@@ -1,0 +1,407 @@
+# Bibliography. Keys are cited from page front matter (`sources:`) and in text as [key].
+# S<n> keys come from the spreadsheet Sources tab, with the original Source ID as <n>.
+# Other keys were added by AI while drafting pilot pages. `verified: false` means a person
+# has not yet checked that the reference exists and that the details are correct.
+# Rule: never cite a key that is not in this file.
+
+S1:
+  type: survey/review
+  title: A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems
+  url: https://dl.acm.org/doi/pdf/10.1145/3387166
+  note: Explainable AI Systems
+  origin: spreadsheet Sources tab
+S2:
+  type: book
+  origin: spreadsheet Sources tab
+  issue: Empty row in spreadsheet (type only). Fill in or delete.
+S3:
+  type: course
+  title: Evaluating AI Agents
+  url: https://www.deeplearning.ai/short-courses/evaluating-ai-agents/
+  note: Agentic systems
+  origin: spreadsheet Sources tab
+S4:
+  type: survey/review
+  title: Holistic Evaluation of Language Models
+  url: https://arxiv.org/pdf/2211.09110
+  note: Multi-dimensional evaluation framework (accuracy, calibration, robustness, fairness, efficiency)
+  origin: spreadsheet Sources tab
+S5:
+  type: survey/review
+  title: A Survey on Evaluation of Large Language Models
+  url: https://dl.acm.org/doi/10.1145/3641289
+  note: Comprehensive taxonomy of LLM evaluation methods and benchmarks
+  origin: spreadsheet Sources tab
+S6:
+  type: survey/review
+  title: 'Evaluating Large Language Models: A Comprehensive Survey'
+  url: https://arxiv.org/pdf/2310.19736
+  note: Evaluation across capability, alignment, safety
+  origin: spreadsheet Sources tab
+S7:
+  type: survey/review
+  title: 'A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations,
+    and Recommendations'
+  url: https://aclanthology.org/2024.emnlp-main.764.pdf
+  note: Reliability, robustness, reproducibility issues in LLM evaluation
+  origin: spreadsheet Sources tab
+S8:
+  type: survey/review
+  title: 'The Scales of Justitia: A Comprehensive Survey on Safety Evaluation of LLMs'
+  url: https://arxiv.org/pdf/2506.11094
+  note: Toxicity, harmfulness, jailbreak testing metrics
+  origin: spreadsheet Sources tab
+S9:
+  type: survey/review
+  title: 'LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods'
+  url: https://arxiv.org/pdf/2412.05579
+  note: Model-based evaluation and meta-evaluation
+  origin: spreadsheet Sources tab
+S10:
+  type: survey/review
+  title: 'Evaluation and Benchmarking of LLM Agents: A Survey'
+  url: https://dl.acm.org/doi/epdf/10.1145/3711896.3736570
+  note: Evaluation taxonomy for LLM agents
+  origin: spreadsheet Sources tab
+S11:
+  type: survey/review
+  title: A Survey on Evaluation of Multimodal Large Language Models
+  url: https://arxiv.org/pdf/2408.15769
+  note: Evaluation of multimodal LLMs (vision-language)
+  origin: spreadsheet Sources tab
+S12:
+  type: survey/review
+  title: 'MME-Survey: A Comprehensive Survey on Evaluation of Multimodal LLMs'
+  url: https://arxiv.org/pdf/2411.15296
+  note: Multimodal benchmarks and evaluation pipelines
+  origin: spreadsheet Sources tab
+S13:
+  type: survey/review
+  title: 'Human-Centered Evaluation of Explainable AI Applications: A Systematic Review'
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11525002/pdf/frai-07-1456486.pdf
+  note: User-centered evaluation dimensions in explainable AI
+  origin: spreadsheet Sources tab
+S14:
+  type: survey/review
+  title: 'From Anecdotal Evidence to Quantitative Evaluation Methods: A Systematic Review on Evaluating Explainable
+    AI'
+  url: https://dl.acm.org/doi/full/10.1145/3583558
+  note: Quantitative explainable AI evaluation methods
+  origin: spreadsheet Sources tab
+S15:
+  type: survey/review
+  title: 'Towards Human-centered Explainable AI: A Survey of User Studies for Model Explanations'
+  url: https://arxiv.org/pdf/2210.11584
+  note: Human-centered explainable AI evaluation measures (trust, understanding, usability)
+  origin: spreadsheet Sources tab
+S16:
+  type: survey/review
+  title: 'Evaluating the necessity of the multiple metrics for assessing explainable AI: A critical examination'
+  url: https://www.sciencedirect.com/science/article/pii/S0925231224010531
+  note: Critical analysis of XAI evaluation metrics
+  origin: spreadsheet Sources tab
+S17:
+  type: survey/review
+  title: 'An Overview of the Empirical Evaluation of Explainable AI (XAI): A Comprehensive Guideline for User-Centered
+    Evaluation in XAI'
+  url: https://www.mdpi.com/2076-3417/14/23/11288
+  note: Empirical (user-centered) evaluation guidelines for XAI
+  origin: spreadsheet Sources tab
+S18:
+  type: survey/review
+  title: A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems
+  url: https://arxiv.org/pdf/2502.09849
+  note: Human-centered evaluation frameworks for clinical XAI
+  origin: spreadsheet Sources tab
+S19:
+  type: survey/review
+  title: 'A survey of explainable artificial intelligence in healthcare: Concepts, applications, and challenges'
+  url: https://www.sciencedirect.com/science/article/pii/S2352914824001448?via%3Dihub
+  note: Healthcare XAI overview with evaluation challenges
+  origin: spreadsheet Sources tab
+S20:
+  type: survey/review
+  title: Evaluation framework to guide implementation of AI systems into healthcare settings
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8513218/
+  note: Healthcare AI implementation evaluation framework
+  origin: spreadsheet Sources tab
+S21:
+  type: survey/review
+  title: 'Explainable artificial intelligence (XAI) in medical imaging: a systematic review of techniques, applications,
+    and challenges'
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12809972/
+  note: XAI methods and validation issues in medical imaging
+  origin: spreadsheet Sources tab
+S22:
+  type: course
+  title: Hugging Face LLM Course - Evaluation
+  url: https://huggingface.co/learn/llm-course/en/chapter11/5
+  note: Benchmark-based evaluation tutorial
+  origin: spreadsheet Sources tab
+S23:
+  type: course
+  title: Hugging Face Agents Course - Observability & Evaluation
+  url: https://huggingface.co/learn/agents-course/bonus-unit2/monitoring-and-evaluating-agents-notebook
+  note: Agent evaluation methods (offline/online metrics, trace analysis)
+  origin: spreadsheet Sources tab
+S24:
+  type: course
+  title: 'Mastering LLM Evaluation: Build Reliable Scalable AI Systems'
+  url: https://www.udemy.com/course/mastering-llm-evaluation-build-reliable-scalable-ai-systems/
+  note: classical ML metrics
+  origin: spreadsheet Sources tab
+S25:
+  type: course
+  title: 'LLM apps: Evaluation'
+  url: https://wandb.ai/site/courses/evals/
+  note: LLM evaluation pipelines & LLM-as-judge practical, Automatic LLM Evaluators
+  origin: spreadsheet Sources tab
+S26:
+  type: course
+  title: 'AI Evaluations: Foundations & Practical Examples'
+  url: https://www.linkedin.com/learning/ai-evaluations-foundations-and-practical-examples
+  note: Manual AI evaluation strategies and automated evaluation techniques and metrics
+  origin: spreadsheet Sources tab
+S27:
+  type: paper
+  title: 'Evaluating Trustworthiness in AI: Risks, Metrics, and Applications Across Industries'
+  url: https://www.mdpi.com/2079-9292/14/13/2717
+  note: Comprehensive review of AI trustworthiness frameworks, risks, and evaluation metrics across the AI lifecycle,
+    emphasizing fairness, transparency, privacy, security, and real-world deployment trade-offs.
+  origin: spreadsheet Sources tab
+S28:
+  type: survey/review
+  title: 'Taxonomy of Quality Assessment for Intelligent Software Systems: A Systematic Literature Review'
+  url: https://ieeexplore.ieee.org/abstract/document/10320363
+  note: assessment models across functional, reliability, security, usability, and ethical dimensions
+  origin: spreadsheet Sources tab
+S29:
+  type: article
+  title: AI agent evaluation from prompts to metrics
+  url: https://www.ibm.com/think/tutorials/ai-agent-evaluation#725195535
+  note: 'Metrics used in tutorial: Correctness, Helpfulness, Coherence'
+  origin: spreadsheet Sources tab
+S30:
+  type: paper
+  title: Survey on Evaluation of LLM-based Agents
+  url: https://arxiv.org/abs/2503.16416
+  note: Cognitive and behavioral capability taxonomies
+  origin: spreadsheet Sources tab
+S31:
+  type: paper
+  title: 'Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation'
+  url: https://www.arxiv.org/abs/2510.11977
+  note: Reliability and cost-efficiency trade-off profiles
+  origin: spreadsheet Sources tab
+S32:
+  type: paper
+  title: 'Beyond Task Completion: An Assessment Framework for Evaluating Agentic AI Systems'
+  url: https://www.arxiv.org/abs/2512.12791
+  note: Multi-pillar operational and reasoning metrics
+  origin: spreadsheet Sources tab
+S33:
+  type: article
+  title: 'A Survey of Agent Evaluation Frameworks: Benchmarking the Benchmarks'
+  url: https://www.getmaxim.ai/blog/llm-agent-evaluation-framework-comparison/
+  note: Comparative cross-framework benchmarking standards
+  origin: spreadsheet Sources tab
+S34:
+  type: paper
+  title: 'Ragas: Automated Evaluation of Retrieval Augmented Generation'
+  url: https://arxiv.org/abs/2309.15217
+  note: Retrieval faithfulness, relevance, and precision
+  origin: spreadsheet Sources tab
+S35:
+  type: paper
+  title: 'GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems'
+  url: https://arxiv.org/abs/2507.13190
+  note: Collaboration quality and communication diversity
+  origin: spreadsheet Sources tab
+S36:
+  type: paper
+  title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?'
+  url: https://arxiv.org/abs/2310.06770
+  note: Real-world GitHub issue resolution rates
+  origin: spreadsheet Sources tab
+S37:
+  type: paper
+  title: 'TrustLLM: Trustworthiness in Large Language Models'
+  url: https://arxiv.org/abs/2401.05561
+  note: Safety, ethics, and truthfulness benchmarks
+  origin: spreadsheet Sources tab
+S38:
+  type: paper
+  title: 'GAIA: a benchmark for General AI Assistants'
+  url: https://arxiv.org/abs/2311.12983
+  note: Human-centric real-world task success
+  origin: spreadsheet Sources tab
+S39:
+  type: paper
+  title: Carbon Emissions and Large Neural Network Training
+  url: https://arxiv.org/abs/2104.10350
+  note: Carbon footprint and energy efficiency
+  origin: spreadsheet Sources tab
+S40:
+  type: paper
+  title: 'AgentCrypt: Advancing Privacy and (Secure) Computation in AI Agent Collaboration'
+  url: https://openreview.net/pdf?id=SALDDQFGKg
+  note: Privacy-preserving communication and leakage risk
+  origin: spreadsheet Sources tab
+S41:
+  type: book
+  title: State of Open Source AI Book - 2023 Edition
+  url: https://book.premai.io/state-of-open-source-ai/
+  note: Holistic open-source model performance metrics
+  origin: spreadsheet Sources tab
+S42:
+  type: paper
+  title: 'DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models'
+  url: https://arxiv.org/abs/2306.11698
+  note: Adversarial robustness and toxicity levels
+  origin: spreadsheet Sources tab
+brooke1996:
+  citation: 'Brooke, J. (1996). SUS: A ''quick and dirty'' usability scale. In P. W. Jordan et al. (Eds.), Usability
+    Evaluation in Industry (pp. 189-194). Taylor & Francis.'
+  origin: added by AI (Sept 2026)
+  verified: false
+bangor2008:
+  citation: Bangor, A., Kortum, P. T., & Miller, J. T. (2008). An empirical evaluation of the System Usability Scale.
+    International Journal of Human-Computer Interaction, 24(6), 574-594.
+  origin: added by AI (Sept 2026)
+  verified: false
+bangor2009:
+  citation: 'Bangor, A., Kortum, P., & Miller, J. (2009). Determining what individual SUS scores mean: Adding an
+    adjective rating scale. Journal of Usability Studies, 4(3), 114-123.'
+  origin: added by AI (Sept 2026)
+  verified: false
+lewis2009:
+  citation: Lewis, J. R., & Sauro, J. (2009). The factor structure of the System Usability Scale. In Human Centered
+    Design (HCD 2009), LNCS 5619, 94-103.
+  origin: added by AI (Sept 2026)
+  verified: false
+sauro2011positive:
+  citation: Sauro, J., & Lewis, J. R. (2011). When designing usability questionnaires, does it hurt to be positive?
+    Proceedings of CHI 2011, 2215-2224.
+  origin: added by AI (Sept 2026)
+  verified: false
+lewis2018:
+  citation: 'Lewis, J. R. (2018). The System Usability Scale: Past, present, and future. International Journal of
+    Human-Computer Interaction, 34(7), 577-590.'
+  origin: added by AI (Sept 2026)
+  verified: false
+hart1988:
+  citation: 'Hart, S. G., & Staveland, L. E. (1988). Development of NASA-TLX (Task Load Index): Results of empirical
+    and theoretical research. Advances in Psychology, 52, 139-183.'
+  origin: added by AI (Sept 2026)
+  verified: false
+hart2006:
+  citation: Hart, S. G. (2006). NASA-Task Load Index (NASA-TLX); 20 years later. Proceedings of the Human Factors
+    and Ergonomics Society Annual Meeting, 50(9), 904-908.
+  origin: added by AI (Sept 2026)
+  verified: false
+vanrijsbergen1979:
+  citation: van Rijsbergen, C. J. (1979). Information Retrieval (2nd ed.). Butterworths.
+  origin: added by AI (Sept 2026)
+  verified: false
+manning2008:
+  citation: 'Manning, C. D., Raghavan, P., & Schutze, H. (2008). Introduction to Information Retrieval, Chapter
+    8: Evaluation in information retrieval. Cambridge University Press.'
+  origin: added by AI (Sept 2026)
+  verified: false
+voorhees2000:
+  citation: Voorhees, E. M. (2000). Variations in relevance judgments and the measurement of retrieval effectiveness.
+    Information Processing & Management, 36(5), 697-716.
+  origin: added by AI (Sept 2026)
+  verified: false
+hersh2000:
+  citation: Hersh, W., Turpin, A., Price, S., et al. (2000). Do batch and user evaluations give the same results?
+    Proceedings of SIGIR 2000, 17-24.
+  origin: added by AI (Sept 2026)
+  verified: false
+turpin2006:
+  citation: Turpin, A., & Scholer, F. (2006). User performance versus precision measures for simple search tasks.
+    Proceedings of SIGIR 2006, 11-18.
+  origin: added by AI (Sept 2026)
+  verified: false
+kelly2009:
+  citation: Kelly, D. (2009). Methods for evaluating interactive information retrieval systems with users. Foundations
+    and Trends in Information Retrieval, 3(1-2), 1-224.
+  origin: added by AI (Sept 2026)
+  verified: false
+iso9241-11:
+  citation: 'ISO 9241-11:2018. Ergonomics of human-system interaction - Part 11: Usability: Definitions and concepts.'
+  origin: added by AI (Sept 2026)
+  verified: false
+hornbaek2006:
+  citation: 'Hornbaek, K. (2006). Current practice in measuring usability: Challenges to usability studies and research.
+    International Journal of Human-Computer Studies, 64(2), 79-102.'
+  origin: added by AI (Sept 2026)
+  verified: false
+hornbaek2007:
+  citation: Hornbaek, K., & Law, E. L.-C. (2007). Meta-analysis of correlations among usability measures. Proceedings
+    of CHI 2007, 617-626.
+  origin: added by AI (Sept 2026)
+  verified: false
+sauro2009:
+  citation: 'Sauro, J., & Lewis, J. R. (2009). Correlations among prototypical usability metrics: Evidence for the
+    construct of usability. Proceedings of CHI 2009, 1609-1618.'
+  origin: added by AI (Sept 2026)
+  verified: false
+sauro2010:
+  citation: 'Sauro, J., & Lewis, J. R. (2010). Average task times in usability tests: What to report? Proceedings
+    of CHI 2010, 2347-2350.'
+  origin: added by AI (Sept 2026)
+  verified: false
+sauro2016:
+  citation: 'Sauro, J., & Lewis, J. R. (2016). Quantifying the User Experience: Practical Statistics for User Research
+    (2nd ed.). Morgan Kaufmann.'
+  origin: added by AI (Sept 2026)
+  verified: false
+card1983:
+  citation: Card, S. K., Moran, T. P., & Newell, A. (1983). The Psychology of Human-Computer Interaction. Lawrence
+    Erlbaum.
+  origin: added by AI (Sept 2026)
+  verified: false
+miller1968:
+  citation: Miller, R. B. (1968). Response time in man-computer conversational transactions. Proceedings of the
+    AFIPS Fall Joint Computer Conference, 267-277.
+  origin: added by AI (Sept 2026)
+  verified: false
+nielsen1993:
+  citation: Nielsen, J. (1993). Usability Engineering, Chapter 5. Academic Press.
+  origin: added by AI (Sept 2026)
+  verified: false
+dean2013:
+  citation: Dean, J., & Barroso, L. A. (2013). The tail at scale. Communications of the ACM, 56(2), 74-80.
+  origin: added by AI (Sept 2026)
+  verified: false
+arapakis2014:
+  citation: Arapakis, I., Bai, X., & Cambazoglu, B. B. (2014). Impact of response latency on user behavior in web
+    search. Proceedings of SIGIR 2014, 103-112.
+  origin: added by AI (Sept 2026)
+  verified: false
+liu2014:
+  citation: Liu, Z., & Heer, J. (2014). The effects of interactive latency on exploratory visual analysis. IEEE
+    Transactions on Visualization and Computer Graphics, 20(12), 2122-2131.
+  origin: added by AI (Sept 2026)
+  verified: false
+kohavi2020:
+  citation: 'Kohavi, R., Tang, D., & Xu, Y. (2020). Trustworthy Online Controlled Experiments: A Practical Guide
+    to A/B Testing. Cambridge University Press.'
+  origin: added by AI (Sept 2026)
+  verified: false
+davis1989:
+  citation: Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information
+    technology. MIS Quarterly, 13(3), 319-340.
+  origin: added by AI (Sept 2026)
+  verified: false
+bhattacherjee2001:
+  citation: 'Bhattacherjee, A. (2001). Understanding information systems continuance: An expectation-confirmation
+    model. MIS Quarterly, 25(3), 351-370.'
+  origin: added by AI (Sept 2026)
+  verified: false
+strathern1997:
+  citation: 'Strathern, M. (1997). ''Improving ratings'': Audit in the British university system. European Review,
+    5(3), 305-321.'
+  origin: added by AI (Sept 2026)
+  verified: false

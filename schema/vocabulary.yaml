@@ -1,0 +1,115 @@
+# Controlled vocabulary for metric front matter.
+# Version: 0.1 (provisional). Expect these lists to change during the pilot.
+# Any facet may take several values. If nothing fits, use "other: <short description>"
+# and raise it for discussion rather than inventing a new value silently.
+#
+# Origin: slide 4 of "EvalOps - Metric Dimensions" (24 Aug 2026) asks
+#   "what is <property> of <subject> in <context>?"
+# Here the slide's single "property" facet is split into ASPECT (the quality being judged)
+# and QUANTITY_FORM (the form of the number). The slide's "human behavior" vs "human
+# perception" subjects become one subject ("user") plus a PERSPECTIVE facet
+# (objective vs perceived). See slide_mapping at the bottom.
+
+subject:            # whose property is it?
+  system-component: A module inside a system (retriever, ranker, classifier, explanation module, UI widget).
+  system: The system as a whole, as delivered to users.
+  user: An individual person using the system.
+  user-system-team: A person and the system working together on a task (joint performance).
+  user-population: A group of users or an organization, e.g. adoption, retention, churn.
+
+aspect:             # what quality is being judged?
+  effectiveness: Correctness, accuracy, or completeness of outcomes.
+  efficiency: Resources spent to reach an outcome (time, effort, compute, money).
+  responsiveness: How quickly the system reacts to input.
+  workload: Mental and physical demand placed on the person.
+  ease-of-use: How easy the system is to use or learn.
+  satisfaction: Comfort with, and positive attitude toward, use.
+  trust: Willingness to rely on the system.
+  engagement: Depth, frequency, or duration of interaction.
+  adoption: Uptake and continued use over time.
+  safety: Absence of harm, including harmful outputs.
+  resource-cost: Monetary, energy, or environmental cost of operating the system.
+
+perspective:        # who judges the aspect?
+  objective: Observed or computed without asking the person (logs, timers, relevance judgments on outputs).
+  perceived: Reported by the person (questionnaires, ratings, interviews).
+
+quantity_form:      # what form does the number take?
+  duration: Elapsed time (seconds, minutes).
+  count: Number of events.
+  rate: Events per unit time.
+  proportion: A ratio between 0 and 1 (or a percentage), e.g. precision, success rate.
+  rating-score: A score from a questionnaire or rating scale.
+  composite-index: A weighted or aggregated combination of several sub-measures.
+  physical-quantity: A physical unit other than time (joules, kg CO2e, bytes).
+
+context:            # what conditions is the measurement tied to?
+  task: A defined task or task set (a query set, a benchmark, a usability-test scenario).
+  session: A single session of use.
+  longitudinal: Repeated measurement over days, weeks, or longer.
+  time-location: A particular time, place, or physical environment.
+  system-specific: Scores are meaningful mainly relative to the same system (e.g. before/after a redesign).
+  user-specific: Depends strongly on who the users are (expertise, population).
+
+measure_type:       # relative to the construct statement on the same page
+  direct: The number is the construct, by definition (e.g. elapsed time for "time to complete").
+  proxy: The number stands in for a construct that is not observed directly.
+  mixed: Direct for one reading of the construct, proxy for another. Explain in section 2.1.
+
+collection_mode:
+  offline: Computed after the fact on stored data or a fixed test collection.
+  online: Computed live from a deployed system.
+  in-lab: Collected in a controlled study with participants.
+  field: Collected with real users in their own setting.
+
+data_source:
+  questionnaire: Self-report instrument.
+  interaction-logs: Clicks, keystrokes, queries, dwell time, telemetry.
+  timing: Timers or timestamps.
+  relevance-judgments: Human or reference labels on system outputs.
+  reference-answers: Gold answers, test cases.
+  model-judge: An LLM or classifier used as an evaluator.
+  physiological: Eye tracking, pupillometry, EEG, heart rate.
+  observation: Researcher observation, think-aloud, video coding.
+  system-telemetry: Server-side measurements (latency, compute, energy).
+
+cost_level:         # effort to obtain one usable measurement for one condition
+  low: Automatic once instrumented; no participants needed per measurement.
+  medium: Needs participants or annotators, but with a short standard procedure.
+  high: Needs special equipment, expertise, long studies, or many participants.
+
+evidence_strength:  # used for links to business objectives
+  causal: Controlled experiments show that moving this metric moves the objective.
+  correlational: Observed association, with no causal identification.
+  theoretical: Argued from an established theory (e.g. TAM), not tested for this metric.
+  none: No known evidence; included as a hypothesis only.
+
+status:
+  ai-draft: Written by AI; not yet reviewed by a person.
+  human-edited: A person has edited it; claims not yet systematically checked.
+  human-reviewed: A person has checked claims against the cited sources.
+  expert-verified: A domain expert has signed off.
+
+# How the slide's original values map to this vocabulary.
+slide_mapping:
+  subject:
+    "Component within a system": {subject: system-component}
+    "System itself": {subject: system}
+    "Human behavior": {subject: user, perspective: objective}
+    "Human perception": {subject: user, perspective: perceived}
+    "Human-system collaboration": {subject: user-system-team}
+    "Long-term technology adoption": {subject: user-population, aspect: adoption, context: longitudinal}
+  property:
+    "Time duration of events": {quantity_form: duration}
+    "Count of events": {quantity_form: count}
+    "Rate of events": {quantity_form: rate}
+    "Component performance": {subject: system-component, aspect: effectiveness}
+    "System performance": {subject: system, aspect: effectiveness}
+    "Human-system task perf.": {subject: user-system-team, aspect: effectiveness}
+    "Human satisfaction level": {aspect: satisfaction, perspective: perceived}
+    "Ease-of-use level": {aspect: ease-of-use}
+  context:
+    "A task?": {context: task}
+    "Time & location?": {context: time-location}
+    "System-specific?": {context: system-specific}
+    "User-specific?": {context: user-specific}
