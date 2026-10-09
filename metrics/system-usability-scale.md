@@ -119,7 +119,7 @@ Across studies, perceived-satisfaction measures correlate only modestly with eff
 
 ## Open questions and review notes
 - AI-suggested references are marked `verified: false` in the bibliography; check them.
-- Should AI-assistant studies use SUS as is, or add trust or output-quality items? Decide whether that belongs here or on a separate page.  
+- Should AI-assistant studies use SUS as is, or add trust or output-quality items? Decide whether that belongs here or on a separate page.
 
 - *Notes:*
   1. *All checked -> `verified: true`*
