@@ -118,11 +118,11 @@ Across studies, perceived-satisfaction measures correlate only modestly with eff
 - [S13], [S15]: use in human-centered XAI evaluation.
 
 ## Open questions and review notes
-- AI-suggested references are marked `verified: false` in the bibliography; check them.
+- AI-suggested references are marked `verified: false` in the bibliography; check them.  
   All checked -> `verified: true`
-- Should AI-assistant studies use SUS as is, or add trust or output-quality items? Decide whether that belongs here or on a separate page.
+- Should AI-assistant studies use SUS as is, or add trust or output-quality items? Decide whether that belongs here or on a separate page.  
   Use SUS unchanged when reporting a SUS score. Trust and output quality are separate constructs and could be covered on a separate metric page; they can be noted here as complementary measures.
 
 - Note:
   1) Consider adding [Hertzum (2026)](https://doi.org/10.1080/10447318.2026.2625260), a meta-analysis of 105 studies comparing SUS with workload, task time, and error rate. It provides newer SUS-specific evidence for the relationships with NASA-TLX and task-completion measures.
-  2) "causally-linked" may be stronger than the SUS-specific evidence currently supports. Consider a weaker relation label (e.g., "correlated", if allowed by the vocabulary), or clarify that the causal evidence is indirect and not SUS-specific.
+  2) "causally-linked" may be stronger than the SUS-specific evidence currently supports. Consider a weaker relation label (e.g., "correlated"), or clarify that the causal evidence is indirect and not SUS-specific.
