@@ -40,7 +40,7 @@ objectives:
   sustained-use: {direction: negative, evidence: causal, note: "Controlled online experiments in web search show added latency reduces engagement; transfer to AI assistants, where users expect slower answers, is untested here."}
   improved-usability: {direction: negative, evidence: causal, note: "Added interactive latency changed how people explored data in a controlled visualization study."}
 
-sources: [miller1968, card1983, nielsen1993, dean2013, arapakis2014, liu2014, kohavi2020, S4, S5, S10, S31]
+sources: [miller1968, card1983, nielsen1993, dean2013, arapakis2014, liu2014, kohavi2020, liang2022, chang2024, mohammadi2025, kapoor2025]
 ---
 
 # Response Latency
@@ -67,10 +67,10 @@ It does not measure how fast the response *feels*: progress indicators and strea
 Individual measurements are noisy and have long tails. Distribution summaries over many requests are stable when load and conditions are controlled; they drift with load, hardware, and deployment.
 
 ### 2.3 Data collection and measurement error
-Offline: benchmark runs on fixed inputs [S4; S5]. Online: telemetry from the deployed system. Client-side measurement is closer to experience but harder to collect; server-side is easy but partial. Clock differences between machines and sampling of logs introduce error.
+Offline: benchmark runs on fixed inputs [liang2022; chang2024]. Online: telemetry from the deployed system. Client-side measurement is closer to experience but harder to collect; server-side is easy but partial. Clock differences between machines and sampling of logs introduce error.
 
 ### 2.4 Computation
-Collect per-request durations and report percentiles, typically the median (p50) and a tail value (p95 or p99), not only the mean. Tail latency matters because users of large systems regularly hit the slow cases [dean2013]. For AI agents, also report latency per completed task, which includes all intermediate steps and tool calls [S10; S31].
+Collect per-request durations and report percentiles, typically the median (p50) and a tail value (p95 or p99), not only the mean. Tail latency matters because users of large systems regularly hit the slow cases [dean2013]. For AI agents, also report latency per completed task, which includes all intermediate steps and tool calls [mohammadi2025; kapoor2025].
 
 ### 2.5 Unit and scale
 Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive systems: about 0.1 s feels instantaneous, about 1 s keeps the flow of thought, and about 10 s is the limit for holding attention [miller1968; card1983; nielsen1993]. These predate AI assistants and should be treated as guidance, not thresholds.
@@ -78,7 +78,7 @@ Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive sy
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Service-level monitoring and alerting; choosing models or hardware under a quality-cost-latency trade-off [S4; S31]; checking that a new feature does not slow the product; A/B testing the effect of speed on user behavior [kohavi2020].
+Service-level monitoring and alerting; choosing models or hardware under a quality-cost-latency trade-off [liang2022; kapoor2025]; checking that a new feature does not slow the product; A/B testing the effect of speed on user behavior [kohavi2020].
 
 ### 3.2 Assumptions
 That faster is always better, which may not hold where users read a delay as care or effort, or where speed costs quality. That the user is waiting on this response (background tasks tolerate more delay). That the thresholds from command-line and web interaction carry over to conversational AI.
@@ -97,7 +97,7 @@ Reporting the mean hides tail problems. Measuring server time only hides client 
 ## 5. Related metrics
 
 ### 5.1 Static relationships
-Component of [Task Completion Time](task-completion-time.md). Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [S31]. Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
+Component of [Task Completion Time](task-completion-time.md). Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [kapoor2025]. Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
 
 ### 5.2 Dynamic relationships
 In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
@@ -114,7 +114,7 @@ This is one of the few metrics in the pilot where the path to the business objec
 - [dean2013]: tail latency.
 - [arapakis2014], [kohavi2020]: effects of latency on user behavior in web search.
 - [liu2014]: effects of latency in visual analytics.
-- [S4], [S5], [S10], [S31]: efficiency and cost reporting in LLM and agent evaluation.
+- [liang2022], [chang2024], [mohammadi2025], [kapoor2025]: efficiency and cost reporting in LLM and agent evaluation.
 
 ## Open questions and review notes
 - Verify the specific figures attributed to [liu2014] and add figures from [arapakis2014].

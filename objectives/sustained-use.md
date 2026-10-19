@@ -4,7 +4,7 @@ title: "Objective 1: Sustained Use Over Time"
 page_type: objective
 template_version: "0.1"
 status: ai-draft
-sources: [davis1989, bhattacherjee2001, kohavi2020, S13, S17, S18]
+sources: [davis1989, bhattacherjee2001, kohavi2020, kim2024, naveed2024, gambetti2025]
 ---
 
 # Objective 1: Sustained Use Over Time
@@ -18,7 +18,7 @@ Continued, voluntary use by the intended users. It is observed directly only ove
 Retention and churn rates, active users over time, frequency and recency of use, and whether users keep acting on the system's outputs. These need longitudinal logs from a deployed system. (No metric pages for these yet.)
 
 ## Why proxies are used instead
-Direct measures take months, need a deployed product, and arrive too late to guide early design. So teams use earlier signals and assume they predict continued use. The spreadsheet's review of sources found that most user studies stop at intention to use rather than logged continued use [S13], and that longitudinal studies are recommended but rare [S17; S18].
+Direct measures take months, need a deployed product, and arrive too late to guide early design. So teams use earlier signals and assume they predict continued use. The spreadsheet's review of sources found that most user studies stop at intention to use rather than logged continued use [kim2024], and that longitudinal studies are recommended but rare [naveed2024; gambetti2025].
 
 ## Theoretical paths
 - Perceived usefulness and ease of use → intention to use (Technology Acceptance Model) [davis1989].

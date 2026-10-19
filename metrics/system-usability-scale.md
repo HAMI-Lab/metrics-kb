@@ -41,7 +41,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Via perceived ease of use -> intention to use (TAM), and satisfaction -> continuance (expectation-confirmation model). Links to logged retention for SUS itself are not established here."}
   improved-usability: {direction: positive, evidence: correlational, note: "SUS is a perceived-usability measure by construction; its correlation with objective usability measures is moderate."}
 
-sources: [brooke1996, bangor2008, bangor2009, lewis2009, sauro2011positive, lewis2018, sauro2009, hornbaek2007, davis1989, bhattacherjee2001, iso9241-11, sauro2016, strathern1997, S13, S15]
+sources: [brooke1996, bangor2008, bangor2009, lewis2009, sauro2011positive, lewis2018, sauro2009, hornbaek2007, davis1989, bhattacherjee2001, iso9241-11, sauro2016, strathern1997, kim2024, rong2022]
 ---
 
 # System Usability Scale (SUS)
@@ -81,7 +81,7 @@ A dimensionless score, 0-100. Usually treated as interval data. A commonly cited
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Quick benchmark of perceived usability; before-and-after comparisons across design iterations; comparison of alternative designs; a standard number to report to stakeholders. Common in HCI and increasingly in human-AI and explainable AI user studies [S13; S15].
+Quick benchmark of perceived usability; before-and-after comparisons across design iterations; comparison of alternative designs; a standard number to report to stakeholders. Common in HCI and increasingly in human-AI and explainable AI user studies [kim2024; rong2022].
 
 ### 3.2 Assumptions
 That respondents have used the system enough to judge it. That ten generic items capture what matters for this system (for AI systems, trust and output quality may matter more and are not asked about). That the respondent population resembles the eventual users. That the score's meaning carries across cultures and translations.
@@ -108,14 +108,14 @@ Across studies, perceived-satisfaction measures correlate only modestly with eff
 ## 6. Links to business objectives
 **Improved usability:** positive, correlational. SUS measures perceived usability by definition, and it tracks objective usability only moderately.
 
-**Sustained use:** positive, theoretical. The Technology Acceptance Model links perceived ease of use to intention to use [davis1989], and the expectation-confirmation model links satisfaction to continued use [bhattacherjee2001]. Reviews of human-centered XAI note that most studies stop at intention rather than logged continued use [S13]. Whether SUS predicts retention in a given product should be checked against logs.
+**Sustained use:** positive, theoretical. The Technology Acceptance Model links perceived ease of use to intention to use [davis1989], and the expectation-confirmation model links satisfaction to continued use [bhattacherjee2001]. Reviews of human-centered XAI note that most studies stop at intention rather than logged continued use [kim2024]. Whether SUS predicts retention in a given product should be checked against logs.
 
 ## 7. Sources
 - [brooke1996] original instrument and scoring.
 - [bangor2008], [bangor2009], [lewis2009], [lewis2018], [sauro2011positive]: psychometrics, norms, variants.
 - [sauro2009], [hornbaek2007]: correlations with other usability measures.
 - [davis1989], [bhattacherjee2001]: theoretical path to sustained use.
-- [S13], [S15]: use in human-centered XAI evaluation.
+- [kim2024], [rong2022]: use in human-centered XAI evaluation.
 
 ## Open questions and review notes
 Tracked in GitHub Issues: [#5](https://github.com/HAMI-Lab/metrics-kb/issues/5) (flip bibliography `verified` flags after reviewer check), [#6](https://github.com/HAMI-Lab/metrics-kb/issues/6) (closed — trust/output-quality items, decision recorded), [#7](https://github.com/HAMI-Lab/metrics-kb/issues/7) (reconsider "causally-linked" relation to Response Latency), [#8](https://github.com/HAMI-Lab/metrics-kb/issues/8) (consider adding Hertzum 2026 as a source).

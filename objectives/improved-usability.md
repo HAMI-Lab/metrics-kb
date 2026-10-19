@@ -4,7 +4,7 @@ title: "Objective 2: Improved Usability"
 page_type: objective
 template_version: "0.1"
 status: ai-draft
-sources: [iso9241-11, hornbaek2007, sauro2009, S13, S15]
+sources: [iso9241-11, hornbaek2007, sauro2009, kim2024, rong2022]
 ---
 
 # Objective 2: Improved Usability
@@ -34,4 +34,4 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Recall](../metrics/recall.md) | positive | correlational | Batch gains do not always translate to users |
 
 ## Open questions
-- For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [S13; S15].
+- For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

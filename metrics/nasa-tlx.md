@@ -40,7 +40,7 @@ objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "High workload is assumed to discourage continued use; not established with retention data here."}
   improved-usability: {direction: negative, evidence: correlational, note: "Lower workload for the same outcome is generally read as better usability, but too little demand can signal disengagement."}
 
-sources: [hart1988, hart2006, iso9241-11, S13, S15, S18]
+sources: [hart1988, hart2006, iso9241-11, kim2024, rong2022, gambetti2025]
 ---
 
 # NASA Task Load Index (NASA-TLX)
@@ -82,7 +82,7 @@ Dimensionless, 0-100. There is no universal "acceptable" threshold; scores are b
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Comparing designs or AI-assistance conditions for how demanding they are; checking that added features (such as explanations) do not overload people [S15; S18]; safety-critical work where overload leads to errors.
+Comparing designs or AI-assistance conditions for how demanding they are; checking that added features (such as explanations) do not overload people [rong2022; gambetti2025]; safety-critical work where overload leads to errors.
 
 ### 3.2 Assumptions
 That people can introspect on and report their workload. That the six subscales cover the relevant kinds of demand (for AI assistance, demands such as checking the AI's output may not map neatly). That lower is better, which does not always hold (see 4.3).
@@ -109,12 +109,12 @@ Workload often rises with task time and time pressure, and falls as users gain e
 ## 6. Links to business objectives
 **Improved usability:** lower workload for the same outcome is generally read as better usability; the ISO definition includes resources spent, of which effort is one [iso9241-11]. Evidence strength: correlational, and non-monotonic at the low end.
 
-**Sustained use:** high workload is assumed to discourage continued use. Evidence: theoretical only; reviews note that human-centered XAI studies rarely follow up on actual continued use [S15].
+**Sustained use:** high workload is assumed to discourage continued use. Evidence: theoretical only; reviews note that human-centered XAI studies rarely follow up on actual continued use [rong2022].
 
 ## 7. Sources
 - [hart1988] original instrument; [hart2006] 20-year review including Raw TLX.
 - [iso9241-11] usability definition.
-- [S13], [S15], [S18]: use of TLX in XAI and clinical decision-support evaluation.
+- [kim2024], [rong2022], [gambetti2025]: use of TLX in XAI and clinical decision-support evaluation.
 
 ## Open questions and review notes
 - Add verified reliability figures and a source on physiological workload measures.

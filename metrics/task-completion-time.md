@@ -42,7 +42,7 @@ objectives:
   sustained-use: {direction: unknown, evidence: none, note: "Shorter task time could mean a better tool or a less engaging one; depends on the task."}
   improved-usability: {direction: negative, evidence: correlational, note: "Efficiency is one of the three parts of the ISO usability definition; lower time for the same outcome is better."}
 
-sources: [iso9241-11, hornbaek2006, hornbaek2007, sauro2009, sauro2010, sauro2016, card1983, S19, S20, S21]
+sources: [iso9241-11, hornbaek2006, hornbaek2007, sauro2009, sauro2010, sauro2016, card1983, mienye2024, reddy2021, ahmed2026]
 ---
 
 # Task Completion Time
@@ -83,7 +83,7 @@ Seconds (ratio scale). Only comparable within the same task definition.
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Comparing designs or AI-assistance conditions; benchmarking against a competitor or earlier version; finding tasks that are unexpectedly slow. The spreadsheet's Metrics tab lists time-to-diagnosis logs for clinical decision-support evaluation [S19; S20; S21]; which of these sources actually reports it needs checking.
+Comparing designs or AI-assistance conditions; benchmarking against a competitor or earlier version; finding tasks that are unexpectedly slow. The spreadsheet's Metrics tab lists time-to-diagnosis logs for clinical decision-support evaluation [mienye2024; reddy2021; ahmed2026]; which of these sources actually reports it needs checking.
 
 ### 3.2 Assumptions
 That lower time is better, which fits routine and goal-directed tasks but not exploration, learning, or reading, where more time may mean more engagement or care. That the task is equally meaningful for all participants. That participants are motivated to be fast in the same way real users would be.
@@ -117,7 +117,7 @@ Correlations between efficiency, effectiveness, and satisfaction measures are ge
 - [hornbaek2006], [hornbaek2007], [sauro2009]: practice and correlations.
 - [sauro2010], [sauro2016]: summarizing task times.
 - [card1983]: predicted task times.
-- [S19], [S20], [S21]: time-to-diagnosis in clinical AI evaluation (per spreadsheet; unverified).
+- [mienye2024], [reddy2021], [ahmed2026]: time-to-diagnosis in clinical AI evaluation (per spreadsheet; unverified).
 
 ## Open questions and review notes
 - Should task success rate be a required companion field on this page?

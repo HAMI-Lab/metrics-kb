@@ -1,264 +1,257 @@
 # Bibliography. Keys are cited from page front matter (`sources:`) and in text as [key].
-# S<n> keys come from the spreadsheet Sources tab, with the original Source ID as <n>.
-# Other keys were added by AI while drafting pilot pages. `verified: false` means a person
-# has not yet checked that the reference exists and that the details are correct.
+# Every key follows <lastname><year>, with a trailing a/b/c letter for collisions.
+# Entries migrated from the spreadsheet's Sources tab keep their original Source ID
+# (S<n>) recorded in `origin:` for traceability. `verified: false` means a person has
+# not yet checked that the reference exists and that the details (author list, venue,
+# pages) are correct as given.
 # Rule: never cite a key that is not in this file.
 
-S1:
-  type: survey/review
-  title: A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems
+mohseni2021:
+  citation: "Mohseni, S., et al. (2021). A Multidisciplinary Survey and Framework for Design and Evaluation of Explainable AI Systems. ACM Transactions on Interactive Intelligent Systems. (check against the paper for the full author list and page numbers)"
   url: https://dl.acm.org/doi/pdf/10.1145/3387166
   note: Explainable AI Systems
-  origin: spreadsheet Sources tab
-S2:
-  type: book
-  origin: spreadsheet Sources tab
-  issue: Empty row in spreadsheet (type only). Fill in or delete.
-S3:
-  type: course
-  title: Evaluating AI Agents
+  origin: migrated from spreadsheet (was S1)
+  verified: false
+gilhuly2025:
+  citation: "Gilhuly, J., & Khan, A. (2025). Evaluating AI Agents [short course]. DeepLearning.AI, in partnership with Arize AI."
   url: https://www.deeplearning.ai/short-courses/evaluating-ai-agents/
   note: Agentic systems
-  origin: spreadsheet Sources tab
-S4:
-  type: survey/review
-  title: Holistic Evaluation of Language Models
+  origin: migrated from spreadsheet (was S3)
+  verified: false
+liang2022:
+  citation: "Liang, P., et al. (2022). Holistic Evaluation of Language Models. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2211.09110
   note: Multi-dimensional evaluation framework (accuracy, calibration, robustness, fairness, efficiency)
-  origin: spreadsheet Sources tab
-S5:
-  type: survey/review
-  title: A Survey on Evaluation of Large Language Models
+  origin: migrated from spreadsheet (was S4)
+  verified: false
+chang2024:
+  citation: "Chang, Y., et al. (2024). A Survey on Evaluation of Large Language Models. ACM Transactions on Intelligent Systems and Technology. (arXiv preprint dates to 2023; check against the paper for the cited version and full author list)"
   url: https://dl.acm.org/doi/10.1145/3641289
   note: Comprehensive taxonomy of LLM evaluation methods and benchmarks
-  origin: spreadsheet Sources tab
-S6:
-  type: survey/review
-  title: 'Evaluating Large Language Models: A Comprehensive Survey'
+  origin: migrated from spreadsheet (was S5)
+  verified: false
+guo2023:
+  citation: "Guo, Z., et al. (2023). Evaluating Large Language Models: A Comprehensive Survey. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2310.19736
   note: Evaluation across capability, alignment, safety
-  origin: spreadsheet Sources tab
-S7:
-  type: survey/review
-  title: 'A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations,
-    and Recommendations'
+  origin: migrated from spreadsheet (was S6)
+  verified: false
+laskar2024:
+  citation: "Laskar, M. T. R., et al. (2024). A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations, and Recommendations. Proceedings of EMNLP 2024."
   url: https://aclanthology.org/2024.emnlp-main.764.pdf
   note: Reliability, robustness, reproducibility issues in LLM evaluation
-  origin: spreadsheet Sources tab
-S8:
-  type: survey/review
-  title: 'The Scales of Justitia: A Comprehensive Survey on Safety Evaluation of LLMs'
+  origin: migrated from spreadsheet (was S7)
+  verified: false
+liu2025:
+  citation: "Liu, S., et al. (2025). The Scales of Justitia: A Comprehensive Survey on Safety Evaluation of LLMs. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2506.11094
   note: Toxicity, harmfulness, jailbreak testing metrics
-  origin: spreadsheet Sources tab
-S9:
-  type: survey/review
-  title: 'LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods'
+  origin: migrated from spreadsheet (was S8)
+  verified: false
+li2024:
+  citation: "Li, H., et al. (2024). LLMs-as-Judges: A Comprehensive Survey on LLM-based Evaluation Methods. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2412.05579
   note: Model-based evaluation and meta-evaluation
-  origin: spreadsheet Sources tab
-S10:
-  type: survey/review
-  title: 'Evaluation and Benchmarking of LLM Agents: A Survey'
+  origin: migrated from spreadsheet (was S9)
+  verified: false
+mohammadi2025:
+  citation: "Mohammadi, M., et al. (2025). Evaluation and Benchmarking of LLM Agents: A Survey. KDD '25. (check against the paper for the full author list)"
   url: https://dl.acm.org/doi/epdf/10.1145/3711896.3736570
   note: Evaluation taxonomy for LLM agents
-  origin: spreadsheet Sources tab
-S11:
-  type: survey/review
-  title: A Survey on Evaluation of Multimodal Large Language Models
+  origin: migrated from spreadsheet (was S10)
+  verified: false
+huang2024a:
+  citation: "Huang, J., et al. (2024). A Survey on Evaluation of Multimodal Large Language Models. arXiv preprint. (check against the paper for the full author list; distinct from huang2024b, a different Huang)"
   url: https://arxiv.org/pdf/2408.15769
   note: Evaluation of multimodal LLMs (vision-language)
-  origin: spreadsheet Sources tab
-S12:
-  type: survey/review
-  title: 'MME-Survey: A Comprehensive Survey on Evaluation of Multimodal LLMs'
+  origin: migrated from spreadsheet (was S11)
+  verified: false
+fu2024:
+  citation: "Fu, C., et al. (2024). MME-Survey: A Comprehensive Survey on Evaluation of Multimodal LLMs. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2411.15296
   note: Multimodal benchmarks and evaluation pipelines
-  origin: spreadsheet Sources tab
-S13:
-  type: survey/review
-  title: 'Human-Centered Evaluation of Explainable AI Applications: A Systematic Review'
+  origin: migrated from spreadsheet (was S12)
+  verified: false
+kim2024:
+  citation: "Kim, J., et al. (2024). Human-Centered Evaluation of Explainable AI Applications: A Systematic Review. Frontiers in Artificial Intelligence. (check against the paper for the full author list)"
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11525002/pdf/frai-07-1456486.pdf
   note: User-centered evaluation dimensions in explainable AI
-  origin: spreadsheet Sources tab
-S14:
-  type: survey/review
-  title: 'From Anecdotal Evidence to Quantitative Evaluation Methods: A Systematic Review on Evaluating Explainable
-    AI'
+  origin: migrated from spreadsheet (was S13)
+  verified: false
+nauta2023:
+  citation: "Nauta, M., et al. (2023). From Anecdotal Evidence to Quantitative Evaluation Methods: A Systematic Review on Evaluating Explainable AI. ACM Computing Surveys. (check against the paper for the full author list)"
   url: https://dl.acm.org/doi/full/10.1145/3583558
   note: Quantitative explainable AI evaluation methods
-  origin: spreadsheet Sources tab
-S15:
-  type: survey/review
-  title: 'Towards Human-centered Explainable AI: A Survey of User Studies for Model Explanations'
+  origin: migrated from spreadsheet (was S14)
+  verified: false
+rong2022:
+  citation: "Rong, Y., et al. (2022). Towards Human-centered Explainable AI: A Survey of User Studies for Model Explanations. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/pdf/2210.11584
   note: Human-centered explainable AI evaluation measures (trust, understanding, usability)
-  origin: spreadsheet Sources tab
-S16:
-  type: survey/review
-  title: 'Evaluating the necessity of the multiple metrics for assessing explainable AI: A critical examination'
+  origin: migrated from spreadsheet (was S15)
+  verified: false
+pawlicki2024:
+  citation: "Pawlicki, M., et al. (2024). Evaluating the necessity of the multiple metrics for assessing explainable AI: A critical examination. Neurocomputing. (check against the paper for the full author list)"
   url: https://www.sciencedirect.com/science/article/pii/S0925231224010531
   note: Critical analysis of XAI evaluation metrics
-  origin: spreadsheet Sources tab
-S17:
-  type: survey/review
-  title: 'An Overview of the Empirical Evaluation of Explainable AI (XAI): A Comprehensive Guideline for User-Centered
-    Evaluation in XAI'
+  origin: migrated from spreadsheet (was S16)
+  verified: false
+naveed2024:
+  citation: "Naveed, S., et al. (2024). An Overview of the Empirical Evaluation of Explainable AI (XAI): A Comprehensive Guideline for User-Centered Evaluation in XAI. Applied Sciences (MDPI). (check against the paper for the full author list)"
   url: https://www.mdpi.com/2076-3417/14/23/11288
   note: Empirical (user-centered) evaluation guidelines for XAI
-  origin: spreadsheet Sources tab
-S18:
-  type: survey/review
-  title: A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems
+  origin: migrated from spreadsheet (was S17)
+  verified: false
+gambetti2025:
+  citation: "Gambetti, A., et al. (2025). A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems. arXiv preprint, first submitted Feb 2025. (check against the paper for the full author list; the repo's earlier migration notes speculated a possible mix-up with a separate 'Humer et al., 2024' source at the same link -- that could not be confirmed one way or the other, so treat with care)"
   url: https://arxiv.org/pdf/2502.09849
   note: Human-centered evaluation frameworks for clinical XAI
-  origin: spreadsheet Sources tab
-S19:
-  type: survey/review
-  title: 'A survey of explainable artificial intelligence in healthcare: Concepts, applications, and challenges'
+  origin: migrated from spreadsheet (was S18)
+  verified: false
+mienye2024:
+  citation: "Mienye, I. D., et al. (2024). A survey of explainable artificial intelligence in healthcare: Concepts, applications, and challenges. Informatics in Medicine Unlocked. (check against the paper for the full author list)"
   url: https://www.sciencedirect.com/science/article/pii/S2352914824001448?via%3Dihub
   note: Healthcare XAI overview with evaluation challenges
-  origin: spreadsheet Sources tab
-S20:
-  type: survey/review
-  title: Evaluation framework to guide implementation of AI systems into healthcare settings
+  origin: migrated from spreadsheet (was S19)
+  verified: false
+reddy2021:
+  citation: "Reddy, S., et al. (2021). Evaluation framework to guide implementation of AI systems into healthcare settings. (check against the paper for the full author list and journal details)"
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8513218/
   note: Healthcare AI implementation evaluation framework
-  origin: spreadsheet Sources tab
-S21:
-  type: survey/review
-  title: 'Explainable artificial intelligence (XAI) in medical imaging: a systematic review of techniques, applications,
-    and challenges'
+  origin: migrated from spreadsheet (was S20)
+  verified: false
+ahmed2026:
+  citation: "Ahmed, F., et al. (2026). Explainable artificial intelligence (XAI) in medical imaging: a systematic review of techniques, applications, and challenges. BMC Medical Imaging. (check against the paper for the full author list)"
   url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12809972/
   note: XAI methods and validation issues in medical imaging
-  origin: spreadsheet Sources tab
-S22:
-  type: course
-  title: Hugging Face LLM Course - Evaluation
+  origin: migrated from spreadsheet (was S21)
+  verified: false
+huggingface2025a:
+  citation: "Hugging Face (2025). LLM Course -- Chapter 11: Evaluation. (no individual author credited on the page)"
   url: https://huggingface.co/learn/llm-course/en/chapter11/5
   note: Benchmark-based evaluation tutorial
-  origin: spreadsheet Sources tab
-S23:
-  type: course
-  title: Hugging Face Agents Course - Observability & Evaluation
+  origin: migrated from spreadsheet (was S22)
+  verified: false
+huggingface2025b:
+  citation: "Hugging Face (2025). Agents Course -- Bonus Unit 2: Observability & Evaluation. (no individual author credited on the page; distinct course from huggingface2025a)"
   url: https://huggingface.co/learn/agents-course/bonus-unit2/monitoring-and-evaluating-agents-notebook
   note: Agent evaluation methods (offline/online metrics, trace analysis)
-  origin: spreadsheet Sources tab
-S24:
-  type: course
-  title: 'Mastering LLM Evaluation: Build Reliable Scalable AI Systems'
+  origin: migrated from spreadsheet (was S23)
+  verified: false
+schoolofai2025:
+  citation: "School of AI (2025). Mastering LLM Evaluation: Build Reliable Scalable AI Systems [Udemy course]. (no individual instructor credited; year from course-listing metadata)"
   url: https://www.udemy.com/course/mastering-llm-evaluation-build-reliable-scalable-ai-systems/
   note: classical ML metrics
-  origin: spreadsheet Sources tab
-S25:
-  type: course
-  title: 'LLM apps: Evaluation'
+  origin: migrated from spreadsheet (was S24)
+  verified: false
+shah2025:
+  citation: "Shah, A. (2025). LLM apps: Evaluation [course]. Weights & Biases. (multi-instructor course; Shah is the named lead -- check against the course for the full instructor list)"
   url: https://wandb.ai/site/courses/evals/
   note: LLM evaluation pipelines & LLM-as-judge practical, Automatic LLM Evaluators
-  origin: spreadsheet Sources tab
-S26:
-  type: course
-  title: 'AI Evaluations: Foundations & Practical Examples'
+  origin: migrated from spreadsheet (was S25)
+  verified: false
+yadav2025:
+  citation: "Yadav, M. (2025, estimated). AI Evaluations: Foundations & Practical Examples [course]. LinkedIn Learning. (exact release date not confirmed; check against the course page)"
   url: https://www.linkedin.com/learning/ai-evaluations-foundations-and-practical-examples
   note: Manual AI evaluation strategies and automated evaluation techniques and metrics
-  origin: spreadsheet Sources tab
-S27:
-  type: paper
-  title: 'Evaluating Trustworthiness in AI: Risks, Metrics, and Applications Across Industries'
+  origin: migrated from spreadsheet (was S26)
+  verified: false
+nastoska2025:
+  citation: "Nastoska, A., et al. (2025). Evaluating Trustworthiness in AI: Risks, Metrics, and Applications Across Industries. Electronics (MDPI). (check against the paper for the full author list)"
   url: https://www.mdpi.com/2079-9292/14/13/2717
-  note: Comprehensive review of AI trustworthiness frameworks, risks, and evaluation metrics across the AI lifecycle,
-    emphasizing fairness, transparency, privacy, security, and real-world deployment trade-offs.
-  origin: spreadsheet Sources tab
-S28:
-  type: survey/review
-  title: 'Taxonomy of Quality Assessment for Intelligent Software Systems: A Systematic Literature Review'
+  note: 'Comprehensive review of AI trustworthiness frameworks, risks, and evaluation metrics across the AI lifecycle, emphasizing fairness, transparency, privacy, security, and real-world deployment trade-offs.'
+  origin: migrated from spreadsheet (was S27)
+  verified: false
+jabborov2023:
+  citation: "Jabborov, A., et al. (2023). Taxonomy of Quality Assessment for Intelligent Software Systems: A Systematic Literature Review. IEEE Access. (check against the paper for the full author list)"
   url: https://ieeexplore.ieee.org/abstract/document/10320363
   note: assessment models across functional, reliability, security, usability, and ethical dimensions
-  origin: spreadsheet Sources tab
-S29:
-  type: article
-  title: AI agent evaluation from prompts to metrics
+  origin: migrated from spreadsheet (was S28)
+  verified: false
+harkar2025:
+  citation: "Harkar, S. (2025, estimated). AI agent evaluation from prompts to metrics [tutorial]. IBM. (publication date not confirmed from the page; check against the source)"
   url: https://www.ibm.com/think/tutorials/ai-agent-evaluation#725195535
   note: 'Metrics used in tutorial: Correctness, Helpfulness, Coherence'
-  origin: spreadsheet Sources tab
-S30:
-  type: paper
-  title: Survey on Evaluation of LLM-based Agents
+  origin: migrated from spreadsheet (was S29)
+  verified: false
+yehudai2025:
+  citation: "Yehudai, A., et al. (2025). Survey on Evaluation of LLM-based Agents. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2503.16416
   note: Cognitive and behavioral capability taxonomies
-  origin: spreadsheet Sources tab
-S31:
-  type: paper
-  title: 'Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation'
+  origin: migrated from spreadsheet (was S30)
+  verified: false
+kapoor2025:
+  citation: "Kapoor, S., et al. (2025). Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation. arXiv preprint. (check against the paper for the full author list)"
   url: https://www.arxiv.org/abs/2510.11977
   note: Reliability and cost-efficiency trade-off profiles
-  origin: spreadsheet Sources tab
-S32:
-  type: paper
-  title: 'Beyond Task Completion: An Assessment Framework for Evaluating Agentic AI Systems'
+  origin: migrated from spreadsheet (was S31)
+  verified: false
+akshathala2025:
+  citation: "Akshathala, S., et al. (2025). Beyond Task Completion: An Assessment Framework for Evaluating Agentic AI Systems. arXiv preprint. (check against the paper for the full author list)"
   url: https://www.arxiv.org/abs/2512.12791
   note: Multi-pillar operational and reasoning metrics
-  origin: spreadsheet Sources tab
-S33:
-  type: article
-  title: 'A Survey of Agent Evaluation Frameworks: Benchmarking the Benchmarks'
+  origin: migrated from spreadsheet (was S32)
+  verified: false
+singhal2025:
+  citation: "Singhal, M. (2025). A Survey of Agent Evaluation Frameworks: Benchmarking the Benchmarks [blog]. Maxim AI. (check against the source for any co-authors)"
   url: https://www.getmaxim.ai/blog/llm-agent-evaluation-framework-comparison/
   note: Comparative cross-framework benchmarking standards
-  origin: spreadsheet Sources tab
-S34:
-  type: paper
-  title: 'Ragas: Automated Evaluation of Retrieval Augmented Generation'
+  origin: migrated from spreadsheet (was S33)
+  verified: false
+es2023:
+  citation: "Es, S., et al. (2023). Ragas: Automated Evaluation of Retrieval Augmented Generation. arXiv preprint. (check against the paper for the full author list; 'Es' is the correct short surname, not a typo)"
   url: https://arxiv.org/abs/2309.15217
   note: Retrieval faithfulness, relevance, and precision
-  origin: spreadsheet Sources tab
-S35:
-  type: paper
-  title: 'GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems'
+  origin: migrated from spreadsheet (was S34)
+  verified: false
+lee2025:
+  citation: "Lee, J., et al. (2025). GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2507.13190
   note: Collaboration quality and communication diversity
-  origin: spreadsheet Sources tab
-S36:
-  type: paper
-  title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?'
+  origin: migrated from spreadsheet (was S35)
+  verified: false
+jimenez2023:
+  citation: "Jimenez, C. E., et al. (2023). SWE-bench: Can Language Models Resolve Real-World GitHub Issues? arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2310.06770
   note: Real-world GitHub issue resolution rates
-  origin: spreadsheet Sources tab
-S37:
-  type: paper
-  title: 'TrustLLM: Trustworthiness in Large Language Models'
+  origin: migrated from spreadsheet (was S36)
+  verified: false
+huang2024b:
+  citation: "Huang, Y., et al. (2024). TrustLLM: Trustworthiness in Large Language Models. arXiv preprint. (check against the paper for the full author list; distinct from huang2024a, a different Huang)"
   url: https://arxiv.org/abs/2401.05561
   note: Safety, ethics, and truthfulness benchmarks
-  origin: spreadsheet Sources tab
-S38:
-  type: paper
-  title: 'GAIA: a benchmark for General AI Assistants'
+  origin: migrated from spreadsheet (was S37)
+  verified: false
+mialon2023:
+  citation: "Mialon, G., et al. (2023). GAIA: a benchmark for General AI Assistants. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2311.12983
   note: Human-centric real-world task success
-  origin: spreadsheet Sources tab
-S39:
-  type: paper
-  title: Carbon Emissions and Large Neural Network Training
+  origin: migrated from spreadsheet (was S38)
+  verified: false
+patterson2021:
+  citation: "Patterson, D., et al. (2021). Carbon Emissions and Large Neural Network Training. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2104.10350
   note: Carbon footprint and energy efficiency
-  origin: spreadsheet Sources tab
-S40:
-  type: paper
-  title: 'AgentCrypt: Advancing Privacy and (Secure) Computation in AI Agent Collaboration'
+  origin: migrated from spreadsheet (was S39)
+  verified: false
+karthikeyan2025:
+  citation: "Karthikeyan, H., et al. (2025). AgentCrypt: Advancing Privacy and (Secure) Computation in AI Agent Collaboration. (matched by title and venue across arXiv and the IACR ePrint archive; the bibliography's original OpenReview link could not be independently confirmed to resolve to the same paper -- check before citing)"
   url: https://openreview.net/pdf?id=SALDDQFGKg
   note: Privacy-preserving communication and leakage risk
-  origin: spreadsheet Sources tab
-S41:
-  type: book
-  title: State of Open Source AI Book - 2023 Edition
+  origin: migrated from spreadsheet (was S40)
+  verified: false
+premai2023:
+  citation: "PremAI (2023). State of Open Source AI Book -- 2023 Edition. (community-maintained open book; Casper da Costa-Luis is credited as lead editor/maintainer rather than a single author)"
   url: https://book.premai.io/state-of-open-source-ai/
   note: Holistic open-source model performance metrics
-  origin: spreadsheet Sources tab
-S42:
-  type: paper
-  title: 'DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models'
+  origin: migrated from spreadsheet (was S41)
+  verified: false
+wang2023:
+  citation: "Wang, B., et al. (2023). DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models. arXiv preprint. (check against the paper for the full author list)"
   url: https://arxiv.org/abs/2306.11698
   note: Adversarial robustness and toxicity levels
-  origin: spreadsheet Sources tab
+  origin: migrated from spreadsheet (was S42)
+  verified: false
 brooke1996:
   citation: 'Brooke, J. (1996). SUS: A ''quick and dirty'' usability scale. In P. W. Jordan et al. (Eds.), Usability
     Evaluation in Industry (pp. 189-194). Taylor & Francis.'

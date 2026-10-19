@@ -41,7 +41,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Relevant results are assumed to make the system worth returning to; long causal chain."}
   improved-usability: {direction: positive, evidence: correlational, note: "Batch precision gains do not always translate into better user task performance."}
 
-sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, turpin2006, kelly2009, S24, S34]
+sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, turpin2006, kelly2009, schoolofai2025, es2023]
 ---
 
 # Precision
@@ -68,7 +68,7 @@ It ignores what was missed (that is [Recall](recall.md)). It says nothing about 
 Depends on the judgments. Different assessors disagree about relevance substantially, although system *rankings* by precision tend to be stable across assessors [voorhees2000]. Precision@k with small *k* and few queries has high variance.
 
 ### 2.3 Data collection and measurement error
-Offline: run the system on a test collection with existing judgments. Online: infer relevance from clicks or ratings (biased by position and presentation). LLM-as-judge labeling is cheaper but adds the judge's own errors [S34]. Unjudged items in pooled collections are usually counted as not relevant, which can penalize new systems.
+Offline: run the system on a test collection with existing judgments. Online: infer relevance from clicks or ratings (biased by position and presentation). LLM-as-judge labeling is cheaper but adds the judge's own errors [es2023]. Unjudged items in pooled collections are usually counted as not relevant, which can penalize new systems.
 
 ### 2.4 Computation
 - Set-based: |relevant ∩ retrieved| ÷ |retrieved|.
@@ -82,7 +82,7 @@ A proportion from 0 to 1 (ratio scale). Only comparable across systems on the sa
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Comparing retrieval or classification components during development; regression testing; reporting benchmark results; evaluating RAG retrievers and LLM classifiers [S24; S34].
+Comparing retrieval or classification components during development; regression testing; reporting benchmark results; evaluating RAG retrievers and LLM classifiers [schoolofai2025; es2023].
 
 ### 3.2 Assumptions
 Implicit user model: the user looks at the top *k* results, all positions equally, and every irrelevant item costs the same. Relevance is treated as binary and independent of other results (no credit for novelty or penalty for duplicates). The query set represents real use.
@@ -115,7 +115,7 @@ Raising precision by being more selective usually lowers recall. Links from prec
 - [vanrijsbergen1979], [manning2008]: definitions and variants.
 - [voorhees2000]: assessor disagreement and stability.
 - [hersh2000], [turpin2006], [kelly2009]: relation to user performance.
-- [S24], [S34]: use in LLM and RAG evaluation.
+- [schoolofai2025], [es2023]: use in LLM and RAG evaluation.
 
 ## Open questions and review notes
 - Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall](recall.md) and commit 3912bde (PR #1).

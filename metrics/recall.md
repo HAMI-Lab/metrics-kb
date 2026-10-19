@@ -40,7 +40,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Matters mainly where users need to find everything (e.g. systematic reviews); users rarely notice what is missing."}
   improved-usability: {direction: positive, evidence: correlational, note: "Batch recall gains do not always translate into better user task performance."}
 
-sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, kelly2009, S24, S34]
+sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, kelly2009, schoolofai2025, es2023]
 ---
 
 # Recall
@@ -67,7 +67,7 @@ It ignores how many irrelevant items were returned along with the relevant ones 
 Depends on the judgments. Different assessors disagree about relevance, although system rankings tend to be stable across assessors [voorhees2000]. Recall is less stable than precision when relevant items are few: with three relevant items per query, missing one moves recall by a third.
 
 ### 2.3 Data collection and measurement error
-Recall needs to know **all** relevant items, which is rarely possible in a large collection. Test collections usually judge only a pool of items returned by several systems, so recall is measured against the pool, not the true total [manning2008]. Relevant items that no pooled system found are invisible, so recall tends to be overestimated. LLM-as-judge labeling is cheaper but adds the judge's own errors [S34]. Recall is rarely measured online, because live logs show what users clicked, not what they never saw.
+Recall needs to know **all** relevant items, which is rarely possible in a large collection. Test collections usually judge only a pool of items returned by several systems, so recall is measured against the pool, not the true total [manning2008]. Relevant items that no pooled system found are invisible, so recall tends to be overestimated. LLM-as-judge labeling is cheaper but adds the judge's own errors [es2023]. Recall is rarely measured online, because live logs show what users clicked, not what they never saw.
 
 ### 2.4 Computation
 - Set-based: |relevant ∩ retrieved| ÷ |relevant|.
@@ -82,7 +82,7 @@ A proportion from 0 to 1 (ratio scale). Only comparable across systems on the sa
 ## 3. Why it is measured
 
 ### 3.1 Purposes
-Comparing retrieval or classification components during development, especially where misses are costly; checking that a retriever surfaces enough material for a later step (for example, the context given to an LLM in retrieval-augmented generation [S34]); reporting benchmark results [S24].
+Comparing retrieval or classification components during development, especially where misses are costly; checking that a retriever surfaces enough material for a later step (for example, the context given to an LLM in retrieval-augmented generation [es2023]); reporting benchmark results [schoolofai2025].
 
 ### 3.2 Assumptions
 Implicit user model: the user wants all relevant items and will look through everything returned, so a missed item is a loss and an extra irrelevant item is not. Relevance is treated as binary and independent of other results (duplicates count as extra hits). The set of relevant items is assumed to be known, which pooling only approximates. The query set represents real use.
@@ -115,7 +115,7 @@ Returning more results usually raises recall and lowers precision. Raising recal
 - [vanrijsbergen1979], [manning2008]: definitions, variants, and pooling.
 - [voorhees2000]: assessor disagreement and stability.
 - [hersh2000], [kelly2009]: relation to user performance.
-- [S24], [S34]: use in classical ML and RAG evaluation.
+- [schoolofai2025], [es2023]: use in classical ML and RAG evaluation.
 
 ## Open questions and review notes
 Tracked in GitHub Issues: [#2](https://github.com/HAMI-Lab/metrics-kb/issues/2) (sources for pooling bias and recall-oriented domains), [#3](https://github.com/HAMI-Lab/metrics-kb/issues/3) (confirm hersh2000 reports recall specifically), [#4](https://github.com/HAMI-Lab/metrics-kb/issues/4) (RAG "context recall" as its own page?).

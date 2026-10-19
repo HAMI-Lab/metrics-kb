@@ -2,6 +2,8 @@
 
 Notes on how the three spreadsheet tabs (exported 21 Sept 2026) map onto this repo, what is missing, and data problems to fix. Rows are identified by their "Goal" text because the CSV has multi-line cells, so line numbers are unreliable.
 
+The `S<n>` Source IDs below are the spreadsheet's own numbering, kept here for traceability to the original export. `references/bibliography.yaml` no longer uses `S<n>` as a citation key: each was renamed to `<lastname><year>` once a first author was identified (the mapping, and each entry's original `S<n>`, is recorded in that file's `origin:` field).
+
 ## Key finding: the Metrics tab is organized by evaluation goal, not by metric
 
 The "Metric name(s)" column is empty in every row. Each row instead describes an **evaluation goal studied by a group of sources** (for example "Assess calibration / uncertainty quality", with sources 4, 5, 6). One row usually covers several metrics, and one metric (for example accuracy or LLM-as-judge scores) appears in several rows.
@@ -74,7 +76,7 @@ Observation: the spreadsheet leans heavily toward LLM, agent, and XAI evaluation
 ## Data problems to fix
 
 **Sources tab**
-- S2 is an empty row (type "book", no name or link).
+- S2 was an empty row (type "book", no name or link) and was not cited anywhere; removed from the bibliography during the 2026-10 key rename rather than kept as a placeholder.
 - S27 has stray line breaks in its name (cleaned in the bibliography).
 
 **Human vs. System tab**
