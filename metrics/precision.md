@@ -118,14 +118,5 @@ Raising precision by being more selective usually lowers recall. Links from prec
 - [S24], [S34]: use in LLM and RAG evaluation.
 
 ## Open questions and review notes
-- Create the Recall page and link it from 1.3 and 5.1.
-- Should precision for LLM claim-level correctness be its own page?
-
-## Review notes
-<!-- Responses to the open questions above. Drafted with AI assistance on 2026-10-12; to be confirmed by the reviewer. -->
-
-**1. Create the Recall page and link it from 1.3 and 5.1.**
-Status: done (2026-10-12), pending review. Recall is the share of all relevant items that the system found, and it is the main trade-off partner of precision (see 4.3 and 5.2). Done: (a) created [Recall](recall.md) from the template (`status: ai-draft`); (b) added `{metric: recall, relation: trade-off}` to `related` here, and the reverse link on the Recall page; (c) linked recall in 1.3 and 5.1; (d) `python scripts/validate.py` passes. The Recall page has its own open questions about unverified claims.
-
-**2. Should precision for LLM claim-level correctness be its own page?**
-Recommendation: yes. Claim-level precision uses the same formula (correct items ÷ all items returned), but almost every other section of this page would need a different answer. The counted unit is a claim that must first be split out of generated text, not a returned document. "Correct" can mean true in the world or supported by a given source, which are different constructs. Judgments are often made by an LLM judge with its own errors, top-*k* ranking does not apply, a recall counterpart is hard to define, and the main gaming risk is answers that say very little. When most of sections 1 to 4 differ, the measure should be treated as a separate metric rather than a variant. If it gets its own page, add one sentence to section 1.3 of this page pointing readers to it. For the team to decide: a standalone page, or part of the planned Faithfulness page (listed as a candidate metric in `migration/spreadsheet-mapping.md`, source [S34]), since faithfulness is measured in a very similar way.
+- Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall](recall.md) and commit 3912bde (PR #1).
+- Should precision for LLM claim-level correctness be its own page? Tracked in [issue #9](https://github.com/HAMI-Lab/metrics-kb/issues/9).

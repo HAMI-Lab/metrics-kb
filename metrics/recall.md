@@ -118,6 +118,4 @@ Returning more results usually raises recall and lowers precision. Raising recal
 - [S24], [S34]: use in classical ML and RAG evaluation.
 
 ## Open questions and review notes
-- Find a source for the claim that pooling overestimates recall, and one on recall in systematic reviews or legal discovery.
-- Check whether [hersh2000] reports results for recall specifically (instance recall) and update 2.1 and 6.
-- Should RAG "context recall" [S34] be its own page or a variant here?
+Tracked in GitHub Issues: [#2](https://github.com/HAMI-Lab/metrics-kb/issues/2) (sources for pooling bias and recall-oriented domains), [#3](https://github.com/HAMI-Lab/metrics-kb/issues/3) (confirm hersh2000 reports recall specifically), [#4](https://github.com/HAMI-Lab/metrics-kb/issues/4) (RAG "context recall" as its own page?).
