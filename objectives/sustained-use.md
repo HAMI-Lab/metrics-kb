@@ -36,6 +36,12 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Precision](../metrics/precision.md) | positive | theoretical | Long causal chain |
 | [Recall](../metrics/recall.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
 | [Task Completion Time](../metrics/task-completion-time.md) | unknown | none | Could go either way |
+| [Object-Track Completeness](../metrics/object-track-completeness.md) | positive | theoretical | Trusted labels keep downstream teams on the tool |
+| [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md) | negative | theoretical | Paid, repetitive work |
+| [Workaround Action Rate](../metrics/workaround-action-rate.md) | negative | theoretical | |
+| [Work-Loss Incidence](../metrics/work-loss-incidence.md) | negative | theoretical | |
+| [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md) | positive | theoretical | Indirect, via trust and fewer workarounds |
+| [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md) | non-monotonic | theoretical | Near zero may mean blind acceptance |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

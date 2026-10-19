@@ -32,6 +32,12 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [NASA-TLX](../metrics/nasa-tlx.md) | negative | correlational | Not at very low workload |
 | [Precision](../metrics/precision.md) | positive | correlational | Weaker than assumed |
 | [Recall](../metrics/recall.md) | positive | correlational | Batch gains do not always translate to users |
+| [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md) | negative | correlational | At equal completeness; video labeling |
+| [Object-Track Completeness](../metrics/object-track-completeness.md) | positive | theoretical | Effectiveness of labeler and tool together |
+| [Workaround Action Rate](../metrics/workaround-action-rate.md) | negative | theoretical | Catalog of tool-specific patterns |
+| [Work-Loss Incidence](../metrics/work-loss-incidence.md) | negative | theoretical | |
+| [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md) | positive | theoretical | Component test; indirect |
+| [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md) | unknown | none | Reflects the model more than the tool |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].
