@@ -77,10 +77,16 @@ Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive sy
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- A search engine team sets a latency SLO (e.g., p95 under 200ms) and gates backend releases on it.
+- An LLM chatbot product team reports time-to-first-token to decide whether to switch model providers or batch sizes for a snappier feel.
+- A visualization tool team measures pan/zoom interaction latency, since prior lab studies tie this kind of delay to perceived usability.
+- A data platform team compares server-side versus client-side latency to diagnose a complaint about slow dashboard loads despite healthy backend metrics.
+
+### 3.2 Purposes
 Service-level monitoring and alerting; choosing models or hardware under a quality-cost-latency trade-off [liang2022; kapoor2025]; checking that a new feature does not slow the product; A/B testing the effect of speed on user behavior [kohavi2020].
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 That faster is always better, which may not hold where users read a delay as care or effort, or where speed costs quality. That the user is waiting on this response (background tasks tolerate more delay). That the thresholds from command-line and web interaction carry over to conversational AI.
 
 ## 4. Who is involved

@@ -80,10 +80,16 @@ A dimensionless score, 0-100. Usually treated as interval data. A commonly cited
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- A UX team runs SUS after a usability test comparing two onboarding flows for a budgeting app, to decide which design to ship.
+- An enterprise software vendor gives SUS to pilot customers' employees after rolling out a new CRM feature, as one input into the renewal conversation.
+- A research team studying an AI writing assistant administers SUS after each session, reporting it alongside task performance in a paper.
+- An internal tools team compares SUS scores before and after redesigning a ticket-routing dashboard, to show leadership the redesign moved perceived usability.
+
+### 3.2 Purposes
 Quick benchmark of perceived usability; before-and-after comparisons across design iterations; comparison of alternative designs; a standard number to report to stakeholders. Common in HCI and increasingly in human-AI and explainable AI user studies [kim2024; rong2022].
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 That respondents have used the system enough to judge it. That ten generic items capture what matters for this system (for AI systems, trust and output quality may matter more and are not asked about). That the respondent population resembles the eventual users. That the score's meaning carries across cultures and translations.
 
 ## 4. Who is involved

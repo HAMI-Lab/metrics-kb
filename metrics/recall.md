@@ -81,10 +81,16 @@ A proportion from 0 to 1 (ratio scale). Only comparable across systems on the sa
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- A law firm's e-discovery review checks the recall of its predictive-coding tool against a random sample of documents the tool did *not* flag, since a missed responsive document can have legal consequences.
+- A hospital's radiology team reports the recall (sensitivity) of a cancer-screening model to an internal review board before letting it flag cases for a second read.
+- A team doing a systematic literature review checks how many of a hand-curated set of known-relevant papers their ML-assisted screening tool actually surfaced.
+- A RAG-based product FAQ assistant is evaluated for context recall: whether the retriever pulled in the passages actually needed to answer each test question, before the team ships it.
+
+### 3.2 Purposes
 Comparing retrieval or classification components during development, especially where misses are costly; checking that a retriever surfaces enough material for a later step (for example, the context given to an LLM in retrieval-augmented generation [es2023]); reporting benchmark results [schoolofai2025].
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 Implicit user model: the user wants all relevant items and will look through everything returned, so a missed item is a loss and an extra irrelevant item is not. Relevance is treated as binary and independent of other results (duplicates count as extra hits). The set of relevant items is assumed to be known, which pooling only approximates. The query set represents real use.
 
 ## 4. Who is involved

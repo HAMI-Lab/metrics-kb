@@ -87,10 +87,15 @@ sources: []                      # keys in references/bibliography.yaml, e.g. [S
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+<!-- 2-4 concrete scenarios where this metric would actually be pulled up, real or realistic.
+     Name a specific system, team, or decision, not a generic task category (e.g. not just
+     "information retrieval") -- these are seeds for a reviewer to swap in their own. -->
+
+### 3.2 Purposes
 <!-- Evaluation, documentation, comparison, improvement, monitoring... and for which kinds of systems. -->
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 <!-- Hidden beliefs. What reference anchors the unit? For system metrics: the assumed user model.
      For user metrics: the assumed user population. -->
 

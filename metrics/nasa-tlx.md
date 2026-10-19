@@ -81,10 +81,16 @@ Dimensionless, 0-100. There is no universal "acceptable" threshold; scores are b
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- An automotive HMI team compares perceived workload across two in-car voice-assistant designs, to decide which is safe to ship to drivers.
+- A hospital runs a simulated-scenario study to check whether a new clinical-decision-support alert adds to nurses' workload during a shift.
+- A research team studying an AI pair-programming assistant gives TLX after coding sessions to see whether suggestions add or reduce cognitive load.
+- An air-traffic-control simulator study compares TLX scores across levels of automation to check whether a new tool overloads controllers during peak traffic.
+
+### 3.2 Purposes
 Comparing designs or AI-assistance conditions for how demanding they are; checking that added features (such as explanations) do not overload people [rong2022; gambetti2025]; safety-critical work where overload leads to errors.
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 That people can introspect on and report their workload. That the six subscales cover the relevant kinds of demand (for AI assistance, demands such as checking the AI's output may not map neatly). That lower is better, which does not always hold (see 4.3).
 
 ## 4. Who is involved

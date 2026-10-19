@@ -81,10 +81,16 @@ A proportion from 0 to 1 (ratio scale). Only comparable across systems on the sa
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- An e-discovery vendor tunes the relevance threshold of its document classifier before a client review, checking precision on a sample of flagged documents so reviewers are not drowning in false positives.
+- A streaming service A/B tests two "recommended for you" ranking models, comparing precision@10 against what listeners actually played versus skipped.
+- A support-ticket triage system auto-tags incoming tickets by category before routing; the team checks precision on a hand-labeled sample before trusting it to route without human review.
+- A hospital's sepsis-alert system is audited monthly: of the alerts it fired, how many did clinicians confirm versus dismiss as false alarms?
+
+### 3.2 Purposes
 Comparing retrieval or classification components during development; regression testing; reporting benchmark results; evaluating RAG retrievers and LLM classifiers [schoolofai2025; es2023].
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 Implicit user model: the user looks at the top *k* results, all positions equally, and every irrelevant item costs the same. Relevance is treated as binary and independent of other results (no credit for novelty or penalty for duplicates). The query set represents real use.
 
 ## 4. Who is involved

@@ -82,10 +82,16 @@ Seconds (ratio scale). Only comparable within the same task definition.
 
 ## 3. Why it is measured
 
-### 3.1 Purposes
+### 3.1 Use cases
+- A support-tooling team times how long agents take to resolve tickets before and after adding an AI-suggested-reply feature, to see whether it actually speeds up resolution.
+- A tax-software company times how long new users take to complete a standard return in a usability study, to benchmark against a competitor.
+- A clinical-decision-support study times how long clinicians take to reach a diagnosis with versus without an AI assistant, as one of several outcome measures.
+- A data-visualization vendor times how long analysts take to build a standard chart from a given dataset, comparing two tool versions.
+
+### 3.2 Purposes
 Comparing designs or AI-assistance conditions; benchmarking against a competitor or earlier version; finding tasks that are unexpectedly slow. The spreadsheet's Metrics tab lists time-to-diagnosis logs for clinical decision-support evaluation [mienye2024; reddy2021; ahmed2026]; which of these sources actually reports it needs checking.
 
-### 3.2 Assumptions
+### 3.3 Assumptions
 That lower time is better, which fits routine and goal-directed tasks but not exploration, learning, or reading, where more time may mean more engagement or care. That the task is equally meaningful for all participants. That participants are motivated to be fast in the same way real users would be.
 
 ## 4. Who is involved
