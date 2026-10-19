@@ -31,6 +31,7 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Task Completion Time](../metrics/task-completion-time.md) | negative | correlational | For the same outcome |
 | [NASA-TLX](../metrics/nasa-tlx.md) | negative | correlational | Not at very low workload |
 | [Precision](../metrics/precision.md) | positive | correlational | Weaker than assumed |
+| [Recall](../metrics/recall.md) | positive | correlational | Batch gains do not always translate to users |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [S13; S15].
