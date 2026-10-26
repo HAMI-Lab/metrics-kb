@@ -1,0 +1,88 @@
+# The construct DAG: one entry per construct page in constructs/.
+# Edit freely, then run `python scripts/sync_constructs.py` to update the pages.
+#   title:        the page title (a field prefix such as "Retrieval effectiveness: ..." is fine)
+#   broader:      parent construct ids; several parents are allowed (it is a DAG, not a tree)
+#   renamed_from: (optional, one-off) the old id when renaming; removed after the sync
+# Adding an entry creates a stub page. Removing an entry stops the sync until the page is deleted or
+# merged by hand. Comments in this file are not kept when the script rewrites it; only this header is.
+# Entries are listed parents first.
+
+output-quality:
+  title: Output quality
+  broader: []
+
+annotation-quality:
+  title: Annotation quality
+  broader: [output-quality]
+
+pre-annotation-quality:
+  title: "Annotation quality: pre-annotation quality"
+  broader: [annotation-quality]
+
+classification-correctness:
+  title: "Classification effectiveness: correctness"
+  broader: [output-quality]
+
+retrieval-effectiveness:
+  title: Retrieval effectiveness
+  broader: []
+
+relevance:
+  title: "Retrieval effectiveness: relevance"
+  broader: [retrieval-effectiveness]
+
+timeliness:
+  title: "Retrieval effectiveness: timeliness"
+  broader: [relevance]
+
+topical-relevance:
+  title: "Retrieval effectiveness: topical relevance"
+  broader: [relevance]
+
+trustworthiness:
+  title: Trustworthiness
+  broader: [relevance, output-quality]
+
+system-reliability:
+  title: System reliability
+  broader: []
+
+temporal-alignment:
+  title: "Annotation tool: temporal alignment"
+  broader: [system-reliability, annotation-quality]
+
+work-preservation:
+  title: Work preservation
+  broader: [system-reliability]
+
+usability:
+  title: Usability
+  broader: []
+
+interaction-friction:
+  title: Interaction friction
+  broader: [usability]
+
+effectiveness:
+  title: "Usability: effectiveness"
+  broader: [usability]
+
+label-completeness:
+  title: "Annotation quality: completeness"
+  broader: [annotation-quality, effectiveness]
+
+efficiency:
+  title: "Usability: efficiency"
+  broader: [usability]
+
+mental-workload:
+  title: Mental workload
+  broader: [efficiency]
+
+responsiveness:
+  title: System responsiveness
+  broader: [efficiency]
+
+perceived-usability:
+  title: "Usability: perceived usability"
+  broader: [usability]
