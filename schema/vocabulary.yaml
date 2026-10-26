@@ -72,6 +72,8 @@ data_source:
   physiological: Eye tracking, pupillometry, EEG, heart rate.
   observation: Researcher observation, think-aloud, video coding.
   system-telemetry: Server-side measurements (latency, compute, energy).
+  synthetic-labels: Machine-generated or weak reference labels (LLM-generated, programmatic, distant supervision).
+  simulated-users: Behaviour produced by a user simulator or an LLM acting as a proxy user.
 
 cost_level:         # effort to obtain one usable measurement for one condition
   low: Automatic once instrumented; no participants needed per measurement.
@@ -89,6 +91,29 @@ status:
   human-edited: A person has edited it; claims not yet systematically checked.
   human-reviewed: A person has checked claims against the cited sources.
   expert-verified: A domain expert has signed off.
+
+research_method:    # layer 1 of the measurement-strategy landscape: how the data is gathered
+  test-collection: A fixed benchmark, test collection, or automated test suite with known inputs.
+  logs-telemetry: Interaction logs and system telemetry from a running system.
+  task-study: People do defined tasks with the system (lab or field usability test, controlled experiment task).
+  questionnaire-survey: Standardized or custom questionnaires and surveys.
+  interview: Structured, semi-structured, or unstructured interviews.
+  diary-esm: Diary studies and experience sampling (ESM) over days or weeks.
+  observation-think-aloud: Researcher observation, think-aloud, video recording.
+  physiological-sensing: Eye tracking, pupillometry, EEG, heart rate, skin conductance.
+  expert-inspection: Experts inspect the system without users (heuristic evaluation, cognitive walkthrough).
+  analytical-model: Predictions from a model of the user or task without observing users (GOMS, KLM).
+  simulation: Simulated users or environments, including LLM proxy users.
+
+validity_concern:   # how much deliberation the gap between the number and its construct deserves
+  low: The number obviously is, or closely tracks, the construct; a sentence in 2.1 suffices.
+  moderate: Known gaps exist; read 2.1 before relying on the number for decisions.
+  high: The link is contested or easily broken (proxy, gaming, unchecked judges); deliberate before use.
+
+related_kind:       # front matter related[].kind; matches the subsections of section 5
+  operational: Shares computation (variant, part, built from, derived from).
+  conceptual: Measures the same or a related construct (including DAG siblings).
+  empirical: Moves with this metric according to evidence (correlation, trade-off, causal link).
 
 # How the slide's original values map to this vocabulary.
 slide_mapping:

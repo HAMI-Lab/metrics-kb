@@ -4,7 +4,7 @@ id: metric-id                    # lowercase-hyphenated; must equal the file nam
 title: Metric Name
 aliases: []
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: []                       # e.g. hci, information-retrieval, recommender-systems, visualization, human-ai-interaction, llm-evaluation
 
 # ---- Provenance ----
@@ -13,8 +13,10 @@ last_reviewed: null              # YYYY-MM-DD
 reviewers: []
 
 # ---- 1. What (construct) ----
+# One page = one operationalization. Variants that differ only in a parameter (precision@k) stay on this page.
 construct:
-  statement: ""                  # one sentence in plain language; this is the authoritative definition
+  statement: ""                  # one sentence in plain language: the "spirit" of what this number measures, across all its uses. Authoritative.
+  measures: []                   # construct ids from constructs/ (one or more); the place(s) this metric sits in the construct DAG
   subject: []                    # vocabulary: subject
   aspect: []                     # vocabulary: aspect
   perspective: []                # vocabulary: perspective
@@ -25,11 +27,16 @@ construct:
 # ---- 2. How (operationalization) ----
 operationalization:
   measure_type: direct           # direct | proxy | mixed, relative to construct.statement
+  research_method: []            # vocabulary: research_method (how the data is gathered)
+  route: []                      # strategy ids from strategies/ (how the data becomes a number)
   collection_mode: []            # vocabulary: collection_mode
   data_source: []                # vocabulary: data_source
   unit: ""
   range: ""
   better: higher                 # higher | lower | target-range | context-dependent
+  validity_concern:              # how much thought the gap between number and construct deserves
+    level: low                   # vocabulary: validity_concern
+    note: ""                     # one line: why
 
 # ---- 4. Who (cost) ----
 cost:
@@ -38,9 +45,8 @@ cost:
   automatable: true
 
 # ---- 5. Related metrics ----
-related:                         # each item: {metric: <id>, relation: <see below>, note: "..."}
+related:                         # each item: {metric: <id>, kind: operational | conceptual | empirical, note: "..."}
   []
-  # relation values: same-construct | complementary | trade-off | component-of | correlated | causally-linked
 
 # ---- 6. Business objectives ----
 objectives:
@@ -48,7 +54,7 @@ objectives:
   improved-usability: {direction: unknown, evidence: none, note: ""}
 
 # ---- 7. Sources ----
-sources: []                      # keys in references/bibliography.yaml, e.g. [S13, brooke1996]
+sources: []                      # keys in references/bibliography.yaml
 ---
 
 # Metric Name
@@ -56,41 +62,51 @@ sources: []                      # keys in references/bibliography.yaml, e.g. [S
 > One-sentence summary a newcomer can read in five seconds.
 
 ## 1. What is measured
+<!-- What property, of what subject, in what context, does this number capture? -->
 
 ### 1.1 Definition
 <!-- Plain-language definition. Formula goes in 2.4. -->
 
 ### 1.2 Construct: property of subject in context
-<!-- Expand construct.statement: what property, of what subject, in what context.
-     Name the abstract construct of interest if there is one (e.g. "perceived usability"). -->
+<!-- Expand construct.statement: what property, of what subject, in what context. Write it at the level
+     of the "spirit" of the measurement, so it holds for every use in 3.1. The links to the construct
+     DAG (front matter construct.measures) are listed automatically below; do not edit between the markers. -->
+<!-- generated:constructs:start -->
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 <!-- Common misreadings; neighbouring constructs this metric is often confused with. -->
 
 ## 2. How it is measured
+<!-- How are observations gathered and turned into this number, and how far can the number be trusted? -->
 
 ### 2.1 Direct or proxy; construct validity
-<!-- Is it a direct or proxy measure of the construct in 1.2? How well does the measurement align
-     with the construct? What epistemic uncertainty remains? -->
+<!-- Is it a direct or proxy measure of the construct in 1.2? If it is a proxy, what gap between the
+     number and the construct could mislead a user of this metric, and what evidence says the gap is
+     small? Keep this short when the metric obviously is the thing (validity_concern: low); say more
+     when it is contested (moderate or high). The research method and route in the front matter link
+     to strategy pages that hold the caveats shared by all metrics using that route. -->
 
 ### 2.2 Reliability
-<!-- Is the construct measured consistently across subjects and contexts? Known reliability figures. -->
+<!-- Would the metric give the same answer twice: across judges, occasions, samples? Known figures. -->
 
 ### 2.3 Data collection and measurement error
 <!-- Online / offline / in-lab / field. Instruments. Sources of measurement error and statistical uncertainty. -->
 
 ### 2.4 Computation
-<!-- Data selection, transformation, aggregation. The formula. Common variants. -->
+<!-- Data selection, transformation, aggregation. The formula. Common variants (e.g. @k, macro vs micro). -->
 
 ### 2.5 Unit and scale
 <!-- Unit, range, scale type (ratio / interval / ordinal), what "good" looks like, benchmarks. -->
 
 ## 3. Why it is measured
+<!-- In which situations, and for which purposes, do people pull up this number? -->
 
 ### 3.1 Use cases
 <!-- 2-4 concrete scenarios where this metric would actually be pulled up, real or realistic.
      Name a specific system, team, or decision, not a generic task category (e.g. not just
-     "information retrieval") -- these are seeds for a reviewer to swap in their own. -->
+     "information retrieval") -- these are seeds for a reviewer to swap in their own.
+     Different fields' uses of the same computation (e.g. precision in search vs in classification) go here. -->
 
 ### 3.2 Purposes
 <!-- Evaluation, documentation, comparison, improvement, monitoring... and for which kinds of systems. -->
@@ -100,6 +116,7 @@ sources: []                      # keys in references/bibliography.yaml, e.g. [S
      For user metrics: the assumed user population. -->
 
 ## 4. Who is involved
+<!-- Who collects the number, who acts on it, and what can go wrong once people act on it? -->
 
 ### 4.1 Measurers and cost of measuring
 <!-- Who collects it, what it takes (participants, equipment, expertise, time). -->
@@ -108,18 +125,28 @@ sources: []                      # keys in references/bibliography.yaml, e.g. [S
 <!-- Who reads it; which decisions it informs. -->
 
 ### 4.3 Risks: misuse, misinterpretation, gaming, Goodhart's law
-<!-- Is it prone to misuse or misreading? Can it be gamed, and who has the incentive? -->
+<!-- Is it prone to misuse or misreading? Can it be gamed, and who has the incentive? This is the
+     consequential side of validity: what happens to the link between number and construct once
+     people start optimizing the number or are judged by it. -->
 
 ## 5. Related metrics
+<!-- Which other metrics share its computation, its construct, or its movements? -->
 
-### 5.1 Static relationships
-<!-- Metrics with similar construct / operationalization / purpose / stakeholders.
-     Complementary (together characterize the subject) or supplementary (substitutes)?
-     Include the cost vs directness trade-off where relevant. -->
+### 5.1 Operationally related metrics
+<!-- Metrics that share computation with this one: variants, parts, metrics built from it or derived
+     from it (e.g. F1 and average precision from precision; NASA-TLX subscales). Front matter kind: operational. -->
 
-### 5.2 Dynamic relationships
-<!-- If this metric moves, how do others move? Known correlations (with sign and strength)
-     and causal links, with evidence. -->
+### 5.2 Conceptually related metrics
+<!-- Metrics that measure the same or a related construct, including siblings in the construct DAG
+     (precision and recall). Say whether each is a substitute or a complement, and the trade-off
+     between cost and directness. Front matter kind: conceptual. Metrics that share a construct or
+     a neighbouring construct are listed automatically below. -->
+<!-- generated:neighbours:start -->
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
+<!-- If this metric moves, how do others move? Known correlations (with sign and strength), trade-offs
+     and causal links, with evidence. Front matter kind: empirical. -->
 
 ## 6. Links to business objectives
 <!-- Sustained use over time; improved usability. State direction, evidence strength, and the
