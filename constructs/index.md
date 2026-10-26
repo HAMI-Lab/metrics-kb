@@ -14,7 +14,6 @@ graph TD
   c_component_performance(["Component performance"])
   c_information_literacy(["Literacy: information literacy"])
   c_interaction_friction(["Interaction friction"])
-  c_interface_performance(["Interface performance"])
   c_label_completeness(["Annotation quality: completeness"])
   c_literacy(["Literacy"])
   c_machine_pre_annotation_quality(["Machine pre-annotation quality"])
@@ -33,7 +32,6 @@ graph TD
   c_task_effectiveness(["Task effectiveness"])
   c_task_efficiency(["Task efficiency"])
   c_task_performance(["Task performance"])
-  c_temporal_alignment(["Annotation tool: temporal alignment"])
   c_timeliness(["Retrieval effectiveness: timeliness"])
   c_topical_relevance(["Retrieval effectiveness: topical relevance"])
   c_trustworthiness(["Trustworthiness"])
@@ -57,10 +55,8 @@ graph TD
   c_classification_performance --> c_classification_correctness
   c_component_characteristics --> c_component_performance
   c_component_performance --> c_classification_performance
-  c_component_performance --> c_interface_performance
   c_component_performance --> c_machine_pre_annotation_quality
   c_component_performance --> c_retrieval_performance
-  c_interface_performance --> c_temporal_alignment
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_visualization_literacy
@@ -95,9 +91,9 @@ graph TD
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
   c_responsiveness -.-> m_response_latency
+  c_system_reliability -.-> m_frame_sync_accuracy
   c_task_efficiency -.-> m_active_labeling_time_per_object
   c_task_efficiency -.-> m_task_completion_time
-  c_temporal_alignment -.-> m_frame_sync_accuracy
   c_topical_relevance -.-> m_precision
   c_topical_relevance -.-> m_recall
   c_work_preservation -.-> m_work_loss_incidence
@@ -112,8 +108,6 @@ A construct with several broader constructs appears under each of them.
   - [Component performance](component-performance.md)
     - [Classification performance](classification-performance.md)
       - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
-    - [Interface performance](interface-performance.md)
-      - [Annotation tool: temporal alignment](temporal-alignment.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
     - [Machine pre-annotation quality](machine-pre-annotation-quality.md) · metrics: [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
@@ -126,7 +120,7 @@ A construct with several broader constructs appears under each of them.
   - [System performance](system-performance.md)
     - [Output quality](output-quality.md)
       - [Trustworthiness](trustworthiness.md)
-    - [System reliability](system-reliability.md)
+    - [System reliability](system-reliability.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
       - [Work preservation](work-preservation.md) · metrics: [Work-Loss Incidence](../metrics/work-loss-incidence.md)
     - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
 - [Task characteristics](task-characteristics.md)
@@ -156,7 +150,6 @@ A construct with several broader constructs appears under each of them.
 - [Classification performance](classification-performance.md)
 - [Component characteristics](component-characteristics.md)
 - [Component performance](component-performance.md)
-- [Interface performance](interface-performance.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
@@ -169,7 +162,6 @@ A construct with several broader constructs appears under each of them.
 - [Retrieval performance](retrieval-performance.md)
 - [System characteristics](system-characteristics.md)
 - [System performance](system-performance.md)
-- [System reliability](system-reliability.md)
 - [Task characteristics](task-characteristics.md)
 - [Task effectiveness](task-effectiveness.md)
 - [Task performance](task-performance.md)

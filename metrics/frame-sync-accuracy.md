@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "The share of annotation operations whose box is saved to, and later shown on, the same video frame the person saw when making it."
-  measures: [temporal-alignment]
+  measures: [system-reliability]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -63,7 +63,7 @@ The property is **temporal correctness** of the video and annotation component. 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under Component characteristics → Component performance → Interface performance)
+- [System reliability](../constructs/system-reliability.md) (under System characteristics → System performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -129,7 +129,8 @@ The field companion (the share of tasks where frames can only be approximated, 2
 Component-level cause of labeler-level problems. Complementary to [Response Latency](response-latency.md).
 
 <!-- generated:neighbours:start -->
-_None found from the construct DAG yet._
+- Narrower construct: [Work-Loss Incidence](work-loss-incidence.md) (Work preservation)
+- Sibling construct: [Response Latency](response-latency.md) (System responsiveness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

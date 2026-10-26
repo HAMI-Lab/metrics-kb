@@ -4,6 +4,15 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-10-26 (component clarifications)
+
+### D15. Components: what counts, and what is deferred
+- **Removed.** Interface performance and its child, temporal alignment (supersedes that part of D14). The interface was an example of a component; interface constructs will be added later. [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md) now links to system reliability, where temporal alignment sat before D14.
+- **Deferred.** Generation and recommendation are components, because they can come from a backend without specifying how the front end renders them. Pages to be added later.
+- **Component boundary.** A model that both retrieves and generates is still a component, or several components if those capabilities can be evaluated separately, because it leaves rendering to the interface, workflow, and UX design.
+
+---
+
 ## 2026-10-26 (component split): Component characteristics as a fourth root
 
 ### D14. Separate what a component does from what the system does

@@ -16,14 +16,6 @@ classification-correctness:
   title: "Classification effectiveness: correctness"
   broader: [classification-performance]
 
-interface-performance:
-  title: Interface performance
-  broader: [component-performance]
-
-temporal-alignment:
-  title: "Annotation tool: temporal alignment"
-  broader: [interface-performance]
-
 machine-pre-annotation-quality:
   title: Machine pre-annotation quality
   broader: [component-performance]

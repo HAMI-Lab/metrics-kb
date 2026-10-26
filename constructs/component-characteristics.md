@@ -47,4 +47,4 @@ Fourth top-level group, decided by the team on 2026-10-26. Matches the component
 - [turpin2006]
 
 ## Open questions and review notes
-- Where does a component end and the system begin for end-to-end models (one model doing retrieval and generation)?
+- Settled (2026-10-26): a model that both retrieves and generates is still a component, or several components if those capabilities can be evaluated separately, because it leaves rendering to the interface, workflow, and UX design.
