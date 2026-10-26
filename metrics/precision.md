@@ -63,8 +63,8 @@ The property is **output correctness** (the absence of false positives). The sub
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under System characteristics → System performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
-- [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under System characteristics → System performance → Output quality)
+- [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
+- [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -125,7 +125,6 @@ Summaries of both: F1, average precision, nDCG. Precision@k and macro or micro a
 
 <!-- generated:neighbours:start -->
 - Same construct: [Recall](recall.md) (Retrieval effectiveness: topical relevance)
-- Sibling construct: [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (Machine pre-annotation quality)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

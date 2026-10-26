@@ -13,6 +13,8 @@ A record of decisions about the wiki's structure, why they were made, and what w
 - **Kept.** Trustworthiness keeps two parents: relevance (component side) and output quality (system side), as the same idea at two levels.
 - **Open.** Name of "interface performance" (it may read as speed only); generation and recommendation components; where the component/system line falls for end-to-end models.
 
+---
+
 ## 2026-10-26 (later still): User characteristics, system performance, annotation quality
 
 ### D13. Three roots, symmetric task and system sides

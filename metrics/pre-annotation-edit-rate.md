@@ -63,7 +63,7 @@ The property is **how far the model's proposal was from what the person accepted
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Machine pre-annotation quality](../constructs/machine-pre-annotation-quality.md) (under System characteristics → System performance → Output quality)
+- [Machine pre-annotation quality](../constructs/machine-pre-annotation-quality.md) (under Component characteristics → Component performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -125,7 +125,7 @@ Added tracks per video and the edit rate per model-score bin (2.4) are computed 
 A human-observed stand-in for model [Precision](precision.md) (deletions) and localization error (resizes) [manning2008]. Complementary: [Object-Track Completeness](object-track-completeness.md), which sees misses. Cheaper than a gold-standard model evaluation, but only valid when checking is careful.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Precision](precision.md) (Classification effectiveness: correctness), [Recall](recall.md) (Classification effectiveness: correctness)
+_None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
