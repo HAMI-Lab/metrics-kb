@@ -85,7 +85,7 @@ Offline. Build a gold sample: videos labeled independently by two experienced la
 
 Example, InfinityPool: the server already expands keyframes into per-frame boxes (`apps/api/app/libraries/expandLabels.ts`), so the comparison script can read the same expansion the training pipeline uses. Stratify the gold sample by mode (from scratch vs pre-annotated) and by video type (constant vs variable frame rate, short vs long). A first pilot of roughly 20 to 30 videos per mode gives a usable estimate; size the full study from the pilot's spread.
 
-Error sources: IoU threshold choice; frame misalignment between labels and gold (which is itself a known InfinityPool issue, see [Frame-Sync Accuracy](frame-sync-accuracy.md)); disagreement on borderline objects.
+Error sources: IoU threshold choice; frame misalignment between labels and gold (itself a known InfinityPool issue, request #11); disagreement on borderline objects.
 
 ### 2.4 Computation
 - Match labeled boxes to gold boxes per frame with an IoU threshold (commonly 0.5), as in CLEAR MOT [bernardin2008].

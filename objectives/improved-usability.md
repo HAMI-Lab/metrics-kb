@@ -36,7 +36,6 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Object-Track Completeness](../metrics/object-track-completeness.md) | positive | theoretical | Effectiveness of labeler and tool together |
 | [Workaround Action Rate](../metrics/workaround-action-rate.md) | negative | theoretical | Catalog of tool-specific patterns |
 | [Work-Loss Incidence](../metrics/work-loss-incidence.md) | negative | theoretical | |
-| [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md) | positive | theoretical | Component test; indirect |
 | [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md) | unknown | none | Reflects the model more than the tool |
 
 ## Open questions

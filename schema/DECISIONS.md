@@ -4,6 +4,14 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-10-26 (frame sync removed)
+
+### D16. Frame-Sync Accuracy removed for now
+- **Removed.** The metric page Frame-Sync Accuracy (supersedes the relinking in D15). It is a component-level (interface) metric, so it should not sit under system reliability, and interface constructs are not yet defined. Temporal alignment stays removed.
+- **Pending.** The team will revisit the interface and interaction metrics proposed for InfinityPool before adding interface constructs. The underlying issue (boxes out of step with video frames, InfinityPool requests #1 and #11) is still noted as an error source on [Object-Track Completeness](../metrics/object-track-completeness.md).
+
+---
+
 ## 2026-10-26 (component clarifications)
 
 ### D15. Components: what counts, and what is deferred

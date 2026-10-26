@@ -40,7 +40,6 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md) | negative | theoretical | Paid, repetitive work |
 | [Workaround Action Rate](../metrics/workaround-action-rate.md) | negative | theoretical | |
 | [Work-Loss Incidence](../metrics/work-loss-incidence.md) | negative | theoretical | |
-| [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md) | positive | theoretical | Indirect, via trust and fewer workarounds |
 | [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md) | non-monotonic | theoretical | Near zero may mean blind acceptance |
 
 ## Open questions

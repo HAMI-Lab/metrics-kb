@@ -119,7 +119,7 @@ Component of [Task Completion Time](task-completion-time.md).
 Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Frame-Sync Accuracy](frame-sync-accuracy.md) (System reliability)
+_None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

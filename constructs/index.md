@@ -40,7 +40,6 @@ graph TD
   c_visualization_literacy(["Literacy: visualization literacy"])
   c_work_preservation(["Work preservation"])
   m_active_labeling_time_per_object["Active Labeling Time per Object"]:::metric
-  m_frame_sync_accuracy["Frame-Sync Accuracy"]:::metric
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
   m_object_track_completeness["Object-Track Completeness"]:::metric
   m_pre_annotation_edit_rate["Pre-annotation Edit Rate"]:::metric
@@ -91,7 +90,6 @@ graph TD
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
   c_responsiveness -.-> m_response_latency
-  c_system_reliability -.-> m_frame_sync_accuracy
   c_task_efficiency -.-> m_active_labeling_time_per_object
   c_task_efficiency -.-> m_task_completion_time
   c_topical_relevance -.-> m_precision
@@ -120,7 +118,7 @@ A construct with several broader constructs appears under each of them.
   - [System performance](system-performance.md)
     - [Output quality](output-quality.md)
       - [Trustworthiness](trustworthiness.md)
-    - [System reliability](system-reliability.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
+    - [System reliability](system-reliability.md)
       - [Work preservation](work-preservation.md) · metrics: [Work-Loss Incidence](../metrics/work-loss-incidence.md)
     - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
 - [Task characteristics](task-characteristics.md)
@@ -162,6 +160,7 @@ A construct with several broader constructs appears under each of them.
 - [Retrieval performance](retrieval-performance.md)
 - [System characteristics](system-characteristics.md)
 - [System performance](system-performance.md)
+- [System reliability](system-reliability.md)
 - [Task characteristics](task-characteristics.md)
 - [Task effectiveness](task-effectiveness.md)
 - [Task performance](task-performance.md)

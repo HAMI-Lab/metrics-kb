@@ -32,7 +32,7 @@ Reliability failures show up as usability problems, but their fixes are engineer
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
+_No metric page yet._
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

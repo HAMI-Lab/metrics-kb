@@ -128,7 +128,7 @@ No operationally related metric pages yet. Severity (edits or minutes lost per i
 Reliability counterpart to effectiveness measures. Complementary to [Workaround Action Rate](workaround-action-rate.md) and to [Active Labeling Time per Object](active-labeling-time-per-object.md) (redo time).
 
 <!-- generated:neighbours:start -->
-- Broader construct: [Frame-Sync Accuracy](frame-sync-accuracy.md) (System reliability)
+_None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
