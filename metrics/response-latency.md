@@ -3,7 +3,7 @@ id: response-latency
 title: Response Latency
 aliases: [response time, latency, time to first token, TTFT, end-to-end latency]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, information-retrieval, visualization, llm-evaluation, systems]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How long the system takes to respond after the user acts."
+  measures: [responsiveness]
   subject: [system]
   aspect: [responsiveness, efficiency]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: direct
+  research_method: [logs-telemetry]
+  route: [direct-reading]
   collection_mode: [offline, online]
   data_source: [system-telemetry, timing]
   unit: "milliseconds"
   range: "> 0"
   better: lower
+  validity_concern: {level: low, note: "Direct for system waiting time; perceived speed can differ from measured latency."}
 
 cost:
   level: low
@@ -33,8 +37,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: task-completion-time, relation: component-of, note: "Latency is part of the time users spend on a task."}
-  - {metric: system-usability-scale, relation: causally-linked, note: "Delays plausibly lower perceived usability."}
+  - {metric: task-completion-time, kind: operational, note: "Latency is part of the time users spend on a task."}
+  - {metric: system-usability-scale, kind: empirical, note: "Delays plausibly lower perceived usability."}
 
 objectives:
   sustained-use: {direction: negative, evidence: causal, note: "Controlled online experiments in web search show added latency reduces engagement; transfer to AI assistants, where users expect slower answers, is untested here."}
@@ -54,6 +58,12 @@ The elapsed time from a user action (a click, a query, a prompt) to the system's
 
 ### 1.2 Construct: property of subject in context
 The property is **responsiveness**. The subject is the **system**, including its network path. The context is the kind of request (a simple lookup vs. a long generation) and the time and place (load, network conditions, the user's device).
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [System responsiveness](../constructs/responsiveness.md) (under Usability → Usability: efficiency)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure how fast the response *feels*: progress indicators and streaming change perception without changing latency. It does not measure the quality of the response; a fast wrong answer scores well. It does not include the user's own time to read or act; see [Task Completion Time](task-completion-time.md).
@@ -102,11 +112,19 @@ Reporting the mean hides tail problems. Measuring server time only hides client 
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Component of [Task Completion Time](task-completion-time.md). Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [kapoor2025]. Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
+### 5.1 Operationally related metrics
+Component of [Task Completion Time](task-completion-time.md).
 
-### 5.2 Dynamic relationships
-In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
+### 5.2 Conceptually related metrics
+Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
+
+<!-- generated:neighbours:start -->
+- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency)
+- Sibling construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
+Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [kapoor2025]. In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
 
 ## 6. Links to business objectives
 **Sustained use:** negative, with causal evidence from online experiments in web search [kohavi2020; arapakis2014]. How far this carries to AI assistants, where users may expect answers to take seconds, is not known.

@@ -3,7 +3,7 @@ id: system-usability-scale
 title: System Usability Scale (SUS)
 aliases: [SUS]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, human-ai-interaction, visualization, information-retrieval]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How usable people who have just used a system perceive it to be, summarized as one score."
+  measures: [perceived-usability]
   subject: [system, user]
   aspect: [ease-of-use, satisfaction]
   perspective: [perceived]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [questionnaire-survey]
+  route: [self-rating]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "SUS score (dimensionless)"
   range: "0-100"
   better: higher
+  validity_concern: {level: low, note: "Direct for perceived usability as reported; a proxy for usability in the ISO sense (see 2.1)."}
 
 cost:
   level: medium
@@ -33,9 +37,9 @@ cost:
   automatable: false
 
 related:
-  - {metric: nasa-tlx, relation: complementary, note: "SUS asks about the system; NASA-TLX asks about the demand the task placed on the person."}
-  - {metric: task-completion-time, relation: complementary, note: "Objective efficiency vs. perceived usability; correlations are modest."}
-  - {metric: response-latency, relation: causally-linked, note: "Slow responses plausibly lower perceived usability; not quantified for SUS specifically."}
+  - {metric: nasa-tlx, kind: conceptual, note: "SUS asks about the system; NASA-TLX asks about the demand the task placed on the person."}
+  - {metric: task-completion-time, kind: conceptual, note: "Objective efficiency vs. perceived usability; correlations are modest."}
+  - {metric: response-latency, kind: empirical, note: "Slow responses plausibly lower perceived usability; not quantified for SUS specifically."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Via perceived ease of use -> intention to use (TAM), and satisfaction -> continuance (expectation-confirmation model). Links to logged retention for SUS itself are not established here."}
@@ -57,6 +61,12 @@ SUS is a standardized questionnaire of ten statements about a system, answered o
 The property is **perceived usability**, which blends ease of use and satisfaction. The subject is the **system**, as judged by a **user**. The context is the use the respondent just had: the tasks they did and who they are. A SUS score therefore describes the system *for these people doing these tasks*, not the system in general.
 
 Factor analyses suggest SUS has two related parts, often called "usable" (eight items) and "learnable" (two items) [lewis2009], though later work questions how stable that split is [lewis2018]. Most practice treats it as one overall score.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Usability: perceived usability](../constructs/perceived-usability.md) (under Usability)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure objective performance. People can rate a system highly and still fail tasks, or the reverse [sauro2009; hornbaek2007]. It also does not diagnose *what* is wrong: a low score says there is a problem, not where it is. And it is not a percentage or a percentile, even though its range is 0-100.
@@ -105,10 +115,17 @@ Reading 70 as "70%" is a common mistake. Comparing scores across very different 
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
+### 5.1 Operationally related metrics
+No operationally related metric pages yet. The "usable" and "learnable" subscores (1.2) are computed from subsets of the same ten items [lewis2009].
+
+### 5.2 Conceptually related metrics
 Other perceived-usability questionnaires (for example UMUX, UMUX-LITE, PSSUQ) are close substitutes. [NASA-TLX](nasa-tlx.md) is complementary: it asks about demand on the person rather than qualities of the system. [Task Completion Time](task-completion-time.md) and task success are complementary objective measures; SUS is cheaper to add to a study than careful timing, but it says nothing about actual performance.
 
-### 5.2 Dynamic relationships
+<!-- generated:neighbours:start -->
+- Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Across studies, perceived-satisfaction measures correlate only modestly with efficiency and effectiveness measures [hornbaek2007], with somewhat stronger correlations when measured at the task level [sauro2009]. So improving task time will not reliably raise SUS, and vice versa. Slower response times plausibly lower SUS; see [Response Latency](response-latency.md).
 
 ## 6. Links to business objectives

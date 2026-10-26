@@ -3,7 +3,7 @@ id: active-labeling-time-per-object
 title: Active Labeling Time per Object
 aliases: [annotation time per track, labeling cost per object, time per bounding-box track]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [data-annotation, hci, computer-vision]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How much active working time a labeler spends, using the tool, to produce one finished object track in a video."
+  measures: [efficiency]
   subject: [user-system-team]
   aspect: [efficiency]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [logs-telemetry, task-study]
+  route: [direct-reading]
   collection_mode: [field, in-lab]
   data_source: [interaction-logs, timing]
   unit: "seconds per gold object (or per submitted track)"
   range: "> 0"
   better: lower
+  validity_concern: {level: moderate, note: "The idle cutoff and object-count normalization shape the number; compare only at equal completeness."}
 
 cost:
   level: low
@@ -33,11 +37,11 @@ cost:
   automatable: true
 
 related:
-  - {metric: task-completion-time, relation: same-construct, note: "Task time normalized by object count, with idle time removed."}
-  - {metric: object-track-completeness, relation: trade-off, note: "Only compare times at equal completeness."}
-  - {metric: pre-annotation-edit-rate, relation: correlated, note: "More corrections are expected to cost more time."}
-  - {metric: workaround-action-rate, relation: correlated, note: "Workarounds add time without adding labels."}
-  - {metric: nasa-tlx, relation: complementary, note: "Time does not capture how demanding the work felt."}
+  - {metric: task-completion-time, kind: operational, note: "Task time normalized by object count, with idle time removed."}
+  - {metric: object-track-completeness, kind: empirical, note: "Only compare times at equal completeness."}
+  - {metric: pre-annotation-edit-rate, kind: empirical, note: "More corrections are expected to cost more time."}
+  - {metric: workaround-action-rate, kind: empirical, note: "Workarounds add time without adding labels."}
+  - {metric: nasa-tlx, kind: conceptual, note: "Time does not capture how demanding the work felt."}
 
 objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "Labeling is paid, repetitive work; lower cost per object makes the tool worth keeping. Not tested."}
@@ -57,6 +61,12 @@ Total active time a labeler spends on a video task (summed across sessions, minu
 
 ### 1.2 Construct: property of subject in context
 The property is **labeling efficiency**. The subject is the **labeler and tool together**. The context is a **task** (one video) and depends on the labeler's experience and on video properties (length, object count, motion).
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Usability: efficiency](../constructs/efficiency.md) (under Usability)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 Not label quality; it must be read together with [Object-Track Completeness](object-track-completeness.md). Not how demanding the work felt ([NASA-TLX](nasa-tlx.md)). Not time lost to crashes that led to redoing work, unless redone work is logged too.
@@ -115,10 +125,19 @@ Used as a per-labeler productivity score, it pushes people to skip checking and 
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Refinement of [Task Completion Time](task-completion-time.md). Complementary: [Object-Track Completeness](object-track-completeness.md), [NASA-TLX](nasa-tlx.md). Its components include [Response Latency](response-latency.md) (waiting for video loads and seeks) and [Workaround Action Rate](workaround-action-rate.md).
+### 5.1 Operationally related metrics
+Refinement of [Task Completion Time](task-completion-time.md). Its components include [Response Latency](response-latency.md) (waiting for video loads and seeks) and [Workaround Action Rate](workaround-action-rate.md).
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+Complementary: [Object-Track Completeness](object-track-completeness.md), [NASA-TLX](nasa-tlx.md).
+
+<!-- generated:neighbours:start -->
+- Same construct: [Task Completion Time](task-completion-time.md) (Usability: efficiency)
+- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Response Latency](response-latency.md) (System responsiveness)
+- Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Video annotation research shows labeling cost can be traded against quality through keyframe spacing and interpolation [vondrick2013]; expect speed-completeness trade-offs. Efficiency, effectiveness, and satisfaction correlate only modestly in general [hornbaek2007].
 
 ## 6. Links to business objectives

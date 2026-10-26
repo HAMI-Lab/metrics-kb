@@ -3,7 +3,7 @@ id: precision
 title: Precision
 aliases: [positive predictive value, "precision@k", P@k]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of the items a system returns or labels as positive, the share that are actually relevant or correct."
+  measures: [topical-relevance, classification-correctness]
   subject: [system-component, system]
   aspect: [effectiveness]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [test-collection, logs-telemetry]
+  route: [reference-comparison, external-judgment]
   collection_mode: [offline, online]
   data_source: [relevance-judgments, reference-answers, model-judge]
   unit: "proportion"
   range: "0-1"
   better: higher
+  validity_concern: {level: moderate, note: "Direct for meeting the relevance criterion; a weak proxy for whether results help users' tasks (see 2.1)."}
 
 cost:
   level: medium
@@ -33,9 +37,9 @@ cost:
   automatable: true
 
 related:
-  - {metric: recall, relation: trade-off, note: "Being more selective raises precision and lowers recall."}
-  - {metric: task-completion-time, relation: correlated, note: "Better ranking is expected to shorten search tasks; user studies show the link is weaker than assumed."}
-  - {metric: system-usability-scale, relation: correlated, note: "Output quality is one input to perceived usability; not measured directly."}
+  - {metric: recall, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
+  - {metric: task-completion-time, kind: empirical, note: "Better ranking is expected to shorten search tasks; user studies show the link is weaker than assumed."}
+  - {metric: system-usability-scale, kind: empirical, note: "Output quality is one input to perceived usability; not measured directly."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Relevant results are assumed to make the system worth returning to; long causal chain."}
@@ -55,6 +59,13 @@ Precision = relevant items returned ÷ all items returned. In classification it 
 
 ### 1.2 Construct: property of subject in context
 The property is **output correctness** (the absence of false positives). The subject is usually a **system component** such as a retriever, ranker, or classifier, or the whole system when outputs are judged end to end. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Retrieval effectiveness → Retrieval effectiveness: relevance)
+- [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Output quality)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It ignores what was missed (that is [Recall](recall.md)). It says nothing about how results are presented, how long the user took, or whether the user was satisfied. For LLM outputs, "precision" is sometimes used loosely for the share of correct claims; make sure the counting unit is stated.
@@ -106,11 +117,18 @@ Precision alone is easy to game by returning fewer, safer results (precision ris
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Trade-off: [Recall](recall.md). Summaries of both: F1, average precision, nDCG. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](system-usability-scale.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+### 5.1 Operationally related metrics
+Summaries of both: F1, average precision, nDCG. Precision@k and macro or micro averages are variants on this page (2.4).
 
-### 5.2 Dynamic relationships
-Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006].
+### 5.2 Conceptually related metrics
+[Recall](recall.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](system-usability-scale.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+
+<!-- generated:neighbours:start -->
+- Same construct: [Recall](recall.md) (Retrieval effectiveness: topical relevance)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
+Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006].Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006].
 
 ## 6. Links to business objectives
 **Improved usability:** positive, correlational, and weaker than commonly assumed (see 5.2).

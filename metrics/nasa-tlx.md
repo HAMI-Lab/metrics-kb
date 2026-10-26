@@ -3,7 +3,7 @@ id: nasa-tlx
 title: NASA Task Load Index (NASA-TLX)
 aliases: [NASA-TLX, TLX, Raw TLX, RTLX]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, human-factors, human-ai-interaction, visualization]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How much mental, physical, and time demand a person felt while doing a task, and how much effort, frustration, and (in)success they felt, combined into one workload score."
+  measures: [mental-workload]
   subject: [user]
   aspect: [workload]
   perspective: [perceived]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [questionnaire-survey]
+  route: [self-rating]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "workload score (dimensionless)"
   range: "0-100"
   better: context-dependent
+  validity_concern: {level: moderate, note: "Self-reported workload; may differ from physiological or performance-based workload measures."}
 
 cost:
   level: medium
@@ -33,8 +37,8 @@ cost:
   automatable: false
 
 related:
-  - {metric: system-usability-scale, relation: complementary, note: "Demand on the person vs. perceived qualities of the system."}
-  - {metric: task-completion-time, relation: correlated, note: "Time pressure is one TLX subscale; the two often but not always move together."}
+  - {metric: system-usability-scale, kind: conceptual, note: "Demand on the person vs. perceived qualities of the system."}
+  - {metric: task-completion-time, kind: empirical, note: "Time pressure is one TLX subscale; the two often but not always move together."}
 
 objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "High workload is assumed to discourage continued use; not established with retention data here."}
@@ -54,6 +58,12 @@ NASA-TLX asks a person to rate a task they just did on six subscales: mental dem
 
 ### 1.2 Construct: property of subject in context
 The property is **perceived workload**. The subject is the **user**. The context is a specific **task** done with a specific system by a specific person. The same system can produce very different TLX scores for novices and experts.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Mental workload](../constructs/mental-workload.md) (under Usability → Usability: efficiency)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure the system's quality directly: a hard task can have high workload even with an excellent tool. It does not measure workload *during* the task moment by moment; it is a single retrospective judgment. And it does not tell you which interface element caused the load.
@@ -106,10 +116,18 @@ Treating lower as always better: very low demand can mean people have handed jud
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
+### 5.1 Operationally related metrics
+The six subscale ratings are parts of the overall score. The unweighted "raw TLX" is a common variant (see 2.4).
+
+### 5.2 Conceptually related metrics
 Same construct, different operationalization: single-item workload scales, physiological workload measures, secondary-task performance. Complementary: [SUS](system-usability-scale.md) (system qualities), [Task Completion Time](task-completion-time.md) and task success (outcomes).
 
-### 5.2 Dynamic relationships
+<!-- generated:neighbours:start -->
+- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency)
+- Sibling construct: [Response Latency](response-latency.md) (System responsiveness)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Workload often rises with task time and time pressure, and falls as users gain expertise. Speed and accuracy can be bought with extra effort, so an improvement in performance with a rise in TLX may not be a net gain. (TODO: add correlation evidence.)
 
 ## 6. Links to business objectives

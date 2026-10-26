@@ -3,7 +3,7 @@ id: task-completion-time
 title: Task Completion Time
 aliases: [time on task, task time, time-to-completion]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, information-retrieval, visualization, human-ai-interaction]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How long a person, working with the system, takes to finish a defined task."
+  measures: [efficiency]
   subject: [user-system-team]
   aspect: [efficiency]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [task-study, logs-telemetry]
+  route: [direct-reading]
   collection_mode: [in-lab, field, online]
   data_source: [timing, interaction-logs, observation]
   unit: "seconds"
   range: "> 0"
   better: context-dependent
+  validity_concern: {level: low, note: "Direct for elapsed time; read it with task success, or it can reward giving up quickly."}
 
 cost:
   level: medium
@@ -33,10 +37,11 @@ cost:
   automatable: true
 
 related:
-  - {metric: response-latency, relation: component-of, note: "System waiting time is part of task time."}
-  - {metric: nasa-tlx, relation: correlated, note: "Faster is not better if it costs much more effort."}
-  - {metric: system-usability-scale, relation: complementary, note: "Objective efficiency vs. perceived usability; modest correlation."}
-  - {metric: precision, relation: correlated, note: "Better results are expected to shorten search tasks; evidence is mixed."}
+  - {metric: response-latency, kind: operational, note: "System waiting time is part of task time."}
+  - {metric: nasa-tlx, kind: empirical, note: "Faster is not better if it costs much more effort."}
+  - {metric: system-usability-scale, kind: conceptual, note: "Objective efficiency vs. perceived usability; modest correlation."}
+  - {metric: precision, kind: empirical, note: "Better results are expected to shorten search tasks; evidence is mixed."}
+  - {metric: active-labeling-time-per-object, kind: operational, note: "Task time with idle gaps removed, per object labeled."}
 
 objectives:
   sustained-use: {direction: unknown, evidence: none, note: "Shorter task time could mean a better tool or a less engaging one; depends on the task."}
@@ -56,6 +61,12 @@ The time elapsed between the start of a task and its completion, for a person us
 
 ### 1.2 Construct: property of subject in context
 The property is **efficiency** (time spent to achieve an outcome). The subject is the **user and system together**: both the person's skill and the system's speed and design shape it. The context is a specific **task**, which must be defined carefully; the same system gives very different times for different tasks and different users.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Usability: efficiency](../constructs/efficiency.md) (under Usability)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure whether the outcome was right, so it must be paired with task success or accuracy. It does not distinguish time spent thinking from time spent waiting for the system or fighting the interface. It does not measure perceived speed.
@@ -107,10 +118,19 @@ Optimizing for speed can reduce accuracy or careful checking, including checking
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Component: [Response Latency](response-latency.md) is part of task time. Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
+### 5.1 Operationally related metrics
+Component: [Response Latency](response-latency.md) is part of task time. [Active Labeling Time per Object](active-labeling-time-per-object.md) is a refinement for labeling tasks: task time with idle gaps removed, divided by the number of objects.
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
+
+<!-- generated:neighbours:start -->
+- Same construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency)
+- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Response Latency](response-latency.md) (System responsiveness)
+- Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Correlations between efficiency, effectiveness, and satisfaction measures are generally low to modest across studies [hornbaek2007], though higher at the task level in some datasets [sauro2009]. So time cannot stand in for the others. Speed-accuracy trade-offs mean time and error rate can move in opposite directions.
 
 ## 6. Links to business objectives

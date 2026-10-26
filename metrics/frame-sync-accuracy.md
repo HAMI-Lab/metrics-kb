@@ -3,7 +3,7 @@ id: frame-sync-accuracy
 title: Frame-Sync Accuracy
 aliases: [frame alignment accuracy, keyframe placement accuracy, annotation-video sync]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [computer-vision, data-annotation, software-testing]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "The share of annotation operations whose box is saved to, and later shown on, the same video frame the person saw when making it."
+  measures: [temporal-alignment]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: direct
+  research_method: [test-collection]
+  route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers, system-telemetry]
   unit: "proportion of operations on the exact frame"
   range: "0-1"
   better: higher
+  validity_concern: {level: low, note: "Direct for the scripted cases; field coverage depends on how well the test videos match real encodings."}
 
 cost:
   level: low
@@ -33,9 +37,9 @@ cost:
   automatable: true
 
 related:
-  - {metric: object-track-completeness, relation: causally-linked, note: "Boxes on the wrong frame drift off their objects and lower frame-level completeness."}
-  - {metric: workaround-action-rate, relation: causally-linked, note: "Lagging boxes make labelers step back and forth to resync."}
-  - {metric: response-latency, relation: complementary, note: "Latency is how fast the display updates; this is whether it shows the right frame."}
+  - {metric: object-track-completeness, kind: empirical, note: "Boxes on the wrong frame drift off their objects and lower frame-level completeness."}
+  - {metric: workaround-action-rate, kind: empirical, note: "Lagging boxes make labelers step back and forth to resync."}
+  - {metric: response-latency, kind: conceptual, note: "Latency is how fast the display updates; this is whether it shows the right frame."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Wrong-frame saves corrupt training data and undermine trust in the tool."}
@@ -55,6 +59,12 @@ Run a scripted set of labeling operations on test videos with known frame timest
 
 ### 1.2 Construct: property of subject in context
 The property is **temporal correctness** of the video and annotation component. The subject is a **system component** (player, frame index, keyframe store). The context is a **test suite** of video types and interaction sequences, specific to this tool.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under System reliability; Output quality → Annotation quality)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 Not whether boxes are on the right object (that is labeling quality). Not display smoothness. It tests only the interaction sequences scripted.
@@ -112,11 +122,18 @@ Passing the suite does not prove field correctness; new encodings appear. Keep a
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Component-level cause of labeler-level problems. Complementary to [Response Latency](response-latency.md). Frame misalignment between labels and gold also adds error to [Object-Track Completeness](object-track-completeness.md) scoring, which matches boxes frame by frame [bernardin2008].
+### 5.1 Operationally related metrics
+The field companion (the share of tasks where frames can only be approximated, 2.4) is computed alongside.
 
-### 5.2 Dynamic relationships
-Expected: failures here cause drift (lower completeness) and resync workarounds. Component accuracy does not guarantee better labeler outcomes; check those separately.
+### 5.2 Conceptually related metrics
+Component-level cause of labeler-level problems. Complementary to [Response Latency](response-latency.md).
+
+<!-- generated:neighbours:start -->
+- Sibling construct: [Work-Loss Incidence](work-loss-incidence.md) (Work preservation), [Object-Track Completeness](object-track-completeness.md) (Annotation quality: completeness), [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (Annotation quality: pre-annotation quality)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
+Frame misalignment between labels and gold also adds error to [Object-Track Completeness](object-track-completeness.md) scoring, which matches boxes frame by frame [bernardin2008]. Expected: failures here cause drift (lower completeness) and resync workarounds. Component accuracy does not guarantee better labeler outcomes; check those separately.
 
 ## 6. Links to business objectives
 **Improved usability:** positive, theoretical. **Sustained use:** positive, theoretical. Both are indirect: this is a component test whose payoff comes through fewer workarounds and better labels.

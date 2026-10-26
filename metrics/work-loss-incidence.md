@@ -3,7 +3,7 @@ id: work-loss-incidence
 title: Work-Loss Incidence
 aliases: [lost-work rate, data-loss incidents, save failure rate]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, data-annotation, software-reliability]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "The share of labeling sessions in which work the person did is not present when they or the system next read it."
+  measures: [work-preservation]
   subject: [system]
   aspect: [effectiveness, trust]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [logs-telemetry]
+  route: [direct-reading]
   collection_mode: [online, field]
   data_source: [system-telemetry, interaction-logs]
   unit: "proportion of sessions (also: minutes of work lost per incident)"
   range: "0-1"
   better: lower
+  validity_concern: {level: low, note: "Direct when detected by comparing client and server state; otherwise limited to losses users notice."}
 
 cost:
   level: low
@@ -33,9 +37,9 @@ cost:
   automatable: true
 
 related:
-  - {metric: active-labeling-time-per-object, relation: correlated, note: "Lost work is redone, inflating time."}
-  - {metric: workaround-action-rate, relation: complementary, note: "Users who fear loss submit early or avoid long sessions, a workaround logs may miss."}
-  - {metric: system-usability-scale, relation: correlated, note: "Expected to lower perceived usability and trust; not measured."}
+  - {metric: active-labeling-time-per-object, kind: empirical, note: "Lost work is redone, inflating time."}
+  - {metric: workaround-action-rate, kind: conceptual, note: "Users who fear loss submit early or avoid long sessions, a workaround logs may miss."}
+  - {metric: system-usability-scale, kind: empirical, note: "Expected to lower perceived usability and trust; not measured."}
 
 objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "Losing work is a strong reason to stop trusting a tool; not tested here."}
@@ -55,6 +59,12 @@ The share of labeling sessions with at least one loss event: edits made in the s
 
 ### 1.2 Construct: property of subject in context
 The property is **reliability of keeping the user's work**. The subject is the **system** (client, network, server). The context is a **session**. Usability heuristics treat preventing loss and allowing recovery as basic requirements [nielsen1993].
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Work preservation](../constructs/work-preservation.md) (under System reliability)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 Not wrong labels saved correctly (those are quality issues). Not loss the user caused on purpose (deleting). Not the user's fear of loss, which changes behavior even if loss is rare.
@@ -111,10 +121,17 @@ Low incidence can hide one catastrophic loss; always report severity. If users a
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
+### 5.1 Operationally related metrics
+No operationally related metric pages yet. Severity (edits or minutes lost per incident, 2.4) is computed from the same events.
+
+### 5.2 Conceptually related metrics
 Reliability counterpart to effectiveness measures. Complementary to [Workaround Action Rate](workaround-action-rate.md) and to [Active Labeling Time per Object](active-labeling-time-per-object.md) (redo time).
 
-### 5.2 Dynamic relationships
+<!-- generated:neighbours:start -->
+- Sibling construct: [Frame-Sync Accuracy](frame-sync-accuracy.md) (Annotation tool: temporal alignment)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Each incident adds redo time; links to satisfaction and continued use are expected but not measured here.
 
 ## 6. Links to business objectives

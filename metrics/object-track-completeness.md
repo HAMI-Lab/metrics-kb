@@ -3,7 +3,7 @@ id: object-track-completeness
 title: Object-Track Completeness
 aliases: [track recall, object recall in video, "frame-coverage recall", mostly-tracked ratio]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [computer-vision, data-annotation, human-ai-interaction]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of all the objects of interest that appear in a video, the share that the finished labels track, counted per object and per frame of visibility."
+  measures: [label-completeness]
   subject: [user-system-team]
   aspect: [effectiveness]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [test-collection]
+  route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers]
   unit: "proportion"
   range: "0-1"
   better: higher
+  validity_concern: {level: moderate, note: "Depends on the gold set and matching thresholds; a proxy for whether labels are fit for training."}
 
 cost:
   level: medium
@@ -33,10 +37,10 @@ cost:
   automatable: true
 
 related:
-  - {metric: recall, relation: same-construct, note: "A recall variant for video tracks: the unit is an object (or object-frame) instead of a document."}
-  - {metric: precision, relation: trade-off, note: "Labeling every blob raises completeness and adds false tracks; report false-track rate alongside."}
-  - {metric: active-labeling-time-per-object, relation: trade-off, note: "Faster labeling is only a gain if completeness holds."}
-  - {metric: pre-annotation-edit-rate, relation: correlated, note: "Low edit rate with low completeness suggests labelers accepted model misses."}
+  - {metric: recall, kind: operational, note: "A recall variant for video tracks: the unit is an object (or object-frame) instead of a document."}
+  - {metric: precision, kind: empirical, note: "Labeling every blob raises completeness and adds false tracks; report false-track rate alongside."}
+  - {metric: active-labeling-time-per-object, kind: empirical, note: "Faster labeling is only a gain if completeness holds."}
+  - {metric: pre-annotation-edit-rate, kind: empirical, note: "Low edit rate with low completeness suggests labelers accepted model misses."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Teams keep using a labeling tool whose output they do not have to re-check; not tested."}
@@ -58,6 +62,12 @@ The share of gold-standard objects in a video that the submitted labels cover. T
 
 ### 1.2 Construct: property of subject in context
 The property is **completeness of labeled output**. The subject is the **labeler and tool together**: misses come from the person overlooking an object, from the tool (interpolation drift moving a box off its object, lost work), or from a pre-annotation model that missed the object and the labeler did not add it. The context is a **task**: one video with a taskset's object classes.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Annotation quality: completeness](../constructs/label-completeness.md) (under Output quality → Annotation quality; Usability → Usability: effectiveness)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 Not box tightness (localization error), not false tracks (that is a precision-type count), and not identity consistency (one object split across several track IDs still counts as covered). These are separate numbers; see 2.4. It also says nothing about effort or time.
@@ -114,10 +124,17 @@ Labelers can raise completeness by adding boxes for everything, including non-ob
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Same construct as [Recall](recall.md) with objects as the unit [manning2008]. Complementary: false-track rate (precision side), ID switches, localization error. Cheaper proxy: reviewer pass/fail on a task, which is quick but does not count misses. Costlier alternative: full HOTA scoring [luiten2021], which separates detection from association errors.
+### 5.1 Operationally related metrics
+A variant of [Recall](recall.md) with objects (or object-frames) as the unit [manning2008]. Companion counts come from the same matching (2.4): false-track rate (the precision side), ID switches, and localization error. Combined scores such as HOTA [luiten2021], which separates detection from association errors, build on the same matching.
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+Cheaper proxy: reviewer pass/fail on a task, which is quick but does not count misses. Complementary: [Active Labeling Time per Object](active-labeling-time-per-object.md) (effort) and [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (how much of the model's output was changed).
+
+<!-- generated:neighbours:start -->
+- Sibling construct: [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (Annotation quality: pre-annotation quality), [Frame-Sync Accuracy](frame-sync-accuracy.md) (Annotation tool: temporal alignment)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Expected trade-off with [Active Labeling Time per Object](active-labeling-time-per-object.md): rushing lowers completeness. With pre-annotations, completeness is bounded below by model recall only if labelers add what the model missed; a low [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) together with lower completeness than the from-scratch mode suggests anchoring on the model. These are hypotheses for this system, not measured.
 
 ## 6. Links to business objectives

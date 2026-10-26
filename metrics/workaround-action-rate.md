@@ -3,7 +3,7 @@ id: workaround-action-rate
 title: Workaround Action Rate
 aliases: [corrective action rate, fighting-the-tool rate, compensatory edits, undo rate]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [hci, data-annotation, human-ai-interaction]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How often a person performs actions that exist only to undo or compensate for the tool's own behavior, rather than to state their labeling judgment."
+  measures: [interaction-friction]
   subject: [user-system-team]
   aspect: [ease-of-use, efficiency]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: proxy
+  research_method: [logs-telemetry, observation-think-aloud]
+  route: [direct-reading, qualitative-coding]
   collection_mode: [field, in-lab]
   data_source: [interaction-logs, observation]
   unit: "workaround actions per object (or per 100 edit actions)"
   range: ">= 0"
   better: lower
+  validity_concern: {level: high, note: "Inferred from a hand-built catalog of log patterns; validate the catalog against observation."}
 
 cost:
   level: medium
@@ -33,10 +37,10 @@ cost:
   automatable: true
 
 related:
-  - {metric: active-labeling-time-per-object, relation: component-of, note: "Workarounds add time without adding labels."}
-  - {metric: nasa-tlx, relation: correlated, note: "Fighting the tool is expected to raise frustration and effort ratings."}
-  - {metric: system-usability-scale, relation: complementary, note: "Behavioral vs perceived view of the same problem."}
-  - {metric: work-loss-incidence, relation: complementary, note: "Lost work forces redo, a large workaround the event catalog may not see."}
+  - {metric: active-labeling-time-per-object, kind: operational, note: "Workarounds add time without adding labels."}
+  - {metric: nasa-tlx, kind: empirical, note: "Fighting the tool is expected to raise frustration and effort ratings."}
+  - {metric: system-usability-scale, kind: conceptual, note: "Behavioral vs perceived view of the same problem."}
+  - {metric: work-loss-incidence, kind: conceptual, note: "Lost work forces redo, a large workaround the event catalog may not see."}
 
 objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "Users who must keep working around a tool look for another one; not tested here."}
@@ -56,6 +60,12 @@ The number of actions, per object labeled, that match a predefined catalog of wo
 
 ### 1.2 Construct: property of subject in context
 The property is **friction**: the extra work the tool's behavior imposes. The subject is the **labeler and tool together**. The context is a **task**, and the catalog is **system-specific**: it is written for one tool's known problems. A workaround is a goal-directed adaptation that gets around an obstacle the system puts in the way [alter2014].
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Interaction friction](../constructs/interaction-friction.md) (under Usability)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 Not ordinary edits (correcting a wrong pre-annotation is the job, not a workaround). Not friction the catalog does not anticipate. Not how frustrating it felt.
@@ -117,10 +127,17 @@ Read per labeler, it can penalize careful people. A drop can mean labelers stopp
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Behavioral counterpart to perceived usability ([SUS](system-usability-scale.md)) and to usability-test error and problem counts [nielsen1993]. Part of [Active Labeling Time per Object](active-labeling-time-per-object.md). Keystroke-level models [card1983] can estimate how many steps a workaround costs, which is cheaper than logging for single patterns like the 7-step delete.
+### 5.1 Operationally related metrics
+Part of [Active Labeling Time per Object](active-labeling-time-per-object.md).
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+Behavioral counterpart to perceived usability ([SUS](system-usability-scale.md)) and to usability-test error and problem counts [nielsen1993]. Keystroke-level models [card1983] can estimate how many steps a workaround costs, which is cheaper than logging for single patterns like the 7-step delete.
+
+<!-- generated:neighbours:start -->
+- Sibling construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Expected to move with time per object and with workload ratings ([NASA-TLX](nasa-tlx.md)); no measured link here.
 
 ## 6. Links to business objectives

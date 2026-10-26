@@ -3,7 +3,7 @@ id: recall
 title: Recall
 aliases: [sensitivity, true positive rate, hit rate, "recall@k", R@k]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of all the items that are actually relevant or correct, the share that the system returns or labels as positive."
+  measures: [topical-relevance, classification-correctness]
   subject: [system-component, system]
   aspect: [effectiveness]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [test-collection]
+  route: [reference-comparison, external-judgment]
   collection_mode: [offline]
   data_source: [relevance-judgments, reference-answers, model-judge]
   unit: "proportion"
   range: "0-1"
   better: higher
+  validity_concern: {level: moderate, note: "Direct for coverage of judged-relevant items; needs judgments of all relevant items, and is a weak proxy for user outcomes."}
 
 cost:
   level: medium
@@ -33,8 +37,9 @@ cost:
   automatable: true
 
 related:
-  - {metric: precision, relation: trade-off, note: "Returning more items usually raises recall and lowers precision."}
-  - {metric: task-completion-time, relation: correlated, note: "In recall-oriented tasks, finding more of the relevant items usually takes users longer; not quantified here."}
+  - {metric: precision, kind: conceptual, note: "Returning more items usually raises recall and lowers precision."}
+  - {metric: task-completion-time, kind: empirical, note: "In recall-oriented tasks, finding more of the relevant items usually takes users longer; not quantified here."}
+  - {metric: object-track-completeness, kind: operational, note: "A variant for video tracks, with objects matched across frames as the unit."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Matters mainly where users need to find everything (e.g. systematic reviews); users rarely notice what is missing."}
@@ -54,6 +59,13 @@ Recall = relevant items returned ÷ all relevant items. In classification it is 
 
 ### 1.2 Construct: property of subject in context
 The property is **output completeness** (the absence of misses, or false negatives). The subject is usually a **system component** such as a retriever, ranker, or classifier, or the whole system when outputs are judged end to end. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Retrieval effectiveness → Retrieval effectiveness: relevance)
+- [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Output quality)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It ignores how many irrelevant items were returned along with the relevant ones (that is [Precision](precision.md)). A system that returns everything has perfect recall. It says nothing about ranking order within the returned set, how results are presented, how long the user took, or whether the user was satisfied.
@@ -106,10 +118,17 @@ Recall alone is easy to game by returning more results (recall rises, precision 
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Trade-off: [Precision](precision.md). Summaries of both: F1, average precision, precision-recall curves. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+### 5.1 Operationally related metrics
+Summaries of both: F1, average precision, precision-recall curves. [Object-Track Completeness](object-track-completeness.md) is a variant for video tracks, with objects matched across frames as the unit.
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+[Precision](precision.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+
+<!-- generated:neighbours:start -->
+- Same construct: [Precision](precision.md) (Retrieval effectiveness: topical relevance)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Returning more results usually raises recall and lowers precision. Raising recall in a recall-oriented task usually gives users more to read, which can lengthen task time. Links from recall to user outcomes are weaker than often assumed [hersh2000].
 
 ## 6. Links to business objectives

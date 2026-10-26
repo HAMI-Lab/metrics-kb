@@ -3,7 +3,7 @@ id: pre-annotation-edit-rate
 title: Pre-annotation Edit Rate
 aliases: [correction rate, model-suggestion edit rate, acceptance rate (its complement), human edit distance on pre-labels]
 page_type: metric
-template_version: "0.1"
+template_version: "0.2"
 fields: [data-annotation, human-ai-interaction, computer-vision]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of the annotations a model proposed before a person started labeling, the share the person changed or deleted before submitting."
+  measures: [pre-annotation-quality]
   subject: [system-component, user-system-team]
   aspect: [effectiveness, trust]
   perspective: [objective]
@@ -21,11 +22,14 @@ construct:
 
 operationalization:
   measure_type: proxy
+  research_method: [logs-telemetry]
+  route: [external-judgment]
   collection_mode: [offline, field]
   data_source: [interaction-logs]
   unit: "proportion of model keyframes (or tracks)"
   range: "0-1"
   better: context-dependent
+  validity_concern: {level: high, note: "Untouched model labels may be unchecked rather than correct (automation bias); validate against a gold sample."}
 
 cost:
   level: low
@@ -33,9 +37,9 @@ cost:
   automatable: true
 
 related:
-  - {metric: precision, relation: correlated, note: "A model with low precision forces many deletions; edit rate is a human-observed stand-in for model precision."}
-  - {metric: object-track-completeness, relation: complementary, note: "Edit rate sees what was changed; it cannot see objects the model missed and the person also missed."}
-  - {metric: active-labeling-time-per-object, relation: correlated, note: "More edits are expected to take more time; the size of the link is unknown."}
+  - {metric: precision, kind: conceptual, note: "A model with low precision forces many deletions; edit rate is a human-observed stand-in for model precision."}
+  - {metric: object-track-completeness, kind: conceptual, note: "Edit rate sees what was changed; it cannot see objects the model missed and the person also missed."}
+  - {metric: active-labeling-time-per-object, kind: empirical, note: "More edits are expected to take more time; the size of the link is unknown."}
 
 objectives:
   sustained-use: {direction: non-monotonic, evidence: theoretical, note: "Very high edit rates make pre-annotation pointless; near-zero rates can mean blind acceptance rather than good models."}
@@ -55,6 +59,12 @@ Among annotations that came from a model (imported pre-annotations), the share t
 
 ### 1.2 Construct: property of subject in context
 The property is **how far the model's proposal was from what the person accepted as correct**. The subject is the **pre-annotation model as seen through the labeler**, and partly the labeler's own checking behavior. The context is a **task** (one video) in a **system-specific** setting: the number depends on how the tool records edits.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Annotation quality: pre-annotation quality](../constructs/pre-annotation-quality.md) (under Output quality → Annotation quality)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure model quality directly: an unchanged model box may be wrong and simply unchecked. It does not count objects the model missed and the person added (count those separately as "added tracks"). It does not measure effort: one deletion and one careful resize count the same.
@@ -108,10 +118,17 @@ If labelers are rewarded for low edit rates, or if it is read as "model is good"
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
+### 5.1 Operationally related metrics
+Added tracks per video and the edit rate per model-score bin (2.4) are computed from the same diff.
+
+### 5.2 Conceptually related metrics
 A human-observed stand-in for model [Precision](precision.md) (deletions) and localization error (resizes) [manning2008]. Complementary: [Object-Track Completeness](object-track-completeness.md), which sees misses. Cheaper than a gold-standard model evaluation, but only valid when checking is careful.
 
-### 5.2 Dynamic relationships
+<!-- generated:neighbours:start -->
+- Sibling construct: [Object-Track Completeness](object-track-completeness.md) (Annotation quality: completeness), [Frame-Sync Accuracy](frame-sync-accuracy.md) (Annotation tool: temporal alignment)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Video annotation work has long traded labeler effort against automated interpolation and tracking [vondrick2013]; better pre-annotation should lower edit rate and labeling time together. Whether it does here is untested.
 
 ## 6. Links to business objectives
