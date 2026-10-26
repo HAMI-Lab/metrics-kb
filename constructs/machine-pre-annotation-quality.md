@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [data-annotation, human-ai-interaction]
 
-broader: [output-quality]
+broader: [component-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: [parasuraman2010]
 The quality of model-generated labels offered to a person as a starting point.
 
 ## 2. Boundaries
-It is about the model's proposals, not the final labels, so it is a system characteristic; the final labels are [annotation quality](annotation-quality.md), a task characteristic. When people accept proposals without checking, final labels inherit their errors [parasuraman2010].
+It is about the model's proposals, not the final labels, so it is a characteristic of a component (the pre-annotation model); the final labels are [annotation quality](annotation-quality.md), a task characteristic. When people accept proposals without checking, final labels inherit their errors [parasuraman2010].
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
@@ -46,4 +46,4 @@ Added from the InfinityPool metric-chat interview (2026-10-19).
 - [parasuraman2010]
 
 ## Open questions and review notes
-- None yet.
+- Component level only, not system level: confirmed by the team (2026-10-26).

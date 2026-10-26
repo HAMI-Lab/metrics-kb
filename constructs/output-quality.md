@@ -17,19 +17,17 @@ sources: []
 
 # Output quality
 
-> How good what a system produces is: results, labels, classifications, generated text.
+> How good the system's end-to-end outputs are: final answers, reports, labels, recommendations as delivered.
 
 ## 1. Definition
-The quality of a system's outputs judged against what they should have been.
+The quality of what the system as a whole delivers, judged against what it should have been. Outputs of single components (a retriever's ranking, a classifier's labels) are component characteristics.
 
 ## 2. Boundaries
 It judges outputs, not the user's outcome ([task effectiveness](task-effectiveness.md)) or the experience ([usability](usability.md)).
 
 ## 3. Narrower constructs
-Narrower constructs are kinds of output, each with its own notion of "correct".
+Narrower constructs are qualities of end-to-end output. After the 2026-10-26 split, only trustworthiness is here; correctness, completeness, and faithfulness of end-to-end outputs are candidates.
 <!-- generated:narrower:start -->
-- [Classification effectiveness: correctness](classification-correctness.md)
-- [Machine pre-annotation quality](machine-pre-annotation-quality.md)
 - [Trustworthiness](trustworthiness.md)
 <!-- generated:narrower:end -->
 
@@ -48,4 +46,4 @@ Added as a shared parent so that constructs like trustworthiness can be reused a
 - None yet.
 
 ## Open questions and review notes
-- Should retrieval effectiveness sit under output quality too?
+- No metric measures end-to-end output quality yet; which metric should be added first?

@@ -20,10 +20,10 @@ sources: [hersh2000, turpin2006]
 > Properties of the system that can be stated without a particular user doing a particular task.
 
 ## 1. Definition
-Properties of a system or its components, such as the quality of its outputs, its speed, and its reliability, measured with test data, benchmarks, or telemetry.
+Properties of the system as a whole, as delivered: the quality of its end-to-end outputs, its speed, and its reliability, measured with test data, benchmarks, or telemetry. Properties of single parts are [component characteristics](component-characteristics.md).
 
 ## 2. Boundaries
-Unlike [task characteristics](task-characteristics.md), they do not need a user pursuing a goal. Whether a better system characteristic yields better task characteristics is an empirical question: in IR, large gains in batch effectiveness did not always improve users' task performance [hersh2000; turpin2006].
+Unlike [task characteristics](task-characteristics.md), they do not need a user pursuing a goal. Unlike component characteristics, they include how components work together, so errors that accumulate between components show up here. Whether a better system characteristic yields better task characteristics is an empirical question: in IR, large gains in batch effectiveness did not always improve users' task performance [hersh2000; turpin2006].
 
 ## 3. Narrower constructs
 [System performance](system-performance.md) mirrors task performance on the task side. Several system properties are indirect causes of task characteristics, recorded as empirical links on metric pages rather than as DAG edges.

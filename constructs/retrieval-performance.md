@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [information-retrieval]
 
-broader: [system-performance]
+broader: [component-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: [manning2008]
 The performance of a search or retrieval system as a system: the quality of what it returns ([retrieval effectiveness](retrieval-effectiveness.md)) and the resources it uses to return it ([retrieval efficiency](retrieval-efficiency.md)) [manning2008].
 
 ## 2. Boundaries
-It is measured with test collections and telemetry, not with a person pursuing a goal; that is [task performance](task-performance.md).
+It is a component characteristic: measured on the retrieval component with test collections and telemetry, not with a person pursuing a goal; that is [task performance](task-performance.md).
 
 ## 3. Narrower constructs
 Effectiveness and efficiency often trade off: more elaborate ranking can return better results more slowly.

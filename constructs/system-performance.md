@@ -26,10 +26,9 @@ Performance of the system as measured without a user pursuing a goal: the qualit
 It mirrors [task performance](task-performance.md) on the task side. A system can perform well on benchmarks while users still struggle with the task; the two are linked by evidence, not by definition.
 
 ## 3. Narrower constructs
-Field-specific performance (such as [retrieval performance](retrieval-performance.md)) sits next to cross-field groups (output quality, responsiveness, reliability).
+End-to-end output quality, responsiveness, and reliability. Field-specific performance of single parts (such as [retrieval performance](retrieval-performance.md)) is on the component side.
 <!-- generated:narrower:start -->
 - [Output quality](output-quality.md)
-- [Retrieval performance](retrieval-performance.md)
 - [System reliability](system-reliability.md)
 - [System responsiveness](responsiveness.md)
 <!-- generated:narrower:end -->

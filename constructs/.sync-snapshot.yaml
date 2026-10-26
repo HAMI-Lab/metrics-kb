@@ -1,28 +1,36 @@
 # Last synced state. Written by scripts/sync_constructs.py; do not edit.
 
-system-characteristics:
-  title: System characteristics
+component-characteristics:
+  title: Component characteristics
   broader: []
 
-system-performance:
-  title: System performance
-  broader: [system-characteristics]
+component-performance:
+  title: Component performance
+  broader: [component-characteristics]
 
-output-quality:
-  title: Output quality
-  broader: [system-performance]
+classification-performance:
+  title: Classification performance
+  broader: [component-performance]
 
 classification-correctness:
   title: "Classification effectiveness: correctness"
-  broader: [output-quality]
+  broader: [classification-performance]
+
+interface-performance:
+  title: Interface performance
+  broader: [component-performance]
+
+temporal-alignment:
+  title: "Annotation tool: temporal alignment"
+  broader: [interface-performance]
 
 machine-pre-annotation-quality:
   title: Machine pre-annotation quality
-  broader: [output-quality]
+  broader: [component-performance]
 
 retrieval-performance:
   title: Retrieval performance
-  broader: [system-performance]
+  broader: [component-performance]
 
 retrieval-effectiveness:
   title: Retrieval effectiveness
@@ -40,21 +48,29 @@ topical-relevance:
   title: "Retrieval effectiveness: topical relevance"
   broader: [relevance]
 
-trustworthiness:
-  title: Trustworthiness
-  broader: [relevance, output-quality]
-
 retrieval-efficiency:
   title: Retrieval efficiency
   broader: [retrieval-performance]
 
+system-characteristics:
+  title: System characteristics
+  broader: []
+
+system-performance:
+  title: System performance
+  broader: [system-characteristics]
+
+output-quality:
+  title: Output quality
+  broader: [system-performance]
+
+trustworthiness:
+  title: Trustworthiness
+  broader: [relevance, output-quality]
+
 system-reliability:
   title: System reliability
   broader: [system-performance]
-
-temporal-alignment:
-  title: "Annotation tool: temporal alignment"
-  broader: [system-reliability]
 
 work-preservation:
   title: Work preservation

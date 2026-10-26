@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [machine-learning]
 
-broader: [output-quality]
+broader: [classification-performance]
 
 status: ai-draft
 last_reviewed: null

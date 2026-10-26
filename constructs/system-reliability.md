@@ -27,7 +27,6 @@ Reliability failures show up as usability problems, but their fixes are engineer
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-- [Annotation tool: temporal alignment](temporal-alignment.md)
 - [Work preservation](work-preservation.md)
 <!-- generated:narrower:end -->
 

@@ -4,6 +4,15 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-10-26 (component split): Component characteristics as a fourth root
+
+### D14. Separate what a component does from what the system does
+- **Decision.** A new root, **Component characteristics** → **Component performance**, holds properties of single components or system functionalities judged on their own. Its children: **Retrieval performance** (moved from the system side, with retrieval effectiveness, relevance, and retrieval efficiency), **Classification performance** (new; classification correctness moved under it), **Interface performance** (new; temporal alignment moved under it), and **Machine pre-annotation quality** (moved; the team confirmed it is component level, not system level).
+- **System side now.** System performance covers what the whole system delivers: end-to-end output quality, reliability, responsiveness. Output quality has no metric yet.
+- **Why.** Classification, retrieval, and the interface are components or system functionalities. Gains in a component do not automatically become gains in the system or the task, and errors accumulate between components; keeping the levels apart makes that visible. It matches the `subject` facet (`system-component` vs `system`) and the component/system levels in the metric-chat skill.
+- **Kept.** Trustworthiness keeps two parents: relevance (component side) and output quality (system side), as the same idea at two levels.
+- **Open.** Name of "interface performance" (it may read as speed only); generation and recommendation components; where the component/system line falls for end-to-end models.
+
 ## 2026-10-26 (later still): User characteristics, system performance, annotation quality
 
 ### D13. Three roots, symmetric task and system sides

@@ -9,8 +9,12 @@ graph TD
   c_ai_literacy(["Literacy: AI literacy"])
   c_annotation_quality(["Annotation quality"])
   c_classification_correctness(["Classification effectiveness: correctness"])
+  c_classification_performance(["Classification performance"])
+  c_component_characteristics(["Component characteristics"])
+  c_component_performance(["Component performance"])
   c_information_literacy(["Literacy: information literacy"])
   c_interaction_friction(["Interaction friction"])
+  c_interface_performance(["Interface performance"])
   c_label_completeness(["Annotation quality: completeness"])
   c_literacy(["Literacy"])
   c_machine_pre_annotation_quality(["Machine pre-annotation quality"])
@@ -50,11 +54,16 @@ graph TD
   m_work_loss_incidence["Work-Loss Incidence"]:::metric
   m_workaround_action_rate["Workaround Action Rate"]:::metric
   c_annotation_quality --> c_label_completeness
+  c_classification_performance --> c_classification_correctness
+  c_component_characteristics --> c_component_performance
+  c_component_performance --> c_classification_performance
+  c_component_performance --> c_interface_performance
+  c_component_performance --> c_machine_pre_annotation_quality
+  c_component_performance --> c_retrieval_performance
+  c_interface_performance --> c_temporal_alignment
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_visualization_literacy
-  c_output_quality --> c_classification_correctness
-  c_output_quality --> c_machine_pre_annotation_quality
   c_output_quality --> c_trustworthiness
   c_relevance --> c_timeliness
   c_relevance --> c_topical_relevance
@@ -64,10 +73,8 @@ graph TD
   c_retrieval_performance --> c_retrieval_efficiency
   c_system_characteristics --> c_system_performance
   c_system_performance --> c_output_quality
-  c_system_performance --> c_retrieval_performance
   c_system_performance --> c_system_reliability
   c_system_performance --> c_responsiveness
-  c_system_reliability --> c_temporal_alignment
   c_system_reliability --> c_work_preservation
   c_task_characteristics --> c_task_performance
   c_task_characteristics --> c_usability
@@ -101,12 +108,13 @@ graph TD
 
 A construct with several broader constructs appears under each of them.
 
-- [System characteristics](system-characteristics.md)
-  - [System performance](system-performance.md)
-    - [Output quality](output-quality.md)
+- [Component characteristics](component-characteristics.md)
+  - [Component performance](component-performance.md)
+    - [Classification performance](classification-performance.md)
       - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
-      - [Machine pre-annotation quality](machine-pre-annotation-quality.md) · metrics: [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
-      - [Trustworthiness](trustworthiness.md)
+    - [Interface performance](interface-performance.md)
+      - [Annotation tool: temporal alignment](temporal-alignment.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
+    - [Machine pre-annotation quality](machine-pre-annotation-quality.md) · metrics: [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md)
@@ -114,8 +122,11 @@ A construct with several broader constructs appears under each of them.
           - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
+- [System characteristics](system-characteristics.md)
+  - [System performance](system-performance.md)
+    - [Output quality](output-quality.md)
+      - [Trustworthiness](trustworthiness.md)
     - [System reliability](system-reliability.md)
-      - [Annotation tool: temporal alignment](temporal-alignment.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
       - [Work preservation](work-preservation.md) · metrics: [Work-Loss Incidence](../metrics/work-loss-incidence.md)
     - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
 - [Task characteristics](task-characteristics.md)
@@ -142,6 +153,10 @@ A construct with several broader constructs appears under each of them.
 ## Constructs with no metric yet
 
 - [Annotation quality](annotation-quality.md)
+- [Classification performance](classification-performance.md)
+- [Component characteristics](component-characteristics.md)
+- [Component performance](component-performance.md)
+- [Interface performance](interface-performance.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)

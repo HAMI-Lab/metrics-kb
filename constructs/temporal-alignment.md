@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [data-annotation, computer-vision]
 
-broader: [system-reliability]
+broader: [interface-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: []
 Correct placement of annotations in time: a box drawn on a video frame is stored for that frame and displayed on it.
 
 ## 2. Boundaries
-It is a reliability property of the tool. It affects [annotation quality](annotation-quality.md), but that is an empirical link recorded on metric pages, not a DAG edge.
+It is a property of the interface component (the video player and annotation canvas), checked with scripted tests. It affects [annotation quality](annotation-quality.md), but that is an empirical link recorded on metric pages, not a DAG edge.
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
