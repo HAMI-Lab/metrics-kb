@@ -66,7 +66,7 @@ The property is **completeness of labeled output**. The subject is the **labeler
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation quality: completeness](../constructs/label-completeness.md) (under Output quality → Annotation quality; Usability → Usability: effectiveness)
+- [Annotation quality: completeness](../constructs/label-completeness.md) (under System characteristics → Output quality → Annotation quality; Task characteristics → Task performance → Task effectiveness; Task characteristics → Usability → Task effectiveness)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

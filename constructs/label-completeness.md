@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [data-annotation, computer-vision]
 
-broader: [annotation-quality, effectiveness]
+broader: [annotation-quality, task-effectiveness]
 
 status: ai-draft
 last_reviewed: null

@@ -62,7 +62,7 @@ The property is **perceived workload**. The subject is the **user**. The context
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Mental workload](../constructs/mental-workload.md) (under Usability → Usability: efficiency)
+- [Mental workload](../constructs/mental-workload.md) (under Task characteristics → Task performance → Task efficiency; Task characteristics → Usability → Task efficiency)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -123,8 +123,7 @@ The six subscale ratings are parts of the overall score. The unweighted "raw TLX
 Same construct, different operationalization: single-item workload scales, physiological workload measures, secondary-task performance. Complementary: [SUS](system-usability-scale.md) (system qualities), [Task Completion Time](task-completion-time.md) and task success (outcomes).
 
 <!-- generated:neighbours:start -->
-- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency)
-- Sibling construct: [Response Latency](response-latency.md) (System responsiveness)
+- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency), [Task Completion Time](task-completion-time.md) (Task efficiency)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

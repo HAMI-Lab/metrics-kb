@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [information-retrieval]
 
-broader: []
+broader: [retrieval-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: [manning2008, saracevic2007]
 The degree to which a search or retrieval system returns information that meets the information need behind a query [manning2008].
 
 ## 2. Boundaries
-It concerns the system's results. User-side outcomes, such as finding an answer faster, belong under [usability](usability.md).
+It concerns the system's results, measured without a particular user pursuing a goal. Its sibling [retrieval efficiency](retrieval-efficiency.md) covers what returning them costs. User-side outcomes, such as finding an answer faster, belong under [task performance](task-performance.md).
 
 ## 3. Narrower constructs
 [Relevance](relevance.md) is the central narrower construct; other candidates (coverage, diversity, novelty) are not yet added.
@@ -47,4 +47,4 @@ IR literature [manning2008; saracevic2007].
 - [saracevic2007]
 
 ## Open questions and review notes
-- Assumed to be a level in the DAG rather than a namespace prefix on titles; confirm with the team.
+- Placed under retrieval performance (decided 2026-10-26), so it is a level in the DAG, not just a prefix on titles.

@@ -63,7 +63,7 @@ The property is **temporal correctness** of the video and annotation component. 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under System reliability; Output quality → Annotation quality)
+- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under System characteristics → System reliability; System characteristics → Output quality → Annotation quality)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -6,13 +6,13 @@ page_type: construct
 template_version: "0.1"
 fields: [hci, information-retrieval, visualization]
 
-broader: [efficiency]
+broader: [system-characteristics]
 
 status: ai-draft
 last_reviewed: null
 reviewers: []
 
-sources: [iso9241-11]
+sources: []
 ---
 
 # System responsiveness
@@ -20,10 +20,10 @@ sources: [iso9241-11]
 > How quickly the system reacts to a person's input.
 
 ## 1. Definition
-The speed with which a system responds to user actions, as one resource (waiting time) that users spend [iso9241-11].
+The speed with which a system responds to user actions.
 
 ## 2. Boundaries
-It is a property of the system, not of the person; it is one part of task time.
+It is a property of the system, measurable without a user pursuing a goal, so it sits under [system characteristics](system-characteristics.md). Waiting time is one part of task time; how much it affects [task efficiency](task-efficiency.md) is an empirical question.
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
@@ -43,7 +43,7 @@ Faster response is positive for [Improved Usability](../objectives/improved-usab
 Systems and HCI practice.
 
 ## 7. Sources
-- [iso9241-11]
+- None yet.
 
 ## Open questions and review notes
 - Should perceived speed be its own narrower construct?

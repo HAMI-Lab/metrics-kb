@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How long a person, working with the system, takes to finish a defined task."
-  measures: [efficiency]
+  measures: [task-efficiency]
   subject: [user-system-team]
   aspect: [efficiency]
   perspective: [objective]
@@ -65,7 +65,7 @@ The property is **efficiency** (time spent to achieve an outcome). The subject i
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Usability: efficiency](../constructs/efficiency.md) (under Usability)
+- [Task efficiency](../constructs/task-efficiency.md) (under Task characteristics → Task performance; Task characteristics → Usability)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -125,8 +125,8 @@ Component: [Response Latency](response-latency.md) is part of task time. [Active
 Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency)
-- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Response Latency](response-latency.md) (System responsiveness)
+- Same construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency)
+- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
 - Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 

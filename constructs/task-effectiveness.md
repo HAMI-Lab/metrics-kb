@@ -1,12 +1,12 @@
 ---
-id: effectiveness
-title: "Usability: effectiveness"
+id: task-effectiveness
+title: Task effectiveness
 aliases: [task effectiveness]
 page_type: construct
 template_version: "0.1"
 fields: [hci]
 
-broader: [usability]
+broader: [task-performance, usability]
 
 status: ai-draft
 last_reviewed: null
@@ -15,15 +15,15 @@ reviewers: []
 sources: [iso9241-11]
 ---
 
-# Usability: effectiveness
+# Task effectiveness
 
 > The accuracy and completeness with which users reach their goals.
 
 ## 1. Definition
-The accuracy and completeness with which users achieve specified goals [iso9241-11]. More effectiveness means the outcome the user produced with the system is more correct and more complete.
+Here a *task* is the combined setting in which a user uses a system to achieve a certain goal: properties of a task belong to the user, the system, and the goal together. Task effectiveness is the accuracy and completeness with which users achieve specified goals [iso9241-11]. More effectiveness means the outcome the user produced with the system is more correct and more complete.
 
 ## 2. Boundaries
-It judges the *outcome* of the user and system together, unlike [output quality](output-quality.md), which judges what the system produces by itself. It ignores the effort spent, which is [efficiency](efficiency.md).
+It judges the *outcome* of the user and system together, unlike [output quality](output-quality.md), which judges what the system produces by itself. It ignores the effort spent, which is [task efficiency](task-efficiency.md).
 
 ## 3. Narrower constructs
 Narrower constructs are field-specific forms of outcome quality, such as completeness of labels in an annotation task.
@@ -47,4 +47,5 @@ Standard definition [iso9241-11].
 - [iso9241-11]
 
 ## Open questions and review notes
+- Two parents: task performance (outcomes and resources) and usability (the ISO decomposition). Keep both?
 - Add a Task Success Rate metric page.

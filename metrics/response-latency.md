@@ -62,7 +62,7 @@ The property is **responsiveness**. The subject is the **system**, including its
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [System responsiveness](../constructs/responsiveness.md) (under Usability → Usability: efficiency)
+- [System responsiveness](../constructs/responsiveness.md) (under System characteristics)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -119,8 +119,7 @@ Component of [Task Completion Time](task-completion-time.md).
 Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
 
 <!-- generated:neighbours:start -->
-- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency)
-- Sibling construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
+_None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

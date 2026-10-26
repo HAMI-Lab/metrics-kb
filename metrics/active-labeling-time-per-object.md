@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How much active working time a labeler spends, using the tool, to produce one finished object track in a video."
-  measures: [efficiency]
+  measures: [task-efficiency]
   subject: [user-system-team]
   aspect: [efficiency]
   perspective: [objective]
@@ -65,7 +65,7 @@ The property is **labeling efficiency**. The subject is the **labeler and tool t
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Usability: efficiency](../constructs/efficiency.md) (under Usability)
+- [Task efficiency](../constructs/task-efficiency.md) (under Task characteristics → Task performance; Task characteristics → Usability)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -132,8 +132,8 @@ Refinement of [Task Completion Time](task-completion-time.md). Its components in
 Complementary: [Object-Track Completeness](object-track-completeness.md), [NASA-TLX](nasa-tlx.md).
 
 <!-- generated:neighbours:start -->
-- Same construct: [Task Completion Time](task-completion-time.md) (Usability: efficiency)
-- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Response Latency](response-latency.md) (System responsiveness)
+- Same construct: [Task Completion Time](task-completion-time.md) (Task efficiency)
+- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
 - Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 

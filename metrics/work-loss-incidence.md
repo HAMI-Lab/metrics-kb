@@ -63,7 +63,7 @@ The property is **reliability of keeping the user's work**. The subject is the *
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Work preservation](../constructs/work-preservation.md) (under System reliability)
+- [Work preservation](../constructs/work-preservation.md) (under System characteristics → System reliability)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

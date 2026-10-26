@@ -23,7 +23,7 @@ sources: [alter2014]
 Work users do only to undo, prevent, or get around something the system does: workarounds [alter2014].
 
 ## 2. Boundaries
-Friction is a cause of lower [efficiency](efficiency.md) and lower [perceived usability](perceived-usability.md), but is named on its own because it points to specific fixes. It excludes ordinary corrections of wrong inputs or outputs, which are part of the job.
+Friction is a cause of lower [task efficiency](task-efficiency.md) and lower [perceived usability](perceived-usability.md), but is named on its own because it points to specific fixes. It excludes ordinary corrections of wrong inputs or outputs, which are part of the job.
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
@@ -46,4 +46,4 @@ Added from the InfinityPool metric-chat interview (2026-10-19), where users desc
 - [alter2014]
 
 ## Open questions and review notes
-- Is friction a sibling of efficiency, or should it sit under efficiency?
+- Is friction a sibling of task efficiency under usability, or should it sit under task efficiency?

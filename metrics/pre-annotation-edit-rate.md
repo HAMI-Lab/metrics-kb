@@ -63,7 +63,7 @@ The property is **how far the model's proposal was from what the person accepted
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation quality: pre-annotation quality](../constructs/pre-annotation-quality.md) (under Output quality → Annotation quality)
+- [Annotation quality: pre-annotation quality](../constructs/pre-annotation-quality.md) (under System characteristics → Output quality → Annotation quality)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

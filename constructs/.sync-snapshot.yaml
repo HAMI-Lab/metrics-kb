@@ -1,8 +1,12 @@
 # Last synced state. Written by scripts/sync_constructs.py; do not edit.
 
+system-characteristics:
+  title: System characteristics
+  broader: []
+
 output-quality:
   title: Output quality
-  broader: []
+  broader: [system-characteristics]
 
 annotation-quality:
   title: Annotation quality
@@ -16,9 +20,13 @@ classification-correctness:
   title: "Classification effectiveness: correctness"
   broader: [output-quality]
 
+retrieval-performance:
+  title: Retrieval performance
+  broader: [system-characteristics]
+
 retrieval-effectiveness:
   title: Retrieval effectiveness
-  broader: []
+  broader: [retrieval-performance]
 
 relevance:
   title: "Retrieval effectiveness: relevance"
@@ -36,9 +44,13 @@ trustworthiness:
   title: Trustworthiness
   broader: [relevance, output-quality]
 
+retrieval-efficiency:
+  title: Retrieval efficiency
+  broader: [retrieval-performance]
+
 system-reliability:
   title: System reliability
-  broader: []
+  broader: [system-characteristics]
 
 temporal-alignment:
   title: "Annotation tool: temporal alignment"
@@ -48,33 +60,41 @@ work-preservation:
   title: Work preservation
   broader: [system-reliability]
 
+responsiveness:
+  title: System responsiveness
+  broader: [system-characteristics]
+
+task-characteristics:
+  title: Task characteristics
+  broader: []
+
+task-performance:
+  title: Task performance
+  broader: [task-characteristics]
+
 usability:
   title: Usability
-  broader: []
+  broader: [task-characteristics]
 
 interaction-friction:
   title: Interaction friction
   broader: [usability]
 
-effectiveness:
-  title: "Usability: effectiveness"
-  broader: [usability]
+task-effectiveness:
+  title: Task effectiveness
+  broader: [task-performance, usability]
 
 label-completeness:
   title: "Annotation quality: completeness"
-  broader: [annotation-quality, effectiveness]
+  broader: [annotation-quality, task-effectiveness]
 
-efficiency:
-  title: "Usability: efficiency"
-  broader: [usability]
+task-efficiency:
+  title: Task efficiency
+  broader: [task-performance, usability]
 
 mental-workload:
   title: Mental workload
-  broader: [efficiency]
-
-responsiveness:
-  title: System responsiveness
-  broader: [efficiency]
+  broader: [task-efficiency]
 
 perceived-usability:
   title: "Usability: perceived usability"

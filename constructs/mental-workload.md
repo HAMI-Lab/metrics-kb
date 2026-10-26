@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [hci, human-factors]
 
-broader: [efficiency]
+broader: [task-efficiency]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: [hart1988, iso9241-11]
 How much mental (and physical and temporal) demand doing a task with the system places on a person [hart1988].
 
 ## 2. Boundaries
-It is about the person's state during the task, not about the system's qualities ([perceived usability](perceived-usability.md)). It is placed under [efficiency](efficiency.md) because ISO 9241-11 counts human effort as a resource [iso9241-11].
+It is about the person's state during the task, not about the system's qualities ([perceived usability](perceived-usability.md)). It is placed under [task efficiency](task-efficiency.md) because ISO 9241-11 counts human effort as a resource [iso9241-11].
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
@@ -47,4 +47,4 @@ Human factors research on workload [hart1988].
 - [iso9241-11]
 
 ## Open questions and review notes
-- Is efficiency the right parent, or should mental workload be a root construct shared with human factors?
+- Is task efficiency the right parent, or should mental workload be a root construct shared with human factors?

@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [machine-learning, llm-evaluation, data-annotation]
 
-broader: []
+broader: [system-characteristics]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: []
 The quality of a system's outputs judged against what they should have been.
 
 ## 2. Boundaries
-It judges outputs, not the user's outcome ([effectiveness](effectiveness.md)) or the experience ([usability](usability.md)).
+It judges outputs, not the user's outcome ([task effectiveness](task-effectiveness.md)) or the experience ([usability](usability.md)).
 
 ## 3. Narrower constructs
 Narrower constructs are kinds of output, each with its own notion of "correct".

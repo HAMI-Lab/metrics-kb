@@ -64,7 +64,7 @@ The property is **friction**: the extra work the tool's behavior imposes. The su
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Interaction friction](../constructs/interaction-friction.md) (under Usability)
+- [Interaction friction](../constructs/interaction-friction.md) (under Task characteristics → Usability)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -134,7 +134,7 @@ Part of [Active Labeling Time per Object](active-labeling-time-per-object.md).
 Behavioral counterpart to perceived usability ([SUS](system-usability-scale.md)) and to usability-test error and problem counts [nielsen1993]. Keystroke-level models [card1983] can estimate how many steps a workaround costs, which is cheaper than logging for single patterns like the 7-step delete.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Usability: efficiency), [Task Completion Time](task-completion-time.md) (Usability: efficiency), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+- Sibling construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency), [Task Completion Time](task-completion-time.md) (Task efficiency), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

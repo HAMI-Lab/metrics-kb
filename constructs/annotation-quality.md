@@ -23,7 +23,7 @@ sources: []
 The fitness of annotations (labels, boxes, tracks) to serve as ground truth, usually for training or evaluating models.
 
 ## 2. Boundaries
-It is about the labels, whoever produced them. The labeler's effort belongs under [efficiency](efficiency.md).
+It is about the labels, whoever produced them. The labeler's effort belongs under [task efficiency](task-efficiency.md).
 
 ## 3. Narrower constructs
 Completeness, correctness of pre-annotations, and correct placement in time are separate parts.

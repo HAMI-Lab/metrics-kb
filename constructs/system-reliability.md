@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [software-engineering, hci]
 
-broader: []
+broader: [system-characteristics]
 
 status: ai-draft
 last_reviewed: null

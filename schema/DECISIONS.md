@@ -4,6 +4,20 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-10-26 (later): Task characteristics vs system characteristics
+
+### D12. Two top-level groups of constructs
+- **Decision.** "Task" means the combined setting in which a user uses a system to achieve a certain goal. Constructs about that setting go under **Task characteristics**; constructs about the system alone (measurable without a user pursuing a goal) go under **System characteristics**. Either may sit several levels down.
+- **Changes.**
+  - Renamed `effectiveness` → `task-effectiveness` ("Task effectiveness") and `efficiency` → `task-efficiency` ("Task efficiency"). Both sit under the new **Task performance** (under Task characteristics) and also under Usability, which keeps the ISO 9241-11 decomposition.
+  - Usability moved under Task characteristics.
+  - New **Retrieval performance** (under System characteristics) with children Retrieval effectiveness and the new **Retrieval efficiency**. This settles D3's open point: retrieval effectiveness is a level in the DAG.
+  - Output quality, System reliability, and System responsiveness moved under System characteristics. Responsiveness is no longer under task efficiency: its effect on task time is recorded as an empirical link on metric pages, not as a DAG edge.
+- **Why.** Separating what can be measured on the system alone from what needs a user pursuing a goal mirrors the component/system vs interaction/outcome levels in the metric-chat skill, and makes explicit that system gains do not automatically become task gains.
+- **To confirm.** Task effectiveness and task efficiency keep two parents (task performance and usability). Annotation quality stays under output quality (system side), while label completeness also sits under task effectiveness. Whether a third root for properties of the user alone (expertise, trust as an attitude) is needed. Whether an intermediate "system performance" construct is wanted.
+
+---
+
 ## 2026-10-26: Constructs, strategies, and validity (metric template 0.2)
 
 Decided in a design discussion between the project lead (after a team discussion) and an AI assistant. Each item gives the decision, the reason, and the alternatives considered.
