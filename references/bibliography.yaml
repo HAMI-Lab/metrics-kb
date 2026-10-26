@@ -440,3 +440,111 @@ alter2014:
   note: Defines workarounds and why users create them when systems block their goals
   origin: added by AI for the InfinityPool metric-chat (2026-10-19)
   verified: false
+jacobs2021:
+  citation: "Jacobs, A. Z., & Wallach, H. (2021). Measurement and Fairness. Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT). (check against the paper)"
+  url: null
+  note: "Constructs vs operationalizations; validity types (face, content, convergent, discriminant, predictive, hypothesis, consequential) and reliability"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+campbell1959:
+  citation: "Campbell, D. T., & Fiske, D. W. (1959). Convergent and Discriminant Validation by the Multitrait-Multimethod Matrix. Psychological Bulletin. (check against the paper for volume and pages)"
+  url: null
+  note: "Method variance; convergent and discriminant validity"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bollen1991:
+  citation: "Bollen, K., & Lennox, R. (1991). Conventional Wisdom on Measurement: A Structural Equation Perspective. Psychological Bulletin. (check against the paper)"
+  url: null
+  note: "Reflective vs formative indicators"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+webb1966:
+  citation: "Webb, E. J., Campbell, D. T., Schwartz, R. D., & Sechrest, L. (1966). Unobtrusive Measures: Nonreactive Research in the Social Sciences. Rand McNally. (check edition)"
+  url: null
+  note: "Reactive vs non-reactive measures"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lazar2017:
+  citation: "Lazar, J., Feng, J. H., & Hochheiser, H. (2017). Research Methods in Human-Computer Interaction (2nd ed.). Morgan Kaufmann. (check edition and year)"
+  url: null
+  note: "Survey of HCI research methods: surveys, diaries, interviews, logs, physiological measures"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bolger2003:
+  citation: "Bolger, N., Davis, A., & Rafaeli, E. (2003). Diary Methods: Capturing Life as It Is Lived. Annual Review of Psychology. (check against the paper)"
+  url: null
+  note: "Diary and experience-sampling methods"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+krippendorff2004:
+  citation: "Krippendorff, K. (2004). Content Analysis: An Introduction to Its Methodology (2nd ed.). Sage. (check edition)"
+  url: null
+  note: "Coding qualitative data into counts; inter-coder agreement (alpha)"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+braun2006:
+  citation: "Braun, V., & Clarke, V. (2006). Using Thematic Analysis in Psychology. Qualitative Research in Psychology. (check against the paper)"
+  url: null
+  note: "Thematic analysis of qualitative data"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+hofmann2016:
+  citation: "Hofmann, K., Li, L., & Radlinski, F. (2016). Online Evaluation for Information Retrieval. Foundations and Trends in Information Retrieval. (check against the paper)"
+  url: null
+  note: "A/B tests, interleaving and other online evaluation methods"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+chapelle2012:
+  citation: "Chapelle, O., Joachims, T., Radlinski, F., & Yue, Y. (2012). Large-Scale Validation and Analysis of Interleaved Search Evaluation. ACM Transactions on Information Systems. (check against the paper)"
+  url: null
+  note: "Interleaving as comparative evaluation"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bradley1952:
+  citation: "Bradley, R. A., & Terry, M. E. (1952). Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons. Biometrika. (check against the paper)"
+  url: null
+  note: "Bradley-Terry model for pairwise comparisons"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+zheng2023:
+  citation: "Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks. (check against the paper for the author list)"
+  url: null
+  note: "LLM-as-a-judge agreement with humans and its biases; pairwise arena rankings"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+ratner2017:
+  citation: "Ratner, A., Bach, S. H., Ehrenberg, H., Fries, J., Wu, S., & Re, C. (2017). Snorkel: Rapid Training Data Creation with Weak Supervision. Proceedings of the VLDB Endowment. (check against the paper)"
+  url: null
+  note: "Weak supervision: programmatic, noisy labels"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+chuklin2015:
+  citation: "Chuklin, A., Markov, I., & de Rijke, M. (2015). Click Models for Web Search. Morgan & Claypool. (check against the book)"
+  url: null
+  note: "Statistical models that infer relevance or satisfaction from clicks"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+embretson2000:
+  citation: "Embretson, S. E., & Reise, S. P. (2000). Item Response Theory for Psychologists. Lawrence Erlbaum. (check against the book)"
+  url: null
+  note: "Latent-trait models for questionnaire and test scores"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+saracevic2007:
+  citation: "Saracevic, T. (2007). Relevance: A Review of the Literature and a Framework for Thinking on the Notion in Information Science. Part II: Nature and Manifestations of Relevance. Journal of the American Society for Information Science and Technology. (check against the paper)"
+  url: null
+  note: "Manifestations of relevance: system, topical, cognitive, situational, motivational"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+barry1998:
+  citation: "Barry, C. L., & Schamber, L. (1998). Users' Criteria for Relevance Evaluation: A Cross-Situational Comparison. Information Processing & Management. (check against the paper)"
+  url: null
+  note: "User relevance criteria beyond topic, such as currency and source quality"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lee2004:
+  citation: "Lee, J. D., & See, K. A. (2004). Trust in Automation: Designing for Appropriate Reliance. Human Factors. (check against the paper)"
+  url: null
+  note: "Trust as attitude vs trustworthiness of the system; appropriate reliance"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
