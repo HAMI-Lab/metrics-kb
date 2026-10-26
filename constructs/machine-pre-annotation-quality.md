@@ -1,12 +1,12 @@
 ---
-id: pre-annotation-quality
-title: "Annotation quality: pre-annotation quality"
+id: machine-pre-annotation-quality
+title: Machine pre-annotation quality
 aliases: [model-suggestion quality]
 page_type: construct
 template_version: "0.1"
 fields: [data-annotation, human-ai-interaction]
 
-broader: [annotation-quality]
+broader: [output-quality]
 
 status: ai-draft
 last_reviewed: null
@@ -15,7 +15,7 @@ reviewers: []
 sources: [parasuraman2010]
 ---
 
-# Annotation quality: pre-annotation quality
+# Machine pre-annotation quality
 
 > How close a model's proposed labels are to what a careful person would accept.
 
@@ -23,7 +23,7 @@ sources: [parasuraman2010]
 The quality of model-generated labels offered to a person as a starting point.
 
 ## 2. Boundaries
-It is about the model's proposals, not the final labels. When people accept proposals without checking, final labels inherit their errors [parasuraman2010].
+It is about the model's proposals, not the final labels, so it is a system characteristic; the final labels are [annotation quality](annotation-quality.md), a task characteristic. When people accept proposals without checking, final labels inherit their errors [parasuraman2010].
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->

@@ -11,25 +11,25 @@ system-characteristics:
   title: System characteristics
   broader: []
 
-output-quality:
-  title: Output quality
+system-performance:
+  title: System performance
   broader: [system-characteristics]
 
-annotation-quality:
-  title: Annotation quality
-  broader: [output-quality]
-
-pre-annotation-quality:
-  title: "Annotation quality: pre-annotation quality"
-  broader: [annotation-quality]
+output-quality:
+  title: Output quality
+  broader: [system-performance]
 
 classification-correctness:
   title: "Classification effectiveness: correctness"
   broader: [output-quality]
 
+machine-pre-annotation-quality:
+  title: Machine pre-annotation quality
+  broader: [output-quality]
+
 retrieval-performance:
   title: Retrieval performance
-  broader: [system-characteristics]
+  broader: [system-performance]
 
 retrieval-effectiveness:
   title: Retrieval effectiveness
@@ -57,11 +57,11 @@ retrieval-efficiency:
 
 system-reliability:
   title: System reliability
-  broader: [system-characteristics]
+  broader: [system-performance]
 
 temporal-alignment:
   title: "Annotation tool: temporal alignment"
-  broader: [system-reliability, annotation-quality]
+  broader: [system-reliability]
 
 work-preservation:
   title: Work preservation
@@ -69,7 +69,7 @@ work-preservation:
 
 responsiveness:
   title: System responsiveness
-  broader: [system-characteristics]
+  broader: [system-performance]
 
 task-characteristics:
   title: Task characteristics
@@ -91,9 +91,13 @@ task-effectiveness:
   title: Task effectiveness
   broader: [task-performance, usability]
 
+annotation-quality:
+  title: Annotation quality
+  broader: [task-effectiveness]
+
 label-completeness:
   title: "Annotation quality: completeness"
-  broader: [annotation-quality, task-effectiveness]
+  broader: [annotation-quality]
 
 task-efficiency:
   title: Task efficiency
@@ -106,3 +110,23 @@ mental-workload:
 perceived-usability:
   title: "Usability: perceived usability"
   broader: [usability]
+
+user-characteristics:
+  title: User characteristics
+  broader: []
+
+literacy:
+  title: Literacy
+  broader: [user-characteristics]
+
+ai-literacy:
+  title: "Literacy: AI literacy"
+  broader: [literacy]
+
+information-literacy:
+  title: "Literacy: information literacy"
+  broader: [literacy]
+
+visualization-literacy:
+  title: "Literacy: visualization literacy"
+  broader: [literacy]

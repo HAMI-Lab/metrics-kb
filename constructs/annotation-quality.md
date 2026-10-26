@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [data-annotation]
 
-broader: [output-quality]
+broader: [task-effectiveness]
 
 status: ai-draft
 last_reviewed: null
@@ -17,20 +17,18 @@ sources: []
 
 # Annotation quality
 
-> How good the labels produced by people, models, or both are as ground truth.
+> How good the labels produced in an annotation task are as ground truth.
 
 ## 1. Definition
 The fitness of annotations (labels, boxes, tracks) to serve as ground truth, usually for training or evaluating models.
 
 ## 2. Boundaries
-It is about the labels, whoever produced them. The labeler's effort belongs under [task efficiency](task-efficiency.md).
+It is the outcome of an annotation task: people working with a system (its interface, interaction design, and any machine pre-annotation), so it sits under [task effectiveness](task-effectiveness.md). The quality of the machine's proposals alone is a system characteristic, [machine pre-annotation quality](machine-pre-annotation-quality.md). The labeler's effort belongs under [task efficiency](task-efficiency.md).
 
 ## 3. Narrower constructs
-Completeness, correctness of pre-annotations, and correct placement in time are separate parts.
+Completeness is the first part with a page. Pre-annotation quality and correct placement in time are system characteristics that feed it, linked by evidence rather than by the DAG.
 <!-- generated:narrower:start -->
 - [Annotation quality: completeness](label-completeness.md)
-- [Annotation quality: pre-annotation quality](pre-annotation-quality.md)
-- [Annotation tool: temporal alignment](temporal-alignment.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

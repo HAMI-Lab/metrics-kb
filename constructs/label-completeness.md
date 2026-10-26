@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [data-annotation, computer-vision]
 
-broader: [annotation-quality, task-effectiveness]
+broader: [annotation-quality]
 
 status: ai-draft
 last_reviewed: null
@@ -23,7 +23,7 @@ sources: []
 The share of things that should be labeled that actually are.
 
 ## 2. Boundaries
-It is a property of the labels, but also the user's task outcome, hence its two parents.
+It is a property of the labels produced in the annotation task, so it inherits task effectiveness through [annotation quality](annotation-quality.md).
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->

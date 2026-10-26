@@ -4,6 +4,20 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-10-26 (later still): User characteristics, system performance, annotation quality
+
+### D13. Three roots, symmetric task and system sides
+- **Decision.**
+  - Added a third root, **User characteristics**: properties of the user alone, independent of a particular system or task. First child: **Literacy**, with information, visualization, and AI literacy, measurable by literacy tests.
+  - Added **System performance** between System characteristics and its children (retrieval performance, output quality, system reliability, system responsiveness), mirroring Task characteristics → Task performance.
+  - **Annotation quality** is a task characteristic (under task effectiveness): an annotation task involves both people and the system (interface, interaction design, machine pre-annotation). Label completeness now sits under it only.
+  - Renamed `pre-annotation-quality` → `machine-pre-annotation-quality` ("Machine pre-annotation quality"), kept on the system side under output quality, because it is machine-generated.
+  - Temporal alignment is now under system reliability only; its effect on annotation quality is an empirical link, as with responsiveness and task efficiency (D12).
+- **Confirmed from D12.** Usability under task characteristics with task effectiveness and task efficiency under both task performance and usability; output quality, reliability, and responsiveness on the system side.
+- **Open.** Whether reliability is part of system performance or a sibling; more user characteristics (expertise, propensity to trust automation, data literacy, numeracy).
+
+---
+
 ## 2026-10-26 (later): Task characteristics vs system characteristics
 
 ### D12. Two top-level groups of constructs

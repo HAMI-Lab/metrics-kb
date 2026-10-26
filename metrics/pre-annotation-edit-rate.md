@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of the annotations a model proposed before a person started labeling, the share the person changed or deleted before submitting."
-  measures: [pre-annotation-quality]
+  measures: [machine-pre-annotation-quality]
   subject: [system-component, user-system-team]
   aspect: [effectiveness, trust]
   perspective: [objective]
@@ -63,7 +63,7 @@ The property is **how far the model's proposal was from what the person accepted
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation quality: pre-annotation quality](../constructs/pre-annotation-quality.md) (under System characteristics → Output quality → Annotation quality)
+- [Machine pre-annotation quality](../constructs/machine-pre-annotation-quality.md) (under System characteristics → System performance → Output quality)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -125,7 +125,7 @@ Added tracks per video and the edit rate per model-score bin (2.4) are computed 
 A human-observed stand-in for model [Precision](precision.md) (deletions) and localization error (resizes) [manning2008]. Complementary: [Object-Track Completeness](object-track-completeness.md), which sees misses. Cheaper than a gold-standard model evaluation, but only valid when checking is careful.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Object-Track Completeness](object-track-completeness.md) (Annotation quality: completeness), [Frame-Sync Accuracy](frame-sync-accuracy.md) (Annotation tool: temporal alignment)
+- Sibling construct: [Precision](precision.md) (Classification effectiveness: correctness), [Recall](recall.md) (Classification effectiveness: correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

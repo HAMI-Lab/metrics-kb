@@ -28,7 +28,7 @@ It judges the *outcome* of the user and system together, unlike [output quality]
 ## 3. Narrower constructs
 Narrower constructs are field-specific forms of outcome quality, such as completeness of labels in an annotation task.
 <!-- generated:narrower:start -->
-- [Annotation quality: completeness](label-completeness.md)
+- [Annotation quality](annotation-quality.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

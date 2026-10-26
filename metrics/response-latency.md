@@ -62,7 +62,7 @@ The property is **responsiveness**. The subject is the **system**, including its
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [System responsiveness](../constructs/responsiveness.md) (under System characteristics)
+- [System responsiveness](../constructs/responsiveness.md) (under System characteristics → System performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [machine-learning, llm-evaluation, data-annotation]
 
-broader: [system-characteristics]
+broader: [system-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -28,8 +28,8 @@ It judges outputs, not the user's outcome ([task effectiveness](task-effectivene
 ## 3. Narrower constructs
 Narrower constructs are kinds of output, each with its own notion of "correct".
 <!-- generated:narrower:start -->
-- [Annotation quality](annotation-quality.md)
 - [Classification effectiveness: correctness](classification-correctness.md)
+- [Machine pre-annotation quality](machine-pre-annotation-quality.md)
 - [Trustworthiness](trustworthiness.md)
 <!-- generated:narrower:end -->
 

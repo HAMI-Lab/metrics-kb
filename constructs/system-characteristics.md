@@ -26,12 +26,9 @@ Properties of a system or its components, such as the quality of its outputs, it
 Unlike [task characteristics](task-characteristics.md), they do not need a user pursuing a goal. Whether a better system characteristic yields better task characteristics is an empirical question: in IR, large gains in batch effectiveness did not always improve users' task performance [hersh2000; turpin2006].
 
 ## 3. Narrower constructs
-Groups of system properties. Several are indirect causes of task characteristics, recorded as empirical links on metric pages rather than as DAG edges.
+[System performance](system-performance.md) mirrors task performance on the task side. Several system properties are indirect causes of task characteristics, recorded as empirical links on metric pages rather than as DAG edges.
 <!-- generated:narrower:start -->
-- [Output quality](output-quality.md)
-- [Retrieval performance](retrieval-performance.md)
-- [System reliability](system-reliability.md)
-- [System responsiveness](responsiveness.md)
+- [System performance](system-performance.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics
@@ -51,4 +48,4 @@ Top-level split decided by the team on 2026-10-26 (see `schema/DECISIONS.md`).
 - [turpin2006]
 
 ## Open questions and review notes
-- Should there be an intermediate "system performance" construct grouping retrieval performance, output quality, responsiveness, and reliability?
+- Added system performance as the intermediate construct (2026-10-26).

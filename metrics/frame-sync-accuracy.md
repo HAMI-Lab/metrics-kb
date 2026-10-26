@@ -63,7 +63,7 @@ The property is **temporal correctness** of the video and annotation component. 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under System characteristics → System reliability; System characteristics → Output quality → Annotation quality)
+- [Annotation tool: temporal alignment](../constructs/temporal-alignment.md) (under System characteristics → System performance → System reliability)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -129,7 +129,7 @@ The field companion (the share of tasks where frames can only be approximated, 2
 Component-level cause of labeler-level problems. Complementary to [Response Latency](response-latency.md).
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Work-Loss Incidence](work-loss-incidence.md) (Work preservation), [Object-Track Completeness](object-track-completeness.md) (Annotation quality: completeness), [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (Annotation quality: pre-annotation quality)
+- Sibling construct: [Work-Loss Incidence](work-loss-incidence.md) (Work preservation)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

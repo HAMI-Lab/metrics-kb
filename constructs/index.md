@@ -6,20 +6,24 @@ Rounded boxes are constructs; square boxes are metrics. Solid arrows point from 
 
 ```mermaid
 graph TD
+  c_ai_literacy(["Literacy: AI literacy"])
   c_annotation_quality(["Annotation quality"])
   c_classification_correctness(["Classification effectiveness: correctness"])
+  c_information_literacy(["Literacy: information literacy"])
   c_interaction_friction(["Interaction friction"])
   c_label_completeness(["Annotation quality: completeness"])
+  c_literacy(["Literacy"])
+  c_machine_pre_annotation_quality(["Machine pre-annotation quality"])
   c_mental_workload(["Mental workload"])
   c_output_quality(["Output quality"])
   c_perceived_usability(["Usability: perceived usability"])
-  c_pre_annotation_quality(["Annotation quality: pre-annotation quality"])
   c_relevance(["Retrieval effectiveness: relevance"])
   c_responsiveness(["System responsiveness"])
   c_retrieval_effectiveness(["Retrieval effectiveness"])
   c_retrieval_efficiency(["Retrieval efficiency"])
   c_retrieval_performance(["Retrieval performance"])
   c_system_characteristics(["System characteristics"])
+  c_system_performance(["System performance"])
   c_system_reliability(["System reliability"])
   c_task_characteristics(["Task characteristics"])
   c_task_effectiveness(["Task effectiveness"])
@@ -30,6 +34,8 @@ graph TD
   c_topical_relevance(["Retrieval effectiveness: topical relevance"])
   c_trustworthiness(["Trustworthiness"])
   c_usability(["Usability"])
+  c_user_characteristics(["User characteristics"])
+  c_visualization_literacy(["Literacy: visualization literacy"])
   c_work_preservation(["Work preservation"])
   m_active_labeling_time_per_object["Active Labeling Time per Object"]:::metric
   m_frame_sync_accuracy["Frame-Sync Accuracy"]:::metric
@@ -44,10 +50,11 @@ graph TD
   m_work_loss_incidence["Work-Loss Incidence"]:::metric
   m_workaround_action_rate["Workaround Action Rate"]:::metric
   c_annotation_quality --> c_label_completeness
-  c_annotation_quality --> c_pre_annotation_quality
-  c_annotation_quality --> c_temporal_alignment
-  c_output_quality --> c_annotation_quality
+  c_literacy --> c_ai_literacy
+  c_literacy --> c_information_literacy
+  c_literacy --> c_visualization_literacy
   c_output_quality --> c_classification_correctness
+  c_output_quality --> c_machine_pre_annotation_quality
   c_output_quality --> c_trustworthiness
   c_relevance --> c_timeliness
   c_relevance --> c_topical_relevance
@@ -55,15 +62,16 @@ graph TD
   c_retrieval_effectiveness --> c_relevance
   c_retrieval_performance --> c_retrieval_effectiveness
   c_retrieval_performance --> c_retrieval_efficiency
-  c_system_characteristics --> c_output_quality
-  c_system_characteristics --> c_retrieval_performance
-  c_system_characteristics --> c_system_reliability
-  c_system_characteristics --> c_responsiveness
+  c_system_characteristics --> c_system_performance
+  c_system_performance --> c_output_quality
+  c_system_performance --> c_retrieval_performance
+  c_system_performance --> c_system_reliability
+  c_system_performance --> c_responsiveness
   c_system_reliability --> c_temporal_alignment
   c_system_reliability --> c_work_preservation
   c_task_characteristics --> c_task_performance
   c_task_characteristics --> c_usability
-  c_task_effectiveness --> c_label_completeness
+  c_task_effectiveness --> c_annotation_quality
   c_task_efficiency --> c_mental_workload
   c_task_performance --> c_task_effectiveness
   c_task_performance --> c_task_efficiency
@@ -71,13 +79,14 @@ graph TD
   c_usability --> c_task_effectiveness
   c_usability --> c_task_efficiency
   c_usability --> c_perceived_usability
+  c_user_characteristics --> c_literacy
   c_classification_correctness -.-> m_precision
   c_classification_correctness -.-> m_recall
   c_interaction_friction -.-> m_workaround_action_rate
   c_label_completeness -.-> m_object_track_completeness
+  c_machine_pre_annotation_quality -.-> m_pre_annotation_edit_rate
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
-  c_pre_annotation_quality -.-> m_pre_annotation_edit_rate
   c_responsiveness -.-> m_response_latency
   c_task_efficiency -.-> m_active_labeling_time_per_object
   c_task_efficiency -.-> m_task_completion_time
@@ -93,41 +102,50 @@ graph TD
 A construct with several broader constructs appears under each of them.
 
 - [System characteristics](system-characteristics.md)
-  - [Output quality](output-quality.md)
-    - [Annotation quality](annotation-quality.md)
-      - [Annotation quality: completeness](label-completeness.md) · metrics: [Object-Track Completeness](../metrics/object-track-completeness.md)
-      - [Annotation quality: pre-annotation quality](pre-annotation-quality.md) · metrics: [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
+  - [System performance](system-performance.md)
+    - [Output quality](output-quality.md)
+      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
+      - [Machine pre-annotation quality](machine-pre-annotation-quality.md) · metrics: [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
+      - [Trustworthiness](trustworthiness.md)
+    - [Retrieval performance](retrieval-performance.md)
+      - [Retrieval effectiveness](retrieval-effectiveness.md)
+        - [Retrieval effectiveness: relevance](relevance.md)
+          - [Retrieval effectiveness: timeliness](timeliness.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
+          - [Trustworthiness](trustworthiness.md)
+      - [Retrieval efficiency](retrieval-efficiency.md)
+    - [System reliability](system-reliability.md)
       - [Annotation tool: temporal alignment](temporal-alignment.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
-    - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
-    - [Trustworthiness](trustworthiness.md)
-  - [Retrieval performance](retrieval-performance.md)
-    - [Retrieval effectiveness](retrieval-effectiveness.md)
-      - [Retrieval effectiveness: relevance](relevance.md)
-        - [Retrieval effectiveness: timeliness](timeliness.md)
-        - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
-        - [Trustworthiness](trustworthiness.md)
-    - [Retrieval efficiency](retrieval-efficiency.md)
-  - [System reliability](system-reliability.md)
-    - [Annotation tool: temporal alignment](temporal-alignment.md) · metrics: [Frame-Sync Accuracy](../metrics/frame-sync-accuracy.md)
-    - [Work preservation](work-preservation.md) · metrics: [Work-Loss Incidence](../metrics/work-loss-incidence.md)
-  - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
+      - [Work preservation](work-preservation.md) · metrics: [Work-Loss Incidence](../metrics/work-loss-incidence.md)
+    - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
 - [Task characteristics](task-characteristics.md)
   - [Task performance](task-performance.md)
     - [Task effectiveness](task-effectiveness.md)
-      - [Annotation quality: completeness](label-completeness.md) · metrics: [Object-Track Completeness](../metrics/object-track-completeness.md)
+      - [Annotation quality](annotation-quality.md)
+        - [Annotation quality: completeness](label-completeness.md) · metrics: [Object-Track Completeness](../metrics/object-track-completeness.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md), [Task Completion Time](../metrics/task-completion-time.md)
       - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
   - [Usability](usability.md)
     - [Interaction friction](interaction-friction.md) · metrics: [Workaround Action Rate](../metrics/workaround-action-rate.md)
     - [Task effectiveness](task-effectiveness.md)
-      - [Annotation quality: completeness](label-completeness.md) · metrics: [Object-Track Completeness](../metrics/object-track-completeness.md)
+      - [Annotation quality](annotation-quality.md)
+        - [Annotation quality: completeness](label-completeness.md) · metrics: [Object-Track Completeness](../metrics/object-track-completeness.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md), [Task Completion Time](../metrics/task-completion-time.md)
       - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
     - [Usability: perceived usability](perceived-usability.md) · metrics: [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
+- [User characteristics](user-characteristics.md)
+  - [Literacy](literacy.md)
+    - [Literacy: AI literacy](ai-literacy.md)
+    - [Literacy: information literacy](information-literacy.md)
+    - [Literacy: visualization literacy](visualization-literacy.md)
 
 ## Constructs with no metric yet
 
 - [Annotation quality](annotation-quality.md)
+- [Literacy](literacy.md)
+- [Literacy: AI literacy](ai-literacy.md)
+- [Literacy: information literacy](information-literacy.md)
+- [Literacy: visualization literacy](visualization-literacy.md)
 - [Output quality](output-quality.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: relevance](relevance.md)
@@ -135,9 +153,11 @@ A construct with several broader constructs appears under each of them.
 - [Retrieval efficiency](retrieval-efficiency.md)
 - [Retrieval performance](retrieval-performance.md)
 - [System characteristics](system-characteristics.md)
+- [System performance](system-performance.md)
 - [System reliability](system-reliability.md)
 - [Task characteristics](task-characteristics.md)
 - [Task effectiveness](task-effectiveness.md)
 - [Task performance](task-performance.md)
 - [Trustworthiness](trustworthiness.md)
 - [Usability](usability.md)
+- [User characteristics](user-characteristics.md)

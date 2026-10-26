@@ -23,7 +23,7 @@ sources: [iso9241-11]
 Here a *task* is the combined setting in which a user uses a system to achieve a certain goal: properties of a task belong to the user, the system, and the goal together. Task characteristics are properties of that combined setting, such as how well and at what cost the goal is reached, and how the user experiences it.
 
 ## 2. Boundaries
-Unlike [system characteristics](system-characteristics.md), they cannot be observed without a user (or a stand-in for one) pursuing a goal with the system. This matches the ISO 9241-11 view that usability is defined for specified users, goals, and context of use [iso9241-11].
+Unlike [system characteristics](system-characteristics.md) and [user characteristics](user-characteristics.md), they cannot be observed without a user (or a stand-in for one) pursuing a goal with the system. This matches the ISO 9241-11 view that usability is defined for specified users, goals, and context of use [iso9241-11].
 
 ## 3. Narrower constructs
 [Task performance](task-performance.md) covers outcomes and the resources spent on them. [Usability](usability.md) adds how the user experiences the task. Task effectiveness and task efficiency sit under both.
@@ -48,4 +48,4 @@ Top-level split decided by the team on 2026-10-26 (see `schema/DECISIONS.md`).
 - [iso9241-11]
 
 ## Open questions and review notes
-- Is a third root needed for properties of the user alone (expertise, trust as an attitude)?
+- Added [user characteristics](user-characteristics.md) as the third root (2026-10-26).

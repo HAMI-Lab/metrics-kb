@@ -548,3 +548,27 @@ lee2004:
   note: "Trust as attitude vs trustworthiness of the system; appropriate reliance"
   origin: added by AI for the schema revision (2026-10-26)
   verified: false
+long2020:
+  citation: "Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. Proceedings of CHI 2020. (check against the paper)"
+  url: null
+  note: "Defines AI literacy as a set of competencies"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lee2017:
+  citation: "Lee, S., Kim, S.-H., & Kwon, B. C. (2017). VLAT: Development of a Visualization Literacy Assessment Test. IEEE Transactions on Visualization and Computer Graphics. (check against the paper)"
+  url: null
+  note: "A standardized visualization literacy test"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+boy2014:
+  citation: "Boy, J., Rensink, R. A., Bertini, E., & Fekete, J.-D. (2014). A Principled Way of Assessing Visualization Literacy. IEEE Transactions on Visualization and Computer Graphics. (check against the paper)"
+  url: null
+  note: "Method for building visualization literacy tests with item response theory"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+acrl2015:
+  citation: "Association of College and Research Libraries (2015). Framework for Information Literacy for Higher Education. ACRL. (check the version)"
+  url: null
+  note: "A widely used framework defining information literacy"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false

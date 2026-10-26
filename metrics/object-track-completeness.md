@@ -66,7 +66,7 @@ The property is **completeness of labeled output**. The subject is the **labeler
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Annotation quality: completeness](../constructs/label-completeness.md) (under System characteristics → Output quality → Annotation quality; Task characteristics → Task performance → Task effectiveness; Task characteristics → Usability → Task effectiveness)
+- [Annotation quality: completeness](../constructs/label-completeness.md) (under Task characteristics → Task performance → Task effectiveness → Annotation quality; Task characteristics → Usability → Task effectiveness → Annotation quality)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -131,7 +131,7 @@ A variant of [Recall](recall.md) with objects (or object-frames) as the unit [ma
 Cheaper proxy: reviewer pass/fail on a task, which is quick but does not count misses. Complementary: [Active Labeling Time per Object](active-labeling-time-per-object.md) (effort) and [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (how much of the model's output was changed).
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Pre-annotation Edit Rate](pre-annotation-edit-rate.md) (Annotation quality: pre-annotation quality), [Frame-Sync Accuracy](frame-sync-accuracy.md) (Annotation tool: temporal alignment)
+_None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
