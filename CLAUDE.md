@@ -8,7 +8,13 @@ Read `README.md` first. This file adds the rules for AI edits.
 - Pages with `status: human-reviewed` or `expert-verified`: propose changes in chat or in review notes; do not edit the body unless asked.
 
 ## Writing rules
-- Follow `schema/metric-template.md` exactly: same headings, same order, same front matter keys.
+- Follow the template for the page type exactly (`schema/metric-template.md`, `construct-template.md`, `strategy-template.md`): same headings, same order, same front matter keys.
+- One metric page per operationalization. Write `construct.statement` at the level of the "spirit" of the measurement; put field-specific uses in 3.1, not in separate pages or separate statements.
+- Every metric links to at least one construct (`construct.measures`) and one strategy (`operationalization.route`). If no construct fits, add one (in `constructs/dag.yaml` or a new page) and say so in chat.
+- Set `validity_concern` honestly. Use `high` when the number is a proxy that is easy to game or when judges (human or model) go unchecked.
+- Never edit between `<!-- generated:...:start -->` and `<!-- generated:...:end -->` markers, `constructs/index.md`, or `schema/page-guide.md`; run `python scripts/build.py` instead.
+- Change the construct DAG through `scripts/sync_constructs.py` (after editing `constructs/dag.yaml` or a page's `broader`). If sync reports a conflict or a removal, ask a person; do not delete construct pages yourself.
+- Record schema changes, with reasons and alternatives, in `schema/DECISIONS.md`.
 - Use only values from `schema/vocabulary.yaml`. If none fits, use `other: <description>` and flag it.
 - `construct.statement` is the authoritative definition; tags are aids.
 - Every factual claim that is not common knowledge cites a key from `references/bibliography.yaml` in the form `[key]`. Never invent a citation. If you add a reference, mark it `verified: false`, and never add details (page numbers, figures) you are not sure of; write "(check against the paper)" instead.
@@ -21,6 +27,6 @@ Read `README.md` first. This file adds the rules for AI edits.
 - Never raise a page's status yourself.
 
 ## After editing
-- Run `python scripts/validate.py`; it must pass.
+- Run `python scripts/sync_constructs.py` (if constructs changed), `python scripts/build.py`, then `python scripts/validate.py`; it must pass.
 - Commit in small steps, one topic per commit, with a message that says what changed and why. Do not commit changes mixed with a human's uncommitted work; ask first if the working tree is dirty.
 - Update the tables in `objectives/*.md` if you changed a page's `objectives` front matter.
