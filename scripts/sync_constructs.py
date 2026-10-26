@@ -163,6 +163,14 @@ def apply_renames(dag, snap):
         for e in snap.values():
             if e and old in (e.get("broader") or []):
                 e["broader"] = [new if x == old else x for x in e["broader"]]
+        for folder, prefix in [("constructs", ""), ("metrics", "../constructs/"), ("strategies", "../constructs/"),
+                               ("objectives", "../constructs/")]:
+            for path in sorted((ROOT / folder).glob("*.md")):
+                text = path.read_text()
+                fixed = text.replace(f"]({prefix}{old}.md)", f"]({prefix}{new}.md)")
+                if fixed != text:
+                    path.write_text(fixed)
+                    msgs.append(f"updated links in {folder}/{path.name}")
         if old in snap:
             snap[new] = snap.pop(old)
             if snap[new]:
@@ -232,7 +240,11 @@ def main():
     for cid, entry in page_updates.items():
         path = ROOT / "constructs" / f"{cid}.md"
         text = path.read_text()
-        text = set_fm_line(text, "title", yaml_scalar(str(entry.get("title") or "")))
+        old_title = str((split(text)[0] or {}).get("title") or "")
+        new_title = str(entry.get("title") or "")
+        if old_title != new_title:
+            text = text.replace(f"\n# {old_title}\n", f"\n# {new_title}\n", 1)
+        text = set_fm_line(text, "title", yaml_scalar(new_title))
         text = set_fm_line(text, "broader", flow_list(list(entry.get("broader") or [])))
         path.write_text(text)
         msgs.append(f"updated constructs/{cid}.md from dag.yaml")
