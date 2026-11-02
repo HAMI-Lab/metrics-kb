@@ -91,6 +91,8 @@ def check_metric(mid, page, metrics, constructs, strategies):
     for r in route:
         if r not in strategies:
             err(f"operationalization.route: '{r}' has no page in strategies/")
+        elif (strategies[r]["fm"] or {}).get("layer") == "method":
+            err(f"operationalization.route: '{r}' is a method page; list it under research_method instead")
     vc = o.get("validity_concern") or {}
     if vc.get("level") not in VOCAB["validity_concern"]:
         err(f"bad validity_concern.level '{vc.get('level')}'")
@@ -137,6 +139,16 @@ def check_strategy(sid, page):
     n = f"strategies/{sid}.md"
     if not common_checks(n, sid, fm, body, "strategy", STRATEGY_HEADINGS):
         return
+    layer = fm.get("layer")
+    if layer not in ("route", "method"):
+        errors.append(f"{n}: layer should be 'route' or 'method', not '{layer}'")
+    if layer == "method":
+        if sid not in VOCAB["research_method"]:
+            errors.append(f"{n}: a method page's id must be a research_method value in the vocabulary")
+        if fm.get("research_methods"):
+            errors.append(f"{n}: research_methods should be empty on a method page")
+    elif sid in VOCAB["research_method"]:
+        errors.append(f"{n}: id is a research_method value, so layer should be 'method'")
     for v in fm.get("research_methods") or []:
         if not in_vocab(v, "research_method"):
             errors.append(f"{n}: research_methods: '{v}' not in vocabulary")

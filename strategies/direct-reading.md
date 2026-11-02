@@ -3,8 +3,9 @@ id: direct-reading
 title: "Direct reading: timing and counting"
 aliases: [instrumented measurement, event counting]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [logs-telemetry, task-study, test-collection]
 
 status: ai-draft
@@ -23,8 +24,13 @@ sources: [webb1966, hornbaek2006, kohavi2020]
 ### 1.1 Definition
 Durations, counts, and rates are recorded directly from events: when a task started and ended, how many times an action happened, how long the server took, whether a test passed. No one is asked to judge anything.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Logs and telemetry, timed tasks in lab or field studies, and automated test suites.
+<!-- generated:pairings:start -->
+- [Interaction logs and telemetry](logs-telemetry.md)
+- `task-study` (no method page yet)
+- [Test collections and benchmarks](test-collection.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Time on task** in usability tests.

@@ -3,7 +3,7 @@
 
 Writes:
   - generated blocks in construct pages (narrower constructs, metrics),
-    strategy pages (metrics using the route), and metric pages (construct links, neighbours);
+    strategy pages (pairings between routes and methods, metrics using each), and metric pages (construct links, neighbours);
   - constructs/index.md: the construct DAG as a Mermaid diagram and a nested list;
   - schema/page-guide.md: every template heading with the question it answers.
 
@@ -70,11 +70,32 @@ def render_construct_page(cid, c, constructs, metrics, children, by):
     return text
 
 
-def render_strategy_page(sid, s, metrics):
+def layer_of(s):
+    return (s["fm"] or {}).get("layer") or "route"
+
+
+def render_strategy_page(sid, s, metrics, strategies):
+    if layer_of(s) == "method":
+        field = "research_method"
+        pairs = sorted([rid for rid, r in strategies.items()
+                        if layer_of(r) == "route" and sid in ((r["fm"] or {}).get("research_methods") or [])],
+                       key=lambda x: title_of(strategies, x).lower())
+        lines = [f"[{title_of(strategies, r)}]({r}.md)" for r in pairs]
+        empty = "_No route page names this method yet._"
+    else:
+        field = "route"
+        lines = []
+        for v in (s["fm"] or {}).get("research_methods") or []:
+            if v in strategies and layer_of(strategies[v]) == "method":
+                lines.append(f"[{title_of(strategies, v)}]({v}.md)")
+            else:
+                lines.append(f"`{v}` (no method page yet)")
+        empty = "_No method listed yet._"
+    text = replace_block(s["text"], "pairings", bullets(lines, empty))
     users = sorted([mid for mid, m in metrics.items()
-                    if sid in (((m["fm"] or {}).get("operationalization") or {}).get("route") or [])],
+                    if sid in (((m["fm"] or {}).get("operationalization") or {}).get(field) or [])],
                    key=lambda x: title_of(metrics, x).lower())
-    return replace_block(s["text"], "metrics", bullets(
+    return replace_block(text, "metrics", bullets(
         [f"[{title_of(metrics, m)}](../metrics/{m}.md)" for m in users], "_No metric page uses it yet._"))
 
 
@@ -214,7 +235,7 @@ def render_all():
     for cid, c in constructs.items():
         files[c["path"]] = render_construct_page(cid, c, constructs, metrics, children, by)
     for sid, s in strategies.items():
-        files[s["path"]] = render_strategy_page(sid, s, metrics)
+        files[s["path"]] = render_strategy_page(sid, s, metrics, strategies)
     for mid, m in metrics.items():
         if has_block(m["text"], "constructs") or has_block(m["text"], "neighbours"):
             files[m["path"]] = render_metric_page(mid, m, constructs, metrics, parents, children, by)

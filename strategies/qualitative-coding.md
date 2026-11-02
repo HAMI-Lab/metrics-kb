@@ -3,8 +3,9 @@ id: qualitative-coding
 title: Coding qualitative data
 aliases: [content analysis, quantified qualitative data]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [interview, diary-esm, observation-think-aloud, questionnaire-survey]
 
 status: ai-draft
@@ -23,8 +24,14 @@ sources: [krippendorff2004, braun2006, lazar2017, bolger2003]
 ### 1.1 Definition
 Researchers assign codes from a codebook to segments of qualitative data, then count codes per participant, session, or task.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Interviews, diary studies [bolger2003], observation and think-aloud, and open-ended survey answers [lazar2017].
+<!-- generated:pairings:start -->
+- `interview` (no method page yet)
+- `diary-esm` (no method page yet)
+- `observation-think-aloud` (no method page yet)
+- [Questionnaires and surveys](questionnaire-survey.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Content analysis** with a fixed codebook and counts [krippendorff2004].

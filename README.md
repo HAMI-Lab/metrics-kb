@@ -10,13 +10,13 @@ The wiki has three first-class page types:
 
 - **Constructs** are what we want to know about: abstract concepts such as relevance, perceived usability, or mental workload ("concept" is a plain-language synonym). They form a DAG (directed acyclic graph): a construct can have several broader constructs.
 - **Metrics** are operationalizations: procedures that turn observations into a number. One page per operationalization; variants that differ only in a parameter (precision@k) stay on the same page. Each metric links to one or more constructs it measures.
-- **Strategies** are quantification routes shared by many metrics (direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, coding qualitative data, statistical modeling). Their pages hold the caveats every metric using the route inherits.
+- **Strategies** are the reusable methodology behind metrics, in two layers (`layer` in front matter). *Routes* say how data becomes a number (direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, coding qualitative data, statistical modeling). *Methods* say how the data is gathered (test collections, logs and telemetry, questionnaires, and others in `research_method` in the vocabulary). Their pages hold the caveats every metric using them inherits.
 
 | Folder | Contents |
 |---|---|
 | `constructs/` | One page per construct; `dag.yaml` (the DAG, hand-editable); `index.md` (generated diagram and tree). |
 | `metrics/` | One page per metric. |
-| `strategies/` | One page per quantification route. |
+| `strategies/` | One page per route, and one per research method that has a page so far. |
 | `objectives/` | One page per business objective, with the evidence linking metrics to it. |
 | `schema/` | Templates for the three page types, `vocabulary.yaml` (allowed tag values), `page-guide.md` (generated: what every section answers), `DECISIONS.md` (schema decisions and their reasons). |
 | `references/` | `bibliography.yaml`: every source that pages may cite. |

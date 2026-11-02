@@ -3,8 +3,9 @@ id: comparative-judgment
 title: "Comparative judgment: preferences and interleaving"
 aliases: [pairwise preference, side-by-side, interleaving]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [task-study, logs-telemetry, questionnaire-survey]
 
 status: ai-draft
@@ -23,8 +24,13 @@ sources: [chapelle2012, hofmann2016, bradley1952, zheng2023]
 ### 1.1 Definition
 Two or more outputs or systems are shown together, and the judge or the user's behaviour indicates which is better. Many such comparisons are combined into relative scores.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Side-by-side studies, online experiments with real users, and preference questions.
+<!-- generated:pairings:start -->
+- `task-study` (no method page yet)
+- [Interaction logs and telemetry](logs-telemetry.md)
+- [Questionnaires and surveys](questionnaire-survey.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Interleaving** in online search: results from two rankers are mixed in one list, and clicks show which ranker users prefer [chapelle2012; hofmann2016].

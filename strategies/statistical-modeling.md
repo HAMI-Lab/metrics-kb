@@ -3,8 +3,9 @@ id: statistical-modeling
 title: Statistical and latent-variable modeling
 aliases: [latent measurement, model-based measurement, inferred metrics]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [questionnaire-survey, logs-telemetry]
 
 status: ai-draft
@@ -23,8 +24,12 @@ sources: [embretson2000, bollen1991, chuklin2015]
 ### 1.1 Definition
 A model links observed data (item responses, clicks, behaviours) to an unobserved quantity, and the metric is the model's estimate of that quantity.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Questionnaires with many items, and large logs of behaviour.
+<!-- generated:pairings:start -->
+- [Questionnaires and surveys](questionnaire-survey.md)
+- [Interaction logs and telemetry](logs-telemetry.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Psychometric scaling** with factor analysis or item response theory [embretson2000].

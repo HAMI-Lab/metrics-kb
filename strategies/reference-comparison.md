@@ -3,8 +3,9 @@ id: reference-comparison
 title: Comparison against reference data
 aliases: [gold-standard evaluation, test-collection evaluation, Cranfield paradigm]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [test-collection]
 
 status: ai-draft
@@ -23,8 +24,11 @@ sources: [manning2008, voorhees2000, ratner2017]
 ### 1.1 Definition
 A reference set says what the right output is for each input. The system is run on the inputs, and its outputs are scored against the reference, usually automatically.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Test collections, benchmarks, labeled datasets, and automated test suites.
+<!-- generated:pairings:start -->
+- [Test collections and benchmarks](test-collection.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Cranfield-style test collections** in IR: documents, queries, and relevance judgments, reused to compare systems [manning2008].

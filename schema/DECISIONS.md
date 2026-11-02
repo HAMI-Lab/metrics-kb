@@ -4,6 +4,16 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-01 (research methods as a strategy layer)
+
+### D18. Research methods get pages, as a second layer of strategy pages
+- **Decision.** Strategy pages carry `layer: route | method` (strategy template 0.2). Route pages are the seven existing ones. A method page's id must be a `research_method` value in the vocabulary; the vocabulary stays the controlled list, and not every value needs a page. Section 1.2 is now "Typical pairings": route pages list their methods from `research_methods`, and method pages get the routes that name them, generated. Section 5 on a method page lists metrics whose `operationalization.research_method` includes it. Pilot pages: test collections, logs and telemetry, questionnaires and surveys.
+- **Why.** In the analogy of a research project, constructs are the variables a study asks about (open-ended, can't be listed completely), strategies are its methodology (few, heavily reused, often renamed), and metrics are where the two meet. D10 gave only the route half of methodology a page. Methods carry caveats of their own that come from gathering the data (who and what is sampled, what is recorded) and that otherwise get repeated on metric pages or wrongly put on route pages.
+- **Considered.** A fourth page type with its own template and folder: more structure than the pilot justifies. Keeping methods as tags only (D10): no place for method caveats, synonyms or lineage.
+- **Test.** After the pilot, check whether method pages hold content not already on route or metric pages. If they stay thin, fold them back into the tag. Supersedes the part of D10 that kept methods as tags only.
+
+---
+
 ## 2026-11-01 (InfinityPool proposals removed)
 
 ### D17. Metrics and constructs from the InfinityPool interview removed

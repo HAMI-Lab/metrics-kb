@@ -3,8 +3,9 @@ id: external-judgment
 title: "External judgment: annotators, experts, model judges, simulated users"
 aliases: [human assessment, LLM-as-a-judge, proxy user]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [test-collection, expert-inspection, simulation, logs-telemetry]
 
 status: ai-draft
@@ -23,8 +24,14 @@ sources: [voorhees2000, nielsen1993, zheng2023, li2024]
 ### 1.1 Definition
 A judge looks at an output or an interaction and assigns a label or score: relevant or not, correct or not, a quality rating. The judge can be a trained annotator, a domain expert, an LLM, or a simulated user.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Building test collections, expert inspection, simulation, and judging samples of logged outputs.
+<!-- generated:pairings:start -->
+- [Test collections and benchmarks](test-collection.md)
+- `expert-inspection` (no method page yet)
+- `simulation` (no method page yet)
+- [Interaction logs and telemetry](logs-telemetry.md)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Human relevance assessment** for test collections; assessors disagree, but system rankings are fairly stable across assessors [voorhees2000].

@@ -3,8 +3,9 @@ id: self-rating
 title: "Self-rating: questionnaires and rating scales"
 aliases: [self-report, subjective rating]
 page_type: strategy
-template_version: "0.1"
+template_version: "0.2"
 
+layer: route
 research_methods: [questionnaire-survey, diary-esm, task-study]
 
 status: ai-draft
@@ -23,8 +24,13 @@ sources: [brooke1996, hart1988, bolger2003, campbell1959, webb1966]
 ### 1.1 Definition
 The person who used the system answers items on a rating scale. Responses are scored into a number by a fixed rule.
 
-### 1.2 Typical research methods
+### 1.2 Typical pairings
 Post-task and post-study questionnaires, surveys, diary entries, and experience-sampling prompts during the day [bolger2003].
+<!-- generated:pairings:start -->
+- [Questionnaires and surveys](questionnaire-survey.md)
+- `diary-esm` (no method page yet)
+- `task-study` (no method page yet)
+<!-- generated:pairings:end -->
 
 ### 1.3 Named practices
 - **Standardized questionnaires** with fixed scoring, such as SUS [brooke1996] and NASA-TLX [hart1988].
