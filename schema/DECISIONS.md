@@ -8,6 +8,15 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 The decisions below follow a stress test: 50 metrics sampled from the Every Eval Ever metric registry [batzner2026] were mapped onto the wiki. The mapping and counts are in [`docs/stress-test-eee.md`](../docs/stress-test-eee.md).
 
+### D32. A plain definition of a construct, with three checks
+- **Decision.** The README opens its account of the design with a definition written for first-time readers: a construct is the thing you want to know about, as opposed to the number you compute to find out. Three checks decide whether something is a construct:
+  1. **About the what, not the how**: it can be named without saying how it is measured.
+  2. **A matter of degree**: a component, a system, a person using the system, or the person alone can have more or less of it.
+  3. **Measurable in more than one way**, at least in principle.
+  Not constructs: what one test happens to cover (an attribute of the instrument, D27), the goals of one product, and agreement between judges (route pages, D21).
+- **Why.** The earlier definition ("any conceivable concept of interest") did not match practice after D23 and D24, and a first draft of the new one leaned on the roots and the DAG, which a new reader does not know yet. The technical rules stay in the later README sections and in these decisions.
+- **Considered.** A definition stated per root (rejected as too technical for the opening).
+
 ### D31. Recommendation is a component type; self-rating becomes self-report
 - **Recommendation.** Rating prediction sits under a new type, **recommendation performance**, with **rating prediction accuracy** below it, not under a general "numeric prediction" type, which was too broad to say what is being predicted. This lifts the D15 deferral of recommendation components. Ranking items for a person still overlaps with retrieval, and ranking metrics serve both.
 - **Self-report route.** The route `self-rating` is renamed `self-report` ("Self-report: ratings and answers about oneself") and now has two forms: ratings of one's own experience, and factual answers about oneself such as age or education. Caveats shared by both, such as social desirability and the effect of being asked, are stated once; recall errors and ill-fitting answer options are added for factual answers. Demographic Profile and Educational Attainment move from `direct-reading` to `self-report`.
