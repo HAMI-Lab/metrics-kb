@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

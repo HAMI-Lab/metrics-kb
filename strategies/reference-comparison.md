@@ -61,6 +61,8 @@ High to build the reference (usually by [external judgment](external-judgment.md
 - [Accuracy](../metrics/accuracy.md)
 - [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
 - [Attack Success Rate (ASR)](../metrics/attack-success-rate.md)
+- [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md)
+- [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
 - [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
 - [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 - [F1 Score](../metrics/f1-score.md)
@@ -78,6 +80,7 @@ High to build the reference (usually by [external judgment](external-judgment.md
 - [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 - [Under-reliance Rate](../metrics/under-reliance-rate.md)
+- [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

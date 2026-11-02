@@ -63,6 +63,9 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none | Aesthetic pleasure is distinct from readability. |
 | [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | unknown | none | More trust is good only when it matches trustworthiness. |
 | [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Less effort for the same outcome means better usability. |
+| [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

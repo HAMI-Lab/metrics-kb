@@ -65,6 +65,8 @@ graph TD
   m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
   m_attack_success_rate["Attack Success Rate (ASR)"]:::metric
   m_beauvis["BeauVis Aesthetic Pleasure Scale"]:::metric
+  m_berlin_numeracy_test["Berlin Numeracy Test"]:::metric
+  m_calvi["Critical Thinking Assessment for Literacy in Visualizations (CALVI)"]:::metric
   m_cost_per_task["Cost per Task"]:::metric
   m_decision_accuracy_with_ai["Decision Accuracy with AI Assistance"]:::metric
   m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
@@ -97,6 +99,7 @@ graph TD
   m_ueq["User Experience Questionnaire (UEQ)"]:::metric
   m_umux["Usability Metric for User Experience (UMUX)"]:::metric
   m_under_reliance_rate["Under-reliance Rate"]:::metric
+  m_vlat["Visualization Literacy Assessment Test (VLAT)"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_component_characteristics --> c_component_performance
@@ -159,6 +162,7 @@ graph TD
   c_classification_correctness -.-> m_precision_test_collection
   c_classification_correctness -.-> m_recall_test_collection
   c_classification_correctness -.-> m_roc_auc
+  c_critical_visualization_literacy -.-> m_calvi
   c_decision_correctness -.-> m_decision_accuracy_with_ai
   c_emotional_response -.-> m_self_assessment_manikin
   c_explanation_faithfulness -.-> m_aopc
@@ -168,6 +172,7 @@ graph TD
   c_groundedness -.-> m_answer_faithfulness
   c_mental_workload -.-> m_nasa_tlx
   c_mental_workload -.-> m_smeq
+  c_numeracy -.-> m_berlin_numeracy_test
   c_perceived_usability -.-> m_system_usability_scale
   c_perceived_usability -.-> m_umux
   c_reference_similarity -.-> m_f1_score
@@ -191,6 +196,7 @@ graph TD
   c_user_experience -.-> m_ueq
   c_verifiable_correctness -.-> m_pass_at_k
   c_visualization_aesthetics -.-> m_beauvis
+  c_visualization_literacy -.-> m_vlat
   classDef metric stroke-dasharray: 4 2
 ```
 
@@ -255,9 +261,9 @@ A construct with several broader constructs appears under each of them.
   - [Literacy](literacy.md)
     - [Literacy: AI literacy](ai-literacy.md)
     - [Literacy: information literacy](information-literacy.md)
-    - [Literacy: numeracy](numeracy.md)
-    - [Literacy: visualization literacy](visualization-literacy.md)
-      - [Literacy: critical visualization literacy](critical-visualization-literacy.md)
+    - [Literacy: numeracy](numeracy.md) · metrics: [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md)
+    - [Literacy: visualization literacy](visualization-literacy.md) · metrics: [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
+      - [Literacy: critical visualization literacy](critical-visualization-literacy.md) · metrics: [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
 
 ## Constructs with no metric yet
 
@@ -268,10 +274,7 @@ A construct with several broader constructs appears under each of them.
 - [Generation performance](generation-performance.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
-- [Literacy: critical visualization literacy](critical-visualization-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
-- [Literacy: numeracy](numeracy.md)
-- [Literacy: visualization literacy](visualization-literacy.md)
 - [Output quality](output-quality.md)
 - [Reliance on AI](reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)

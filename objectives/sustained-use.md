@@ -67,6 +67,9 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none |  |
 | [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
 | [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Effortful systems are less pleasant to keep using. |
+| [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

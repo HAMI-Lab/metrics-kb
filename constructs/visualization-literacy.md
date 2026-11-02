@@ -31,9 +31,9 @@ About reading visualizations in general, not the usability of a particular visua
 <!-- generated:narrower:end -->
 
 ## 4. Metrics
-Gap: no metric page yet. Candidates: standardized tests such as VLAT [lee2017], and tests built with item response theory [boy2014].
+Standardized tests with right answers, such as VLAT [lee2017], some built and scored with item response theory [boy2014].
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

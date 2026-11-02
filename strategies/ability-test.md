@@ -55,7 +55,9 @@ Low per person once a validated test exists; building and validating a new test 
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-_No metric page uses it yet._
+- [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md)
+- [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
+- [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources
