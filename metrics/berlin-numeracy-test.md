@@ -14,7 +14,7 @@ construct:
   statement: "How well a person understands numbers, probabilities and risk, shown by solving short word problems."
   measures: [numeracy]
   subject: [user]
-  aspect: ["other: ability (numeracy)"]
+  aspect: [ability]
   perspective: [objective]
   quantity_form: [count]
   context: [user-specific]
@@ -131,4 +131,4 @@ Not linked to the objectives directly.
 - [ding2023]: reVISit.
 
 ## Open questions and review notes
-- Numeracy is an ability, not one of the aspect values; see the same question on the [VLAT](vlat.md) page.
+- None yet.

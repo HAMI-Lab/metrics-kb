@@ -14,7 +14,7 @@ construct:
   statement: "How well a person avoids being misled by charts whose design invites a wrong conclusion."
   measures: [critical-visualization-literacy]
   subject: [user]
-  aspect: ["other: ability (visualization literacy)"]
+  aspect: [ability]
   perspective: [objective]
   quantity_form: [proportion]
   context: [user-specific]

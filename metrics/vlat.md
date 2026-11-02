@@ -14,7 +14,7 @@ construct:
   statement: "How well a person can read and interpret common charts, shown by answering test questions with right answers."
   measures: [visualization-literacy]
   subject: [user]
-  aspect: ["other: ability (visualization literacy)"]
+  aspect: [ability]
   perspective: [objective]
   quantity_form: [proportion]
   context: [user-specific]
@@ -139,4 +139,4 @@ Not linked to the objectives directly: user characteristics describe users and e
 - [ding2023]: reVISit.
 
 ## Open questions and review notes
-- Visualization literacy is an ability, not one of the aspect values; `other: ability (visualization literacy)` is used. Add an `ability` aspect for user characteristics?
+- None yet.
