@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: lower
   validity_concern: {level: moderate, note: "Needs enough cases where the advice is wrong (or right); the study's mix of right and wrong advice shapes the rate."}
+  instruments: []
 
 cost:
   level: high

@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Depends on the ground truth and on how representative the cases and the advice quality are."}
+  instruments: []
 
 cost:
   level: high

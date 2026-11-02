@@ -30,6 +30,9 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: high, note: "Word overlap is a weak proxy for quality; correct paraphrases score low and fluent errors can score high."}
+  instruments:
+    - {name: "CNN/DailyMail", sources: [hermann2015], probes: "summarizing news articles in several sentences", scale: "ROUGE-1/2/L, 0-1", note: "News articles with bullet-point highlights used as reference summaries."}
+    - {name: "XSum", sources: [narayan2018], probes: "summarizing news articles in one sentence", scale: "ROUGE-1/2/L, 0-1", note: "BBC articles with one-sentence summaries."}
 
 cost:
   level: low
@@ -45,7 +48,7 @@ objectives:
   sustained-use: {direction: unknown, evidence: none, note: "Too far from what users experience to say."}
   improved-usability: {direction: unknown, evidence: none, note: "Too far from what users experience to say."}
 
-sources: [lin2004, papineni2002, liang2022, chang2024]
+sources: [lin2004, papineni2002, liang2022, chang2024, hermann2015, narayan2018]
 ---
 
 # Recall-Oriented Understudy for Gisting Evaluation (ROUGE)
@@ -91,7 +94,11 @@ A test set with one or more references per input.
 0 to 1 (often ×100).
 
 ### 2.6 Instruments
-None listed.
+**News summarization**
+- **CNN/DailyMail** [hermann2015]: news articles whose bullet-point highlights serve as reference summaries; built for reading comprehension and later adapted for summarization (check against the paper). Highlights copy much of the article's wording, which favours extractive systems on ROUGE.
+- **XSum** [narayan2018]: BBC articles with a one-sentence summary that rewords the article, so overlap with the reference is lower for all systems.
+
+Scores are comparable only within one data set, with the same reference set and preprocessing.
 
 ## 3. Why it is measured
 

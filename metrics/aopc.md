@@ -30,6 +30,7 @@ operationalization:
   range: "depends on output scale"
   better: higher
   validity_concern: {level: high, note: "Removing features creates unnatural inputs, so drops may reflect the change rather than reliance (see 2.1)."}
+  instruments: []
 
 cost:
   level: low

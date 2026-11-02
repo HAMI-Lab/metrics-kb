@@ -30,6 +30,7 @@ operationalization:
   range: "0-1 (absolute)"
   better: lower
   validity_concern: {level: high, note: "Fairness has competing definitions; equal rates can be unfair when groups differ in relevant ways."}
+  instruments: []
 
 cost:
   level: low

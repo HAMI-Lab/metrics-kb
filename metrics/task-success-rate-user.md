@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: low, note: "Directly counts completed tasks; the definition of success must be set before the study."}
+  instruments: []
 
 cost:
   level: high

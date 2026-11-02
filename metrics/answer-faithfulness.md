@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: high, note: "Usually judged by an LLM; checks support by the context, not truth, and the judge goes unchecked unless sampled."}
+  instruments: []
 
 cost:
   level: low

@@ -30,6 +30,10 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Benchmark tasks and automatic success checks may not match what users need done."}
+  instruments:
+    - {name: "SWE-bench", sources: [jimenez2023], probes: "resolving real software issues in a code repository", scale: "share resolved, 0-1", note: "GitHub issues; success when the repository's tests pass after the agent's change."}
+    - {name: "GAIA", sources: [mialon2023], probes: "general assistant tasks needing browsing, tools and reasoning", scale: "share correct, 0-1", note: "Questions with short, unambiguous final answers."}
+    - {name: "tau-bench", sources: [yao2024], probes: "tool use while talking with a simulated user under policies", scale: "share of successful episodes, 0-1", note: "Customer-service domains; success judged by the final database state."}
 
 cost:
   level: medium
@@ -46,7 +50,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Agents that complete tasks save users work."}
   improved-usability: {direction: positive, evidence: theoretical, note: "Untested with users here."}
 
-sources: [mohammadi2025, jimenez2023, mialon2023, chen2021, kapoor2025]
+sources: [mohammadi2025, jimenez2023, mialon2023, chen2021, kapoor2025, yao2024]
 ---
 
 # Task Success Rate (agent benchmark)
@@ -93,7 +97,14 @@ Run the agent on the benchmark tasks and apply the success checks.
 0 to 1.
 
 ### 2.6 Instruments
-None listed.
+**Software engineering**
+- **SWE-bench** [jimenez2023]: real issues from open-source repositories; a task counts as resolved when tests tied to the issue pass after the agent's change.
+
+**General assistance**
+- **GAIA** [mialon2023]: questions that need web browsing, tools and several reasoning steps, with short final answers checked by quasi-exact match.
+
+**Tool use with a user in the loop**
+- **tau-bench** [yao2024]: an agent serves a simulated customer through tools under written policies; success is judged by the final state of the database. Also the source of [pass^k](pass-hat-k.md).
 
 ## 3. Why it is measured
 

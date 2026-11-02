@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Assumes one right sequence of calls; agents that reach the goal another way are scored as wrong."}
+  instruments: []
 
 cost:
   level: low

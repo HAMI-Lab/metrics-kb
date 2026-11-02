@@ -30,6 +30,7 @@ operationalization:
   range: "> 0"
   better: context-dependent
   validity_concern: {level: low, note: "Direct for elapsed time; read it with task success, or it can reward giving up quickly."}
+  instruments: []
 
 cost:
   level: medium

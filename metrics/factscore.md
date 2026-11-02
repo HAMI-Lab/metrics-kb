@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: high, note: "Depends on how text is split into facts, on the knowledge source's coverage, and on an automatic judge."}
+  instruments:
+    - {name: "FActScore biographies", sources: [min2023], probes: "factual precision of long-form text about people", scale: "share of supported facts, 0-1", note: "Generated biographies checked against Wikipedia."}
 
 cost:
   level: medium
@@ -90,7 +92,8 @@ Generate texts for a prompt set, split them into facts (by people or a model), a
 0 to 1.
 
 ### 2.6 Instruments
-None listed.
+**Long-form factuality about people**
+- **FActScore biographies** [min2023]: the model writes biographies of people with Wikipedia pages; each atomic fact is checked against Wikipedia. Rare entities give lower scores than well-known ones (check against the paper).
 
 ## 3. Why it is measured
 

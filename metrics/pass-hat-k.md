@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: low, note: "Directly counts repeated success on the same tasks."}
+  instruments:
+    - {name: "tau-bench", sources: [yao2024], probes: "tool use while talking with a simulated user under policies", scale: "pass^k, 0-1", note: "Customer-service domains; repeated trials of each task."}
 
 cost:
   level: medium
@@ -87,7 +89,8 @@ Run each task n ≥ k times and record success.
 0 to 1. Report k.
 
 ### 2.6 Instruments
-None listed.
+**Tool use with a user in the loop**
+- **tau-bench** [yao2024]: introduced pass^k; each task is run several times against a simulated user, and pass^k is the chance that all k runs succeed.
 
 ## 3. Why it is measured
 

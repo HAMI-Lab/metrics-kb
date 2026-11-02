@@ -30,6 +30,9 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Assumes a particular model of how users scan a ranking; the gain values and discount are choices."}
+  instruments:
+    - {name: "BEIR", sources: [thakur2021], probes: "retrieval across domains without in-domain training", scale: "nDCG@10, 0-1", note: "A suite of retrieval data sets from different domains."}
+    - {name: "TREC ad hoc collections", sources: [manning2008], probes: "topical relevance for ad hoc search", scale: "nDCG at a cutoff, 0-1", note: "Queries, documents and pooled graded judgments."}
 
 cost:
   level: medium
@@ -45,7 +48,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain."}
   improved-usability: {direction: positive, evidence: theoretical, note: "Better rankings are assumed to help users; offline-online links are weak."}
 
-sources: [jarvelin2002, manning2008, liang2022, turpin2006]
+sources: [jarvelin2002, manning2008, liang2022, turpin2006, thakur2021]
 ---
 
 # Normalized Discounted Cumulative Gain (nDCG)
@@ -89,7 +92,13 @@ Needs graded relevance judgments, usually from assessors on a test collection.
 0 to 1. Comparable only with the same k, gain scale and judgments.
 
 ### 2.6 Instruments
-None listed.
+**Zero-shot retrieval across domains**
+- **BEIR** [thakur2021]: a suite of retrieval data sets from different domains (such as biomedical, financial and argument retrieval), used to test retrievers without training on each domain; nDCG@10 is the headline number (check against the paper).
+
+**Ad hoc search**
+- **TREC ad hoc collections** [manning2008]: queries, documents and graded relevance judgments on a pool of top results. Unjudged documents are usually counted as non-relevant, which penalizes systems that retrieve differently from the pooled ones.
+
+nDCG at a given cutoff is comparable only within one collection and judgment set.
 
 ## 3. Why it is measured
 

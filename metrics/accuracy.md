@@ -30,6 +30,12 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Direct for agreement with the labels; misleading when classes are imbalanced or the label set is wrong (see 2.1)."}
+  instruments:
+    - {name: "Massive Multitask Language Understanding (MMLU)", sources: [hendrycks2021, gema2024], probes: "knowledge across academic and professional subjects", scale: "proportion, 0-1", note: "Four-option multiple-choice questions in 57 subjects."}
+    - {name: "Grade School Math 8K (GSM8K)", sources: [cobbe2021, zhang2024], probes: "multi-step math reasoning", scale: "proportion, 0-1", note: "Math word problems with a numeric final answer, checked by exact match."}
+    - {name: "HellaSwag", sources: [zellers2019], probes: "commonsense reasoning about everyday situations", scale: "proportion, 0-1", note: "Choose the most plausible continuation of a scene among four."}
+    - {name: "TruthfulQA (multiple-choice)", sources: [lin2022], probes: "avoiding common misconceptions", scale: "proportion, 0-1", note: "Questions written so that a popular false answer is tempting."}
+    - {name: "Stanford Question Answering Dataset (SQuAD)", sources: [rajpurkar2016], probes: "reading comprehension", scale: "proportion, 0-1 (exact match)", note: "Answer spans extracted from Wikipedia paragraphs."}
 
 cost:
   level: low
@@ -46,7 +52,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain through output quality."}
   improved-usability: {direction: positive, evidence: theoretical, note: "Correct components are a precondition for effective tasks; the link to user outcomes is not measured."}
 
-sources: [liang2022, rajpurkar2016, chang2024, nastoska2025, guo2017]
+sources: [liang2022, rajpurkar2016, chang2024, nastoska2025, guo2017, hendrycks2021, gema2024, cobbe2021, zhang2024, zellers2019, lin2022, batzner2026]
 ---
 
 # Accuracy
@@ -91,7 +97,24 @@ Run the component on a benchmark with reference labels or answers. Errors in the
 A proportion from 0 to 1. Compare with the accuracy of always predicting the most common class.
 
 ### 2.6 Instruments
-None listed.
+Representative benchmarks, grouped by what they probe (D27). All report accuracy as a proportion from 0 to 1, but accuracy on one benchmark is not comparable with accuracy on another.
+
+**Knowledge**
+- **MMLU** [hendrycks2021]: four-option multiple-choice questions in 57 academic and professional subjects. Chance is 0.25. Some questions and answer keys are wrong, which caps the attainable score and blurs differences between strong models [gema2024] (check against the paper).
+
+**Math reasoning**
+- **GSM8K** [cobbe2021]: grade-school math word problems that need several steps; the final number is compared with the key after extraction from the model's text. Some models score markedly lower on a freshly written set of similar problems, which suggests contamination of the original set [zhang2024] (check against the paper).
+
+**Commonsense reasoning**
+- **HellaSwag** [zellers2019]: choose the most plausible continuation of a described situation among four, with wrong options chosen to fool models.
+
+**Truthfulness**
+- **TruthfulQA** [lin2022], multiple-choice form: questions where a common misconception gives a tempting wrong answer. It probes whether a model repeats popular falsehoods, not general knowledge.
+
+**Reading comprehension**
+- **SQuAD** [rajpurkar2016]: answer a question with a span from a given Wikipedia paragraph; scored by exact match after normalization (and by token-overlap [F1](f1-score.md)).
+
+The full catalog of benchmarks is far larger; registries such as the one behind Every Eval Ever list them [batzner2026].
 
 ## 3. Why it is measured
 

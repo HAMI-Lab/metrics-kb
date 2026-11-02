@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Hides which of precision or recall is weak; equal weighting is a choice, not a fact."}
+  instruments:
+    - {name: "Stanford Question Answering Dataset (SQuAD)", sources: [rajpurkar2016], probes: "reading comprehension", scale: "token-overlap F1, 0-1", note: "Answer spans from Wikipedia paragraphs; F1 gives partial credit next to exact match."}
 
 cost:
   level: low
@@ -93,7 +95,10 @@ As for [precision](precision-benchmark.md): run on a test collection and compare
 A proportion from 0 to 1. Report the averaging (macro or micro) and the unit counted.
 
 ### 2.6 Instruments
-None listed.
+**Reading comprehension (token-overlap F1)**
+- **SQuAD** [rajpurkar2016]: extractive question answering on Wikipedia paragraphs; F1 over answer tokens is reported next to exact match ([Accuracy](accuracy.md)).
+
+Classification and retrieval uses of F1 run on any labeled data set or test collection; none is singled out here.
 
 ## 3. Why it is measured
 

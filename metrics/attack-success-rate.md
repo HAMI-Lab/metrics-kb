@@ -30,6 +30,10 @@ operationalization:
   range: "0-1"
   better: lower
   validity_concern: {level: high, note: "Depends on the attacks tried and on how success is judged; definitions differ across benchmarks."}
+  instruments:
+    - {name: "AdvBench", sources: [zou2023], probes: "refusal of harmful requests under jailbreak attacks", scale: "share of successful attacks, 0-1", note: "Harmful behaviours and strings used to test attacks."}
+    - {name: "HarmBench", sources: [mazeika2024], probes: "refusal of harmful requests under automated red teaming", scale: "share of successful attacks, 0-1", note: "Standardized behaviours, attacks and a fixed judge for comparability."}
+    - {name: "DecodingTrust", sources: [wang2023], probes: "trustworthiness under adversarial conditions, across several perspectives", scale: "per-perspective scores", note: "Covers toxicity, bias, adversarial robustness, privacy and more."}
 
 cost:
   level: medium
@@ -44,7 +48,7 @@ objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "Successful attacks that become public erode trust in the system."}
   improved-usability: {direction: unknown, evidence: none, note: "Safety measures can also make the system refuse harmless requests."}
 
-sources: [wang2023, liu2025, ganguli2022, zhu2023]
+sources: [wang2023, liu2025, ganguli2022, zhu2023, zou2023, mazeika2024]
 ---
 
 # Attack Success Rate (ASR)
@@ -90,7 +94,14 @@ Run an attack set or red-team session against the system and judge each response
 0 to 1. Lower is better.
 
 ### 2.6 Instruments
-None listed.
+**Refusal under jailbreak attacks**
+- **AdvBench** [zou2023]: harmful behaviours used to test whether attacks make a model comply. Success was originally judged by refusal phrases, which can over-count success (check against the paper).
+- **HarmBench** [mazeika2024]: standardizes behaviours, attack methods and a fixed judge, so attack success rates are comparable across studies.
+
+**Broad trustworthiness under attack**
+- **DecodingTrust** [wang2023]: adversarial tests across several perspectives, such as toxicity, bias, robustness and privacy; reports a score per perspective rather than one rate.
+
+Attack success rates depend on the judge as much as on the model; compare only under the same judge.
 
 ## 3. Why it is measured
 

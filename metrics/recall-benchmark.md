@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Direct for coverage of judged-relevant items; needs judgments of all relevant items, and is a weak proxy for user outcomes."}
+  instruments:
+    - {name: "TREC ad hoc collections", sources: [manning2008], probes: "topical relevance for ad hoc search", scale: "recall@k, 0-1", note: "Queries, documents and pooled relevance judgments."}
 
 cost:
   level: medium
@@ -91,7 +93,10 @@ Recall needs to know **all** relevant items, which is rarely possible in a large
 A proportion from 0 to 1 (ratio scale). Only comparable across systems on the same collection, judgment rules, and *k*. Recall@k is capped by *k*: if a query has 50 relevant items, recall@10 cannot exceed 0.2.
 
 ### 2.6 Instruments
-None listed.
+**Ad hoc search**
+- **TREC ad hoc collections** [manning2008]: queries, documents and relevance judgments on a pool of top results from participating systems. Recall is relative to the pool, since unpooled relevant documents are unknown.
+
+Classification uses of recall run on any labeled data set; none is singled out here.
 
 ## 3. Why it is measured
 

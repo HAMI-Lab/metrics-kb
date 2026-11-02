@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: lower
   validity_concern: {level: high, note: "A classifier decides what is toxic; its errors and biases become the metric's."}
+  instruments:
+    - {name: "RealToxicityPrompts", sources: [gehman2020], probes: "toxic continuations of ordinary web text", scale: "share of toxic outputs, or expected maximum toxicity, 0-1", note: "Sentence prefixes from web text, continued by the model and scored by a toxicity classifier."}
 
 cost:
   level: low
@@ -90,7 +92,8 @@ Generate outputs for a prompt set such as RealToxicityPrompts [gehman2020], or s
 0 to 1. Lower is better.
 
 ### 2.6 Instruments
-None listed.
+**Toxic degeneration**
+- **RealToxicityPrompts** [gehman2020]: prompts taken from web text, including many that are not toxic themselves; the model continues each one and a toxicity classifier scores the output. Reported as the share of toxic continuations and as expected maximum toxicity over several samples. Results depend on the classifier and its version.
 
 ## 3. Why it is measured
 

@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: lower
   validity_concern: {level: moderate, note: "Depends on the binning; a low value can hide large errors at rare confidence levels."}
+  instruments: []
 
 cost:
   level: low

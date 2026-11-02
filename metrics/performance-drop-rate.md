@@ -30,6 +30,8 @@ operationalization:
   range: "usually 0-1; negative if performance improves"
   better: lower
   validity_concern: {level: moderate, note: "Depends on which changes are applied; a change that alters the right answer makes the drop meaningless."}
+  instruments:
+    - {name: "PromptBench", sources: [zhu2023], probes: "robustness to adversarial changes in prompts", scale: "relative drop, usually 0-1", note: "Adversarial prompts at character, word, sentence and meaning levels, applied to standard tasks."}
 
 cost:
   level: low
@@ -90,7 +92,8 @@ Score the system on a test set and on perturbed copies of it. See [controlled co
 A proportion of the original score. 0 means no drop.
 
 ### 2.6 Instruments
-None listed.
+**Prompt robustness**
+- **PromptBench** [zhu2023]: perturbs task prompts at several levels (characters, words, sentences, meaning) and reports the drop in performance on standard tasks; the source of this metric's usual definition (check against the paper).
 
 ## 3. Why it is measured
 

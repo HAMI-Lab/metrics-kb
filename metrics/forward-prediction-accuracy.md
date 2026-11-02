@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Predicting outputs is one sign of understanding; it may not reflect understanding of why the model behaves as it does."}
+  instruments: []
 
 cost:
   level: medium

@@ -30,6 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "Direct for meeting the relevance criterion; a weak proxy for whether results help users' tasks (see 2.1)."}
+  instruments:
+    - {name: "TREC ad hoc collections", sources: [manning2008], probes: "topical relevance for ad hoc search", scale: "precision@k, 0-1", note: "Queries, documents and pooled relevance judgments."}
 
 cost:
   level: medium
@@ -92,7 +94,10 @@ Run the system on a test collection with existing judgments. LLM-as-judge labeli
 A proportion from 0 to 1 (ratio scale). Only comparable across systems on the same collection and judgment rules.
 
 ### 2.6 Instruments
-None listed.
+**Ad hoc search**
+- **TREC ad hoc collections** [manning2008]: queries, documents and relevance judgments on a pool of top results from participating systems. Unjudged documents are usually treated as non-relevant.
+
+Classification uses of precision run on any labeled data set; none is singled out here.
 
 ## 3. Why it is measured
 

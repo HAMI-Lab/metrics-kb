@@ -30,6 +30,7 @@ operationalization:
   range: "> 0"
   better: lower
   validity_concern: {level: low, note: "Direct for system waiting time; perceived speed can differ from measured latency."}
+  instruments: []
 
 cost:
   level: low

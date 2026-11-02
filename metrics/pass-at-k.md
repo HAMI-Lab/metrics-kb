@@ -30,6 +30,9 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: moderate, note: "At k > 1 it assumes someone can pick the right sample out of k; and the tests can accept wrong programs."}
+  instruments:
+    - {name: "HumanEval", sources: [chen2021], probes: "writing short Python functions from a docstring", scale: "pass@k, 0-1", note: "Hand-written problems, each with unit tests."}
+    - {name: "Mostly Basic Python Problems (MBPP)", sources: [austin2021], probes: "writing entry-level Python programs from a description", scale: "pass@k, 0-1", note: "Crowd-sourced problems, each with a few test cases."}
 
 cost:
   level: medium
@@ -45,7 +48,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Through useful generated code or answers; not measured."}
   improved-usability: {direction: unknown, evidence: none, note: "Users see one output at a time and often cannot check it, so large-k scores say little about their experience."}
 
-sources: [kulal2019, chen2021, yue2025, hariri2025]
+sources: [kulal2019, chen2021, yue2025, hariri2025, austin2021]
 ---
 
 # pass@k
@@ -95,7 +98,12 @@ Sample n outputs per problem from the model and run the checks on each.
 0 to 1. Always report k (and n).
 
 ### 2.6 Instruments
-None listed.
+**Code generation**
+- **HumanEval** [chen2021]: 164 hand-written Python problems, each a function signature and docstring with unit tests (check the count against the paper). Small, so differences of a few problems move the score noticeably.
+- **MBPP** [austin2021]: about a thousand short, entry-level Python problems written by crowd workers, each with a few test cases (check against the paper). Easier and more varied in wording than HumanEval.
+
+**Problems with an answer key**
+- pass@k is also reported on math benchmarks whose final answers are checked against a key [yue2025]; see the math benchmarks under [Accuracy](accuracy.md).
 
 ## 3. Why it is measured
 

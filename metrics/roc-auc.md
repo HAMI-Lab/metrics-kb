@@ -30,6 +30,7 @@ operationalization:
   range: "0-1 (0.5 = chance)"
   better: higher
   validity_concern: {level: moderate, note: "Summarizes all thresholds, including ones nobody would use; optimistic under heavy class imbalance."}
+  instruments: []
 
 cost:
   level: low

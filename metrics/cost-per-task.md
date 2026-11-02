@@ -30,6 +30,7 @@ operationalization:
   range: "> 0"
   better: lower
   validity_concern: {level: low, note: "Direct reading of spend; prices change over time, so comparisons need a fixed price table."}
+  instruments: []
 
 cost:
   level: low

@@ -30,6 +30,7 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: high, note: "Explicit judgments change how people search; clicks are biased by rank and presentation and are not judgments (see 2.1)."}
+  instruments: []
 
 cost:
   level: high

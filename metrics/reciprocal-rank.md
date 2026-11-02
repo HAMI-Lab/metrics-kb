@@ -30,6 +30,9 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: low, note: "Direct for the position of the first relevant item; a fair proxy when one answer is enough."}
+  instruments:
+    - {name: "TREC-8 Question Answering track", sources: [voorhees1999], probes: "finding a correct answer to a factoid question", scale: "MRR, 0-1", note: "Ranked answer strings judged for correctness."}
+    - {name: "MS MARCO passage ranking", sources: [bajaj2016], probes: "ranking a relevant passage for real search queries", scale: "MRR@10, 0-1", note: "Queries from search logs with sparse relevance labels."}
 
 cost:
   level: low
@@ -44,7 +47,7 @@ objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain."}
   improved-usability: {direction: positive, evidence: theoretical, note: "When one answer suffices, finding it sooner saves effort."}
 
-sources: [voorhees1999, liang2022, mohammadi2025]
+sources: [voorhees1999, liang2022, mohammadi2025, bajaj2016]
 ---
 
 # Mean Reciprocal Rank (MRR)
@@ -87,7 +90,11 @@ A test collection with at least one known relevant item per query.
 0 to 1.
 
 ### 2.6 Instruments
-None listed.
+**Question answering**
+- **TREC-8 Question Answering track** [voorhees1999]: systems return ranked answers to factoid questions; MRR rewards placing a correct answer early.
+
+**Passage ranking**
+- **MS MARCO passage ranking** [bajaj2016]: real search queries with, typically, one passage labeled relevant; MRR@10 is the official measure (check against the paper). Sparse labels mean a relevant but unlabeled passage counts as wrong.
 
 ## 3. Why it is measured
 
