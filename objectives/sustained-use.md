@@ -33,8 +33,8 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Response Latency](../metrics/response-latency.md) | negative | causal (web search) | Online experiments [kohavi2020] |
 | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | positive | theoretical | Via TAM / satisfaction |
 | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | negative | theoretical | |
-| [Precision (test collection)](../metrics/precision-test-collection.md) | positive | theoretical | Long causal chain |
-| [Recall (test collection)](../metrics/recall-test-collection.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
+| [Precision (benchmark)](../metrics/precision-benchmark.md) | positive | theoretical | Long causal chain |
+| [Recall (benchmark)](../metrics/recall-benchmark.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
 | [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Results that help with real tasks |
 | [Task Completion Time](../metrics/task-completion-time.md) | unknown | none | Could go either way |
 | [Accuracy](../metrics/accuracy.md) | positive | theoretical | Long causal chain through output quality. |

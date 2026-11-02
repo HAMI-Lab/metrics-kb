@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [external-judgment]
   collection_mode: [offline]
   data_source: [model-judge]
@@ -38,7 +38,7 @@ cost:
 
 related:
   - {metric: factscore, kind: conceptual, note: "Checks truth against a knowledge source instead of support by the given context."}
-  - {metric: precision-test-collection, kind: operational, note: "Precision applied to the claims of one answer."}
+  - {metric: precision-benchmark, kind: operational, note: "Precision applied to the claims of one answer."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Grounded answers are expected to keep trust."}
@@ -117,7 +117,7 @@ Answers that hedge or say little score well. The judge can be gamed by phrasing 
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-The same computation as [precision](precision-test-collection.md), applied to an answer's claims.
+The same computation as [precision](precision-benchmark.md), applied to an answer's claims.
 
 ### 5.2 Conceptually related metrics
 [FActScore](factscore.md) checks truth instead of support by context.

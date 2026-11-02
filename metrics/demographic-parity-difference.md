@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [controlled-comparison, test-collection, logs-telemetry]
+  research_method: [controlled-comparison, benchmark, logs-telemetry]
   route: [difference-scoring]
   collection_mode: [offline, online]
   data_source: [reference-answers, interaction-logs]

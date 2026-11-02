@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: proxy
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers]

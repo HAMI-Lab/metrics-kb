@@ -95,7 +95,7 @@ status:
   expert-verified: A domain expert has signed off.
 
 research_method:    # layer 1 of the measurement-strategy landscape: how the data is gathered
-  test-collection: A fixed benchmark, test collection, or automated test suite with known inputs.
+  benchmark: "Benchmark: a fixed set of inputs, often with reference outputs, reused to compare systems. Also called test collection, labeled or annotated dataset, gold standard, test set, or test suite."
   logs-telemetry: Interaction logs and system telemetry from a running system.
   task-study: People do defined tasks with the system (lab or field usability test, controlled experiment task).
   questionnaire-survey: Standardized or custom questionnaires and surveys.

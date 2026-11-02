@@ -40,7 +40,7 @@ related:
   - {metric: response-latency, kind: operational, note: "System waiting time is part of task time."}
   - {metric: mental-workload-score, kind: empirical, note: "Faster is not better if it costs much more effort."}
   - {metric: perceived-usability-score, kind: conceptual, note: "Objective efficiency vs. perceived usability; modest correlation."}
-  - {metric: precision-test-collection, kind: empirical, note: "Better results are expected to shorten search tasks; evidence is mixed."}
+  - {metric: precision-benchmark, kind: empirical, note: "Better results are expected to shorten search tasks; evidence is mixed."}
 
 objectives:
   sustained-use: {direction: unknown, evidence: none, note: "Shorter task time could mean a better tool or a less engaging one; depends on the task."}

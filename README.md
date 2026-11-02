@@ -51,15 +51,15 @@ A page describes one operationalization. Variants that differ only in a paramete
 
 When the same formula measures constructs under **different roots**, it gets one page per root, with titles qualified by how the number is obtained (D20). The canonical example is precision:
 
-- [Precision (test collection)](metrics/precision-test-collection.md): fixed queries and assessor judgments; measures a retrieval component's topical relevance.
+- [Precision (benchmark)](metrics/precision-benchmark.md): fixed queries and assessor judgments; measures a retrieval component's topical relevance.
 - [Precision (user on task)](metrics/precision-user-task.md): the user's own queries and judgments; measures situational relevance of results for the user's task.
 
-Only the formula is shared. Who sets the inputs, who judges, the construct, and the method all differ. The gap between them is a principal-agent problem: builders optimize the cheap test-collection number, users experience the task-level one, and the two are linked only empirically and weakly. Two pages let that link be stated as evidence. Method changes within a root (explicit judgments vs clicks) do not make a new page. The validator enforces the rule.
+Only the formula is shared. Who sets the inputs, who judges, the construct, and the method all differ. The gap between them is a principal-agent problem: builders optimize the cheap benchmark number, users experience the task-level one, and the two are linked only empirically and weakly. Two pages let that link be stated as evidence. Method changes within a root (explicit judgments vs clicks) do not make a new page. The validator enforces the rule.
 
 **Instruments are grouped, not paged** (D25). A standardized questionnaire or test is an instantiation of a metric. Instruments that measure the same construct with the same method share one page, titled by construct and method: [Perceived Usability Score (questionnaire)](metrics/perceived-usability-score.md) holds SUS, UMUX and UMUX-LITE. Each page lists its instruments in front matter and compares them in section 2.6; instrument names stay searchable as aliases.
 
 ### 4. Strategies have two layers
-- **Methods** say how data is gathered: test collections, logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
+- **Methods** say how data is gathered: benchmarks (also called test collections or labeled datasets), logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
 - **Routes** say how data becomes a number: direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, difference scoring, coding qualitative data, statistical modeling (D10).
 
 Keeping the layers apart matters because the same data can be scored in different ways (questionnaire answers can be self-ratings, coded text or test answers scored against a key), and each layer carries its own caveats: sampling and recording on method pages, scoring on route pages.

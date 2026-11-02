@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison, external-judgment]
   collection_mode: [offline]
   data_source: [relevance-judgments]
@@ -37,7 +37,7 @@ cost:
   automatable: true
 
 related:
-  - {metric: precision-test-collection, kind: conceptual, note: "Precision@k ignores order and grades within the top k."}
+  - {metric: precision-benchmark, kind: conceptual, note: "Precision@k ignores order and grades within the top k."}
   - {metric: reciprocal-rank, kind: conceptual, note: "Looks only at the first relevant item."}
   - {metric: precision-user-task, kind: empirical, note: "Offline ranking gains need checking with users."}
 
@@ -121,10 +121,10 @@ Gains in nDCG on a fixed collection can come from overfitting. Treating nDCG gai
 nDCG@k at different k, and the gain variants, are on this page.
 
 ### 5.2 Conceptually related metrics
-[Precision (test collection)](precision-test-collection.md) ignores order and grades within the top k; [Reciprocal Rank](reciprocal-rank.md) looks only at the first relevant item.
+[Precision (benchmark)](precision-benchmark.md) ignores order and grades within the top k; [Reciprocal Rank](reciprocal-rank.md) looks only at the first relevant item.
 
 <!-- generated:neighbours:start -->
-- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance)
+- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

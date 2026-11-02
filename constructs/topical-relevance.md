@@ -35,8 +35,8 @@ Precision and recall are its classic metrics. They capture two different propert
 <!-- generated:metrics:start -->
 - [F1 Score](../metrics/f1-score.md)
 - [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
-- [Precision (test collection)](../metrics/precision-test-collection.md)
-- [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Precision (benchmark)](../metrics/precision-benchmark.md)
+- [Recall (benchmark)](../metrics/recall-benchmark.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

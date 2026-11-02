@@ -6,7 +6,7 @@ page_type: strategy
 template_version: "0.2"
 
 layer: route
-research_methods: [test-collection, task-study, ability-test, adversarial-testing]
+research_methods: [benchmark, task-study, ability-test, adversarial-testing]
 
 status: ai-draft
 last_reviewed: null
@@ -27,7 +27,7 @@ A reference set says what the right output is for each input. The system is run 
 ### 1.2 Typical pairings
 Test collections, benchmarks, labeled datasets, and automated test suites.
 <!-- generated:pairings:start -->
-- [Test collections and benchmarks](test-collection.md)
+- [Benchmarks](benchmark.md)
 - [Task studies with people](task-study.md)
 - [Ability tests](ability-test.md)
 - [Adversarial testing and red teaming](adversarial-testing.md)
@@ -72,8 +72,8 @@ High to build the reference (usually by [external judgment](external-judgment.md
 - [Over-reliance Rate](../metrics/over-reliance-rate.md)
 - [pass@k](../metrics/pass-at-k.md)
 - [pass^k](../metrics/pass-hat-k.md)
-- [Precision (test collection)](../metrics/precision-test-collection.md)
-- [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Precision (benchmark)](../metrics/precision-benchmark.md)
+- [Recall (benchmark)](../metrics/recall-benchmark.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 - [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
 - [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)

@@ -15,7 +15,7 @@ reviewers: []
 # ---- 1. What (construct) ----
 # One page = one operationalization. Variants that differ only in a parameter (precision@k) stay on this page.
 # One page per computation per root (D20): if the same formula measures constructs under different roots,
-# make one page per root and qualify the title, e.g. "Precision (test collection)", "Precision (user on task)".
+# make one page per root and qualify the title, e.g. "Precision (benchmark)", "Precision (user on task)".
 # Method variants within a root (judgments vs clicks) stay on one page.
 # Instruments (D25): a standardized questionnaire or test is an instantiation, not a page. Group instruments
 # that measure the same construct with the same method on one page, e.g. "Perceived Usability Score (questionnaire)".

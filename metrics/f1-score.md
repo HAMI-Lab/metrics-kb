@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: direct
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers, relevance-judgments]
@@ -37,8 +37,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: precision-test-collection, kind: operational, note: "F1 is the harmonic mean of precision and recall."}
-  - {metric: recall-test-collection, kind: operational, note: "F1 is the harmonic mean of precision and recall."}
+  - {metric: precision-benchmark, kind: operational, note: "F1 is the harmonic mean of precision and recall."}
+  - {metric: recall-benchmark, kind: operational, note: "F1 is the harmonic mean of precision and recall."}
   - {metric: accuracy, kind: conceptual, note: "Preferred over accuracy when classes are imbalanced."}
   - {metric: rouge, kind: conceptual, note: "Token-overlap F1 and ROUGE both count overlap with a reference."}
 
@@ -56,7 +56,7 @@ sources: [vanrijsbergen1979, rajpurkar2016, liang2022, guo2023]
 ## 1. What is measured
 
 ### 1.1 Definition
-F1 combines [precision](precision-test-collection.md) and [recall](recall-test-collection.md) into one number, their harmonic mean [vanrijsbergen1979]. The same formula is used on different units: predicted labels in classification, retrieved items in search, and words in generated answers compared with a reference answer (token-overlap F1) [rajpurkar2016; liang2022].
+F1 combines [precision](precision-benchmark.md) and [recall](recall-benchmark.md) into one number, their harmonic mean [vanrijsbergen1979]. The same formula is used on different units: predicted labels in classification, retrieved items in search, and words in generated answers compared with a reference answer (token-overlap F1) [rajpurkar2016; liang2022].
 
 ### 1.2 Construct: property of subject in context
 The property is correctness and completeness of a component's positive outputs together. The subject is a classifier, retriever, or answer generator. The context is a test set with references.
@@ -81,7 +81,7 @@ It does not say which of precision or recall is the problem. It ignores true neg
 As stable as precision and recall on the same set.
 
 ### 2.3 Data collection and measurement error
-As for [precision](precision-test-collection.md): run on a test collection and compare with references.
+As for [precision](precision-benchmark.md): run on a test collection and compare with references.
 
 ### 2.4 Computation
 - F1 = 2 × precision × recall ÷ (precision + recall).
@@ -122,13 +122,13 @@ A model can be tuned to the threshold that maximizes F1 on the test set, which o
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-Built from [Precision (test collection)](precision-test-collection.md) and [Recall (test collection)](recall-test-collection.md). F-beta and macro/micro averages are variants on this page.
+Built from [Precision (benchmark)](precision-benchmark.md) and [Recall (benchmark)](recall-benchmark.md). F-beta and macro/micro averages are variants on this page.
 
 ### 5.2 Conceptually related metrics
 [Accuracy](accuracy.md) is a simpler alternative when classes are balanced. [ROUGE](rouge.md) also counts overlap with a reference, for longer texts.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
+- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->

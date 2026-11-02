@@ -87,9 +87,9 @@ graph TD
   m_pass_hat_k["pass^k"]:::metric
   m_perceived_usability_score["Perceived Usability Score (questionnaire)"]:::metric
   m_performance_drop_rate["Performance Drop Rate (PDR)"]:::metric
-  m_precision_test_collection["Precision (test collection)"]:::metric
+  m_precision_benchmark["Precision (benchmark)"]:::metric
   m_precision_user_task["Precision (user on task)"]:::metric
-  m_recall_test_collection["Recall (test collection)"]:::metric
+  m_recall_benchmark["Recall (benchmark)"]:::metric
   m_reciprocal_rank["Mean Reciprocal Rank (MRR)"]:::metric
   m_response_latency["Response Latency"]:::metric
   m_roc_auc["Area Under the ROC Curve (ROC-AUC)"]:::metric
@@ -171,8 +171,8 @@ graph TD
   c_calibration -.-> m_expected_calibration_error
   c_classification_correctness -.-> m_accuracy
   c_classification_correctness -.-> m_f1_score
-  c_classification_correctness -.-> m_precision_test_collection
-  c_classification_correctness -.-> m_recall_test_collection
+  c_classification_correctness -.-> m_precision_benchmark
+  c_classification_correctness -.-> m_recall_benchmark
   c_classification_correctness -.-> m_roc_auc
   c_content_adequacy -.-> m_rouge
   c_critical_visualization_literacy -.-> m_visualization_literacy_score
@@ -201,8 +201,8 @@ graph TD
   c_task_efficiency -.-> m_task_completion_time
   c_tool_call_correctness -.-> m_tool_call_accuracy
   c_topical_relevance -.-> m_f1_score
-  c_topical_relevance -.-> m_precision_test_collection
-  c_topical_relevance -.-> m_recall_test_collection
+  c_topical_relevance -.-> m_precision_benchmark
+  c_topical_relevance -.-> m_recall_benchmark
   c_topical_relevance -.-> m_reciprocal_rank
   c_trust_in_system -.-> m_trust_score
   c_user_experience -.-> m_user_experience_score
@@ -218,7 +218,7 @@ A construct with several broader constructs appears under each of them.
 - [Component characteristics](component-characteristics.md)
   - [Component performance](component-performance.md)
     - [Classification performance](classification-performance.md)
-      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
+      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md), [F1 Score](../metrics/f1-score.md), [Precision (benchmark)](../metrics/precision-benchmark.md), [Recall (benchmark)](../metrics/recall-benchmark.md)
       - [Classification performance: calibration](calibration.md) · metrics: [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
     - [Closed-answer performance](closed-answer-performance.md)
       - [Closed-answer performance: answer correctness](answer-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [F1 Score](../metrics/f1-score.md), [pass@k](../metrics/pass-at-k.md)
@@ -233,7 +233,7 @@ A construct with several broader constructs appears under each of them.
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
           - [Retrieval effectiveness: timeliness](timeliness.md)
-          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md), [Precision (benchmark)](../metrics/precision-benchmark.md), [Recall (benchmark)](../metrics/recall-benchmark.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
     - [Tool-use performance](tool-use-performance.md)

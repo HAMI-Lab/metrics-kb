@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: proxy
-  research_method: [test-collection, logs-telemetry]
+  research_method: [benchmark, logs-telemetry]
   route: [external-judgment]
   collection_mode: [offline, online]
   data_source: [model-judge]

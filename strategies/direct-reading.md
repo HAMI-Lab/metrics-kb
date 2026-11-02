@@ -6,7 +6,7 @@ page_type: strategy
 template_version: "0.2"
 
 layer: route
-research_methods: [logs-telemetry, task-study, test-collection]
+research_methods: [logs-telemetry, task-study, benchmark]
 
 status: ai-draft
 last_reviewed: null
@@ -29,7 +29,7 @@ Logs and telemetry, timed tasks in lab or field studies, and automated test suit
 <!-- generated:pairings:start -->
 - [Interaction logs and telemetry](logs-telemetry.md)
 - [Task studies with people](task-study.md)
-- [Test collections and benchmarks](test-collection.md)
+- [Benchmarks](benchmark.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices

@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [external-judgment, reference-comparison]
   collection_mode: [offline]
   data_source: [model-judge, reference-answers]
@@ -39,7 +39,7 @@ cost:
 related:
   - {metric: answer-faithfulness, kind: conceptual, note: "Checks support by the given sources, not by trusted knowledge."}
   - {metric: rouge, kind: conceptual, note: "Overlap with a reference; does not check truth."}
-  - {metric: precision-test-collection, kind: operational, note: "The same precision computation applied to atomic facts."}
+  - {metric: precision-benchmark, kind: operational, note: "The same precision computation applied to atomic facts."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "False content erodes trust."}
@@ -118,7 +118,7 @@ Models can score well by saying less. Swapping the judge changes the scores.
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-The same computation as [precision](precision-test-collection.md), applied to atomic facts.
+The same computation as [precision](precision-benchmark.md), applied to atomic facts.
 
 ### 5.2 Conceptually related metrics
 [Answer Faithfulness](answer-faithfulness.md) is the counterpart for support by given context. [ROUGE](rouge.md) does not check truth.

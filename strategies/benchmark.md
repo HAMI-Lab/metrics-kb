@@ -1,7 +1,7 @@
 ---
-id: test-collection
-title: Test collections and benchmarks
-aliases: [benchmark, test set, offline evaluation, batch evaluation]
+id: benchmark
+title: Benchmarks
+aliases: [test collection, test set, labeled dataset, annotated dataset, gold-standard dataset, ground-truth data, evaluation dataset, test suite, offline evaluation, batch evaluation]
 page_type: strategy
 template_version: "0.2"
 
@@ -15,14 +15,16 @@ reviewers: []
 sources: [manning2008, voorhees2000, hersh2000, turpin2006, zheng2023]
 ---
 
-# Test collections and benchmarks
+# Benchmarks
 
 > A fixed set of inputs, often with reference outputs, is built once and reused to run systems against, with no user present.
 
 ## 1. What it is
 
 ### 1.1 Definition
-A test collection is a fixed set of inputs, such as queries, documents, prompts or test cases, often stored with the right outputs. Each system is run on the same inputs, and its outputs are recorded. No user takes part in the run. Because the inputs stay fixed, results can be compared across systems and over time.
+A benchmark is a fixed set of inputs, such as queries, documents, prompts or test cases, often stored with the right outputs. Each system is run on the same inputs, and its outputs are recorded. No user takes part in the run. Because the inputs stay fixed, results can be compared across systems and over time.
+
+Fields use different names for the same concept, and the wiki treats them as one method: **test collection** in information retrieval, **benchmark** in machine learning and LLM evaluation, **labeled** or **annotated dataset**, **gold standard** or **ground truth** when the emphasis is on the reference outputs, **test set** for the held-out part of a dataset, and **test suite** in software engineering. The wiki uses "benchmark" as the canonical name (D26). Each named benchmark, such as TREC or HumanEval, is an instrument (D25).
 
 ### 1.2 Typical pairings
 Most often scored by comparison against the stored reference. When outputs are judged after the run, the route is external judgment. Pass rates and run times of test suites are read directly.
@@ -71,8 +73,8 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 - [pass@k](../metrics/pass-at-k.md)
 - [pass^k](../metrics/pass-hat-k.md)
 - [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
-- [Precision (test collection)](../metrics/precision-test-collection.md)
-- [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Precision (benchmark)](../metrics/precision-benchmark.md)
+- [Recall (benchmark)](../metrics/recall-benchmark.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 - [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)

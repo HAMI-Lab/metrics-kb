@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers]
@@ -39,7 +39,7 @@ cost:
 related:
   - {metric: accuracy, kind: conceptual, note: "Accuracy judges one threshold; AUC judges the ranking."}
   - {metric: expected-calibration-error, kind: conceptual, note: "AUC ignores whether scores are calibrated."}
-  - {metric: precision-test-collection, kind: conceptual, note: "Precision-recall curves are preferred when positives are rare."}
+  - {metric: precision-benchmark, kind: conceptual, note: "Precision-recall curves are preferred when positives are rare."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain."}
@@ -123,7 +123,7 @@ Computed from the same scores as precision and recall at each threshold.
 [Accuracy](accuracy.md) and [F1](f1-score.md) judge one threshold. [Expected Calibration Error](expected-calibration-error.md) judges the scores as probabilities, which AUC ignores.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
+- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 

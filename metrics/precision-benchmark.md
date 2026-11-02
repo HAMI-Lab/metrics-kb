@@ -1,7 +1,7 @@
 ---
-id: precision-test-collection
-title: Precision (test collection)
-aliases: [precision, positive predictive value, "precision@k", P@k, offline precision, batch precision]
+id: precision-benchmark
+title: Precision (benchmark)
+aliases: ["Precision (test collection)", precision, positive predictive value, "precision@k", P@k, offline precision, batch precision]
 page_type: metric
 template_version: "0.3"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison, external-judgment]
   collection_mode: [offline]
   data_source: [relevance-judgments, reference-answers, model-judge]
@@ -38,7 +38,7 @@ cost:
 
 related:
   - {metric: precision-user-task, kind: operational, note: "Same computation at the task level: the user's own queries and judgments."}
-  - {metric: recall-test-collection, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
+  - {metric: recall-benchmark, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
   - {metric: task-completion-time, kind: empirical, note: "Better ranking is expected to shorten search tasks; user studies show the link is weaker than assumed."}
   - {metric: perceived-usability-score, kind: empirical, note: "Output quality is one input to perceived usability; not measured directly."}
 
@@ -49,7 +49,7 @@ objectives:
 sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, turpin2006, kelly2009, schoolofai2025, es2023]
 ---
 
-# Precision (test collection)
+# Precision (benchmark)
 
 > The fraction of what the system returned (or flagged as positive) that was actually relevant or correct.
 
@@ -69,7 +69,7 @@ Measures, in the [construct DAG](../constructs/index.md):
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
-It ignores what was missed (that is [Recall (test collection)](recall-test-collection.md)). It says nothing about how results are presented, how long the user took, or whether the user was satisfied. For LLM outputs, "precision" is sometimes used loosely for the share of correct claims; make sure the counting unit is stated.
+It ignores what was missed (that is [Recall (benchmark)](recall-benchmark.md)). It says nothing about how results are presented, how long the user took, or whether the user was satisfied. For LLM outputs, "precision" is sometimes used loosely for the share of correct claims; make sure the counting unit is stated.
 
 ## 2. How it is measured
 
@@ -123,16 +123,16 @@ Precision alone is easy to game by returning fewer, safer results (precision ris
 Summaries of both: F1, average precision, nDCG. [Precision (user on task)](precision-user-task.md) is the same computation at the task level. Precision@k and macro or micro averages are variants on this page (2.4).
 
 ### 5.2 Conceptually related metrics
-[Recall (test collection)](recall-test-collection.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](perceived-usability-score.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+[Recall (benchmark)](recall-benchmark.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](perceived-usability-score.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006]. This is the gap between test-collection precision and [Precision (user on task)](precision-user-task.md): a builder optimizing the first may not move the second.
+Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006]. This is the gap between benchmark precision and [Precision (user on task)](precision-user-task.md): a builder optimizing the first may not move the second.
 
 ## 6. Links to business objectives
 **Improved usability:** positive, correlational, and weaker than commonly assumed (see 5.2).
@@ -146,5 +146,5 @@ Raising precision by being more selective usually lowers recall. Links from prec
 - [schoolofai2025], [es2023]: use in LLM and RAG evaluation.
 
 ## Open questions and review notes
-- Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall (test collection)](recall-test-collection.md) and commit 3912bde (PR #1).
+- Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall (test collection)](recall-benchmark.md) and commit 3912bde (PR #1).
 - Should precision for LLM claim-level correctness be its own page? Tracked in [issue #9](https://github.com/HAMI-Lab/metrics-kb/issues/9).

@@ -16,7 +16,7 @@ ISO 9241-11 defines usability as the extent to which specified users can use a s
 
 ## How it can be observed
 No single measure captures it. The usual practice is to measure all three parts:
-- Effectiveness: task success, error rate, output quality ([Precision (test collection)](../metrics/precision-test-collection.md) for the system side).
+- Effectiveness: task success, error rate, output quality ([Precision (benchmark)](../metrics/precision-benchmark.md) for the system side).
 - Efficiency: [Task Completion Time](../metrics/task-completion-time.md), effort ([NASA-TLX](../metrics/mental-workload-score.md)), waiting time ([Response Latency](../metrics/response-latency.md)).
 - Satisfaction: [SUS](../metrics/perceived-usability-score.md) and similar questionnaires.
 
@@ -30,8 +30,8 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | positive | correlational | Measures perceived usability |
 | [Task Completion Time](../metrics/task-completion-time.md) | negative | correlational | For the same outcome |
 | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | negative | correlational | Not at very low workload |
-| [Precision (test collection)](../metrics/precision-test-collection.md) | positive | correlational | Weaker than assumed |
-| [Recall (test collection)](../metrics/recall-test-collection.md) | positive | correlational | Batch gains do not always translate to users |
+| [Precision (benchmark)](../metrics/precision-benchmark.md) | positive | correlational | Weaker than assumed |
+| [Recall (benchmark)](../metrics/recall-benchmark.md) | positive | correlational | Batch gains do not always translate to users |
 | [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Part of effectiveness for the user's own task |
 | [Accuracy](../metrics/accuracy.md) | positive | theoretical | Correct components are a precondition for effective tasks; the link to user outcomes is not measured. |
 | [F1 Score](../metrics/f1-score.md) | positive | theoretical | Through output quality; not measured. |

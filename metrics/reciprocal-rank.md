@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [relevance-judgments, reference-answers]
@@ -38,7 +38,7 @@ cost:
 
 related:
   - {metric: ndcg, kind: conceptual, note: "nDCG credits every relevant item, not only the first."}
-  - {metric: precision-test-collection, kind: conceptual, note: "Precision@k counts relevant items regardless of order."}
+  - {metric: precision-benchmark, kind: conceptual, note: "Precision@k counts relevant items regardless of order."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain."}
@@ -118,10 +118,10 @@ Optimizing MRR can push one strong result up while hurting the rest of the ranki
 RR@k is a variant on this page.
 
 ### 5.2 Conceptually related metrics
-[nDCG](ndcg.md) credits all relevant items with grades; [Precision (test collection)](precision-test-collection.md) ignores order.
+[nDCG](ndcg.md) credits all relevant items with grades; [Precision (benchmark)](precision-benchmark.md) ignores order.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 <!-- generated:neighbours:end -->
 

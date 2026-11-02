@@ -37,8 +37,8 @@ cost:
   automatable: false
 
 related:
-  - {metric: precision-test-collection, kind: operational, note: "Same computation at the component level, on fixed queries and assessor judgments."}
-  - {metric: precision-test-collection, kind: empirical, note: "Higher test-collection precision does not reliably give higher precision for users on their own tasks."}
+  - {metric: precision-benchmark, kind: operational, note: "Same computation at the component level, on fixed queries and assessor judgments."}
+  - {metric: precision-benchmark, kind: empirical, note: "Higher benchmark precision does not reliably give higher precision for users on their own tasks."}
   - {metric: task-completion-time, kind: conceptual, note: "Effectiveness and efficiency of the same task."}
   - {metric: perceived-usability-score, kind: empirical, note: "Result quality is expected to feed perceived usability; not measured here."}
 
@@ -56,7 +56,7 @@ sources: [saracevic2007, barry1998, hersh2000, turpin2006, kelly2009, hofmann201
 ## 1. What is measured
 
 ### 1.1 Definition
-Precision = items the user found relevant ÷ items returned (or the top *k* shown). The formula is the same as [Precision (test collection)](precision-test-collection.md). What differs is where the parts come from: the queries are the ones the user issued, and relevance is decided by the user, for their task, either explicitly or as inferred from behaviour.
+Precision = items the user found relevant ÷ items returned (or the top *k* shown). The formula is the same as [Precision (benchmark)](precision-benchmark.md). What differs is where the parts come from: the queries are the ones the user issued, and relevance is decided by the user, for their task, either explicitly or as inferred from behaviour.
 
 ### 1.2 Construct: property of subject in context
 The property is **situational relevance** of the results: whether they help this user with this task [saracevic2007]. The subject is the user and system together. The context is a task the user is doing, in a study or in real use.
@@ -89,7 +89,7 @@ Judgments of one user on one task are not repeatable in the way assessor judgmen
 - With inferred relevance: state the signal (click, save, dwell above a threshold) and the correction model.
 
 ### 2.5 Unit and scale
-A proportion from 0 to 1. Comparable only across conditions with similar users, tasks and judgment instructions; it is not comparable with test-collection precision on the same system.
+A proportion from 0 to 1. Comparable only across conditions with similar users, tasks and judgment instructions; it is not comparable with benchmark precision on the same system.
 
 ### 2.6 Instruments
 None listed.
@@ -116,12 +116,12 @@ User researchers and IR researchers running studies; product analysts working fr
 Product teams deciding whether a ranking change helps users; researchers testing whether offline gains hold up with people.
 
 ### 4.3 Risks: misuse, misinterpretation, gaming, Goodhart's law
-Treating clicks as judgments rewards attractive snippets rather than useful items. Reporting the test-collection number as if it were this one hides the gap described in 5.3.
+Treating clicks as judgments rewards attractive snippets rather than useful items. Reporting the benchmark number as if it were this one hides the gap described in 5.3.
 
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-[Precision (test collection)](precision-test-collection.md) is the same computation at the component level, on fixed queries and assessor judgments.
+[Precision (benchmark)](precision-benchmark.md) is the same computation at the component level, on fixed queries and assessor judgments.
 
 ### 5.2 Conceptually related metrics
 [Task Completion Time](task-completion-time.md) measures the efficiency of the same task; task success measures its outcome. [SUS](perceived-usability-score.md) measures how usable the system felt.
@@ -132,7 +132,7 @@ Treating clicks as judgments rewards attractive snippets rather than useful item
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-The test-collection version is cheap and repeatable, so builders optimize it; users experience this one. In controlled studies, large differences in test-collection precision produced small or no differences in what users achieved [hersh2000; turpin2006]. A builder optimizing the first should check the second before claiming a user benefit.
+The benchmark version is cheap and repeatable, so builders optimize it; users experience this one. In controlled studies, large differences in benchmark precision produced small or no differences in what users achieved [hersh2000; turpin2006]. A builder optimizing the first should check the second before claiming a user benefit.
 
 ## 6. Links to business objectives
 **Improved usability:** positive, theoretical: it is part of effectiveness for the user's task.
@@ -142,7 +142,7 @@ The test-collection version is cheap and repeatable, so builders optimize it; us
 ## 7. Sources
 - [saracevic2007], [barry1998]: situational relevance and users' relevance criteria.
 - [kelly2009]: interactive IR studies with users.
-- [hersh2000], [turpin2006]: test-collection gains vs user outcomes.
+- [hersh2000], [turpin2006]: benchmark gains vs user outcomes.
 - [chuklin2015], [hofmann2016]: relevance inferred from clicks, and position bias.
 - [webb1966]: reactive measurement.
 

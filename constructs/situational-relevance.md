@@ -31,7 +31,7 @@ _None yet._
 <!-- generated:narrower:end -->
 
 ## 4. Metrics
-The test-collection forms of precision and recall measure topical relevance. Their task-level counterparts, computed on the user's own queries and judgments, measure this construct.
+The benchmark forms of precision and recall measure topical relevance. Their task-level counterparts, computed on the user's own queries and judgments, measure this construct.
 <!-- generated:metrics:start -->
 - [Precision (user on task)](../metrics/precision-user-task.md)
 <!-- generated:metrics:end -->

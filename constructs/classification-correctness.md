@@ -36,8 +36,8 @@ Precision and recall per class, and their combinations, are the usual metrics.
 - [Accuracy](../metrics/accuracy.md)
 - [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
 - [F1 Score](../metrics/f1-score.md)
-- [Precision (test collection)](../metrics/precision-test-collection.md)
-- [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Precision (benchmark)](../metrics/precision-benchmark.md)
+- [Recall (benchmark)](../metrics/recall-benchmark.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

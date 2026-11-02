@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: direct
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers]
@@ -122,7 +122,7 @@ Maximum calibration error is a variant on this page.
 The Brier score [brier1950] combines calibration and accuracy in one number. [Accuracy](accuracy.md) and [ROC-AUC](roc-auc.md) are complements.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
+- Sibling construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

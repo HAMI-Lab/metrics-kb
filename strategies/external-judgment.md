@@ -6,7 +6,7 @@ page_type: strategy
 template_version: "0.2"
 
 layer: route
-research_methods: [test-collection, expert-inspection, simulation, logs-telemetry, adversarial-testing]
+research_methods: [benchmark, expert-inspection, simulation, logs-telemetry, adversarial-testing]
 
 status: ai-draft
 last_reviewed: null
@@ -27,7 +27,7 @@ A judge looks at an output or an interaction and assigns a label or score: relev
 ### 1.2 Typical pairings
 Building test collections, expert inspection, simulation, and judging samples of logged outputs.
 <!-- generated:pairings:start -->
-- [Test collections and benchmarks](test-collection.md)
+- [Benchmarks](benchmark.md)
 - `expert-inspection` (no method page yet)
 - `simulation` (no method page yet)
 - [Interaction logs and telemetry](logs-telemetry.md)
@@ -68,8 +68,8 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 - [Attack Success Rate (ASR)](../metrics/attack-success-rate.md)
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 - [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
-- [Precision (test collection)](../metrics/precision-test-collection.md)
-- [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Precision (benchmark)](../metrics/precision-benchmark.md)
+- [Recall (benchmark)](../metrics/recall-benchmark.md)
 - [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 - [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->

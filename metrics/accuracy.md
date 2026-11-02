@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: direct
-  research_method: [test-collection]
+  research_method: [benchmark]
   route: [reference-comparison]
   collection_mode: [offline]
   data_source: [reference-answers]
@@ -38,7 +38,7 @@ cost:
 
 related:
   - {metric: f1-score, kind: conceptual, note: "Balances precision and recall; preferred when classes are imbalanced."}
-  - {metric: precision-test-collection, kind: conceptual, note: "Looks only at predicted positives."}
+  - {metric: precision-benchmark, kind: conceptual, note: "Looks only at predicted positives."}
   - {metric: roc-auc, kind: conceptual, note: "Judges ranking across all thresholds instead of one decision."}
   - {metric: expected-calibration-error, kind: conceptual, note: "Whether confidence matches accuracy."}
 
@@ -80,7 +80,7 @@ It gives no partial credit, so a nearly right answer counts the same as a wrong 
 Stable once the test set is fixed. Small test sets give wide intervals; report them.
 
 ### 2.3 Data collection and measurement error
-Run the component on a test collection with reference labels or answers. Errors in the labels count against the component.
+Run the component on a benchmark with reference labels or answers. Errors in the labels count against the component.
 
 ### 2.4 Computation
 - Accuracy = correct ÷ all cases.
@@ -123,10 +123,10 @@ High accuracy on imbalanced data hides failure on rare cases. Benchmarks reused 
 Exact match and balanced accuracy are variants on this page. [F1](f1-score.md) is computed from the same confusion table.
 
 ### 5.2 Conceptually related metrics
-[F1](f1-score.md) and [Precision (test collection)](precision-test-collection.md) are substitutes when classes are imbalanced. [ROC-AUC](roc-auc.md) complements it by ignoring the threshold.
+[F1](f1-score.md) and [Precision (benchmark)](precision-benchmark.md) are substitutes when classes are imbalanced. [ROC-AUC](roc-auc.md) complements it by ignoring the threshold.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
+- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 

@@ -9,7 +9,7 @@ Read `README.md` first. This file adds the rules for AI edits.
 
 ## Writing rules
 - Follow the template for the page type exactly (`schema/metric-template.md`, `construct-template.md`, `strategy-template.md`): same headings, same order, same front matter keys.
-- One metric page per operationalization, and one per computation per root: all of a page's `construct.measures` must sit under the same root of the construct DAG (D20). Qualify the title when the same name exists under another root, e.g. "Precision (test collection)" and "Precision (user on task)". Method changes within a root do not make a new page.
+- One metric page per operationalization, and one per computation per root: all of a page's `construct.measures` must sit under the same root of the construct DAG (D20). Qualify the title when the same name exists under another root, e.g. "Precision (benchmark)" and "Precision (user on task)". Method changes within a root do not make a new page.
 - Do not make a page for a standardized questionnaire or test (D25). Put it on the page for its construct and method, e.g. "Perceived Usability Score (questionnaire)": list it in `operationalization.instruments`, describe it in section 2.6, give its scoring in 2.4, and add its name to `aliases`.
 - Write `construct.statement` at the level of the "spirit" of the measurement; put field-specific uses in 3.1, not in separate pages or separate statements.
 - Every metric links to at least one construct (`construct.measures`) and one strategy (`operationalization.route`). If no construct fits, add one (in `constructs/dag.yaml` or a new page) and say so in chat.

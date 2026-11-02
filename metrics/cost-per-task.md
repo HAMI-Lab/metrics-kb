@@ -22,7 +22,7 @@ construct:
 
 operationalization:
   measure_type: direct
-  research_method: [test-collection, logs-telemetry]
+  research_method: [benchmark, logs-telemetry]
   route: [direct-reading]
   collection_mode: [offline, online]
   data_source: [system-telemetry]
