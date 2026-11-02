@@ -76,14 +76,6 @@ text-image-alignment:
   title: "Image generation performance: text-image alignment"
   broader: [image-generation-performance]
 
-map-prediction-performance:
-  title: Map prediction performance
-  broader: [component-performance]
-
-saliency-prediction-accuracy:
-  title: "Map prediction performance: saliency prediction accuracy"
-  broader: [map-prediction-performance]
-
 numeric-prediction-performance:
   title: Numeric prediction performance
   broader: [component-performance]
@@ -131,6 +123,14 @@ transcription-performance:
 transcription-accuracy:
   title: "Transcription performance: accuracy"
   broader: [transcription-performance]
+
+visual-attention-prediction-performance:
+  title: Visual attention prediction performance
+  broader: [component-performance]
+
+saliency-prediction-accuracy:
+  title: "Visual attention prediction performance: accuracy"
+  broader: [visual-attention-prediction-performance]
 
 system-characteristics:
   title: System characteristics

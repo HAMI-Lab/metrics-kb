@@ -50,8 +50,6 @@ The construct DAG with the metrics attached to each construct. A construct with 
       - [Grounding performance: localization accuracy](../constructs/grounding-accuracy.md) — [Grounding Accuracy](../metrics/grounding-accuracy.md)
     - [Image generation performance](../constructs/image-generation-performance.md)
       - [Image generation performance: text-image alignment](../constructs/text-image-alignment.md) — [CLIPScore](../metrics/clipscore.md)
-    - [Map prediction performance](../constructs/map-prediction-performance.md)
-      - [Map prediction performance: saliency prediction accuracy](../constructs/saliency-prediction-accuracy.md) — [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
     - [Numeric prediction performance](../constructs/numeric-prediction-performance.md)
       - [Numeric prediction performance: accuracy](../constructs/numeric-prediction-accuracy.md) — [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
     - [Retrieval performance](../constructs/retrieval-performance.md)
@@ -65,6 +63,8 @@ The construct DAG with the metrics attached to each construct. A construct with 
       - [Tool-use performance: call correctness](../constructs/tool-call-correctness.md) — [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
     - [Transcription performance](../constructs/transcription-performance.md)
       - [Transcription performance: accuracy](../constructs/transcription-accuracy.md) — [Word Error Rate (WER)](../metrics/word-error-rate.md)
+    - [Visual attention prediction performance](../constructs/visual-attention-prediction-performance.md)
+      - [Visual attention prediction performance: accuracy](../constructs/saliency-prediction-accuracy.md) — [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
 
 ### System characteristics
 
@@ -145,7 +145,7 @@ Each metric measures constructs under exactly one root (D20).
 | [Recall (benchmark)](../metrics/recall-benchmark.md) | [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md), [Classification effectiveness: correctness](../constructs/classification-correctness.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md), [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md) |
 | [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | [Generation performance: content adequacy](../constructs/content-adequacy.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | [Numeric prediction performance: accuracy](../constructs/numeric-prediction-accuracy.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
-| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | [Map prediction performance: saliency prediction accuracy](../constructs/saliency-prediction-accuracy.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | [Visual attention prediction performance: accuracy](../constructs/saliency-prediction-accuracy.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | [Tool-use performance: call correctness](../constructs/tool-call-correctness.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Word Error Rate (WER)](../metrics/word-error-rate.md) | [Transcription performance: accuracy](../constructs/transcription-accuracy.md) | [Benchmarks](../strategies/benchmark.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 

@@ -63,7 +63,7 @@ The property is how well a component predicts where people look. The subject is 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Map prediction performance: saliency prediction accuracy](../constructs/saliency-prediction-accuracy.md) (under Component characteristics → Component performance → Map prediction performance)
+- [Visual attention prediction performance: accuracy](../constructs/saliency-prediction-accuracy.md) (under Component characteristics → Component performance → Visual attention prediction performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -37,7 +37,6 @@ graph TD
   c_information_literacy(["Literacy: information literacy"])
   c_instruction_following(["Generation performance: instruction following"])
   c_literacy(["Literacy"])
-  c_map_prediction_performance(["Map prediction performance"])
   c_mental_workload(["Mental workload"])
   c_numeracy(["Literacy: numeracy"])
   c_numeric_prediction_accuracy(["Numeric prediction performance: accuracy"])
@@ -54,7 +53,7 @@ graph TD
   c_robustness(["System robustness"])
   c_run_consistency(["Consistency across runs"])
   c_safety(["Output quality: safety"])
-  c_saliency_prediction_accuracy(["Map prediction performance: saliency prediction accuracy"])
+  c_saliency_prediction_accuracy(["Visual attention prediction performance: accuracy"])
   c_situational_relevance(["Task effectiveness: situational relevance"])
   c_system_characteristics(["System characteristics"])
   c_system_performance(["System performance"])
@@ -75,6 +74,7 @@ graph TD
   c_user_background(["User background"])
   c_user_characteristics(["User characteristics"])
   c_user_experience(["User experience"])
+  c_visual_attention_prediction_performance(["Visual attention prediction performance"])
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_accuracy["Accuracy"]:::metric
@@ -138,11 +138,11 @@ graph TD
   c_component_performance --> c_generation_performance
   c_component_performance --> c_grounding_performance
   c_component_performance --> c_image_generation_performance
-  c_component_performance --> c_map_prediction_performance
   c_component_performance --> c_numeric_prediction_performance
   c_component_performance --> c_retrieval_performance
   c_component_performance --> c_tool_use_performance
   c_component_performance --> c_transcription_performance
+  c_component_performance --> c_visual_attention_prediction_performance
   c_explanation_performance --> c_explanation_faithfulness
   c_generation_performance --> c_content_adequacy
   c_generation_performance --> c_factuality
@@ -155,7 +155,6 @@ graph TD
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
   c_literacy --> c_visualization_literacy
-  c_map_prediction_performance --> c_saliency_prediction_accuracy
   c_numeric_prediction_performance --> c_numeric_prediction_accuracy
   c_output_quality --> c_fairness
   c_output_quality --> c_safety
@@ -197,6 +196,7 @@ graph TD
   c_user_characteristics --> c_user_background
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
+  c_visual_attention_prediction_performance --> c_saliency_prediction_accuracy
   c_visualization_literacy --> c_critical_visualization_literacy
   c_answer_correctness -.-> m_accuracy
   c_answer_correctness -.-> m_f1_score
@@ -282,8 +282,6 @@ A construct with several broader constructs appears under each of them.
       - [Grounding performance: localization accuracy](grounding-accuracy.md) · metrics: [Grounding Accuracy](../metrics/grounding-accuracy.md)
     - [Image generation performance](image-generation-performance.md)
       - [Image generation performance: text-image alignment](text-image-alignment.md) · metrics: [CLIPScore](../metrics/clipscore.md)
-    - [Map prediction performance](map-prediction-performance.md)
-      - [Map prediction performance: saliency prediction accuracy](saliency-prediction-accuracy.md) · metrics: [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
     - [Numeric prediction performance](numeric-prediction-performance.md)
       - [Numeric prediction performance: accuracy](numeric-prediction-accuracy.md) · metrics: [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
     - [Retrieval performance](retrieval-performance.md)
@@ -297,6 +295,8 @@ A construct with several broader constructs appears under each of them.
       - [Tool-use performance: call correctness](tool-call-correctness.md) · metrics: [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
     - [Transcription performance](transcription-performance.md)
       - [Transcription performance: accuracy](transcription-accuracy.md) · metrics: [Word Error Rate (WER)](../metrics/word-error-rate.md)
+    - [Visual attention prediction performance](visual-attention-prediction-performance.md)
+      - [Visual attention prediction performance: accuracy](saliency-prediction-accuracy.md) · metrics: [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
 - [System characteristics](system-characteristics.md)
   - [Resource cost](resource-cost.md) · metrics: [Cost per Task](../metrics/cost-per-task.md)
   - [System performance](system-performance.md)
@@ -354,7 +354,6 @@ A construct with several broader constructs appears under each of them.
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
-- [Map prediction performance](map-prediction-performance.md)
 - [Numeric prediction performance](numeric-prediction-performance.md)
 - [Reliance on AI](reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
@@ -371,3 +370,4 @@ A construct with several broader constructs appears under each of them.
 - [Usability](usability.md)
 - [User background](user-background.md)
 - [User characteristics](user-characteristics.md)
+- [Visual attention prediction performance](visual-attention-prediction-performance.md)

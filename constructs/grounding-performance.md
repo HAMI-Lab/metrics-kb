@@ -23,7 +23,7 @@ sources: [cheng2024]
 Output type (D23): the input is an image or screen plus an instruction, and the output is a location, such as a point or a box [cheng2024].
 
 ## 2. Boundaries
-Not [map prediction](map-prediction-performance.md), which outputs a value everywhere. Whether an agent then completes the task is [autonomous task completion](autonomous-task-completion.md).
+Not [visual attention prediction](visual-attention-prediction-performance.md), which outputs a value for every location. Whether an agent then completes the task is [autonomous task completion](autonomous-task-completion.md).
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->

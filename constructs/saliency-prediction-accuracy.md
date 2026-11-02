@@ -1,12 +1,12 @@
 ---
 id: saliency-prediction-accuracy
-title: "Map prediction performance: saliency prediction accuracy"
+title: "Visual attention prediction performance: accuracy"
 aliases: [attention prediction accuracy]
 page_type: construct
 template_version: "0.1"
 fields: [visualization, computer-vision]
 
-broader: [map-prediction-performance]
+broader: [visual-attention-prediction-performance]
 
 status: ai-draft
 last_reviewed: null
@@ -15,7 +15,7 @@ reviewers: []
 sources: [bylinskii2019, borkin2016]
 ---
 
-# Map prediction performance: saliency prediction accuracy
+# Visual attention prediction performance: accuracy
 
 > How well a predicted map matches where people actually look.
 

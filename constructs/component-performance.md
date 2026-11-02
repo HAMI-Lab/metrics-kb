@@ -34,11 +34,11 @@ One narrower construct per kind of component, typed by what the component takes 
 - [Generation performance](generation-performance.md)
 - [Grounding performance](grounding-performance.md)
 - [Image generation performance](image-generation-performance.md)
-- [Map prediction performance](map-prediction-performance.md)
 - [Numeric prediction performance](numeric-prediction-performance.md)
 - [Retrieval performance](retrieval-performance.md)
 - [Tool-use performance](tool-use-performance.md)
 - [Transcription performance](transcription-performance.md)
+- [Visual attention prediction performance](visual-attention-prediction-performance.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

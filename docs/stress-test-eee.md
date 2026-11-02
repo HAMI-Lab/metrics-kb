@@ -43,7 +43,7 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 | 23 | mmau-pro-open-ended-judge-score | border | new page | Audio QA, LLM judge; same missing "judge rating" class as #9. |
 | 24 | restoration-score-rs | out | — | Image restoration, VLM judge. |
 | 25 | rhae | in | new construct | Agent action efficiency relative to humans (ARC-AGI-3): a system-level efficiency construct is missing. |
-| 26 | sim | border | new type | Saliency-map similarity (used in visualization research). Needs a map-prediction output type. |
+| 26 | sim | border | new type | Saliency-map similarity (used in visualization research). Needs an output type for attention maps (named *visual attention prediction*). |
 | 27 | auroc | in | existing | ROC-AUC. |
 | 28 | avg-accuracy | in | existing | Accuracy averaged over several benchmarks: an aggregate across instruments. |
 | 29 | cds | ? | unresolvable | No definition in the registry. |
@@ -82,7 +82,7 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 
 **What held**
 - About half of the in-scope metrics (10 of 19) map to existing pages, mostly as parameter variants (nDCG@5, Hits@50, Pass@1) or new instruments (BFCL for Tool Call Accuracy, SciCode for pass@k). Keeping parameter variants on one page (D5) absorbs the registry's fragmentation.
-- The input/output rule for component constructs (D23) extends without strain: the new output types the sample needed (numeric prediction, map prediction, image generation, spatial grounding) are each defined by their output space.
+- The input/output rule for component constructs (D23) extends without strain: the new output types the sample needed (numeric prediction, visual attention prediction, image generation, spatial grounding) are each defined by their output space.
 - The class/object split (D27) handles the registry's dataset-specific "metrics", which are benchmark subset scores, that is, instruments.
 - The two constructs the sample needed, instruction following and agent efficiency, fit the DAG rules.
 - Name ambiguity was milder than expected. EEE holds only benchmark results, so every registry id maps to the benchmark-method page; the D20 split never caused a collision.
@@ -120,7 +120,7 @@ Existing pages gained scorer or suite instruments: Toxicity Rate (Perspective AP
 | [Win Rate (pairwise comparison)](../metrics/win-rate.md) | win rates in the registry (not sampled) | — |
 | [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | Elo ratings in the registry (not sampled) | — |
 | [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | #13 MSE | output type [numeric prediction](../constructs/numeric-prediction-performance.md) |
-| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | #26 SIM | output type [map prediction](../constructs/map-prediction-performance.md) |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | #26 SIM | output type [visual attention prediction](../constructs/visual-attention-prediction-performance.md) |
 | [CLIPScore](../metrics/clipscore.md) | #3 CLIP R-Precision (as an alias) | output type [image generation](../constructs/image-generation-performance.md) |
 | [Grounding Accuracy](../metrics/grounding-accuracy.md) | the in-scope form of #1 (GUI rather than 3D grounding) | output type [grounding](../constructs/grounding-performance.md) |
 
