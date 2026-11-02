@@ -3,12 +3,9 @@
 # Any facet may take several values. If nothing fits, use "other: <short description>"
 # and raise it for discussion rather than inventing a new value silently.
 #
-# Origin: slide 4 of "EvalOps - Metric Dimensions" (24 Aug 2026) asks
-#   "what is <property> of <subject> in <context>?"
-# Here the slide's single "property" facet is split into ASPECT (the quality being judged)
-# and QUANTITY_FORM (the form of the number). The slide's "human behavior" vs "human
-# perception" subjects become one subject ("user") plus a PERSPECTIVE facet
-# (objective vs perceived). See slide_mapping at the bottom.
+# A metric's construct is described as "property of subject in context". The property is
+# split into ASPECT (the quality being judged) and QUANTITY_FORM (the form of the number);
+# PERSPECTIVE says whether the property is observed (objective) or reported (perceived).
 
 subject:            # whose property is it?
   system-component: A module inside a system (retriever, ranker, classifier, explanation module, UI widget).
@@ -120,27 +117,3 @@ related_kind:       # front matter related[].kind; matches the subsections of se
   operational: Shares computation (variant, part, built from, derived from).
   conceptual: Measures the same or a related construct (including DAG siblings).
   empirical: Moves with this metric according to evidence (correlation, trade-off, causal link).
-
-# How the slide's original values map to this vocabulary.
-slide_mapping:
-  subject:
-    "Component within a system": {subject: system-component}
-    "System itself": {subject: system}
-    "Human behavior": {subject: user, perspective: objective}
-    "Human perception": {subject: user, perspective: perceived}
-    "Human-system collaboration": {subject: user-system-team}
-    "Long-term technology adoption": {subject: user-population, aspect: adoption, context: longitudinal}
-  property:
-    "Time duration of events": {quantity_form: duration}
-    "Count of events": {quantity_form: count}
-    "Rate of events": {quantity_form: rate}
-    "Component performance": {subject: system-component, aspect: effectiveness}
-    "System performance": {subject: system, aspect: effectiveness}
-    "Human-system task perf.": {subject: user-system-team, aspect: effectiveness}
-    "Human satisfaction level": {aspect: satisfaction, perspective: perceived}
-    "Ease-of-use level": {aspect: ease-of-use}
-  context:
-    "A task?": {context: task}
-    "Time & location?": {context: time-location}
-    "System-specific?": {context: system-specific}
-    "User-specific?": {context: user-specific}

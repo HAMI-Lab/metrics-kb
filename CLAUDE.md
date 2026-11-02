@@ -13,7 +13,7 @@ Read `README.md` first. This file adds the rules for AI edits.
 - Write `construct.statement` at the level of the "spirit" of the measurement; put field-specific uses in 3.1, not in separate pages or separate statements.
 - Every metric links to at least one construct (`construct.measures`) and one strategy (`operationalization.route`). If no construct fits, add one (in `constructs/dag.yaml` or a new page) and say so in chat.
 - Set `validity_concern` honestly. Use `high` when the number is a proxy that is easy to game or when judges (human or model) go unchecked.
-- Never edit between `<!-- generated:...:start -->` and `<!-- generated:...:end -->` markers, `constructs/index.md`, or `schema/page-guide.md`; run `python scripts/build.py` instead.
+- Never edit between `<!-- generated:...:start -->` and `<!-- generated:...:end -->` markers, `constructs/index.md`, `schema/page-guide.md`, or `docs/wiki-map.md`; run `python scripts/build.py` instead.
 - Change the construct DAG through `scripts/sync_constructs.py` (after editing `constructs/dag.yaml` or a page's `broader`). If sync reports a conflict or a removal, ask a person; do not delete construct pages yourself.
 - Record schema changes, with reasons and alternatives, in `schema/DECISIONS.md`.
 - Use only values from `schema/vocabulary.yaml`. If none fits, use `other: <description>` and flag it.
