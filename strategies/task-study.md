@@ -25,12 +25,12 @@ sources: [lazar2017, kelly2009, sauro2016, nielsen1993, bansal2021, webb1966]
 Participants use the system to do tasks set by the researcher or chosen by themselves, in a lab or in their own setting [lazar2017]. The study records what they do (actions, time, errors), what they achieve (answers, decisions, outputs), and often what they report afterwards. It is the main method for task-level constructs, because it puts a user, a system and a goal together.
 
 ### 1.2 Typical pairings
-Outcomes are compared with the right answers; times and errors are read directly; ratings collected after tasks are self-ratings; preferences between versions are comparative judgments.
+Outcomes are compared with the right answers; times and errors are read directly; ratings collected after tasks are self-reports; preferences between versions are comparative judgments.
 <!-- generated:pairings:start -->
 - [Comparative judgment: preferences and interleaving](comparative-judgment.md)
 - [Comparison against reference data](reference-comparison.md)
 - [Direct reading: timing and counting](direct-reading.md)
-- [Self-rating: questionnaires and rating scales](self-rating.md)
+- [Self-report: ratings and answers about oneself](self-report.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices

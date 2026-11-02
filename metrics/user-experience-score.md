@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: direct
   research_method: [questionnaire-survey]
-  route: [self-rating]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "scale mean"
@@ -80,7 +80,7 @@ It does not measure task performance. The pragmatic scales overlap with perceive
 Multi-item scales allow internal consistency to be checked; short forms report fewer, broader scales. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
-Questionnaire after use, often online. See [self-rating](../strategies/self-rating.md).
+Questionnaire after use, often online. See [self-report](../strategies/self-report.md).
 
 ### 2.4 Computation
 Each item is scored on the instrument's scale; a scale score is the mean of its items. Compare with the instrument's published benchmark data where it has one. Each instrument's rule is in 2.6.

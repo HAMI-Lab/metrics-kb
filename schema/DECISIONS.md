@@ -8,6 +8,12 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 The decisions below follow a stress test: 50 metrics sampled from the Every Eval Ever metric registry [batzner2026] were mapped onto the wiki. The mapping and counts are in [`docs/stress-test-eee.md`](../docs/stress-test-eee.md).
 
+### D31. Recommendation is a component type; self-rating becomes self-report
+- **Recommendation.** Rating prediction sits under a new type, **recommendation performance**, with **rating prediction accuracy** below it, not under a general "numeric prediction" type, which was too broad to say what is being predicted. This lifts the D15 deferral of recommendation components. Ranking items for a person still overlaps with retrieval, and ranking metrics serve both.
+- **Self-report route.** The route `self-rating` is renamed `self-report` ("Self-report: ratings and answers about oneself") and now has two forms: ratings of one's own experience, and factual answers about oneself such as age or education. Caveats shared by both, such as social desirability and the effect of being asked, are stated once; recall errors and ill-fitting answer options are added for factual answers. Demographic Profile and Educational Attainment move from `direct-reading` to `self-report`.
+- **Why.** Direct reading means reading a number off a timer, counter or log, which does not describe people answering questions. The two forms share most of their caveats, so one route with two forms avoids repeating them.
+- **Considered.** A separate "factual self-report" route (repeats the shared caveats); keeping `direct-reading` (mismatch).
+
 ### D28. Component or system is decided by the role the model plays
 - **Decision.** A model, such as an LLM, is a **component** when it implements part of a larger system's function, for example an AI summary step inside software that runs structured business workflows. It is the **system** when it fulfils the whole function end to end, for example a chatbot or a question-answering system. The same model can be either; what decides is the role in the system being evaluated, not the model.
 - **Consequence for pages.** D20 splits a computation into pages only when who sets the inputs or who judges changes. A change of role alone does not. When a construct applies in both roles (factuality, for instance, is a property of a summary component's output and of a chatbot's answers), it may take a broader construct under each root, and the metric page stays one. Which constructs need both parents is decided case by case.

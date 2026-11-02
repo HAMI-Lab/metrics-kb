@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: direct
   research_method: [questionnaire-survey]
-  route: [self-rating]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "scale mean"
@@ -79,7 +79,7 @@ It does not measure whether people actually rely on the system, nor whether the 
 Multi-item, so internal consistency can be checked; report it for your sample.
 
 ### 2.3 Data collection and measurement error
-Questionnaire after use. See [self-rating](../strategies/self-rating.md).
+Questionnaire after use. See [self-report](../strategies/self-report.md).
 
 ### 2.4 Computation
 Score each item on the instrument's scale, reverse-score distrust items, and average; or report trust and distrust separately (see 2.1). Each instrument's rule is in 2.6.

@@ -44,7 +44,7 @@ The four roots are sorted by **what you need in order to measure the construct**
 
 The roots also differ in **who controls the variable** (D24). Builders design and change components and systems. Task characteristics are outcomes of use. User characteristics are attributes no one controls: a study can only select or sample people, and uses these variables to explain differences in outcomes. That is why latent abilities such as numeracy are constructs for people, while machine capabilities such as math or reasoning are not (D23).
 
-**Inside the component root**, constructs are typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval, generation, tool use and explanation. What the test data probes, such as knowledge or reasoning, is not a construct in the DAG; it belongs to the test data and is named in prose (D23).
+**Inside the component root**, constructs are typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval and recommendation (items for a query or a person), text generation, image generation, transcription (speech or images of text to text), grounding (a location for an instruction), visual attention prediction (where people will look), tool use and explanation. What the test data probes, such as knowledge or reasoning, is not a construct in the DAG; it belongs to the test data and is named in prose (D23).
 
 **A model's root depends on its role** (D28). An LLM that implements part of a larger system, such as a summary step in a business-workflow application, is a component; an LLM that fulfils the whole function, such as a chatbot, is the system. A construct that applies in both roles can sit under both roots, and its metric pages stay as they are.
 
@@ -68,9 +68,9 @@ Instruments come in three kinds (D30): **content** fixes what is measured on (it
 
 ### 4. Strategies have two layers
 - **Methods** say how data is gathered: benchmarks (also called test collections or labeled datasets), logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
-- **Routes** say how data becomes a number: direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, difference scoring, coding qualitative data, statistical modeling (D10).
+- **Routes** say how data becomes a number: direct reading, self-report, external judgment, comparison against reference data, comparative judgment, difference scoring, coding qualitative data, statistical modeling (D10).
 
-Keeping the layers apart matters because the same data can be scored in different ways (questionnaire answers can be self-ratings, coded text or test answers scored against a key), and each layer carries its own caveats: sampling and recording on method pages, scoring on route pages.
+Keeping the layers apart matters because the same data can be scored in different ways (questionnaire answers can be self-reports, coded text or test answers scored against a key), and each layer carries its own caveats: sampling and recording on method pages, scoring on route pages.
 
 **Comparisons.** When a metric *is* a difference between conditions, such as a drop under perturbed inputs or a gap between groups, the method is [controlled comparison](strategies/controlled-comparison.md) and the route is [difference scoring](strategies/difference-scoring.md). When a comparison only tests whether a metric differs (an A/B test on task time), that is study design and stays out of scope; so does the significance test itself, which is analysis rather than measurement (D21).
 

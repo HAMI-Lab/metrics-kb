@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: direct
   research_method: [questionnaire-survey]
-  route: [self-rating]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "rating per dimension"
@@ -79,7 +79,7 @@ It does not measure lasting attitudes such as trust or satisfaction with a produ
 Single items per dimension are noisy; repeated ratings over a session give more stable estimates.
 
 ### 2.3 Data collection and measurement error
-Rating right after a stimulus or task. See [self-rating](../strategies/self-rating.md).
+Rating right after a stimulus or task. See [self-report](../strategies/self-report.md).
 
 ### 2.4 Computation
 One score per rated dimension. Compare conditions dimension by dimension; do not sum dimensions. Each instrument's rule is in 2.6.

@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: mixed
   research_method: [questionnaire-survey]
-  route: [self-rating]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "score (dimensionless)"

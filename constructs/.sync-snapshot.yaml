@@ -76,13 +76,13 @@ text-image-alignment:
   title: "Image generation performance: text-image alignment"
   broader: [image-generation-performance]
 
-numeric-prediction-performance:
-  title: Numeric prediction performance
+recommendation-performance:
+  title: Recommendation performance
   broader: [component-performance]
 
-numeric-prediction-accuracy:
-  title: "Numeric prediction performance: accuracy"
-  broader: [numeric-prediction-performance]
+rating-prediction-accuracy:
+  title: "Recommendation performance: rating prediction accuracy"
+  broader: [recommendation-performance]
 
 retrieval-performance:
   title: Retrieval performance

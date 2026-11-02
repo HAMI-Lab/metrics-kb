@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: direct
   research_method: [questionnaire-survey]
-  route: [self-rating]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "scale mean"
@@ -78,7 +78,7 @@ It does not measure whether the chart is easy to read or correct.
 Multi-item scales allow internal consistency to be checked. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
-Rating after viewing each visualization. See [self-rating](../strategies/self-rating.md).
+Rating after viewing each visualization. See [self-report](../strategies/self-report.md).
 
 ### 2.4 Computation
 The mean of the item ratings for each visualization, averaged across viewers. Each instrument's rule is in 2.6.

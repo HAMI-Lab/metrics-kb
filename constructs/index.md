@@ -39,10 +39,10 @@ graph TD
   c_literacy(["Literacy"])
   c_mental_workload(["Mental workload"])
   c_numeracy(["Literacy: numeracy"])
-  c_numeric_prediction_accuracy(["Numeric prediction performance: accuracy"])
-  c_numeric_prediction_performance(["Numeric prediction performance"])
   c_output_quality(["Output quality"])
   c_perceived_usability(["Usability: perceived usability"])
+  c_rating_prediction_accuracy(["Recommendation performance: rating prediction accuracy"])
+  c_recommendation_performance(["Recommendation performance"])
   c_relevance(["Retrieval effectiveness: relevance"])
   c_reliance(["Reliance on AI"])
   c_resource_cost(["Resource cost"])
@@ -138,7 +138,7 @@ graph TD
   c_component_performance --> c_generation_performance
   c_component_performance --> c_grounding_performance
   c_component_performance --> c_image_generation_performance
-  c_component_performance --> c_numeric_prediction_performance
+  c_component_performance --> c_recommendation_performance
   c_component_performance --> c_retrieval_performance
   c_component_performance --> c_tool_use_performance
   c_component_performance --> c_transcription_performance
@@ -155,10 +155,10 @@ graph TD
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
   c_literacy --> c_visualization_literacy
-  c_numeric_prediction_performance --> c_numeric_prediction_accuracy
   c_output_quality --> c_fairness
   c_output_quality --> c_safety
   c_output_quality --> c_trustworthiness
+  c_recommendation_performance --> c_rating_prediction_accuracy
   c_relevance --> c_timeliness
   c_relevance --> c_topical_relevance
   c_relevance --> c_trustworthiness
@@ -228,11 +228,11 @@ graph TD
   c_instruction_following -.-> m_instruction_following_accuracy
   c_mental_workload -.-> m_mental_workload_score
   c_numeracy -.-> m_numeracy_score
-  c_numeric_prediction_accuracy -.-> m_root_mean_squared_error
   c_output_quality -.-> m_elo_rating
   c_output_quality -.-> m_judge_rating
   c_output_quality -.-> m_win_rate
   c_perceived_usability -.-> m_perceived_usability_score
+  c_rating_prediction_accuracy -.-> m_root_mean_squared_error
   c_relevance -.-> m_ndcg
   c_resource_cost -.-> m_cost_per_task
   c_responsiveness -.-> m_response_latency
@@ -282,8 +282,8 @@ A construct with several broader constructs appears under each of them.
       - [Grounding performance: localization accuracy](grounding-accuracy.md) · metrics: [Grounding Accuracy](../metrics/grounding-accuracy.md)
     - [Image generation performance](image-generation-performance.md)
       - [Image generation performance: text-image alignment](text-image-alignment.md) · metrics: [CLIPScore](../metrics/clipscore.md)
-    - [Numeric prediction performance](numeric-prediction-performance.md)
-      - [Numeric prediction performance: accuracy](numeric-prediction-accuracy.md) · metrics: [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
+    - [Recommendation performance](recommendation-performance.md)
+      - [Recommendation performance: rating prediction accuracy](rating-prediction-accuracy.md) · metrics: [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
@@ -354,7 +354,7 @@ A construct with several broader constructs appears under each of them.
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
-- [Numeric prediction performance](numeric-prediction-performance.md)
+- [Recommendation performance](recommendation-performance.md)
 - [Reliance on AI](reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)

@@ -30,7 +30,7 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 | 10 | maniqa | out | — | No-reference image quality. |
 | 11 | map-at-10 | in | new page | Mean Average Precision: a coverage gap, fits trivially. |
 | 12 | maph | out | — | 3D detection. |
-| 13 | mse | border | new type | Regression; in scope via rating prediction in recommenders. Needs a numeric-prediction output type. |
+| 13 | mse | border | new type | Regression; in scope via rating prediction in recommenders. Needs a construct for rating prediction (added under *recommendation performance*). |
 | 14 | ndcg-at-5 | in | existing | nDCG, k = 5. |
 | 15 | radgraph-f1 | in | existing | F1 over clinical entities in generated reports; adds content adequacy to F1's constructs. |
 | 16 | rouge-lsum | in | existing | ROUGE variant. |
@@ -82,7 +82,7 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 
 **What held**
 - About half of the in-scope metrics (10 of 19) map to existing pages, mostly as parameter variants (nDCG@5, Hits@50, Pass@1) or new instruments (BFCL for Tool Call Accuracy, SciCode for pass@k). Keeping parameter variants on one page (D5) absorbs the registry's fragmentation.
-- The input/output rule for component constructs (D23) extends without strain: the new output types the sample needed (numeric prediction, visual attention prediction, image generation, spatial grounding) are each defined by their output space.
+- The input/output rule for component constructs (D23) extends without strain: the new output types the sample needed (rating prediction in recommenders, visual attention prediction, image generation, spatial grounding) are each defined by their output space.
 - The class/object split (D27) handles the registry's dataset-specific "metrics", which are benchmark subset scores, that is, instruments.
 - The two constructs the sample needed, instruction following and agent efficiency, fit the DAG rules.
 - Name ambiguity was milder than expected. EEE holds only benchmark results, so every registry id maps to the benchmark-method page; the D20 split never caused a collision.
@@ -119,7 +119,7 @@ Existing pages gained scorer or suite instruments: Toxicity Rate (Perspective AP
 | [Word Error Rate (WER)](../metrics/word-error-rate.md) | #19 WER | output type [transcription](../constructs/transcription-performance.md) |
 | [Win Rate (pairwise comparison)](../metrics/win-rate.md) | win rates in the registry (not sampled) | — |
 | [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | Elo ratings in the registry (not sampled) | — |
-| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | #13 MSE | output type [numeric prediction](../constructs/numeric-prediction-performance.md) |
+| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | #13 MSE | [recommendation performance](../constructs/recommendation-performance.md) → rating prediction accuracy |
 | [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | #26 SIM | output type [visual attention prediction](../constructs/visual-attention-prediction-performance.md) |
 | [CLIPScore](../metrics/clipscore.md) | #3 CLIP R-Precision (as an alias) | output type [image generation](../constructs/image-generation-performance.md) |
 | [Grounding Accuracy](../metrics/grounding-accuracy.md) | the in-scope form of #1 (GUI rather than 3D grounding) | output type [grounding](../constructs/grounding-performance.md) |

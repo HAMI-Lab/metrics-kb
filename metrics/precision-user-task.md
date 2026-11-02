@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: mixed
   research_method: [task-study, logs-telemetry]
-  route: [self-rating, statistical-modeling]
+  route: [self-report, statistical-modeling]
   collection_mode: [in-lab, field, online]
   data_source: [relevance-judgments, interaction-logs]
   unit: "proportion"
@@ -149,4 +149,4 @@ The benchmark version is cheap and repeatable, so builders optimize it; users ex
 
 ## Open questions and review notes
 - Should a Recall (user on task) page follow? Interactive studies have used recall computed on users' saved items [hersh2000] (check against the paper).
-- `route` lists self-rating for explicit judgments. A user marking items as relevant is closer to judgment than to rating; is self-rating the right route, or does external judgment by the user fit better?
+- `route` lists self-report for explicit judgments. A user marking items as relevant is closer to judgment than to rating; is self-report the right route, or does external judgment by the user fit better?

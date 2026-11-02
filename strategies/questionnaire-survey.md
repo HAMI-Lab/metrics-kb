@@ -25,11 +25,11 @@ sources: [lazar2017, brooke1996, hart1988, lewis2018, bangor2008, embretson2000,
 A questionnaire is a fixed set of written questions (items) given to people on paper or online. Items can be closed, such as rating scales and multiple choice, or open, asking for free text. A survey gives a questionnaire to a sample of a population, often independently of any task [lazar2017]. The data is what people say, not what they do.
 
 ### 1.2 Typical pairings
-Closed rating items are scored by self-rating. Scales with many items are often scored with statistical or latent-variable models [embretson2000]. Open answers are coded. Preference questions ("which of the two did you prefer?") feed comparative judgment.
+Closed rating items are scored as self-reports. Scales with many items are often scored with statistical or latent-variable models [embretson2000]. Open answers are coded. Preference questions ("which of the two did you prefer?") feed comparative judgment.
 <!-- generated:pairings:start -->
 - [Coding qualitative data](qualitative-coding.md)
 - [Comparative judgment: preferences and interleaving](comparative-judgment.md)
-- [Self-rating: questionnaires and rating scales](self-rating.md)
+- [Self-report: ratings and answers about oneself](self-report.md)
 - [Statistical and latent-variable modeling](statistical-modeling.md)
 <!-- generated:pairings:end -->
 
@@ -50,7 +50,7 @@ Answers reflect what people remember and are willing to report, not what they di
 Who answers matters: people who respond can differ from those who do not, and self-selected samples overrepresent strong opinions [lazar2017]. Timing changes answers (right after a task vs a week later). Changing wording, item order or translation breaks comparison with published norms, such as SUS benchmarks [bangor2008].
 
 ### 3.3 Bias and gaming
-Leading wording and item order shift answers. Biases that come from rating (acquiescence, social desirability) are on the [self-rating](self-rating.md) page. Results can be inflated by surveying only engaged users or sending the survey right after a success.
+Leading wording and item order shift answers. Biases that come from rating (acquiescence, social desirability) are on the [self-report](self-report.md) page. Results can be inflated by surveying only engaged users or sending the survey right after a success.
 
 ## 4. Cost
 Cheap per respondent once the items exist. Designing and validating new items is expensive, which is a reason to reuse standardized instruments. Recruiting enough of the right respondents is often the main cost.

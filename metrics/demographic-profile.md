@@ -23,7 +23,7 @@ construct:
 operationalization:
   measure_type: direct
   research_method: [questionnaire-survey]
-  route: [direct-reading]
+  route: [self-report]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "category per attribute (age may be a number)"
@@ -133,4 +133,4 @@ Not linked to the objectives directly: user characteristics describe users and e
 None yet.
 
 ## Open questions and review notes
-- The route is `direct-reading` because answers are recorded as given. Neither existing route fits a self-reported fact exactly; is a "self-report" route needed?
+- None yet.
