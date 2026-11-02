@@ -31,11 +31,56 @@ This table is maintained by hand for now; a script can later generate it from ea
 | Metric | Direction | Evidence | Note |
 |---|---|---|---|
 | [Response Latency](../metrics/response-latency.md) | negative | causal (web search) | Online experiments [kohavi2020] |
-| [SUS](../metrics/system-usability-scale.md) | positive | theoretical | Via TAM / satisfaction |
-| [NASA-TLX](../metrics/nasa-tlx.md) | negative | theoretical | |
-| [Precision](../metrics/precision.md) | positive | theoretical | Long causal chain |
-| [Recall](../metrics/recall.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
+| [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | positive | theoretical | Via TAM / satisfaction |
+| [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | negative | theoretical | |
+| [Precision (benchmark)](../metrics/precision-benchmark.md) | positive | theoretical | Long causal chain |
+| [Recall (benchmark)](../metrics/recall-benchmark.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
+| [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Results that help with real tasks |
 | [Task Completion Time](../metrics/task-completion-time.md) | unknown | none | Could go either way |
+| [Accuracy](../metrics/accuracy.md) | positive | theoretical | Long causal chain through output quality. |
+| [F1 Score](../metrics/f1-score.md) | positive | theoretical | Long causal chain. |
+| [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md) | positive | theoretical | Long causal chain. |
+| [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md) | positive | theoretical | Users who are misled by confident errors may stop relying on the system. |
+| [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | positive | theoretical | Long causal chain. |
+| [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | positive | theoretical | Long causal chain. |
+| [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | unknown | none | Too far from what users experience to say. |
+| [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | positive | theoretical | False content erodes trust. |
+| [Answer Faithfulness](../metrics/answer-faithfulness.md) | positive | theoretical | Grounded answers are expected to keep trust. |
+| [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | positive | theoretical | Long causal chain. |
+| [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md) | unknown | none |  |
+| [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | negative | theoretical | Successful attacks that become public erode trust in the system. |
+| [Toxicity Rate](../metrics/toxicity-rate.md) | negative | theoretical | Toxic outputs drive users away and damage reputation. |
+| [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md) | unknown | none |  |
+| [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md) | negative | theoretical | Systems that break on small input changes frustrate users. |
+| [pass^k](../metrics/pass-hat-k.md) | positive | theoretical | Users stop relying on systems whose success they cannot predict. |
+| [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | positive | theoretical | Agents that complete tasks save users work. |
+| [Cost per Task](../metrics/cost-per-task.md) | negative | theoretical | Costly systems are harder to offer at a price users accept. |
+| [pass@k](../metrics/pass-at-k.md) | positive | theoretical | Through useful generated code or answers; not measured. |
+| [Task Success Rate (user on task)](../metrics/task-success-rate-user.md) | positive | theoretical | People keep using systems with which they get their tasks done. |
+| [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md) | positive | theoretical | Decision support is kept if it improves decisions. |
+| [Over-reliance Rate](../metrics/over-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
+| [Under-reliance Rate](../metrics/under-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
+| [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md) | unknown | none |  |
+| [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | positive | theoretical | Attractive, stimulating products are expected to be used more. |
+| [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md) | unknown | none |  |
+| [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md) | unknown | none |  |
+| [Trust Score (questionnaire)](../metrics/trust-score.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
+| [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Demographic Profile (questionnaire)](../metrics/demographic-profile.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Educational Attainment (questionnaire)](../metrics/educational-attainment.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md) | positive | theoretical | Outputs that follow instructions need less rework. |
+| [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | positive | theoretical | Long causal chain through better rankings. |
+| [Judge Rating (model judge)](../metrics/judge-rating.md) | positive | theoretical | Depends on the judge matching users' taste. |
+| [Learned Reference-Based Score](../metrics/learned-reference-score.md) | unknown | none | Too far from what users experience to say. |
+| [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md) | positive | theoretical | Efficient agents finish sooner and cost less. |
+| [Word Error Rate (WER)](../metrics/word-error-rate.md) | negative | theoretical | Recognition errors frustrate voice interaction. |
+| [Win Rate (pairwise comparison)](../metrics/win-rate.md) | positive | theoretical | Preferred responses are assumed to keep users coming back. |
+| [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | positive | theoretical | Preferred systems are assumed to be used more. |
+| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | unknown | none | Too far from what users experience to say. |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | unknown | none | Too far from what users experience to say. |
+| [CLIPScore](../metrics/clipscore.md) | unknown | none | Too far from what users experience to say. |
+| [Grounding Accuracy](../metrics/grounding-accuracy.md) | unknown | none | Too far from what users experience to say. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

@@ -1,9 +1,9 @@
 ---
-id: recall
-title: Recall
-aliases: [sensitivity, true positive rate, hit rate, "recall@k", R@k]
+id: recall-benchmark
+title: Recall (benchmark)
+aliases: ["Recall (test collection)", recall, sensitivity, true positive rate, hit rate, "recall@k", R@k]
 page_type: metric
-template_version: "0.1"
+template_version: "0.3"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -12,7 +12,8 @@ reviewers: []
 
 construct:
   statement: "Of all the items that are actually relevant or correct, the share that the system returns or labels as positive."
-  subject: [system-component, system]
+  measures: [topical-relevance, classification-accuracy]
+  subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
   quantity_form: [proportion]
@@ -21,11 +22,16 @@ construct:
 
 operationalization:
   measure_type: mixed
+  research_method: [benchmark]
+  route: [reference-comparison, external-judgment]
   collection_mode: [offline]
   data_source: [relevance-judgments, reference-answers, model-judge]
   unit: "proportion"
   range: "0-1"
   better: higher
+  validity_concern: {level: moderate, note: "Direct for coverage of judged-relevant items; needs judgments of all relevant items, and is a weak proxy for user outcomes."}
+  instruments:
+    - {name: "TREC ad hoc collections", sources: [manning2008], probes: "topical relevance for ad hoc search", scale: "recall@k, 0-1", note: "Queries, documents and pooled relevance judgments."}
 
 cost:
   level: medium
@@ -33,8 +39,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: precision, relation: trade-off, note: "Returning more items usually raises recall and lowers precision."}
-  - {metric: task-completion-time, relation: correlated, note: "In recall-oriented tasks, finding more of the relevant items usually takes users longer; not quantified here."}
+  - {metric: precision-benchmark, kind: conceptual, note: "Returning more items usually raises recall and lowers precision."}
+  - {metric: task-completion-time, kind: empirical, note: "In recall-oriented tasks, finding more of the relevant items usually takes users longer; not quantified here."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Matters mainly where users need to find everything (e.g. systematic reviews); users rarely notice what is missing."}
@@ -43,7 +49,7 @@ objectives:
 sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, kelly2009, schoolofai2025, es2023]
 ---
 
-# Recall
+# Recall (benchmark)
 
 > The fraction of all relevant or correct items that the system actually found.
 
@@ -53,10 +59,17 @@ sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, kelly2009, sc
 Recall = relevant items returned ÷ all relevant items. In classification it is true positives ÷ (true positives + false negatives). In ranked retrieval it is often computed on the top *k* results (recall@k) [manning2008].
 
 ### 1.2 Construct: property of subject in context
-The property is **output completeness** (the absence of misses, or false negatives). The subject is usually a **system component** such as a retriever, ranker, or classifier, or the whole system when outputs are judged end to end. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant.
+The property is **output completeness** (the absence of misses, or false negatives). The subject is a **system component** such as a retriever, ranker, or classifier. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant.
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
+- [Classification performance: accuracy](../constructs/classification-accuracy.md) (under Component characteristics → Component performance → Classification performance)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
-It ignores how many irrelevant items were returned along with the relevant ones (that is [Precision](precision.md)). A system that returns everything has perfect recall. It says nothing about ranking order within the returned set, how results are presented, how long the user took, or whether the user was satisfied.
+It ignores how many irrelevant items were returned along with the relevant ones (that is [Precision (benchmark)](precision-benchmark.md)). A system that returns everything has perfect recall. It says nothing about ranking order within the returned set, how results are presented, how long the user took, or whether the user was satisfied.
 
 ## 2. How it is measured
 
@@ -78,6 +91,12 @@ Recall needs to know **all** relevant items, which is rarely possible in a large
 
 ### 2.5 Unit and scale
 A proportion from 0 to 1 (ratio scale). Only comparable across systems on the same collection, judgment rules, and *k*. Recall@k is capped by *k*: if a query has 50 relevant items, recall@10 cannot exceed 0.2.
+
+### 2.6 Instruments
+**Ad hoc search**
+- **TREC ad hoc collections** [manning2008]: queries, documents and relevance judgments on a pool of top results from participating systems. Recall is relative to the pool, since unpooled relevant documents are unknown.
+
+Classification uses of recall run on any labeled data set; none is singled out here.
 
 ## 3. Why it is measured
 
@@ -102,14 +121,23 @@ Engineers and IR/ML researchers. Judgments are the costly step, and more so than
 Engineers choosing models, thresholds, and how many results to retrieve; researchers comparing methods; teams in recall-critical domains (legal, medical, research reviews) deciding whether a system is safe to rely on.
 
 ### 4.3 Risks: misuse, misinterpretation, gaming, Goodhart's law
-Recall alone is easy to game by returning more results (recall rises, precision falls); always report it with [Precision](precision.md). Pooled recall can look high simply because the pool missed the same items the system missed. Treating a recall gain as a user-experience gain without checking with users [hersh2000].
+Recall alone is easy to game by returning more results (recall rises, precision falls); always report it with [Precision (benchmark)](precision-benchmark.md). Pooled recall can look high simply because the pool missed the same items the system missed. Treating a recall gain as a user-experience gain without checking with users [hersh2000].
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Trade-off: [Precision](precision.md). Summaries of both: F1, average precision, precision-recall curves. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+### 5.1 Operationally related metrics
+Summaries of both: F1, average precision, precision-recall curves.
 
-### 5.2 Dynamic relationships
+### 5.2 Conceptually related metrics
+[Precision (benchmark)](precision-benchmark.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+
+<!-- generated:neighbours:start -->
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification performance: accuracy), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: accuracy)
+- Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
 Returning more results usually raises recall and lowers precision. Raising recall in a recall-oriented task usually gives users more to read, which can lengthen task time. Links from recall to user outcomes are weaker than often assumed [hersh2000].
 
 ## 6. Links to business objectives

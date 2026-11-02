@@ -3,7 +3,7 @@ id: response-latency
 title: Response Latency
 aliases: [response time, latency, time to first token, TTFT, end-to-end latency]
 page_type: metric
-template_version: "0.1"
+template_version: "0.3"
 fields: [hci, information-retrieval, visualization, llm-evaluation, systems]
 
 status: ai-draft
@@ -12,6 +12,7 @@ reviewers: []
 
 construct:
   statement: "How long the system takes to respond after the user acts."
+  measures: [responsiveness]
   subject: [system]
   aspect: [responsiveness, efficiency]
   perspective: [objective]
@@ -21,11 +22,15 @@ construct:
 
 operationalization:
   measure_type: direct
+  research_method: [logs-telemetry]
+  route: [direct-reading]
   collection_mode: [offline, online]
   data_source: [system-telemetry, timing]
   unit: "milliseconds"
   range: "> 0"
   better: lower
+  validity_concern: {level: low, note: "Direct for system waiting time; perceived speed can differ from measured latency."}
+  instruments: []
 
 cost:
   level: low
@@ -33,8 +38,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: task-completion-time, relation: component-of, note: "Latency is part of the time users spend on a task."}
-  - {metric: system-usability-scale, relation: causally-linked, note: "Delays plausibly lower perceived usability."}
+  - {metric: task-completion-time, kind: operational, note: "Latency is part of the time users spend on a task."}
+  - {metric: perceived-usability-score, kind: empirical, note: "Delays plausibly lower perceived usability."}
 
 objectives:
   sustained-use: {direction: negative, evidence: causal, note: "Controlled online experiments in web search show added latency reduces engagement; transfer to AI assistants, where users expect slower answers, is untested here."}
@@ -50,10 +55,16 @@ sources: [miller1968, card1983, nielsen1993, dean2013, arapakis2014, liu2014, ko
 ## 1. What is measured
 
 ### 1.1 Definition
-The elapsed time from a user action (a click, a query, a prompt) to the system's response. For streaming AI systems, two readings are common: **time to first token** (when output starts appearing) and **end-to-end latency** (when the response is complete).
+The elapsed time from a user action (a click, a query, a prompt) to the system's response. For streaming AI systems, two readings are common: **time to first token (TTFT)** (when output starts appearing) and **end-to-end latency** (when the response is complete).
 
 ### 1.2 Construct: property of subject in context
 The property is **responsiveness**. The subject is the **system**, including its network path. The context is the kind of request (a simple lookup vs. a long generation) and the time and place (load, network conditions, the user's device).
+
+<!-- generated:constructs:start -->
+Measures, in the [construct DAG](../constructs/index.md):
+
+- [System responsiveness](../constructs/responsiveness.md) (under System characteristics → System performance)
+<!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
 It does not measure how fast the response *feels*: progress indicators and streaming change perception without changing latency. It does not measure the quality of the response; a fast wrong answer scores well. It does not include the user's own time to read or act; see [Task Completion Time](task-completion-time.md).
@@ -72,8 +83,13 @@ Offline: benchmark runs on fixed inputs [liang2022; chang2024]. Online: telemetr
 ### 2.4 Computation
 Collect per-request durations and report percentiles, typically the median (p50) and a tail value (p95 or p99), not only the mean. Tail latency matters because users of large systems regularly hit the slow cases [dean2013]. For AI agents, also report latency per completed task, which includes all intermediate steps and tool calls [mohammadi2025; kapoor2025].
 
+Variants on this page: time to first token (TTFT) and end-to-end latency for streaming responses [mohammadi2025]; server-side inference time, which leaves out the network and the client [liang2022]; and per-step and whole-run latency for agents.
+
 ### 2.5 Unit and scale
 Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive systems: about 0.1 s feels instantaneous, about 1 s keeps the flow of thought, and about 10 s is the limit for holding attention [miller1968; card1983; nielsen1993]. These predate AI assistants and should be treated as guidance, not thresholds.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 
@@ -102,11 +118,18 @@ Reporting the mean hides tail problems. Measuring server time only hides client 
 
 ## 5. Related metrics
 
-### 5.1 Static relationships
-Component of [Task Completion Time](task-completion-time.md). Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [kapoor2025]. Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
+### 5.1 Operationally related metrics
+Component of [Task Completion Time](task-completion-time.md).
 
-### 5.2 Dynamic relationships
-In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
+### 5.2 Conceptually related metrics
+Complementary: perceived speed ratings, [SUS](perceived-usability-score.md).
+
+<!-- generated:neighbours:start -->
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Action Efficiency Relative to Humans](action-efficiency-vs-humans.md) (Autonomous task efficiency), [pass^k](pass-hat-k.md) (Consistency across runs), [Elo Rating (pairwise comparison)](elo-rating.md) (Output quality), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Win Rate (pairwise comparison)](win-rate.md) (Output quality), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
+<!-- generated:neighbours:end -->
+
+### 5.3 Empirical co-movements
+Trade-off with output quality metrics such as [Precision (benchmark)](precision-benchmark.md) and task success, and with compute cost [kapoor2025]. In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
 
 ## 6. Links to business objectives
 **Sustained use:** negative, with causal evidence from online experiments in web search [kohavi2020; arapakis2014]. How far this carries to AI assistants, where users may expect answers to take seconds, is not known.
@@ -124,4 +147,4 @@ This is one of the few metrics in the pilot where the path to the business objec
 
 ## Open questions and review notes
 - Verify the specific figures attributed to [liu2014] and add figures from [arapakis2014].
-- Should time to first token be a separate page?
+- Should time to first token be a separate page? No: it differs only in the end point of the interval, so it stays here as a variant (D5).

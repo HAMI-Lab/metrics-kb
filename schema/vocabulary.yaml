@@ -3,12 +3,9 @@
 # Any facet may take several values. If nothing fits, use "other: <short description>"
 # and raise it for discussion rather than inventing a new value silently.
 #
-# Origin: slide 4 of "EvalOps - Metric Dimensions" (24 Aug 2026) asks
-#   "what is <property> of <subject> in <context>?"
-# Here the slide's single "property" facet is split into ASPECT (the quality being judged)
-# and QUANTITY_FORM (the form of the number). The slide's "human behavior" vs "human
-# perception" subjects become one subject ("user") plus a PERSPECTIVE facet
-# (objective vs perceived). See slide_mapping at the bottom.
+# A metric's construct is described as "property of subject in context". The property is
+# split into ASPECT (the quality being judged) and QUANTITY_FORM (the form of the number);
+# PERSPECTIVE says whether the property is observed (objective) or reported (perceived).
 
 subject:            # whose property is it?
   system-component: A module inside a system (retriever, ranker, classifier, explanation module, UI widget).
@@ -29,6 +26,9 @@ aspect:             # what quality is being judged?
   adoption: Uptake and continued use over time.
   safety: Absence of harm, including harmful outputs.
   resource-cost: Monetary, energy, or environmental cost of operating the system.
+  fairness: Whether outcomes or quality differ unjustly across groups of people.
+  ability: A person's knowledge or skill, measured with right answers (literacy, numeracy); used for user characteristics.
+  background: A person's attributes that are recorded rather than tested (age, gender, education); used for user characteristics.
 
 perspective:        # who judges the aspect?
   objective: Observed or computed without asking the person (logs, timers, relevance judgments on outputs).
@@ -42,6 +42,8 @@ quantity_form:      # what form does the number take?
   rating-score: A score from a questionnaire or rating scale.
   composite-index: A weighted or aggregated combination of several sub-measures.
   physical-quantity: A physical unit other than time (joules, kg CO2e, bytes).
+  monetary-amount: An amount of money (dollars), or a count of billed units such as tokens.
+  category: A category or level, possibly ordered (age group, highest degree completed).
 
 context:            # what conditions is the measurement tied to?
   task: A defined task or task set (a query set, a benchmark, a usability-test scenario).
@@ -72,6 +74,8 @@ data_source:
   physiological: Eye tracking, pupillometry, EEG, heart rate.
   observation: Researcher observation, think-aloud, video coding.
   system-telemetry: Server-side measurements (latency, compute, energy).
+  synthetic-labels: Machine-generated or weak reference labels (LLM-generated, programmatic, distant supervision).
+  simulated-users: Behaviour produced by a user simulator or an LLM acting as a proxy user.
 
 cost_level:         # effort to obtain one usable measurement for one condition
   low: Automatic once instrumented; no participants needed per measurement.
@@ -90,26 +94,28 @@ status:
   human-reviewed: A person has checked claims against the cited sources.
   expert-verified: A domain expert has signed off.
 
-# How the slide's original values map to this vocabulary.
-slide_mapping:
-  subject:
-    "Component within a system": {subject: system-component}
-    "System itself": {subject: system}
-    "Human behavior": {subject: user, perspective: objective}
-    "Human perception": {subject: user, perspective: perceived}
-    "Human-system collaboration": {subject: user-system-team}
-    "Long-term technology adoption": {subject: user-population, aspect: adoption, context: longitudinal}
-  property:
-    "Time duration of events": {quantity_form: duration}
-    "Count of events": {quantity_form: count}
-    "Rate of events": {quantity_form: rate}
-    "Component performance": {subject: system-component, aspect: effectiveness}
-    "System performance": {subject: system, aspect: effectiveness}
-    "Human-system task perf.": {subject: user-system-team, aspect: effectiveness}
-    "Human satisfaction level": {aspect: satisfaction, perspective: perceived}
-    "Ease-of-use level": {aspect: ease-of-use}
-  context:
-    "A task?": {context: task}
-    "Time & location?": {context: time-location}
-    "System-specific?": {context: system-specific}
-    "User-specific?": {context: user-specific}
+research_method:    # layer 1 of the measurement-strategy landscape: how the data is gathered
+  benchmark: "Benchmark: a fixed set of inputs, often with reference outputs, reused to compare systems. Also called test collection, labeled or annotated dataset, gold standard, test set, or test suite."
+  logs-telemetry: Interaction logs and system telemetry from a running system.
+  task-study: People do defined tasks with the system (lab or field usability test, controlled experiment task).
+  questionnaire-survey: Standardized or custom questionnaires and surveys.
+  interview: Structured, semi-structured, or unstructured interviews.
+  diary-esm: Diary studies and experience sampling (ESM) over days or weeks.
+  observation-think-aloud: Researcher observation, think-aloud, video recording.
+  physiological-sensing: Eye tracking, pupillometry, EEG, heart rate, skin conductance.
+  expert-inspection: Experts inspect the system without users (heuristic evaluation, cognitive walkthrough).
+  analytical-model: Predictions from a model of the user or task without observing users (GOMS, KLM).
+  simulation: Simulated users or environments, including LLM proxy users.
+  ability-test: Tests of a person's knowledge or skill with right answers, scored against a key (literacy and numeracy tests).
+  adversarial-testing: People or programs deliberately try to make the system fail or misbehave (red teaming, attack suites).
+  controlled-comparison: The same measurement under conditions that differ in one deliberate way (baselines, ablations, perturbed inputs, subgroups).
+
+validity_concern:   # how much deliberation the gap between the number and its construct deserves
+  low: The number obviously is, or closely tracks, the construct; a sentence in 2.1 suffices.
+  moderate: Known gaps exist; read 2.1 before relying on the number for decisions.
+  high: The link is contested or easily broken (proxy, gaming, unchecked judges); deliberate before use.
+
+related_kind:       # front matter related[].kind; matches the subsections of section 5
+  operational: Shares computation (variant, part, built from, derived from).
+  conceptual: Measures the same or a related construct (including DAG siblings).
+  empirical: Moves with this metric according to evidence (correlation, trade-off, causal link).

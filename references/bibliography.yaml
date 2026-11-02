@@ -103,10 +103,10 @@ naveed2024:
   origin: migrated from spreadsheet (was S17)
   verified: false
 gambetti2025:
-  citation: "Gambetti, A., et al. (2025). A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems. arXiv preprint, first submitted Feb 2025. (check against the paper for the full author list; the repo's earlier migration notes speculated a possible mix-up with a separate 'Humer et al., 2024' source at the same link -- that could not be confirmed one way or the other, so treat with care)"
+  citation: "Gambetti, A., Han, Q., Shen, H., & Soares, C. (2025). A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems. arXiv preprint arXiv:2502.09849. (title and authors confirmed against the paper by the project lead on 2026-11-02; venue not checked)"
   url: https://arxiv.org/pdf/2502.09849
   note: Human-centered evaluation frameworks for clinical XAI
-  origin: migrated from spreadsheet (was S18)
+  origin: migrated from spreadsheet (was S18); the spreadsheet's "Humer et al., 2024" was a clerical mistake for this paper (confirmed by the project lead)
   verified: false
 mienye2024:
   citation: "Mienye, I. D., et al. (2024). A survey of explainable artificial intelligence in healthcare: Concepts, applications, and challenges. Informatics in Medicine Unlocked. (check against the paper for the full author list)"
@@ -397,4 +397,622 @@ strathern1997:
   citation: 'Strathern, M. (1997). ''Improving ratings'': Audit in the British university system. European Review,
     5(3), 305-321.'
   origin: added by AI (Sept 2026)
+  verified: false
+jacobs2021:
+  citation: "Jacobs, A. Z., & Wallach, H. (2021). Measurement and Fairness. Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT). (check against the paper)"
+  url: null
+  note: "Constructs vs operationalizations; validity types (face, content, convergent, discriminant, predictive, hypothesis, consequential) and reliability"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+campbell1959:
+  citation: "Campbell, D. T., & Fiske, D. W. (1959). Convergent and Discriminant Validation by the Multitrait-Multimethod Matrix. Psychological Bulletin. (check against the paper for volume and pages)"
+  url: null
+  note: "Method variance; convergent and discriminant validity"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bollen1991:
+  citation: "Bollen, K., & Lennox, R. (1991). Conventional Wisdom on Measurement: A Structural Equation Perspective. Psychological Bulletin. (check against the paper)"
+  url: null
+  note: "Reflective vs formative indicators"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+webb1966:
+  citation: "Webb, E. J., Campbell, D. T., Schwartz, R. D., & Sechrest, L. (1966). Unobtrusive Measures: Nonreactive Research in the Social Sciences. Rand McNally. (check edition)"
+  url: null
+  note: "Reactive vs non-reactive measures"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lazar2017:
+  citation: "Lazar, J., Feng, J. H., & Hochheiser, H. (2017). Research Methods in Human-Computer Interaction (2nd ed.). Morgan Kaufmann. (check edition and year)"
+  url: null
+  note: "Survey of HCI research methods: surveys, diaries, interviews, logs, physiological measures"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bolger2003:
+  citation: "Bolger, N., Davis, A., & Rafaeli, E. (2003). Diary Methods: Capturing Life as It Is Lived. Annual Review of Psychology. (check against the paper)"
+  url: null
+  note: "Diary and experience-sampling methods"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+krippendorff2004:
+  citation: "Krippendorff, K. (2004). Content Analysis: An Introduction to Its Methodology (2nd ed.). Sage. (check edition)"
+  url: null
+  note: "Coding qualitative data into counts; inter-coder agreement (alpha)"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+braun2006:
+  citation: "Braun, V., & Clarke, V. (2006). Using Thematic Analysis in Psychology. Qualitative Research in Psychology. (check against the paper)"
+  url: null
+  note: "Thematic analysis of qualitative data"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+hofmann2016:
+  citation: "Hofmann, K., Li, L., & Radlinski, F. (2016). Online Evaluation for Information Retrieval. Foundations and Trends in Information Retrieval. (check against the paper)"
+  url: null
+  note: "A/B tests, interleaving and other online evaluation methods"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+chapelle2012:
+  citation: "Chapelle, O., Joachims, T., Radlinski, F., & Yue, Y. (2012). Large-Scale Validation and Analysis of Interleaved Search Evaluation. ACM Transactions on Information Systems. (check against the paper)"
+  url: null
+  note: "Interleaving as comparative evaluation"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+bradley1952:
+  citation: "Bradley, R. A., & Terry, M. E. (1952). Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons. Biometrika. (check against the paper)"
+  url: null
+  note: "Bradley-Terry model for pairwise comparisons"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+zheng2023:
+  citation: "Zheng, L., et al. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks. (check against the paper for the author list)"
+  url: null
+  note: "LLM-as-a-judge agreement with humans and its biases; pairwise arena rankings"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+ratner2017:
+  citation: "Ratner, A., Bach, S. H., Ehrenberg, H., Fries, J., Wu, S., & Re, C. (2017). Snorkel: Rapid Training Data Creation with Weak Supervision. Proceedings of the VLDB Endowment. (check against the paper)"
+  url: null
+  note: "Weak supervision: programmatic, noisy labels"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+chuklin2015:
+  citation: "Chuklin, A., Markov, I., & de Rijke, M. (2015). Click Models for Web Search. Morgan & Claypool. (check against the book)"
+  url: null
+  note: "Statistical models that infer relevance or satisfaction from clicks"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+embretson2000:
+  citation: "Embretson, S. E., & Reise, S. P. (2000). Item Response Theory for Psychologists. Lawrence Erlbaum. (check against the book)"
+  url: null
+  note: "Latent-trait models for questionnaire and test scores"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+saracevic2007:
+  citation: "Saracevic, T. (2007). Relevance: A Review of the Literature and a Framework for Thinking on the Notion in Information Science. Part II: Nature and Manifestations of Relevance. Journal of the American Society for Information Science and Technology. (check against the paper)"
+  url: null
+  note: "Manifestations of relevance: system, topical, cognitive, situational, motivational"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+barry1998:
+  citation: "Barry, C. L., & Schamber, L. (1998). Users' Criteria for Relevance Evaluation: A Cross-Situational Comparison. Information Processing & Management. (check against the paper)"
+  url: null
+  note: "User relevance criteria beyond topic, such as currency and source quality"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lee2004:
+  citation: "Lee, J. D., & See, K. A. (2004). Trust in Automation: Designing for Appropriate Reliance. Human Factors. (check against the paper)"
+  url: null
+  note: "Trust as attitude vs trustworthiness of the system; appropriate reliance"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+long2020:
+  citation: "Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. Proceedings of CHI 2020. (check against the paper)"
+  url: null
+  note: "Defines AI literacy as a set of competencies"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+lee2017:
+  citation: "Lee, S., Kim, S.-H., & Kwon, B. C. (2017). VLAT: Development of a Visualization Literacy Assessment Test. IEEE Transactions on Visualization and Computer Graphics. (check against the paper)"
+  url: null
+  note: "A standardized visualization literacy test"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+boy2014:
+  citation: "Boy, J., Rensink, R. A., Bertini, E., & Fekete, J.-D. (2014). A Principled Way of Assessing Visualization Literacy. IEEE Transactions on Visualization and Computer Graphics. (check against the paper)"
+  url: null
+  note: "Method for building visualization literacy tests with item response theory"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+acrl2015:
+  citation: "Association of College and Research Libraries (2015). Framework for Information Literacy for Higher Education. ACRL. (check the version)"
+  url: null
+  note: "A widely used framework defining information literacy"
+  origin: added by AI for the schema revision (2026-10-26)
+  verified: false
+min2023:
+  citation: 'Min, S., Krishna, K., Lyu, X., Lewis, M., Yih, W., Koh, P. W., Iyyer, M., Zettlemoyer, L., & Hajishirzi, H. (2023). FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation. EMNLP 2023. (check against the paper)'
+  url: https://aclanthology.org/2023.emnlp-main.741/
+  note: Atomic factual precision of long-form generation
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was P4)
+  verified: false
+ragas2026:
+  citation: Ragas (2026). Available metrics [software documentation], including Faithfulness, Context Precision and Recall, Factual Correctness, Tool Call Accuracy and Tool Call F1. Accessed 2026-10-29. (no individual author credited; check the version)
+  url: https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/
+  note: Official definitions of RAGAS metrics
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was P2, P22)
+  verified: false
+fairlearn2024:
+  citation: Fairlearn (2024). Common fairness metrics [software documentation, user guide v0.11]. (no individual author credited; check the version)
+  url: https://fairlearn.org/v0.11/user_guide/assessment/common_fairness_metrics.html
+  note: Demographic parity difference and ratio; equalized odds
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E25)
+  verified: false
+hardt2016:
+  citation: Hardt, M., Price, E., & Srebro, N. (2016). Equality of Opportunity in Supervised Learning. NeurIPS 2016. (check against the paper)
+  url: https://research.google/pubs/equality-of-opportunity-in-supervised-learning/
+  note: Equal opportunity and equalized odds criteria
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E24)
+  verified: false
+barocas2021:
+  citation: 'Barocas, S., Guo, A., Kamar, E., Krones, J., Morris, M. R., Wortman Vaughan, J., Wadsworth, W. D., & Wallach, H. (2021). Designing Disaggregated Evaluations of AI Systems: Choices, Considerations, and Tradeoffs. AIES 2021. (check against the paper)'
+  url: null
+  note: Subgroup (disaggregated) evaluation design
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+ribeiro2020:
+  citation: 'Ribeiro, M. T., Wu, T., Guestrin, C., & Singh, S. (2020). Beyond Accuracy: Behavioral Testing of NLP Models with CheckList. ACL 2020. (check against the paper)'
+  url: null
+  note: Behavioral testing with perturbed inputs (invariance and directional tests)
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+cronbach1970:
+  citation: 'Cronbach, L. J., & Furby, L. (1970). How we should measure "change": Or should we? Psychological Bulletin. (check against the paper for volume and pages)'
+  url: null
+  note: Reliability problems of difference scores
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+jarvelin2002:
+  citation: Järvelin, K., & Kekäläinen, J. (2002). Cumulated gain-based evaluation of IR techniques. ACM Transactions on Information Systems. (check against the paper)
+  url: null
+  note: Discounted cumulative gain and nDCG
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+voorhees1999:
+  citation: Voorhees, E. M. (1999). The TREC-8 Question Answering Track Report. Proceedings of TREC-8. (check against the paper)
+  url: null
+  note: Mean reciprocal rank in QA evaluation
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+lin2004:
+  citation: 'Lin, C.-Y. (2004). ROUGE: A Package for Automatic Evaluation of Summaries. Text Summarization Branches Out (ACL 2004 workshop). (check against the paper)'
+  url: null
+  note: ROUGE n-gram and longest-common-subsequence overlap
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+papineni2002:
+  citation: 'Papineni, K., Roukos, S., Ward, T., & Zhu, W.-J. (2002). BLEU: a Method for Automatic Evaluation of Machine Translation. ACL 2002. (check against the paper)'
+  url: null
+  note: BLEU n-gram precision with brevity penalty
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+rajpurkar2016:
+  citation: 'Rajpurkar, P., Zhang, J., Lopyrev, K., & Liang, P. (2016). SQuAD: 100,000+ Questions for Machine Comprehension of Text. EMNLP 2016. (check against the paper)'
+  url: null
+  note: Exact match and token-overlap F1 for extractive QA
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+guo2017:
+  citation: Guo, C., Pleiss, G., Sun, Y., & Weinberger, K. Q. (2017). On Calibration of Modern Neural Networks. ICML 2017. (check against the paper)
+  url: null
+  note: Expected calibration error and reliability diagrams
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+brier1950:
+  citation: Brier, G. W. (1950). Verification of Forecasts Expressed in Terms of Probability. Monthly Weather Review. (check against the paper)
+  url: https://journals.ametsoc.org/doi/10.1175/1520-0493%281950%29078%3C0001%3AVOFEIT%3E2.0.CO%3B2
+  note: Brier score
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E09)
+  verified: false
+fawcett2006:
+  citation: Fawcett, T. (2006). An introduction to ROC analysis. Pattern Recognition Letters. (check against the paper)
+  url: null
+  note: ROC curves and AUC
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+samek2017:
+  citation: Samek, W., Binder, A., Montavon, G., Lapuschkin, S., & Müller, K.-R. (2017). Evaluating the Visualization of What a Deep Neural Network Has Learned. IEEE Transactions on Neural Networks and Learning Systems. (check against the paper)
+  url: null
+  note: Region perturbation and AOPC for attribution faithfulness
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+gehman2020:
+  citation: 'Gehman, S., Gururangan, S., Sap, M., Choi, Y., & Smith, N. A. (2020). RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models. Findings of EMNLP 2020. (check against the paper)'
+  url: null
+  note: Toxicity of generated text measured with a classifier
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+zhu2023:
+  citation: 'Zhu, K., et al. (2023). PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts. arXiv preprint. (check against the paper for the full author list)'
+  url: null
+  note: Performance drop rate under adversarial prompts
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+yao2024:
+  citation: 'Yao, S., Shinn, N., Razavi, P., & Narasimhan, K. (2024). tau-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv preprint. (check against the paper)'
+  url: null
+  note: 'pass^k: success on all k repeated trials'
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+chen2021:
+  citation: Chen, M., et al. (2021). Evaluating Large Language Models Trained on Code. arXiv preprint. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2107.03374
+  note: HumanEval and the pass@k estimator
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E07)
+  verified: false
+ganguli2022:
+  citation: 'Ganguli, D., et al. (2022). Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned. arXiv preprint. (check against the paper for the full author list)'
+  url: null
+  note: Human red teaming of language models
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+bansal2021:
+  citation: Bansal, G., Wu, T., Zhou, J., Fok, R., Nushi, B., Kamar, E., Ribeiro, M. T., & Weld, D. (2021). Does the Whole Exceed its Parts? The Effect of AI Explanations on Complementary Team Performance. CHI 2021. (check against the paper)
+  url: null
+  note: Accuracy of human-AI teams vs human or AI alone
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+schemmer2023:
+  citation: 'Schemmer, M., Kühl, N., Benz, C., Bartos, A., & Satzger, G. (2023). Appropriate Reliance on AI Advice: Conceptualization and the Effect of Explanations. IUI 2023. (check against the paper)'
+  url: null
+  note: Appropriateness of reliance measured from initial and final decisions
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+cabitza2023:
+  citation: 'Cabitza, F., et al. (2023). AI Shall Have No Dominion: on How to Measure Technology Dominance in AI-supported Human Decision-Making. CHI 2023. (check against the paper for the author list)'
+  url: https://doi.org/10.1145/3544548.3581095
+  note: Beneficial and detrimental reliance patterns in decision tables
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E28)
+  verified: false
+jian2000:
+  citation: Jian, J.-Y., Bisantz, A. M., & Drury, C. G. (2000). Foundations for an Empirically Determined Scale of Trust in Automated Systems. International Journal of Cognitive Ergonomics. (check against the paper)
+  url: https://doi.org/10.1207/S15327566IJCE0401_04
+  note: 12-item trust in automation scale
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was P19)
+  verified: false
+doshivelez2017:
+  citation: Doshi-Velez, F., & Kim, B. (2017). Towards A Rigorous Science of Interpretable Machine Learning. arXiv preprint. (check against the paper)
+  url: null
+  note: Forward simulation as a human-grounded evaluation of interpretability
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+hase2020:
+  citation: 'Hase, P., & Bansal, M. (2020). Evaluating Explainable AI: Which Algorithmic Explanations Help Users Predict Model Behavior? ACL 2020. (check against the paper)'
+  url: null
+  note: Simulatability tests of explanations
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+finstad2010:
+  citation: Finstad, K. (2010). The Usability Metric for User Experience. Interacting with Computers. (check against the paper)
+  url: https://academic.oup.com/iwc/article-abstract/22/5/323/682940
+  note: 'UMUX: four-item perceived usability scale'
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E01)
+  verified: false
+lewis2013:
+  citation: 'Lewis, J. R., Utesch, B. S., & Maher, D. E. (2013). UMUX-LITE: When There''s No Time for the SUS. CHI 2013. (check against the paper)'
+  url: https://doi.org/10.1145/2470654.2481287
+  note: Two-item short form of UMUX
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E02)
+  verified: false
+laugwitz2008:
+  citation: Laugwitz, B., Held, T., & Schrepp, M. (2008). Construction and Evaluation of a User Experience Questionnaire. USAB 2008, LNCS. (check against the paper)
+  url: null
+  note: 'UEQ: 26 semantic-differential items in six scales'
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+schrepp2017:
+  citation: Schrepp, M., Hinderks, A., & Thomaschewski, J. (2017). Design and Evaluation of a Short Version of the User Experience Questionnaire (UEQ-S). International Journal of Interactive Multimedia and Artificial Intelligence. (check against the paper)
+  url: https://doi.org/10.9781/ijimai.2017.09.001
+  note: Eight-item short form of UEQ
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was P14)
+  verified: false
+bradley1994:
+  citation: 'Bradley, M. M., & Lang, P. J. (1994). Measuring emotion: The Self-Assessment Manikin and the semantic differential. Journal of Behavior Therapy and Experimental Psychiatry. (check against the paper)'
+  url: null
+  note: 'SAM: pictorial ratings of pleasure, arousal and dominance'
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+he2023:
+  citation: 'He, T., Isenberg, P., Dachselt, R., & Isenberg, T. (2023). BeauVis: A Validated Scale for Measuring the Aesthetic Pleasure of Visual Representations. IEEE Transactions on Visualization and Computer Graphics. (check against the paper)'
+  url: null
+  note: Five-item scale of aesthetic pleasure of visualizations
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+zijlstra1985:
+  citation: Zijlstra, F. R. H., & van Doorn, L. (1985). The construction of a scale to measure subjective effort [technical report]. Delft University of Technology. (check against the source)
+  url: null
+  note: 'SMEQ: one-item rating of mental effort'
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+sauro2009onequestion:
+  citation: Sauro, J., & Dumas, J. S. (2009). Comparison of three one-question, post-task usability questionnaires. CHI 2009. (check against the paper)
+  url: null
+  note: Compares SMEQ, a single ease question and usability magnitude estimation
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+pandey2023:
+  citation: 'Pandey, S., & Ottley, A. (2023). Mini-VLAT: A Short and Effective Measure of Visualization Literacy. Computer Graphics Forum (EuroVis 2023). (check against the paper)'
+  url: null
+  note: Short form of VLAT, one item per chart type
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+cui2024:
+  citation: Cui, Y., Ge, L. W., Ding, Y., Yang, F., Harrison, L., & Kay, M. (2024). Adaptive Assessment of Visualization Literacy. IEEE Transactions on Visualization and Computer Graphics. (check against the paper for the author list)
+  url: null
+  note: 'A-VLAT and A-CALVI: adaptive forms using item response theory'
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+ge2023:
+  citation: 'Ge, L. W., Cui, Y., & Kay, M. (2023). CALVI: Critical Thinking Assessment for Literacy in Visualizations. CHI 2023. (check against the paper)'
+  url: null
+  note: Test of recognizing misleading visualizations
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+cokely2012:
+  citation: 'Cokely, E. T., Galesic, M., Schulz, E., Ghazal, S., & Garcia-Retamero, R. (2012). Measuring Risk Literacy: The Berlin Numeracy Test. Judgment and Decision Making. (check against the paper)'
+  url: null
+  note: 'Berlin Numeracy Test: 1-item, 4-item and adaptive forms'
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+ding2023:
+  citation: 'Ding, Y., Wilburn, J., Shrestha, H., Ndlovu, A., Gadhave, K., Nobre, C., Lex, A., & Harrison, L. (2023). reVISit: Supporting Scalable Evaluation of Interactive Visualizations. IEEE VIS 2023 (short paper). (check against the paper for the author list)'
+  url: https://revisit.dev/
+  note: Study platform whose libraries package standard questionnaires and tests
+  origin: added by AI from revisit_metrics.md (2026-11-01)
+  verified: false
+cohen1960:
+  citation: Cohen, J. (1960). A Coefficient of Agreement for Nominal Scales. Educational and Psychological Measurement. (check against the paper)
+  url: null
+  note: Cohen's kappa
+  origin: added by AI for the DAG population (2026-11-01)
+  verified: false
+fleiss1971:
+  citation: Fleiss, J. L. (1971). Measuring Nominal Scale Agreement Among Many Raters. Psychological Bulletin. (check against the paper)
+  url: https://doi.org/10.1037/h0031619
+  note: Fleiss' kappa for many raters
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E15)
+  verified: false
+shrout1979:
+  citation: 'Shrout, P. E., & Fleiss, J. L. (1979). Intraclass Correlations: Uses in Assessing Rater Reliability. Psychological Bulletin. (check against the paper)'
+  url: https://pubmed.ncbi.nlm.nih.gov/18839484/
+  note: Forms of the intraclass correlation
+  origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E14)
+  verified: false
+kulal2019:
+  citation: 'Kulal, S., Pasupat, P., Chandra, K., Lee, M., Padon, O., Aiken, A., & Liang, P. (2019). SPoC: Search-based Pseudocode to Code. NeurIPS 2019 (arXiv:1906.04908). (check against the paper)'
+  url: https://arxiv.org/abs/1906.04908
+  note: Program synthesis success under a budget of candidate programs; early form of pass@k
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false
+yue2025:
+  citation: Yue, Y., et al. (2025). Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model? NeurIPS 2025 (arXiv:2504.13837). (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2504.13837
+  note: pass@k at large k as a capability boundary; RL-trained models vs base models
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false
+hariri2025:
+  citation: 'Hariri, M., Samandar, A., Hinczewski, M., & Chaudhary, V. (2025). Don''t Pass@k: A Bayesian Framework for Large Language Model Evaluation. ICLR 2026 (arXiv:2510.04265). (check against the paper)'
+  url: https://arxiv.org/abs/2510.04265
+  note: Instability of pass@k rankings with few samples; Bayesian alternative
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false
+batzner2026:
+  citation: 'Batzner, J., et al. (2026). Every Eval Ever: A Unifying Schema and Community Repository for AI Evaluation Results. arXiv:2606.14516. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2606.14516
+  note: Shared schema and crowdsourced datastore for AI evaluation results (EvalEval Coalition). Its companion eval-card-registry (github.com/evaleval/eval-card-registry) tags benchmarks with a flat list of about 110 labels.
+  origin: added by AI while comparing the wiki with Every Eval Ever (2026-11-02)
+  verified: false
+hendrycks2021:
+  citation: Hendrycks, D., Burns, C., Basart, S., Zou, A., Mazeika, M., Song, D., & Steinhardt, J. (2021). Measuring Massive Multitask Language Understanding. ICLR 2021. (check against the paper)
+  url: https://arxiv.org/abs/2009.03300
+  note: 'MMLU: multiple-choice questions across 57 subjects'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+cobbe2021:
+  citation: Cobbe, K., et al. (2021). Training Verifiers to Solve Math Word Problems. arXiv:2110.14168. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2110.14168
+  note: 'GSM8K: grade-school math word problems with numeric answers'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zellers2019:
+  citation: 'Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A., & Choi, Y. (2019). HellaSwag: Can a Machine Really Finish Your Sentence? ACL 2019. (check against the paper)'
+  url: https://arxiv.org/abs/1905.07830
+  note: 'HellaSwag: commonsense sentence completion, multiple choice'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+lin2022:
+  citation: 'Lin, S., Hilton, J., & Evans, O. (2022). TruthfulQA: Measuring How Models Mimic Human Falsehoods. ACL 2022. (check against the paper)'
+  url: https://arxiv.org/abs/2109.07958
+  note: 'TruthfulQA: questions that invite common misconceptions'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+austin2021:
+  citation: Austin, J., et al. (2021). Program Synthesis with Large Language Models. arXiv:2108.07732. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2108.07732
+  note: 'MBPP: short Python programming problems with tests'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+bajaj2016:
+  citation: 'Bajaj, P., et al. (2016). MS MARCO: A Human Generated MAchine Reading COmprehension Dataset. arXiv:1611.09268. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/1611.09268
+  note: 'MS MARCO: passage and document ranking from real search queries; MRR@10 for passage ranking'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+thakur2021:
+  citation: 'Thakur, N., Reimers, N., Rücklé, A., Srivastava, A., & Gurevych, I. (2021). BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models. NeurIPS 2021 Datasets and Benchmarks. (check against the paper)'
+  url: https://arxiv.org/abs/2104.08663
+  note: 'BEIR: retrieval across many domains without in-domain training; nDCG@10'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+hermann2015:
+  citation: Hermann, K. M., et al. (2015). Teaching Machines to Read and Comprehend. NeurIPS 2015. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/1506.03340
+  note: CNN/DailyMail news articles with highlights, later widely used for summarization
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+narayan2018:
+  citation: Narayan, S., Cohen, S. B., & Lapata, M. (2018). Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. EMNLP 2018. (check against the paper)
+  url: https://arxiv.org/abs/1808.08745
+  note: 'XSum: one-sentence summaries of BBC articles'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zou2023:
+  citation: Zou, A., Wang, Z., Carlini, N., Nasr, M., Kolter, J. Z., & Fredrikson, M. (2023). Universal and Transferable Adversarial Attacks on Aligned Language Models. arXiv:2307.15043. (check against the paper)
+  url: https://arxiv.org/abs/2307.15043
+  note: 'AdvBench: harmful behaviours used to test jailbreak attacks'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+mazeika2024:
+  citation: 'Mazeika, M., et al. (2024). HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal. ICML 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2402.04249
+  note: 'HarmBench: standardized red-teaming evaluation with a fixed judge'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+gema2024:
+  citation: Gema, A. P., et al. (2024). Are We Done with MMLU? arXiv:2406.04127. (check against the paper for the full author list and venue)
+  url: https://arxiv.org/abs/2406.04127
+  note: Errors in MMLU questions and answer keys
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zhang2024:
+  citation: Zhang, H., et al. (2024). A Careful Examination of Large Language Model Performance on Grade School Arithmetic. arXiv:2405.00332. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2405.00332
+  note: 'GSM1k: a fresh GSM8K-like set; score drops suggest contamination for some models'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+lees2022:
+  citation: 'Lees, A., Tran, V. Q., Tay, Y., Sorensen, J., Gupta, J., Metzler, D., & Vasserman, L. (2022). A New Generation of Perspective API: Efficient Multilingual Character-level Transformers. KDD 2022. (check against the paper)'
+  url: https://arxiv.org/abs/2202.11176
+  note: Perspective API toxicity classifier
+  origin: added by AI for scorer instruments (2026-11-02)
+  verified: false
+zhou2023:
+  citation: Zhou, J., Lu, T., Mishra, S., Brahma, S., Basu, S., Luan, Y., Zhou, D., & Hou, L. (2023). Instruction-Following Evaluation for Large Language Models. arXiv:2311.07911. (check against the paper)
+  url: https://arxiv.org/abs/2311.07911
+  note: 'IFEval: verifiable instructions; prompt- and instruction-level, strict and loose accuracy'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+zhang2020:
+  citation: 'Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., & Artzi, Y. (2020). BERTScore: Evaluating Text Generation with BERT. ICLR 2020. (check against the paper)'
+  url: https://arxiv.org/abs/1904.09675
+  note: 'BERTScore: token matching by contextual embeddings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+rei2020:
+  citation: 'Rei, R., Stewart, C., Farinha, A. C., & Lavie, A. (2020). COMET: A Neural Framework for MT Evaluation. EMNLP 2020. (check against the paper)'
+  url: https://arxiv.org/abs/2009.09025
+  note: 'COMET: learned MT metric trained on human judgments'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+sellam2020:
+  citation: 'Sellam, T., Das, D., & Parikh, A. P. (2020). BLEURT: Learning Robust Metrics for Text Generation. ACL 2020. (check against the paper)'
+  url: https://arxiv.org/abs/2004.04696
+  note: 'BLEURT: learned metric fine-tuned on human ratings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+arcprize2026:
+  citation: 'ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence. arXiv:2603.24621. (check against the paper for the author list)'
+  url: https://arxiv.org/abs/2603.24621
+  note: ARC-AGI-3 interactive games; RHAE scoring against a first-play human baseline. See also https://docs.arcprize.org/methodology
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+panayotov2015:
+  citation: 'Panayotov, V., Chen, G., Povey, D., & Khudanpur, S. (2015). Librispeech: An ASR Corpus Based on Public Domain Audio Books. ICASSP 2015. (check against the paper)'
+  url: null
+  note: 'LibriSpeech: read English speech with transcripts; clean and other test sets'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+jurafsky2025:
+  citation: Jurafsky, D., & Martin, J. H. (2025). Speech and Language Processing (3rd ed. draft). (check the draft date)
+  url: https://web.stanford.edu/~jurafsky/slp3/
+  note: Textbook; word error rate for speech recognition
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+dubois2024:
+  citation: 'Dubois, Y., Galambosi, B., Liang, P., & Hashimoto, T. B. (2024). Length-Controlled AlpacaEval: A Simple Way to Debias Automatic Evaluators. arXiv:2404.04475. (check against the paper)'
+  url: https://arxiv.org/abs/2404.04475
+  note: AlpacaEval win rate against a reference model; length-controlled variant
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+li2024b:
+  citation: 'Li, T., et al. (2024). From Crowdsourced Data to High-Quality Benchmarks: Arena-Hard and BenchBuilder Pipeline. arXiv:2406.11939. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2406.11939
+  note: 'Arena-Hard: hard prompts from Chatbot Arena, judged pairwise by an LLM'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+chiang2024:
+  citation: 'Chiang, W.-L., et al. (2024). Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference. ICML 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2403.04132
+  note: Crowdsourced pairwise votes on users' own prompts; Bradley-Terry ratings reported on an Elo scale
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+elo1978:
+  citation: Elo, A. E. (1978). The Rating of Chessplayers, Past and Present. Arco. (check against the book)
+  url: null
+  note: Elo rating system
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+koren2009:
+  citation: Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix Factorization Techniques for Recommender Systems. IEEE Computer, 42(8). (check against the paper)
+  url: null
+  note: Rating prediction; RMSE in the Netflix Prize
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+harper2015:
+  citation: 'Harper, F. M., & Konstan, J. A. (2015). The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems, 5(4). (check against the paper)'
+  url: null
+  note: MovieLens rating data sets
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+cremonesi2010:
+  citation: Cremonesi, P., Koren, Y., & Turrin, R. (2010). Performance of Recommender Algorithms on Top-N Recommendation Tasks. RecSys 2010. (check against the paper)
+  url: null
+  note: Rating-prediction error and top-N ranking quality can disagree
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+bylinskii2019:
+  citation: Bylinskii, Z., Judd, T., Oliva, A., Torralba, A., & Durand, F. (2019). What Do Different Evaluation Metrics Tell Us About Saliency Models? IEEE TPAMI, 41(3). (check against the paper)
+  url: null
+  note: Saliency metrics including SIM, CC, NSS, AUC and KL divergence
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+borkin2016:
+  citation: 'Borkin, M. A., et al. (2016). Beyond Memorability: Visualization Recognition and Recall. IEEE TVCG (InfoVis 2015). (check against the paper for the full author list)'
+  url: null
+  note: MASSVIS visualizations with eye-tracking data
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+hessel2021:
+  citation: 'Hessel, J., Holtzman, A., Forbes, M., Le Bras, R., & Choi, Y. (2021). CLIPScore: A Reference-free Evaluation Metric for Image Captioning. EMNLP 2021. (check against the paper)'
+  url: https://arxiv.org/abs/2104.08718
+  note: 'CLIPScore: rescaled cosine similarity of CLIP image and text embeddings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+radford2021:
+  citation: Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. ICML 2021. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2103.00020
+  note: CLIP
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+lin2014:
+  citation: 'Lin, T.-Y., et al. (2014). Microsoft COCO: Common Objects in Context. ECCV 2014. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/1405.0312
+  note: MS-COCO images with captions
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+cheng2024:
+  citation: 'Cheng, K., et al. (2024). SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents. ACL 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2401.10935
+  note: 'ScreenSpot: GUI grounding benchmark; click accuracy'
+  origin: added by AI for stress-test additions (2026-11-02)
   verified: false
