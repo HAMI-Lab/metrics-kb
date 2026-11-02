@@ -125,6 +125,7 @@ Plain language and short sentences, with jargon explained on first use. A metric
 | `schema/` | Templates for the three page types, `vocabulary.yaml` (allowed tag values), `page-guide.md` (generated), `DECISIONS.md` (decisions and their reasons). |
 | `references/` | `bibliography.yaml`: every source that pages may cite. |
 | `scripts/` | `validate.py` (checks everything), `build.py` (regenerates derived content), `sync_constructs.py` (keeps `dag.yaml` and construct pages in sync). |
+| `skills/` | `metric-chat/SKILL.md`: a Claude Code skill that interviews a team to choose metrics for their application, using this wiki. Application work (goals, chosen metrics, collection plans) lives in separate repositories that include this wiki and borrow the skill. |
 
 Page types considered for later: task pages (for example "document search and summarization") and decision guides.
 
