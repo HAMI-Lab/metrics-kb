@@ -4,6 +4,20 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-01 (comparison designs; agreement statistics)
+
+### D21. Controlled comparison as a method, difference as a route; agreement statistics stay on route pages
+- **Decision.**
+  - New method **controlled comparison of conditions** (`controlled-comparison`): the same measurement under conditions that differ in one deliberate way. Its named practices are baseline comparison, ablation, perturbation and stress testing, counterfactual testing, disaggregated (subgroup) evaluation, feature removal, and hypothesis testing.
+  - New route **difference: changes between conditions** (`difference`): the metric is the change between scores under the conditions, whether a difference, relative change, ratio, or average over steps.
+  - New methods **task study**, **adversarial testing** and **ability tests**, each with a vocabulary value and a page. Ability tests settle the open question on the questionnaire page: tests with right answers are scored against a key, not self-rated.
+  - Agreement statistics (Cohen's and Fleiss' kappa, Krippendorff's alpha, the intraclass correlation, judge-human correlation, position consistency) describe judges, not systems, tasks or users. They go in the reliability sections (3.2) of the route pages, not on metric pages or in the construct DAG.
+- **Boundary with D10.** Study design stays out of scope when a comparison is used only to test an existing metric (an A/B test on task time). It is in scope when the difference is the metric itself (performance drop, subgroup gap). A significance test on a difference is analysis, not measurement.
+- **Naming.** "Contrast" is the statistical term but is read differently in machine learning (contrastive learning, contrastive explanations, contrast sets). "Difference scoring" and "relative scoring" were considered. The user chose the plain "difference"; the page title adds a gloss to keep it distinct from comparative judgment and comparison against reference data.
+- **Also.** D15's deferral of generation components is lifted: generation, tool use and explanation components were added with the DAG population (see commit history for 2026-11-01). Recommendation and interface components stay deferred.
+
+---
+
 ## 2026-11-01 (same name, different root)
 
 ### D20. One metric page per computation per root; titles qualified by method

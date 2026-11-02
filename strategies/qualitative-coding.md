@@ -12,7 +12,7 @@ status: ai-draft
 last_reviewed: null
 reviewers: []
 
-sources: [krippendorff2004, braun2006, lazar2017, bolger2003]
+sources: [cohen1960, krippendorff2004, braun2006, lazar2017, bolger2003]
 ---
 
 # Coding qualitative data
@@ -48,7 +48,7 @@ Use it when the construct is not yet logged or asked about in a fixed form, or t
 The codebook decides what is counted; a code that is easy to apply may not be the construct. Samples are usually small, so counts are imprecise.
 
 ### 3.2 Reliability
-Measure agreement between independent coders, for example with Krippendorff's alpha [krippendorff2004], before using counts.
+Measure agreement between independent coders before using counts: Cohen's kappa for two coders [cohen1960], Krippendorff's alpha for several coders or missing codes [krippendorff2004]. These describe the coding, not the thing coded, and are reported with the counts.
 
 ### 3.3 Bias and gaming
 Coders' expectations shape coding; blind coding to condition helps. Participants in interviews may tell researchers what they think they want to hear.
@@ -66,6 +66,7 @@ _No metric page uses it yet._
 - [braun2006]
 - [lazar2017]
 - [bolger2003]
+- [cohen1960]
 
 ## Open questions and review notes
 - Should the wiki also give qualitative methods their own page type, for their non-measurement roles?

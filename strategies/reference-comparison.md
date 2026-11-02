@@ -6,7 +6,7 @@ page_type: strategy
 template_version: "0.2"
 
 layer: route
-research_methods: [test-collection]
+research_methods: [test-collection, task-study, ability-test, adversarial-testing]
 
 status: ai-draft
 last_reviewed: null
@@ -28,6 +28,9 @@ A reference set says what the right output is for each input. The system is run 
 Test collections, benchmarks, labeled datasets, and automated test suites.
 <!-- generated:pairings:start -->
 - [Test collections and benchmarks](test-collection.md)
+- [Task studies with people](task-study.md)
+- [Ability tests](ability-test.md)
+- [Adversarial testing and red teaming](adversarial-testing.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices

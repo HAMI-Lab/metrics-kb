@@ -12,7 +12,7 @@ status: ai-draft
 last_reviewed: null
 reviewers: []
 
-sources: [chapelle2012, hofmann2016, bradley1952, zheng2023]
+sources: [chapelle2012, hofmann2016, bradley1952, zheng2023, li2024]
 ---
 
 # Comparative judgment: preferences and interleaving
@@ -27,7 +27,7 @@ Two or more outputs or systems are shown together, and the judge or the user's b
 ### 1.2 Typical pairings
 Side-by-side studies, online experiments with real users, and preference questions.
 <!-- generated:pairings:start -->
-- `task-study` (no method page yet)
+- [Task studies with people](task-study.md)
 - [Interaction logs and telemetry](logs-telemetry.md)
 - [Questionnaires and surveys](questionnaire-survey.md)
 <!-- generated:pairings:end -->
@@ -46,7 +46,7 @@ Use it when absolute scores are unreliable but people can tell which of two is b
 Results are relative: they say A beats B, not whether either is good enough. Preference may track style more than task success.
 
 ### 3.2 Reliability
-Needs many comparisons; rankings depend on which pairs were compared. Interleaving is reported to detect differences with fewer observations than absolute online metrics (check against [chapelle2012]).
+Needs many comparisons; rankings depend on which pairs were compared. With model judges, check position consistency: whether the preferred answer stays the same when the two answers swap places [li2024]. Interleaving is reported to detect differences with fewer observations than absolute online metrics (check against [chapelle2012]).
 
 ### 3.3 Bias and gaming
 Position bias (the first or left option is favoured) and length or style bias. Systems can be tuned to win comparisons without improving outcomes.
@@ -64,6 +64,7 @@ _No metric page uses it yet._
 - [hofmann2016]
 - [bradley1952]
 - [zheng2023]
+- [li2024]
 
 ## Open questions and review notes
 - None yet.

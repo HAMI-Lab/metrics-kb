@@ -104,6 +104,9 @@ research_method:    # layer 1 of the measurement-strategy landscape: how the dat
   expert-inspection: Experts inspect the system without users (heuristic evaluation, cognitive walkthrough).
   analytical-model: Predictions from a model of the user or task without observing users (GOMS, KLM).
   simulation: Simulated users or environments, including LLM proxy users.
+  ability-test: Tests of a person's knowledge or skill with right answers, scored against a key (literacy and numeracy tests).
+  adversarial-testing: People or programs deliberately try to make the system fail or misbehave (red teaming, attack suites).
+  controlled-comparison: The same measurement under conditions that differ in one deliberate way (baselines, ablations, perturbed inputs, subgroups).
 
 validity_concern:   # how much deliberation the gap between the number and its construct deserves
   low: The number obviously is, or closely tracks, the construct; a sentence in 2.1 suffices.

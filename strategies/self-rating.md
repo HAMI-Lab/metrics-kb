@@ -29,7 +29,7 @@ Post-task and post-study questionnaires, surveys, diary entries, and experience-
 <!-- generated:pairings:start -->
 - [Questionnaires and surveys](questionnaire-survey.md)
 - `diary-esm` (no method page yet)
-- `task-study` (no method page yet)
+- [Task studies with people](task-study.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices

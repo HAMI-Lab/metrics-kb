@@ -6,13 +6,13 @@ page_type: strategy
 template_version: "0.2"
 
 layer: route
-research_methods: [test-collection, expert-inspection, simulation, logs-telemetry]
+research_methods: [test-collection, expert-inspection, simulation, logs-telemetry, adversarial-testing]
 
 status: ai-draft
 last_reviewed: null
 reviewers: []
 
-sources: [voorhees2000, nielsen1993, zheng2023, li2024]
+sources: [voorhees2000, nielsen1993, zheng2023, li2024, cohen1960, fleiss1971, krippendorff2004, shrout1979]
 ---
 
 # External judgment: annotators, experts, model judges, simulated users
@@ -31,6 +31,7 @@ Building test collections, expert inspection, simulation, and judging samples of
 - `expert-inspection` (no method page yet)
 - `simulation` (no method page yet)
 - [Interaction logs and telemetry](logs-telemetry.md)
+- [Adversarial testing and red teaming](adversarial-testing.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices
@@ -49,7 +50,11 @@ Use it when the construct is a quality of outputs that needs judgment and no reu
 Judges may not share the user's view of what matters. LLM judges show position bias, a preference for longer answers, and a preference for outputs like their own [zheng2023]. Simulated users are only as valid as their model of real behaviour.
 
 ### 3.2 Reliability
-Measure agreement between judges, and between model judges and humans on a sample, before trusting differences.
+Measure agreement between judges, and between model judges and humans on a sample, before trusting differences. These statistics describe the judges, not the system, so they are reported alongside the metric rather than as metrics of their own:
+- **Two judges, categories:** Cohen's kappa, which corrects raw agreement for agreement expected by chance [cohen1960].
+- **Many judges, categories:** Fleiss' kappa [fleiss1971], or Krippendorff's alpha, which also handles missing judgments and ordinal or interval scales [krippendorff2004].
+- **Numeric ratings:** the intraclass correlation, in the form that matches how judges were assigned [shrout1979].
+- **Model judge vs humans:** Pearson correlation for scores, Spearman or Kendall correlation for rankings, and position consistency for pairwise judges (whether the verdict survives swapping the order of the two answers) [li2024].
 
 ### 3.3 Bias and gaming
 Systems can be tuned to please the judge rather than the user. Judge prompts and guidelines drift over time.
@@ -68,6 +73,10 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 - [nielsen1993]
 - [zheng2023]
 - [li2024]
+- [cohen1960]
+- [fleiss1971]
+- [krippendorff2004]
+- [shrout1979]
 
 ## Open questions and review notes
 - Should LLM-as-a-judge and simulated users get their own pages, given how fast that practice is changing?

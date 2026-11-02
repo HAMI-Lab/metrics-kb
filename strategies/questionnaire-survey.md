@@ -70,4 +70,4 @@ Cheap per respondent once the items exist. Designing and validating new items is
 - [campbell1959]: method variance.
 
 ## Open questions and review notes
-- Knowledge tests with right answers (for example literacy tests) are given like questionnaires but scored against a key. Do they belong here, or need their own vocabulary value?
+- Knowledge tests with right answers now have their own method page: [ability tests](ability-test.md).

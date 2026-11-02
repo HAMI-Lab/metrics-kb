@@ -28,7 +28,7 @@ Durations, counts, and rates are recorded directly from events: when a task star
 Logs and telemetry, timed tasks in lab or field studies, and automated test suites.
 <!-- generated:pairings:start -->
 - [Interaction logs and telemetry](logs-telemetry.md)
-- `task-study` (no method page yet)
+- [Task studies with people](task-study.md)
 - [Test collections and benchmarks](test-collection.md)
 <!-- generated:pairings:end -->
 
