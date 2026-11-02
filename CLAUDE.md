@@ -9,7 +9,8 @@ Read `README.md` first. This file adds the rules for AI edits.
 
 ## Writing rules
 - Follow the template for the page type exactly (`schema/metric-template.md`, `construct-template.md`, `strategy-template.md`): same headings, same order, same front matter keys.
-- One metric page per operationalization. Write `construct.statement` at the level of the "spirit" of the measurement; put field-specific uses in 3.1, not in separate pages or separate statements.
+- One metric page per operationalization, and one per computation per root: all of a page's `construct.measures` must sit under the same root of the construct DAG (D20). Qualify the title when the same name exists under another root, e.g. "Precision (test collection)" and "Precision (user on task)". Method changes within a root do not make a new page.
+- Write `construct.statement` at the level of the "spirit" of the measurement; put field-specific uses in 3.1, not in separate pages or separate statements.
 - Every metric links to at least one construct (`construct.measures`) and one strategy (`operationalization.route`). If no construct fits, add one (in `constructs/dag.yaml` or a new page) and say so in chat.
 - Set `validity_concern` honestly. Use `high` when the number is a proxy that is easy to game or when judges (human or model) go unchecked.
 - Never edit between `<!-- generated:...:start -->` and `<!-- generated:...:end -->` markers, `constructs/index.md`, or `schema/page-guide.md`; run `python scripts/build.py` instead.

@@ -4,6 +4,16 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-01 (same name, different root)
+
+### D20. One metric page per computation per root; titles qualified by method
+- **Decision.** If the same computation measures constructs under different roots of the construct DAG, it gets one page per root. All of a page's `construct.measures` must share a root; the validator checks this. Method variants within a root stay on one page: precision from explicit user judgments and precision inferred from clicks are the same task-level page. When a name exists under more than one root, the titles are qualified by how the number is obtained, e.g. "Precision (test collection)" and "Precision (user on task)"; aliases keep the plain name searchable. This refines D5 and limits D6 to constructs under one root.
+- **Example.** Precision is split into [Precision (test collection)](../metrics/precision-test-collection.md) (component level: fixed queries, assessor judgments, topical relevance) and [Precision (user on task)](../metrics/precision-user-task.md) (task level: the user's own queries and judgments, the new construct [situational relevance](../constructs/situational-relevance.md)). Recall is renamed to Recall (test collection); its task-level page is not written yet.
+- **Why.** Only the formula is shared. Who sets the inputs, who judges, the construct, and the method and route all differ, so the numbers mean different things. The gap between them is a principal-agent problem: builders optimize the cheap test-collection number, users experience the task-level one, and the two are linked only empirically and weakly [hersh2000; turpin2006]. Separate pages let that link be stated as an empirical relation (5.3) instead of hiding inside one page whose front matter mixed both methods.
+- **Considered.** One page with several readings (D5 and D6 as they were): ambiguous front matter and no place for the gap. Splitting on every method change: too many pages, and the method is not what changes the meaning. Qualifying titles by root ("component level"): stable but less informative to readers; the user preferred qualifying by method. Avoided "offline/online": in IR "online evaluation" means live traffic and clicks, which belongs to the task-level page.
+
+---
+
 ## 2026-11-01 (instruments not modeled)
 
 ### D19. Instruments are not modeled: no page type and no front matter list

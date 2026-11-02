@@ -26,9 +26,9 @@ Here a *task* is the combined setting in which a user uses a system to achieve a
 It judges the *outcome* of the user and system together, unlike [output quality](output-quality.md), which judges what the system produces by itself. It ignores the effort spent, which is [task efficiency](task-efficiency.md).
 
 ## 3. Narrower constructs
-Narrower constructs are field-specific forms of outcome quality, such as completeness of labels in an annotation task.
+Narrower constructs are field-specific forms of outcome quality, such as how relevant search results are to the user's own task.
 <!-- generated:narrower:start -->
-_None yet._
+- [Task effectiveness: situational relevance](situational-relevance.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

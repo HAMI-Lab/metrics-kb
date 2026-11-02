@@ -123,7 +123,7 @@ _None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-Trade-off with output quality metrics such as [Precision](precision.md) and task success, and with compute cost [kapoor2025]. In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
+Trade-off with output quality metrics such as [Precision (test collection)](precision-test-collection.md) and task success, and with compute cost [kapoor2025]. In web search, controlled experiments that added delay found reduced user engagement [arapakis2014; kohavi2020]. In exploratory visual analysis, added latency of 500 ms changed how people interacted with the data and reduced the amount of exploration [liu2014] (check the exact figures against the paper).
 
 ## 6. Links to business objectives
 **Sustained use:** negative, with causal evidence from online experiments in web search [kohavi2020; arapakis2014]. How far this carries to AI assistants, where users may expect answers to take seconds, is not known.

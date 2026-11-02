@@ -58,7 +58,7 @@ Low per measurement once instrumented. The costs are engineering time to add and
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Precision](../metrics/precision.md)
+- [Precision (user on task)](../metrics/precision-user-task.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
 <!-- generated:metrics:end -->

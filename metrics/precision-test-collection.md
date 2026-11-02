@@ -1,7 +1,7 @@
 ---
-id: precision
-title: Precision
-aliases: [positive predictive value, "precision@k", P@k]
+id: precision-test-collection
+title: Precision (test collection)
+aliases: [precision, positive predictive value, "precision@k", P@k, offline precision, batch precision]
 page_type: metric
 template_version: "0.2"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
@@ -13,7 +13,7 @@ reviewers: []
 construct:
   statement: "Of the items a system returns or labels as positive, the share that are actually relevant or correct."
   measures: [topical-relevance, classification-correctness]
-  subject: [system-component, system]
+  subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
   quantity_form: [proportion]
@@ -22,9 +22,9 @@ construct:
 
 operationalization:
   measure_type: mixed
-  research_method: [test-collection, logs-telemetry]
+  research_method: [test-collection]
   route: [reference-comparison, external-judgment]
-  collection_mode: [offline, online]
+  collection_mode: [offline]
   data_source: [relevance-judgments, reference-answers, model-judge]
   unit: "proportion"
   range: "0-1"
@@ -37,7 +37,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: recall, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
+  - {metric: precision-user-task, kind: operational, note: "Same computation at the task level: the user's own queries and judgments."}
+  - {metric: recall-test-collection, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
   - {metric: task-completion-time, kind: empirical, note: "Better ranking is expected to shorten search tasks; user studies show the link is weaker than assumed."}
   - {metric: system-usability-scale, kind: empirical, note: "Output quality is one input to perceived usability; not measured directly."}
 
@@ -48,7 +49,7 @@ objectives:
 sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, turpin2006, kelly2009, schoolofai2025, es2023]
 ---
 
-# Precision
+# Precision (test collection)
 
 > The fraction of what the system returned (or flagged as positive) that was actually relevant or correct.
 
@@ -58,7 +59,7 @@ sources: [vanrijsbergen1979, manning2008, voorhees2000, hersh2000, turpin2006, k
 Precision = relevant items returned ÷ all items returned. In classification it is true positives ÷ (true positives + false positives). In ranked retrieval it is usually computed on the top *k* results (precision@k) [manning2008].
 
 ### 1.2 Construct: property of subject in context
-The property is **output correctness** (the absence of false positives). The subject is usually a **system component** such as a retriever, ranker, or classifier, or the whole system when outputs are judged end to end. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant.
+The property is **output correctness** (the absence of false positives). The subject is a **system component** such as a retriever, ranker, or classifier. The context is a **task** defined by a test collection: a set of queries or inputs with judgments of what counts as relevant, both fixed in advance by the collection's builders. When the queries and judgments come from users doing their own tasks, the same computation measures a task-level construct; see [Precision (user on task)](precision-user-task.md).
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
@@ -68,7 +69,7 @@ Measures, in the [construct DAG](../constructs/index.md):
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
-It ignores what was missed (that is [Recall](recall.md)). It says nothing about how results are presented, how long the user took, or whether the user was satisfied. For LLM outputs, "precision" is sometimes used loosely for the share of correct claims; make sure the counting unit is stated.
+It ignores what was missed (that is [Recall (test collection)](recall-test-collection.md)). It says nothing about how results are presented, how long the user took, or whether the user was satisfied. For LLM outputs, "precision" is sometimes used loosely for the share of correct claims; make sure the counting unit is stated.
 
 ## 2. How it is measured
 
@@ -79,7 +80,7 @@ It ignores what was missed (that is [Recall](recall.md)). It says nothing about 
 Depends on the judgments. Different assessors disagree about relevance substantially, although system *rankings* by precision tend to be stable across assessors [voorhees2000]. Precision@k with small *k* and few queries has high variance.
 
 ### 2.3 Data collection and measurement error
-Offline: run the system on a test collection with existing judgments. Online: infer relevance from clicks or ratings (biased by position and presentation). LLM-as-judge labeling is cheaper but adds the judge's own errors [es2023]. Unjudged items in pooled collections are usually counted as not relevant, which can penalize new systems.
+Run the system on a test collection with existing judgments. LLM-as-judge labeling is cheaper but adds the judge's own errors [es2023]. Unjudged items in pooled collections are usually counted as not relevant, which can penalize new systems.
 
 ### 2.4 Computation
 - Set-based: |relevant ∩ retrieved| ÷ |retrieved|.
@@ -94,9 +95,7 @@ A proportion from 0 to 1 (ratio scale). Only comparable across systems on the sa
 
 ### 3.1 Use cases
 - An e-discovery vendor tunes the relevance threshold of its document classifier before a client review, checking precision on a sample of flagged documents so reviewers are not drowning in false positives.
-- A streaming service A/B tests two "recommended for you" ranking models, comparing precision@10 against what listeners actually played versus skipped.
 - A support-ticket triage system auto-tags incoming tickets by category before routing; the team checks precision on a hand-labeled sample before trusting it to route without human review.
-- A hospital's sepsis-alert system is audited monthly: of the alerts it fired, how many did clinicians confirm versus dismiss as false alarms?
 
 ### 3.2 Purposes
 Comparing retrieval or classification components during development; regression testing; reporting benchmark results; evaluating RAG retrievers and LLM classifiers [schoolofai2025; es2023].
@@ -118,17 +117,17 @@ Precision alone is easy to game by returning fewer, safer results (precision ris
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-Summaries of both: F1, average precision, nDCG. Precision@k and macro or micro averages are variants on this page (2.4).
+Summaries of both: F1, average precision, nDCG. [Precision (user on task)](precision-user-task.md) is the same computation at the task level. Precision@k and macro or micro averages are variants on this page (2.4).
 
 ### 5.2 Conceptually related metrics
-[Recall](recall.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](system-usability-scale.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+[Recall (test collection)](recall-test-collection.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](system-usability-scale.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Recall](recall.md) (Retrieval effectiveness: topical relevance)
+- Same construct: [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006].Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006].
+Raising precision by being more selective usually lowers recall. Links from precision to user outcomes are weaker than often assumed: in controlled studies, large precision differences produced small or no differences in user task success [hersh2000; turpin2006]. This is the gap between test-collection precision and [Precision (user on task)](precision-user-task.md): a builder optimizing the first may not move the second.
 
 ## 6. Links to business objectives
 **Improved usability:** positive, correlational, and weaker than commonly assumed (see 5.2).
@@ -142,5 +141,5 @@ Raising precision by being more selective usually lowers recall. Links from prec
 - [schoolofai2025], [es2023]: use in LLM and RAG evaluation.
 
 ## Open questions and review notes
-- Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall](recall.md) and commit 3912bde (PR #1).
+- Create the Recall page and link it from 1.3 and 5.1. Done: see [Recall (test collection)](recall-test-collection.md) and commit 3912bde (PR #1).
 - Should precision for LLM claim-level correctness be its own page? Tracked in [issue #9](https://github.com/HAMI-Lab/metrics-kb/issues/9).

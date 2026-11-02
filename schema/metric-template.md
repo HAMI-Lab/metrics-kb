@@ -14,6 +14,9 @@ reviewers: []
 
 # ---- 1. What (construct) ----
 # One page = one operationalization. Variants that differ only in a parameter (precision@k) stay on this page.
+# One page per computation per root (D20): if the same formula measures constructs under different roots,
+# make one page per root and qualify the title, e.g. "Precision (test collection)", "Precision (user on task)".
+# Method variants within a root (judgments vs clicks) stay on one page.
 construct:
   statement: ""                  # one sentence in plain language: the "spirit" of what this number measures, across all its uses. Authoritative.
   measures: []                   # construct ids from constructs/ (one or more); the place(s) this metric sits in the construct DAG

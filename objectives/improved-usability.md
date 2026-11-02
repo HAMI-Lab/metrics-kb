@@ -16,7 +16,7 @@ ISO 9241-11 defines usability as the extent to which specified users can use a s
 
 ## How it can be observed
 No single measure captures it. The usual practice is to measure all three parts:
-- Effectiveness: task success, error rate, output quality ([Precision](../metrics/precision.md) for the system side).
+- Effectiveness: task success, error rate, output quality ([Precision (test collection)](../metrics/precision-test-collection.md) for the system side).
 - Efficiency: [Task Completion Time](../metrics/task-completion-time.md), effort ([NASA-TLX](../metrics/nasa-tlx.md)), waiting time ([Response Latency](../metrics/response-latency.md)).
 - Satisfaction: [SUS](../metrics/system-usability-scale.md) and similar questionnaires.
 
@@ -30,8 +30,9 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [SUS](../metrics/system-usability-scale.md) | positive | correlational | Measures perceived usability |
 | [Task Completion Time](../metrics/task-completion-time.md) | negative | correlational | For the same outcome |
 | [NASA-TLX](../metrics/nasa-tlx.md) | negative | correlational | Not at very low workload |
-| [Precision](../metrics/precision.md) | positive | correlational | Weaker than assumed |
-| [Recall](../metrics/recall.md) | positive | correlational | Batch gains do not always translate to users |
+| [Precision (test collection)](../metrics/precision-test-collection.md) | positive | correlational | Weaker than assumed |
+| [Recall (test collection)](../metrics/recall-test-collection.md) | positive | correlational | Batch gains do not always translate to users |
+| [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Part of effectiveness for the user's own task |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

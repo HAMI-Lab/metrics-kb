@@ -51,6 +51,16 @@ def common_checks(where, pid, fm, body, page_type, required_headings):
     return True
 
 
+def roots_of(cid, constructs, seen=()):
+    """The root constructs above cid (a construct with no broader construct is its own root)."""
+    if cid in seen:
+        return set()
+    parents = [b for b in ((constructs[cid]["fm"] or {}).get("broader") or []) if b in constructs]
+    if not parents:
+        return {cid}
+    return set().union(*(roots_of(p, constructs, seen + (cid,)) for p in parents))
+
+
 def check_metric(mid, page, metrics, constructs, strategies):
     fm, body = page["fm"], page["body"]
     n = f"metrics/{mid}.md"
@@ -67,6 +77,14 @@ def check_metric(mid, page, metrics, constructs, strategies):
     for cid in measures:
         if cid not in constructs:
             err(f"construct.measures: '{cid}' has no page in constructs/")
+    # D20: one page per computation per root. All measured constructs must share a root.
+    known = [cid for cid in measures if cid in constructs]
+    if known:
+        root_sets = [roots_of(cid, constructs) for cid in known]
+        if not set.intersection(*root_sets):
+            err("construct.measures spans different roots (" + "; ".join(
+                f"{cid}: {', '.join(sorted(r))}" for cid, r in zip(known, root_sets))
+                + "); split the page by root (D20)")
     for f in FACETS:
         vals = c.get(f) or []
         if not vals:

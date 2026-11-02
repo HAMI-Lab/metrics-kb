@@ -33,8 +33,8 @@ _None yet._
 ## 4. Metrics
 Precision and recall are its classic metrics. They capture two different properties, exactness (no false hits) and completeness (no misses), which could become narrower constructs.
 <!-- generated:metrics:start -->
-- [Precision](../metrics/precision.md)
-- [Recall](../metrics/recall.md)
+- [Precision (test collection)](../metrics/precision-test-collection.md)
+- [Recall (test collection)](../metrics/recall-test-collection.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

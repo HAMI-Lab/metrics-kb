@@ -33,8 +33,9 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Response Latency](../metrics/response-latency.md) | negative | causal (web search) | Online experiments [kohavi2020] |
 | [SUS](../metrics/system-usability-scale.md) | positive | theoretical | Via TAM / satisfaction |
 | [NASA-TLX](../metrics/nasa-tlx.md) | negative | theoretical | |
-| [Precision](../metrics/precision.md) | positive | theoretical | Long causal chain |
-| [Recall](../metrics/recall.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
+| [Precision (test collection)](../metrics/precision-test-collection.md) | positive | theoretical | Long causal chain |
+| [Recall (test collection)](../metrics/recall-test-collection.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
+| [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Results that help with real tasks |
 | [Task Completion Time](../metrics/task-completion-time.md) | unknown | none | Could go either way |
 
 ## Open questions

@@ -21,6 +21,7 @@ graph TD
   c_retrieval_effectiveness(["Retrieval effectiveness"])
   c_retrieval_efficiency(["Retrieval efficiency"])
   c_retrieval_performance(["Retrieval performance"])
+  c_situational_relevance(["Task effectiveness: situational relevance"])
   c_system_characteristics(["System characteristics"])
   c_system_performance(["System performance"])
   c_task_characteristics(["Task characteristics"])
@@ -34,8 +35,9 @@ graph TD
   c_user_characteristics(["User characteristics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
-  m_precision["Precision"]:::metric
-  m_recall["Recall"]:::metric
+  m_precision_test_collection["Precision (test collection)"]:::metric
+  m_precision_user_task["Precision (user on task)"]:::metric
+  m_recall_test_collection["Recall (test collection)"]:::metric
   m_response_latency["Response Latency"]:::metric
   m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
@@ -58,6 +60,7 @@ graph TD
   c_system_performance --> c_responsiveness
   c_task_characteristics --> c_task_performance
   c_task_characteristics --> c_usability
+  c_task_effectiveness --> c_situational_relevance
   c_task_efficiency --> c_mental_workload
   c_task_performance --> c_task_effectiveness
   c_task_performance --> c_task_efficiency
@@ -65,14 +68,15 @@ graph TD
   c_usability --> c_task_efficiency
   c_usability --> c_perceived_usability
   c_user_characteristics --> c_literacy
-  c_classification_correctness -.-> m_precision
-  c_classification_correctness -.-> m_recall
+  c_classification_correctness -.-> m_precision_test_collection
+  c_classification_correctness -.-> m_recall_test_collection
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
   c_responsiveness -.-> m_response_latency
+  c_situational_relevance -.-> m_precision_user_task
   c_task_efficiency -.-> m_task_completion_time
-  c_topical_relevance -.-> m_precision
-  c_topical_relevance -.-> m_recall
+  c_topical_relevance -.-> m_precision_test_collection
+  c_topical_relevance -.-> m_recall_test_collection
   classDef metric stroke-dasharray: 4 2
 ```
 
@@ -83,12 +87,12 @@ A construct with several broader constructs appears under each of them.
 - [Component characteristics](component-characteristics.md)
   - [Component performance](component-performance.md)
     - [Classification performance](classification-performance.md)
-      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
+      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md)
           - [Retrieval effectiveness: timeliness](timeliness.md)
-          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision](../metrics/precision.md), [Recall](../metrics/recall.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
 - [System characteristics](system-characteristics.md)
@@ -99,10 +103,12 @@ A construct with several broader constructs appears under each of them.
 - [Task characteristics](task-characteristics.md)
   - [Task performance](task-performance.md)
     - [Task effectiveness](task-effectiveness.md)
+      - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
       - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
   - [Usability](usability.md)
     - [Task effectiveness](task-effectiveness.md)
+      - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
       - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
     - [Usability: perceived usability](perceived-usability.md) · metrics: [System Usability Scale (SUS)](../metrics/system-usability-scale.md)

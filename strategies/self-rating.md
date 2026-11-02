@@ -57,6 +57,7 @@ Low per respondent (minutes), but needs people who actually used the system; can
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
+- [Precision (user on task)](../metrics/precision-user-task.md)
 - [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
 <!-- generated:metrics:end -->
 

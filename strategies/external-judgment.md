@@ -59,8 +59,8 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Precision](../metrics/precision.md)
-- [Recall](../metrics/recall.md)
+- [Precision (test collection)](../metrics/precision-test-collection.md)
+- [Recall (test collection)](../metrics/recall-test-collection.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

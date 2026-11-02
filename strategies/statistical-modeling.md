@@ -56,7 +56,7 @@ Needs statistical expertise and data to fit; cheap to apply once fitted.
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-_No metric page uses it yet._
+- [Precision (user on task)](../metrics/precision-user-task.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources
