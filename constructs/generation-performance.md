@@ -26,12 +26,12 @@ Properties of text (or other content) produced by a generative component, such a
 It judges the component's output. The end-to-end quality of what the whole system delivers is [output quality](output-quality.md); what users achieve with it is [task effectiveness](task-effectiveness.md).
 
 ## 3. Narrower constructs
-The narrower constructs cover different questions about the same output: does it match a reference, is it true, and is it supported by the given sources.
+The narrower constructs cover different questions about generated output: does it carry the right content, is it true, is it supported by the given sources, and, for code, does it run correctly. Short answers checked against a key are a separate type, [closed-answer performance](closed-answer-performance.md) (D23).
 <!-- generated:narrower:start -->
+- [Generation performance: content adequacy](content-adequacy.md)
 - [Generation performance: factuality](factuality.md)
+- [Generation performance: functional correctness](functional-correctness.md)
 - [Generation performance: groundedness](groundedness.md)
-- [Generation performance: similarity to reference](reference-similarity.md)
-- [Generation performance: verifiable correctness](verifiable-correctness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

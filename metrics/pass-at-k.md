@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How likely it is that at least one of k outputs a model generates for a problem passes an automatic check."
-  measures: [verifiable-correctness]
+  measures: [functional-correctness, answer-correctness]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -58,12 +58,13 @@ sources: [kulal2019, chen2021, yue2025, hariri2025]
 pass@k is the probability that at least one of k outputs sampled from a model for a problem is correct, where correct means passing held-out unit tests (for code) or matching the answer key (for math and other problems with checkable answers). It is averaged over problems. It came from program synthesis, where a problem counted as solved if any candidate program within a budget passed the tests [kulal2019], and spread with the HumanEval code benchmark [chen2021].
 
 ### 1.2 Construct: property of subject in context
-The property is verifiable correctness of generated output. The subject is the generating model, a component. The context is a benchmark of problems with automatic checks.
+The property is correctness checked automatically: functional correctness for code (tests pass) and answer correctness for problems with a key, such as math. The subject is the generating model, a component. The context is a benchmark of problems with automatic checks.
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Generation performance: verifiable correctness](../constructs/verifiable-correctness.md) (under Component characteristics → Component performance → Generation performance)
+- [Generation performance: functional correctness](../constructs/functional-correctness.md) (under Component characteristics → Component performance → Generation performance)
+- [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) (under Component characteristics → Component performance → Closed-answer performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -126,7 +127,8 @@ pass@1 is [Accuracy](accuracy.md) of a single sample against the check. The agen
 [pass^k](pass-hat-k.md) uses the same repeated samples to ask whether all k succeed: a measure of consistency rather than of possible success.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
+- Same construct: [Accuracy](accuracy.md) (Closed-answer performance: answer correctness), [F1 Score](f1-score.md) (Closed-answer performance: answer correctness)
+- Sibling construct: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

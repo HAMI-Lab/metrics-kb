@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How much of a reference text's wording a generated text reproduces."
-  measures: [reference-similarity]
+  measures: [content-adequacy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -58,12 +58,12 @@ sources: [lin2004, papineni2002, liang2022, chang2024]
 Recall-Oriented Understudy for Gisting Evaluation (ROUGE) counts how many words (ROUGE-1), word pairs (ROUGE-2), or longest shared word sequences (ROUGE-L) of a reference text also appear in the generated text [lin2004]. It was made for summaries and is reported as recall, precision or F1 of the overlap.
 
 ### 1.2 Construct: property of subject in context
-The property is similarity to a human-written reference. The subject is a text generator, such as a summarizer. The context is a test set with references [liang2022].
+The property is content adequacy: whether the text carries the content it should. ROUGE estimates it by similarity to human-written references. The subject is a text generator, such as a summarizer. The context is a test set with references [liang2022].
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Generation performance: similarity to reference](../constructs/reference-similarity.md) (under Component characteristics → Component performance → Generation performance)
+- [Generation performance: content adequacy](../constructs/content-adequacy.md) (under Component characteristics → Component performance → Generation performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -122,8 +122,7 @@ ROUGE-1, -2 and -L are variants on this page. BLEU (Bilingual Evaluation Underst
 [FActScore](factscore.md) checks truth and [Answer Faithfulness](answer-faithfulness.md) checks support by sources, both closer to what users care about.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Generation performance: similarity to reference)
-- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [pass@k](pass-at-k.md) (Generation performance: verifiable correctness)
+- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

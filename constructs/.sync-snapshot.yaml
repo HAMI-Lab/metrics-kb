@@ -20,6 +20,14 @@ calibration:
   title: "Classification performance: calibration"
   broader: [classification-performance]
 
+closed-answer-performance:
+  title: Closed-answer performance
+  broader: [component-performance]
+
+answer-correctness:
+  title: "Closed-answer performance: answer correctness"
+  broader: [closed-answer-performance]
+
 explanation-performance:
   title: Explanation performance
   broader: [component-performance]
@@ -32,20 +40,20 @@ generation-performance:
   title: Generation performance
   broader: [component-performance]
 
+content-adequacy:
+  title: "Generation performance: content adequacy"
+  broader: [generation-performance]
+
 factuality:
   title: "Generation performance: factuality"
   broader: [generation-performance]
 
+functional-correctness:
+  title: "Generation performance: functional correctness"
+  broader: [generation-performance]
+
 groundedness:
   title: "Generation performance: groundedness"
-  broader: [generation-performance]
-
-reference-similarity:
-  title: "Generation performance: similarity to reference"
-  broader: [generation-performance]
-
-verifiable-correctness:
-  title: "Generation performance: verifiable correctness"
   broader: [generation-performance]
 
 retrieval-performance:

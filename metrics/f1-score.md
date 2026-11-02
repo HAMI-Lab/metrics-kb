@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "A single score that is high only when a component's positive outputs are both correct and complete."
-  measures: [classification-correctness, topical-relevance, reference-similarity]
+  measures: [classification-correctness, topical-relevance, answer-correctness]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -66,7 +66,7 @@ Measures, in the [construct DAG](../constructs/index.md):
 
 - [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
 - [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
-- [Generation performance: similarity to reference](../constructs/reference-similarity.md) (under Component characteristics → Component performance → Generation performance)
+- [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) (under Component characteristics → Component performance → Closed-answer performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -125,9 +125,9 @@ Built from [Precision (test collection)](precision-test-collection.md) and [Reca
 [Accuracy](accuracy.md) is a simpler alternative when classes are balanced. [ROUGE](rouge.md) also counts overlap with a reference, for longer texts.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
+- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
-- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [pass@k](pass-at-k.md) (Generation performance: verifiable correctness)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
@@ -143,4 +143,4 @@ Moves with whichever of precision or recall is lower, because the harmonic mean 
 - [guo2023]: F1 in classification surveys.
 
 ## Open questions and review notes
-- Token-overlap F1 measures similarity to a reference, while classification F1 measures correctness. Both are component level, so D20 keeps them on one page. Is that the right call, or does the unit change enough to split (D5)?
+- Token-overlap F1 gives partial credit for closed answers (answer correctness), while classification F1 measures label correctness. Both are component level, so D20 keeps them on one page. Is that the right call, or does the unit change enough to split (D5)?

@@ -21,7 +21,7 @@ graph LR
   M -. evidence .-> O
 ```
 
-Counts: 54 constructs, 40 metrics, 8 routes, 7 methods.
+Counts: 56 constructs, 40 metrics, 8 routes, 7 methods.
 
 ## 1. Constructs and their metrics, by root
 
@@ -34,13 +34,15 @@ The construct DAG with the metrics attached to each construct. A construct with 
     - [Classification performance](../constructs/classification-performance.md)
       - [Classification effectiveness: correctness](../constructs/classification-correctness.md) — [Accuracy](../metrics/accuracy.md), [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
       - [Classification performance: calibration](../constructs/calibration.md) — [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
+    - [Closed-answer performance](../constructs/closed-answer-performance.md)
+      - [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) — [Accuracy](../metrics/accuracy.md), [F1 Score](../metrics/f1-score.md), [pass@k](../metrics/pass-at-k.md)
     - [Explanation performance](../constructs/explanation-performance.md)
       - [Explanation performance: faithfulness](../constructs/explanation-faithfulness.md) — [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
     - [Generation performance](../constructs/generation-performance.md)
+      - [Generation performance: content adequacy](../constructs/content-adequacy.md) — [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
       - [Generation performance: factuality](../constructs/factuality.md) — [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
+      - [Generation performance: functional correctness](../constructs/functional-correctness.md) — [pass@k](../metrics/pass-at-k.md)
       - [Generation performance: groundedness](../constructs/groundedness.md) — [Answer Faithfulness](../metrics/answer-faithfulness.md)
-      - [Generation performance: similarity to reference](../constructs/reference-similarity.md) — [F1 Score](../metrics/f1-score.md), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
-      - [Generation performance: verifiable correctness](../constructs/verifiable-correctness.md) — [pass@k](../metrics/pass-at-k.md)
     - [Retrieval performance](../constructs/retrieval-performance.md)
       - [Retrieval effectiveness](../constructs/retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](../constructs/relevance.md) — [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
@@ -107,19 +109,19 @@ Each metric measures constructs under exactly one root (D20).
 
 | Metric | Constructs | Methods | Routes |
 |---|---|---|---|
-| [Accuracy](../metrics/accuracy.md) | [Classification effectiveness: correctness](../constructs/classification-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
+| [Accuracy](../metrics/accuracy.md) | [Classification effectiveness: correctness](../constructs/classification-correctness.md), [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Answer Faithfulness](../metrics/answer-faithfulness.md) | [Generation performance: groundedness](../constructs/groundedness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md) |
 | [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md) | [Explanation performance: faithfulness](../constructs/explanation-faithfulness.md) | [Test collections and benchmarks](../strategies/test-collection.md), [Controlled comparison of conditions](../strategies/controlled-comparison.md) | [Difference scoring: changes between conditions](../strategies/difference-scoring.md) |
 | [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md) | [Classification effectiveness: correctness](../constructs/classification-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md) | [Classification performance: calibration](../constructs/calibration.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
-| [F1 Score](../metrics/f1-score.md) | [Classification effectiveness: correctness](../constructs/classification-correctness.md), [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md), [Generation performance: similarity to reference](../constructs/reference-similarity.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
+| [F1 Score](../metrics/f1-score.md) | [Classification effectiveness: correctness](../constructs/classification-correctness.md), [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md), [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | [Generation performance: factuality](../constructs/factuality.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md), [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | [Retrieval effectiveness: relevance](../constructs/relevance.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md), [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md) |
-| [pass@k](../metrics/pass-at-k.md) | [Generation performance: verifiable correctness](../constructs/verifiable-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
+| [pass@k](../metrics/pass-at-k.md) | [Generation performance: functional correctness](../constructs/functional-correctness.md), [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Precision (test collection)](../metrics/precision-test-collection.md) | [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md), [Classification effectiveness: correctness](../constructs/classification-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md), [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md) |
 | [Recall (test collection)](../metrics/recall-test-collection.md) | [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md), [Classification effectiveness: correctness](../constructs/classification-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md), [External judgment: annotators, experts, model judges, simulated users](../strategies/external-judgment.md) |
-| [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | [Generation performance: similarity to reference](../constructs/reference-similarity.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
+| [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | [Generation performance: content adequacy](../constructs/content-adequacy.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 | [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | [Tool-use performance: call correctness](../constructs/tool-call-correctness.md) | [Test collections and benchmarks](../strategies/test-collection.md) | [Comparison against reference data](../strategies/reference-comparison.md) |
 
 ### System characteristics

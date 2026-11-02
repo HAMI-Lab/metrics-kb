@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of all the cases a component answers or labels, the share it gets exactly right."
-  measures: [classification-correctness]
+  measures: [classification-correctness, answer-correctness]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -59,12 +59,13 @@ sources: [liang2022, rajpurkar2016, chang2024, nastoska2025, guo2017]
 Accuracy is the number of correct answers or labels divided by the number of cases. For generated answers it is usually called **exact match**: the answer counts as correct only if it equals the reference after normalization, such as lower-casing and removing punctuation [rajpurkar2016; liang2022].
 
 ### 1.2 Construct: property of subject in context
-The property is correctness of single outputs. The subject is a component such as a classifier or a model answering short questions. The context is a labeled test set.
+The property is correctness of single outputs. The subject is a component such as a classifier (one label set for all items) or a model answering closed questions (each question has its own correct answer: an option, a number, a short span). The context is a labeled test set.
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
 - [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
+- [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) (under Component characteristics → Component performance → Closed-answer performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -122,7 +123,7 @@ Exact match and balanced accuracy are variants on this page. [F1](f1-score.md) i
 [F1](f1-score.md) and [Precision (test collection)](precision-test-collection.md) are substitutes when classes are imbalanced. [ROC-AUC](roc-auc.md) complements it by ignoring the threshold.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
+- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 

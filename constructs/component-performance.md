@@ -26,9 +26,10 @@ The quality, speed, and correctness of one component's work, judged against what
 It mirrors [system performance](system-performance.md) and [task performance](task-performance.md) one level down.
 
 ## 3. Narrower constructs
-One narrower construct per kind of component or functionality: classification, retrieval, generation, tool use and explanation so far.
+One narrower construct per kind of component, typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval (items ranked from a collection), generation (open-ended content), tool use (a structured call) and explanation (an attribution over the input). What the test data probes, such as knowledge or reasoning, is not a type (D23).
 <!-- generated:narrower:start -->
 - [Classification performance](classification-performance.md)
+- [Closed-answer performance](closed-answer-performance.md)
 - [Explanation performance](explanation-performance.md)
 - [Generation performance](generation-performance.md)
 - [Retrieval performance](retrieval-performance.md)

@@ -7,13 +7,16 @@ Rounded boxes are constructs; square boxes are metrics. Solid arrows point from 
 ```mermaid
 graph TD
   c_ai_literacy(["Literacy: AI literacy"])
+  c_answer_correctness(["Closed-answer performance: answer correctness"])
   c_appropriate_reliance(["Reliance on AI: appropriateness"])
   c_autonomous_task_completion(["Autonomous task completion"])
   c_calibration(["Classification performance: calibration"])
   c_classification_correctness(["Classification effectiveness: correctness"])
   c_classification_performance(["Classification performance"])
+  c_closed_answer_performance(["Closed-answer performance"])
   c_component_characteristics(["Component characteristics"])
   c_component_performance(["Component performance"])
+  c_content_adequacy(["Generation performance: content adequacy"])
   c_critical_visualization_literacy(["Literacy: critical visualization literacy"])
   c_decision_correctness(["Task effectiveness: decision correctness"])
   c_emotional_response(["User experience: emotional response"])
@@ -22,6 +25,7 @@ graph TD
   c_explanation_understanding(["Explanation understanding"])
   c_factuality(["Generation performance: factuality"])
   c_fairness(["Output quality: fairness"])
+  c_functional_correctness(["Generation performance: functional correctness"])
   c_generation_performance(["Generation performance"])
   c_groundedness(["Generation performance: groundedness"])
   c_information_literacy(["Literacy: information literacy"])
@@ -30,7 +34,6 @@ graph TD
   c_numeracy(["Literacy: numeracy"])
   c_output_quality(["Output quality"])
   c_perceived_usability(["Usability: perceived usability"])
-  c_reference_similarity(["Generation performance: similarity to reference"])
   c_relevance(["Retrieval effectiveness: relevance"])
   c_reliance(["Reliance on AI"])
   c_resource_cost(["Resource cost"])
@@ -57,7 +60,6 @@ graph TD
   c_usability(["Usability"])
   c_user_characteristics(["User characteristics"])
   c_user_experience(["User experience"])
-  c_verifiable_correctness(["Generation performance: verifiable correctness"])
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_accuracy["Accuracy"]:::metric
@@ -102,17 +104,19 @@ graph TD
   m_vlat["Visualization Literacy Assessment Test (VLAT)"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
+  c_closed_answer_performance --> c_answer_correctness
   c_component_characteristics --> c_component_performance
   c_component_performance --> c_classification_performance
+  c_component_performance --> c_closed_answer_performance
   c_component_performance --> c_explanation_performance
   c_component_performance --> c_generation_performance
   c_component_performance --> c_retrieval_performance
   c_component_performance --> c_tool_use_performance
   c_explanation_performance --> c_explanation_faithfulness
+  c_generation_performance --> c_content_adequacy
   c_generation_performance --> c_factuality
+  c_generation_performance --> c_functional_correctness
   c_generation_performance --> c_groundedness
-  c_generation_performance --> c_reference_similarity
-  c_generation_performance --> c_verifiable_correctness
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
@@ -153,6 +157,9 @@ graph TD
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
   c_visualization_literacy --> c_critical_visualization_literacy
+  c_answer_correctness -.-> m_accuracy
+  c_answer_correctness -.-> m_f1_score
+  c_answer_correctness -.-> m_pass_at_k
   c_appropriate_reliance -.-> m_over_reliance_rate
   c_appropriate_reliance -.-> m_under_reliance_rate
   c_autonomous_task_completion -.-> m_task_success_rate_benchmark
@@ -162,6 +169,7 @@ graph TD
   c_classification_correctness -.-> m_precision_test_collection
   c_classification_correctness -.-> m_recall_test_collection
   c_classification_correctness -.-> m_roc_auc
+  c_content_adequacy -.-> m_rouge
   c_critical_visualization_literacy -.-> m_calvi
   c_decision_correctness -.-> m_decision_accuracy_with_ai
   c_emotional_response -.-> m_self_assessment_manikin
@@ -169,14 +177,13 @@ graph TD
   c_explanation_understanding -.-> m_forward_prediction_accuracy
   c_factuality -.-> m_factscore
   c_fairness -.-> m_demographic_parity_difference
+  c_functional_correctness -.-> m_pass_at_k
   c_groundedness -.-> m_answer_faithfulness
   c_mental_workload -.-> m_nasa_tlx
   c_mental_workload -.-> m_smeq
   c_numeracy -.-> m_berlin_numeracy_test
   c_perceived_usability -.-> m_system_usability_scale
   c_perceived_usability -.-> m_umux
-  c_reference_similarity -.-> m_f1_score
-  c_reference_similarity -.-> m_rouge
   c_relevance -.-> m_ndcg
   c_resource_cost -.-> m_cost_per_task
   c_responsiveness -.-> m_response_latency
@@ -194,7 +201,6 @@ graph TD
   c_topical_relevance -.-> m_reciprocal_rank
   c_trust_in_system -.-> m_trust_in_automation_scale
   c_user_experience -.-> m_ueq
-  c_verifiable_correctness -.-> m_pass_at_k
   c_visualization_aesthetics -.-> m_beauvis
   c_visualization_literacy -.-> m_vlat
   classDef metric stroke-dasharray: 4 2
@@ -209,13 +215,15 @@ A construct with several broader constructs appears under each of them.
     - [Classification performance](classification-performance.md)
       - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
       - [Classification performance: calibration](calibration.md) · metrics: [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
+    - [Closed-answer performance](closed-answer-performance.md)
+      - [Closed-answer performance: answer correctness](answer-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [F1 Score](../metrics/f1-score.md), [pass@k](../metrics/pass-at-k.md)
     - [Explanation performance](explanation-performance.md)
       - [Explanation performance: faithfulness](explanation-faithfulness.md) · metrics: [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
     - [Generation performance](generation-performance.md)
+      - [Generation performance: content adequacy](content-adequacy.md) · metrics: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
       - [Generation performance: factuality](factuality.md) · metrics: [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
+      - [Generation performance: functional correctness](functional-correctness.md) · metrics: [pass@k](../metrics/pass-at-k.md)
       - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
-      - [Generation performance: similarity to reference](reference-similarity.md) · metrics: [F1 Score](../metrics/f1-score.md), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
-      - [Generation performance: verifiable correctness](verifiable-correctness.md) · metrics: [pass@k](../metrics/pass-at-k.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
@@ -268,6 +276,7 @@ A construct with several broader constructs appears under each of them.
 ## Constructs with no metric yet
 
 - [Classification performance](classification-performance.md)
+- [Closed-answer performance](closed-answer-performance.md)
 - [Component characteristics](component-characteristics.md)
 - [Component performance](component-performance.md)
 - [Explanation performance](explanation-performance.md)

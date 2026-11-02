@@ -4,6 +4,26 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-02 (component types by input and output)
+
+### D23. Component constructs are typed by input and output; latent demand is not a construct; route names removed from construct names
+- **Decision.**
+  - Under [component performance](../constructs/component-performance.md), constructs are sorted by the syntax and semantics of the component's computation: what it takes in, what it puts out, and what makes an output right for an input. The types so far are classification, closed answers, retrieval, generation, tool use and explanation.
+  - New type **closed-answer performance** (`closed-answer-performance`), with **answer correctness** (`answer-correctness`): each item has one correct answer (an option given with the question, a number, a short span), and the set of possible answers changes from item to item. Accuracy (exact match), token-overlap F1 and pass@k (on problems with a key) now measure it.
+  - What test data probes, such as knowledge, reasoning, math or language modeling, is the **latent demand** of the computation (its pragmatics, as opposed to its syntax and semantics). It is not a construct in the DAG. It belongs to the test data and is named in prose and cited, like instruments (D19).
+  - Two constructs named after how they are scored are renamed: `reference-similarity` → **content adequacy** (`content-adequacy`), and `verifiable-correctness` → **functional correctness** (`functional-correctness`). Functional correctness now covers code only; final answers to math problems moved to answer correctness.
+- **Why.**
+  - Closed answers are not classification. A classifier chooses from one label set shared by all items; a multiple-choice question brings its own options. Question answering, classification and ranking have long been treated as different tasks in NLP and IR.
+  - Any type of computation can be used to probe any demand. Classification in the broadest sense can test knowledge, reasoning and math, and language modeling is classification over the next token. A DAG sorted by demand would have no stable shape. One metric page (accuracy) serves every demand, so demand is not a property of the metric page either. When the wiki is adapted to a use case, the use case's goals are open-ended anyway. The registry of Every Eval Ever shows the alternative: about 110 flat tags that mix capabilities, qualities (safety), modalities, domains, languages and formats [batzner2026].
+  - Route names in construct names break the separation of constructs and strategies (D1, D10). The old names also made ROUGE a "proxy" for a construct defined as what ROUGE computes; it is now a proxy for content adequacy.
+- **Considered.** Broadening classification to "a correct answer from a constrained space" (rejected: hides the per-item answer space). A capability subtree for knowledge, reasoning and so on (rejected, see above). An optional `probes:` field on metric pages (not adopted: the same computation probes every demand).
+- **Open.**
+  - The definition of a construct says any concept of interest can be one, but latent demands are kept out of the DAG. The definition may need refining, for example by stating what kind of property each root admits.
+  - The rule that separates component from system (one input-output mapping judged per call, vs a closed loop with an environment or the deployed configuration) is not decided.
+  - Sketched but not adopted: retrieval broadened to ranking, generation split into open-ended text and code, and a judgment type (reward models, LLM-as-judge). Constructs that cut across types, such as confidence quality and instruction following, wait until a metric needs them.
+
+---
+
 ## 2026-11-02 (no study records; docs map)
 
 ### D22. No pages or records for individual studies

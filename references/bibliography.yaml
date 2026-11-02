@@ -806,3 +806,9 @@ hariri2025:
   note: Instability of pass@k rankings with few samples; Bayesian alternative
   origin: added by AI after a literature search (2026-11-02)
   verified: false
+batzner2026:
+  citation: 'Batzner, J., et al. (2026). Every Eval Ever: A Unifying Schema and Community Repository for AI Evaluation Results. arXiv:2606.14516. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2606.14516
+  note: Shared schema and crowdsourced datastore for AI evaluation results (EvalEval Coalition). Its companion eval-card-registry (github.com/evaleval/eval-card-registry) tags benchmarks with a flat list of about 110 labels.
+  origin: added by AI while comparing the wiki with Every Eval Ever (2026-11-02)
+  verified: false

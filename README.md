@@ -40,6 +40,8 @@ The four roots are sorted by **what you need in order to measure the construct**
 | [Task characteristics](constructs/task-characteristics.md) | A user using the system to reach a goal: effectiveness, efficiency, usability, experience, trust, reliance | People doing tasks |
 | [User characteristics](constructs/user-characteristics.md) | The person alone, independent of any system: literacy, numeracy | Tests of the person |
 
+**Inside the component root**, constructs are typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval, generation, tool use and explanation. What the test data probes, such as knowledge or reasoning, is not a construct in the DAG; it belongs to the test data and is named in prose (D23).
+
 The split exists because **gains at one level do not automatically carry over to the next**. Errors pile up between components, and a better system does not guarantee better outcomes for users. Effects that cross levels, such as faster responses shortening tasks, are recorded as empirical links on metric pages, not as edges in the DAG.
 
 ### 3. One metric page per computation per root
