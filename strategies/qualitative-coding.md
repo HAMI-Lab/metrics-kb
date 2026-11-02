@@ -51,7 +51,7 @@ High per data point: collection, transcription, and coding by trained people.
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Workaround Action Rate](../metrics/workaround-action-rate.md)
+_No metric page uses it yet._
 <!-- generated:metrics:end -->
 
 ## 6. Sources

@@ -34,7 +34,6 @@ The person's effort is split out as [mental workload](mental-workload.md). The s
 ## 4. Metrics
 Time-based metrics are cheap but ignore effort; pair them with a workload measure when effort matters.
 <!-- generated:metrics:start -->
-- [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
 <!-- generated:metrics:end -->
 

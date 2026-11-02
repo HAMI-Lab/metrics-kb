@@ -122,7 +122,7 @@ No operationally related metric pages yet. The "usable" and "learnable" subscore
 Other perceived-usability questionnaires (for example UMUX, UMUX-LITE, PSSUQ) are close substitutes. [NASA-TLX](nasa-tlx.md) is complementary: it asks about demand on the person rather than qualities of the system. [Task Completion Time](task-completion-time.md) and task success are complementary objective measures; SUS is cheaper to add to a study than careful timing, but it says nothing about actual performance.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency), [Task Completion Time](task-completion-time.md) (Task efficiency)
+- Sibling construct: [Task Completion Time](task-completion-time.md) (Task efficiency)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

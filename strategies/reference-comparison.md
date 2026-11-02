@@ -51,7 +51,6 @@ High to build the reference (usually by [external judgment](external-judgment.md
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Object-Track Completeness](../metrics/object-track-completeness.md)
 - [Precision](../metrics/precision.md)
 - [Recall](../metrics/recall.md)
 <!-- generated:metrics:end -->

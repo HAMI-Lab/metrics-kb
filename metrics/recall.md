@@ -39,7 +39,6 @@ cost:
 related:
   - {metric: precision, kind: conceptual, note: "Returning more items usually raises recall and lowers precision."}
   - {metric: task-completion-time, kind: empirical, note: "In recall-oriented tasks, finding more of the relevant items usually takes users longer; not quantified here."}
-  - {metric: object-track-completeness, kind: operational, note: "A variant for video tracks, with objects matched across frames as the unit."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Matters mainly where users need to find everything (e.g. systematic reviews); users rarely notice what is missing."}
@@ -119,7 +118,7 @@ Recall alone is easy to game by returning more results (recall rises, precision 
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-Summaries of both: F1, average precision, precision-recall curves. [Object-Track Completeness](object-track-completeness.md) is a variant for video tracks, with objects matched across frames as the unit.
+Summaries of both: F1, average precision, precision-recall curves.
 
 ### 5.2 Conceptually related metrics
 [Precision](precision.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.

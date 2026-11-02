@@ -398,48 +398,6 @@ strathern1997:
     5(3), 305-321.'
   origin: added by AI (Sept 2026)
   verified: false
-bernardin2008:
-  citation: "Bernardin, K., & Stiefelhagen, R. (2008). Evaluating Multiple Object Tracking Performance: The CLEAR MOT Metrics. EURASIP Journal on Image and Video Processing. (check against the paper for volume and article number)"
-  url: null
-  note: Defines MOTA and MOTP for multi-object tracking, including ID switch counting
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-ristani2016:
-  citation: "Ristani, E., Solera, F., Zou, R., Cucchiara, R., & Tomasi, C. (2016). Performance Measures and a Data Set for Multi-Target, Multi-Camera Tracking. ECCV 2016 Workshops. (check against the paper)"
-  url: null
-  note: Defines IDF1 (identity-level precision, recall and F1 for tracks)
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-luiten2021:
-  citation: "Luiten, J., Osep, A., Dendorfer, P., Torr, P., Geiger, A., Leal-Taixe, L., & Leibe, B. (2021). HOTA: A Higher Order Metric for Evaluating Multi-Object Tracking. International Journal of Computer Vision. (check against the paper for the author list)"
-  url: null
-  note: Balances detection, association and localization in one tracking score
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-vondrick2013:
-  citation: "Vondrick, C., Patterson, D., & Ramanan, D. (2013). Efficiently Scaling up Crowdsourced Video Annotation. International Journal of Computer Vision. (check against the paper)"
-  url: null
-  note: VATIC video annotation tool; keyframe plus interpolation labeling and its cost/quality trade-off
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-papadopoulos2017:
-  citation: "Papadopoulos, D. P., Uijlings, J. R. R., Keller, F., & Ferrari, V. (2017). Extreme Clicking for Efficient Object Annotation. ICCV 2017. (check against the paper)"
-  url: null
-  note: Measures human time per bounding box under different annotation interfaces
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-parasuraman2010:
-  citation: "Parasuraman, R., & Manzey, D. H. (2010). Complacency and Bias in Human Use of Automation: An Attentional Integration. Human Factors. (check against the paper for volume and pages)"
-  url: null
-  note: Automation bias; relevant to labelers accepting model pre-annotations without checking
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
-alter2014:
-  citation: "Alter, S. (2014). Theory of Workarounds. Communications of the Association for Information Systems. (check against the paper for volume and article number)"
-  url: null
-  note: Defines workarounds and why users create them when systems block their goals
-  origin: added by AI for the InfinityPool metric-chat (2026-10-19)
-  verified: false
 jacobs2021:
   citation: "Jacobs, A. Z., & Wallach, H. (2021). Measurement and Fairness. Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT). (check against the paper)"
   url: null

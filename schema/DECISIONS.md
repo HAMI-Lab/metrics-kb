@@ -4,6 +4,16 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-01 (InfinityPool proposals removed)
+
+### D17. Metrics and constructs from the InfinityPool interview removed
+- **Removed.** The five metric pages proposed from the InfinityPool metric-chat interview (2026-10-19): Active Labeling Time per Object, Object-Track Completeness, Pre-annotation Edit Rate, Work-Loss Incidence and Workaround Action Rate. Also removed: the six constructs added for them, namely annotation quality, annotation quality: completeness, machine pre-annotation quality, interaction friction, system reliability and work preservation. This supersedes D16's pending note.
+- **Also removed.** Their rows in the objective tables, their links from other metric pages, and the seven unverified references added only for them (bernardin2008, ristani2016, luiten2021, vondrick2013, papadopoulos2017, parasuraman2010, alter2014).
+- **Kept.** The schema 0.2 structure, the four construct roots and the "Use cases" subsection of the metric template. These are general, not InfinityPool-specific.
+- **Why.** The team decided to drop the InfinityPool proposals rather than review them one by one. The pages remain in git history (last present at `fbb2bdd`) if any are wanted back.
+
+---
+
 ## 2026-10-26 (frame sync removed)
 
 ### D16. Frame-Sync Accuracy removed for now

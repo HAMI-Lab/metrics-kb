@@ -123,7 +123,7 @@ The six subscale ratings are parts of the overall score. The unweighted "raw TLX
 Same construct, different operationalization: single-item workload scales, physiological workload measures, secondary-task performance. Complementary: [SUS](system-usability-scale.md) (system qualities), [Task Completion Time](task-completion-time.md) and task success (outcomes).
 
 <!-- generated:neighbours:start -->
-- Broader construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency), [Task Completion Time](task-completion-time.md) (Task efficiency)
+- Broader construct: [Task Completion Time](task-completion-time.md) (Task efficiency)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

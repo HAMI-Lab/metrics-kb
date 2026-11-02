@@ -26,9 +26,8 @@ ISO 9241-11 defines usability as the extent to which specified users can use a s
 Usability is a property of the system *for given users, goals, and context*, not of the system alone. It is broader than ease of learning or look and feel. It overlaps with, but is not the same as, usefulness (whether the system's functions serve the goal at all). It sits under [task characteristics](task-characteristics.md) for that reason.
 
 ## 3. Narrower constructs
-The ISO definition splits usability into effectiveness, efficiency, and satisfaction. Here the first two are [task effectiveness](task-effectiveness.md) and [task efficiency](task-efficiency.md), which also sit under [task performance](task-performance.md); satisfaction appears as [perceived usability](perceived-usability.md), and [interaction friction](interaction-friction.md) is added for the extra work a system imposes. The parts correlate only modestly, so improving one does not guarantee the others [hornbaek2007].
+The ISO definition splits usability into effectiveness, efficiency, and satisfaction. Here the first two are [task effectiveness](task-effectiveness.md) and [task efficiency](task-efficiency.md), which also sit under [task performance](task-performance.md); and satisfaction appears as [perceived usability](perceived-usability.md). The parts correlate only modestly, so improving one does not guarantee the others [hornbaek2007].
 <!-- generated:narrower:start -->
-- [Interaction friction](interaction-friction.md)
 - [Task effectiveness](task-effectiveness.md)
 - [Task efficiency](task-efficiency.md)
 - [Usability: perceived usability](perceived-usability.md)

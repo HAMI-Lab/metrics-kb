@@ -51,11 +51,8 @@ Low per measurement once instrumented; the cost is engineering time to add and m
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Active Labeling Time per Object](../metrics/active-labeling-time-per-object.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
-- [Work-Loss Incidence](../metrics/work-loss-incidence.md)
-- [Workaround Action Rate](../metrics/workaround-action-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

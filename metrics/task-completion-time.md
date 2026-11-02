@@ -41,7 +41,6 @@ related:
   - {metric: nasa-tlx, kind: empirical, note: "Faster is not better if it costs much more effort."}
   - {metric: system-usability-scale, kind: conceptual, note: "Objective efficiency vs. perceived usability; modest correlation."}
   - {metric: precision, kind: empirical, note: "Better results are expected to shorten search tasks; evidence is mixed."}
-  - {metric: active-labeling-time-per-object, kind: operational, note: "Task time with idle gaps removed, per object labeled."}
 
 objectives:
   sustained-use: {direction: unknown, evidence: none, note: "Shorter task time could mean a better tool or a less engaging one; depends on the task."}
@@ -119,15 +118,14 @@ Optimizing for speed can reduce accuracy or careful checking, including checking
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-Component: [Response Latency](response-latency.md) is part of task time. [Active Labeling Time per Object](active-labeling-time-per-object.md) is a refinement for labeling tasks: task time with idle gaps removed, divided by the number of objects.
+Component: [Response Latency](response-latency.md) is part of task time.
 
 ### 5.2 Conceptually related metrics
 Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Active Labeling Time per Object](active-labeling-time-per-object.md) (Task efficiency)
 - Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
-- Sibling construct: [Workaround Action Rate](workaround-action-rate.md) (Interaction friction), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+- Sibling construct: [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

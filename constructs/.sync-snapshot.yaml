@@ -16,10 +16,6 @@ classification-correctness:
   title: "Classification effectiveness: correctness"
   broader: [classification-performance]
 
-machine-pre-annotation-quality:
-  title: Machine pre-annotation quality
-  broader: [component-performance]
-
 retrieval-performance:
   title: Retrieval performance
   broader: [component-performance]
@@ -60,14 +56,6 @@ trustworthiness:
   title: Trustworthiness
   broader: [relevance, output-quality]
 
-system-reliability:
-  title: System reliability
-  broader: [system-performance]
-
-work-preservation:
-  title: Work preservation
-  broader: [system-reliability]
-
 responsiveness:
   title: System responsiveness
   broader: [system-performance]
@@ -84,21 +72,9 @@ usability:
   title: Usability
   broader: [task-characteristics]
 
-interaction-friction:
-  title: Interaction friction
-  broader: [usability]
-
 task-effectiveness:
   title: Task effectiveness
   broader: [task-performance, usability]
-
-annotation-quality:
-  title: Annotation quality
-  broader: [task-effectiveness]
-
-label-completeness:
-  title: "Annotation quality: completeness"
-  broader: [annotation-quality]
 
 task-efficiency:
   title: Task efficiency

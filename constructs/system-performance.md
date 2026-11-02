@@ -29,7 +29,6 @@ It mirrors [task performance](task-performance.md) on the task side. A system ca
 End-to-end output quality, responsiveness, and reliability. Field-specific performance of single parts (such as [retrieval performance](retrieval-performance.md)) is on the component side.
 <!-- generated:narrower:start -->
 - [Output quality](output-quality.md)
-- [System reliability](system-reliability.md)
 - [System responsiveness](responsiveness.md)
 <!-- generated:narrower:end -->
 

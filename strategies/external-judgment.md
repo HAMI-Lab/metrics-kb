@@ -52,7 +52,6 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Pre-annotation Edit Rate](../metrics/pre-annotation-edit-rate.md)
 - [Precision](../metrics/precision.md)
 - [Recall](../metrics/recall.md)
 <!-- generated:metrics:end -->
