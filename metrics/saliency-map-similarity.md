@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How much a predicted saliency map overlaps with the map of where people actually looked."
-  measures: [attention-prediction-correctness]
+  measures: [attention-prediction-accuracy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -63,7 +63,7 @@ The property is how well a component predicts where people look. The subject is 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Visual attention prediction performance: correctness](../constructs/attention-prediction-correctness.md) (under Component characteristics → Component performance → Visual attention prediction performance)
+- [Visual attention prediction performance: accuracy](../constructs/attention-prediction-accuracy.md) (under Component characteristics → Component performance → Visual attention prediction performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -23,7 +23,7 @@ sources: [guo2017, liang2022, brier1950]
 A model is calibrated when, among predictions made with confidence *p*, about a share *p* are correct [guo2017]. More calibration means its confidence can be taken at face value, for example to decide when to defer to a person.
 
 ## 2. Boundaries
-Distinct from [correctness](classification-correctness.md): a model can be accurate but overconfident, or poorly accurate but honest about it. It applies to any component that outputs a probability or confidence, including language models answering questions [liang2022].
+Distinct from [accuracy](classification-accuracy.md): a model can be accurate but overconfident, or poorly accurate but honest about it. It applies to any component that outputs a probability or confidence, including language models answering questions [liang2022].
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->

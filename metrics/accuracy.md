@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of all the cases a component answers or labels, the share it gets exactly right."
-  measures: [classification-correctness, answer-correctness]
+  measures: [classification-accuracy, answer-correctness]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -71,7 +71,7 @@ The property is correctness of single outputs. The subject is a component such a
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Classification performance: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
+- [Classification performance: accuracy](../constructs/classification-accuracy.md) (under Component characteristics → Component performance → Classification performance)
 - [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) (under Component characteristics → Component performance → Closed-answer performance)
 <!-- generated:constructs:end -->
 
@@ -155,7 +155,7 @@ Exact match and balanced accuracy are variants on this page. [F1](f1-score.md) i
 [F1](f1-score.md) and [Precision (benchmark)](precision-benchmark.md) are substitutes when classes are imbalanced. [ROC-AUC](roc-auc.md) complements it by ignoring the threshold.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: correctness), [F1 Score](f1-score.md) (Classification performance: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification performance: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification performance: correctness), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
+- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: accuracy), [F1 Score](f1-score.md) (Classification performance: accuracy), [Precision (benchmark)](precision-benchmark.md) (Classification performance: accuracy), [Recall (benchmark)](recall-benchmark.md) (Classification performance: accuracy), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 

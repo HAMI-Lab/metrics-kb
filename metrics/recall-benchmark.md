@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of all the items that are actually relevant or correct, the share that the system returns or labels as positive."
-  measures: [topical-relevance, classification-correctness]
+  measures: [topical-relevance, classification-accuracy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -65,7 +65,7 @@ The property is **output completeness** (the absence of misses, or false negativ
 Measures, in the [construct DAG](../constructs/index.md):
 
 - [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
-- [Classification performance: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
+- [Classification performance: accuracy](../constructs/classification-accuracy.md) (under Component characteristics → Component performance → Classification performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -132,7 +132,7 @@ Summaries of both: F1, average precision, precision-recall curves.
 [Precision (benchmark)](precision-benchmark.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification performance: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: correctness)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification performance: accuracy), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: accuracy)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->

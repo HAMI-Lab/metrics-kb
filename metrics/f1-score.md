@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "A single score that is high only when a component's positive outputs are both correct and complete."
-  measures: [classification-correctness, topical-relevance, answer-correctness]
+  measures: [classification-accuracy, topical-relevance, answer-correctness]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -66,7 +66,7 @@ The property is correctness and completeness of a component's positive outputs t
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Classification performance: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
+- [Classification performance: accuracy](../constructs/classification-accuracy.md) (under Component characteristics → Component performance → Classification performance)
 - [Retrieval effectiveness: topical relevance](../constructs/topical-relevance.md) (under Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance)
 - [Closed-answer performance: answer correctness](../constructs/answer-correctness.md) (under Component characteristics → Component performance → Closed-answer performance)
 <!-- generated:constructs:end -->
@@ -133,7 +133,7 @@ Built from [Precision (benchmark)](precision-benchmark.md) and [Recall (benchmar
 [Accuracy](accuracy.md) is a simpler alternative when classes are balanced. [ROUGE](rouge.md) also counts overlap with a reference, for longer texts.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification performance: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification performance: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification performance: correctness), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
+- Same construct: [Accuracy](accuracy.md) (Classification performance: accuracy), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: accuracy), [Precision (benchmark)](precision-benchmark.md) (Classification performance: accuracy), [Recall (benchmark)](recall-benchmark.md) (Classification performance: accuracy), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->

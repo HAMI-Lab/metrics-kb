@@ -1,6 +1,6 @@
 ---
-id: classification-correctness
-title: "Classification performance: correctness"
+id: classification-accuracy
+title: "Classification performance: accuracy"
 aliases: [classification accuracy]
 page_type: construct
 template_version: "0.1"
@@ -15,7 +15,7 @@ reviewers: []
 sources: [manning2008]
 ---
 
-# Classification performance: correctness
+# Classification performance: accuracy
 
 > Whether a classifier assigns items to the right classes.
 

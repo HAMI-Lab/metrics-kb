@@ -8,6 +8,10 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 The decisions below follow a stress test: 50 metrics sampled from the Every Eval Ever metric registry [batzner2026] were mapped onto the wiki. The mapping and counts are in [`docs/stress-test-eee.md`](../docs/stress-test-eee.md).
 
+### D34. "Accuracy" kept in construct names (reverses part of D33)
+- **Decision.** The renames from "accuracy" to "correctness" in D33 are reversed: "correctness" read awkwardly. The constructs are "Transcription performance: accuracy", "Recommendation performance: rating prediction accuracy", "Visual attention prediction performance: accuracy" (id `attention-prediction-accuracy`) and "Grounding performance: localization accuracy". Classification's construct becomes "Classification performance: accuracy" (id `classification-accuracy`). "Closed-answer performance: answer correctness" is unchanged.
+- **Why.** Accuracy is the ordinary word for these properties. A construct and a metric can share a word; the construct page names the property and the metric page names the computation.
+
 ### D33. Audit of the constructs against D32
 - **Check 2 widened.** "A matter of degree" became "**Something that varies**: more or less of it, or a different kind of it". As first worded, it excluded demographics, which vary by kind; research treats them as variables.
 - **Grouping nodes are not constructs.** The four roots and *User background* organize the tree; they fail the checks and the README says so.

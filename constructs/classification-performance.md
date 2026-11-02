@@ -26,10 +26,10 @@ The performance of a classifier as a component: how correctly it assigns classes
 A component or system functionality, judged on reference labels; whether users act better on its outputs is a task characteristic. A classifier chooses from one label set shared by all items. When each item brings its own options, as in a multiple-choice test, it is [closed-answer performance](closed-answer-performance.md).
 
 ## 3. Narrower constructs
-Correctness so far; efficiency (latency, cost per item) and calibration of its confidence scores are candidates.
+Accuracy so far; efficiency (latency, cost per item) and calibration of its confidence scores are candidates.
 <!-- generated:narrower:start -->
+- [Classification performance: accuracy](classification-accuracy.md)
 - [Classification performance: calibration](calibration.md)
-- [Classification performance: correctness](classification-correctness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

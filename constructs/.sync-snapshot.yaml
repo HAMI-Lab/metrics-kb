@@ -12,12 +12,12 @@ classification-performance:
   title: Classification performance
   broader: [component-performance]
 
-calibration:
-  title: "Classification performance: calibration"
+classification-accuracy:
+  title: "Classification performance: accuracy"
   broader: [classification-performance]
 
-classification-correctness:
-  title: "Classification performance: correctness"
+calibration:
+  title: "Classification performance: calibration"
   broader: [classification-performance]
 
 closed-answer-performance:
@@ -56,8 +56,8 @@ grounding-performance:
   title: Grounding performance
   broader: [component-performance]
 
-grounding-correctness:
-  title: "Grounding performance: localization correctness"
+grounding-accuracy:
+  title: "Grounding performance: localization accuracy"
   broader: [grounding-performance]
 
 image-generation-performance:
@@ -72,8 +72,8 @@ recommendation-performance:
   title: Recommendation performance
   broader: [component-performance]
 
-rating-prediction-correctness:
-  title: "Recommendation performance: rating prediction correctness"
+rating-prediction-accuracy:
+  title: "Recommendation performance: rating prediction accuracy"
   broader: [recommendation-performance]
 
 retrieval-performance:
@@ -112,16 +112,16 @@ transcription-performance:
   title: Transcription performance
   broader: [component-performance]
 
-transcription-correctness:
-  title: "Transcription performance: correctness"
+transcription-accuracy:
+  title: "Transcription performance: accuracy"
   broader: [transcription-performance]
 
 visual-attention-prediction-performance:
   title: Visual attention prediction performance
   broader: [component-performance]
 
-attention-prediction-correctness:
-  title: "Visual attention prediction performance: correctness"
+attention-prediction-accuracy:
+  title: "Visual attention prediction performance: accuracy"
   broader: [visual-attention-prediction-performance]
 
 system-characteristics:

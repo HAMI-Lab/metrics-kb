@@ -27,7 +27,7 @@ Not [visual attention prediction](visual-attention-prediction-performance.md), w
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-- [Grounding performance: localization correctness](grounding-correctness.md)
+- [Grounding performance: localization accuracy](grounding-accuracy.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

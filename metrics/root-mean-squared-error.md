@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How far a recommender's predicted ratings are from the ratings people gave, with large errors weighted more."
-  measures: [rating-prediction-correctness]
+  measures: [rating-prediction-accuracy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -59,12 +59,12 @@ sources: [koren2009, harper2015, cremonesi2010]
 Root Mean Squared Error (RMSE) is the square root of the average squared difference between predicted and observed values. Mean squared error (MSE) omits the square root; mean absolute error (MAE) averages absolute differences. In recommender systems it measures how well a model predicts the ratings users give items [koren2009].
 
 ### 1.2 Construct: property of subject in context
-The property is rating prediction correctness, here meaning how close predictions are. The subject is a recommender component. The context is held-out ratings. The same formula is used for other numeric predictions; within this wiki's scope, rating prediction is its main use (D29).
+The property is rating prediction accuracy. The subject is a recommender component. The context is held-out ratings. The same formula is used for other numeric predictions; within this wiki's scope, rating prediction is its main use (D29).
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Recommendation performance: rating prediction correctness](../constructs/rating-prediction-correctness.md) (under Component characteristics → Component performance → Recommendation performance)
+- [Recommendation performance: rating prediction accuracy](../constructs/rating-prediction-accuracy.md) (under Component characteristics → Component performance → Recommendation performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

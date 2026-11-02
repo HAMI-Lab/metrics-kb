@@ -1,6 +1,6 @@
 ---
-id: grounding-correctness
-title: "Grounding performance: localization correctness"
+id: grounding-accuracy
+title: "Grounding performance: localization accuracy"
 aliases: [click accuracy, localization accuracy]
 page_type: construct
 template_version: "0.1"
@@ -15,7 +15,7 @@ reviewers: []
 sources: [cheng2024]
 ---
 
-# Grounding performance: localization correctness
+# Grounding performance: localization accuracy
 
 > Whether the predicted location falls on the right target.
 

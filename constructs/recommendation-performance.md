@@ -27,7 +27,7 @@ Ranking items for a person overlaps with [retrieval](retrieval-performance.md), 
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-- [Recommendation performance: rating prediction correctness](rating-prediction-correctness.md)
+- [Recommendation performance: rating prediction accuracy](rating-prediction-accuracy.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

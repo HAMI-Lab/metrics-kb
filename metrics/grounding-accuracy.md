@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "Of the instructions given, the share for which the component points at the right element or region."
-  measures: [grounding-correctness]
+  measures: [grounding-accuracy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -58,12 +58,12 @@ sources: [cheng2024]
 Given a screenshot and an instruction such as "open the settings", the component outputs a point or box. It counts as correct when the point falls inside the annotated target element [cheng2024].
 
 ### 1.2 Construct: property of subject in context
-The property is localization correctness. The subject is a grounding component, often the perception step of a GUI agent. The context is a set of screens with instructions.
+The property is localization accuracy. The subject is a grounding component, often the perception step of a GUI agent. The context is a set of screens with instructions.
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Grounding performance: localization correctness](../constructs/grounding-correctness.md) (under Component characteristics → Component performance → Grounding performance)
+- [Grounding performance: localization accuracy](../constructs/grounding-accuracy.md) (under Component characteristics → Component performance → Grounding performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

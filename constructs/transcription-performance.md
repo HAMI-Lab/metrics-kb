@@ -27,7 +27,7 @@ Not [closed-answer performance](closed-answer-performance.md), where the answer 
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-- [Transcription performance: correctness](transcription-correctness.md)
+- [Transcription performance: accuracy](transcription-accuracy.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

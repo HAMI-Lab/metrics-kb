@@ -12,7 +12,7 @@ reviewers: []
 
 construct:
   statement: "How many word errors a transcript contains, relative to the length of the correct transcript."
-  measures: [transcription-correctness]
+  measures: [transcription-accuracy]
   subject: [system-component]
   aspect: [effectiveness]
   perspective: [objective]
@@ -58,12 +58,12 @@ sources: [jurafsky2025, panayotov2015]
 Word Error Rate (WER) aligns the system's transcript with the reference and counts substitutions (S), deletions (D) and insertions (I). WER = (S + D + I) ÷ N, where N is the number of words in the reference [jurafsky2025]. Character error rate (CER) does the same per character.
 
 ### 1.2 Construct: property of subject in context
-The property is transcription correctness. The subject is a speech or text recognizer, a component. The context is a set of recordings with reference transcripts.
+The property is transcription accuracy. The subject is a speech or text recognizer, a component. The context is a set of recordings with reference transcripts.
 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Transcription performance: correctness](../constructs/transcription-correctness.md) (under Component characteristics → Component performance → Transcription performance)
+- [Transcription performance: accuracy](../constructs/transcription-accuracy.md) (under Component characteristics → Component performance → Transcription performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

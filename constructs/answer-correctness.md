@@ -23,7 +23,7 @@ sources: [rajpurkar2016, liang2022]
 An answer is correct when it equals the key after the stated normalization, such as lower-casing or removing punctuation, or, with partial credit, by how much it overlaps the key [rajpurkar2016; liang2022].
 
 ## 2. Boundaries
-- It differs from [classification correctness](classification-correctness.md) in the output space: per-item answers, not one shared label set.
+- It differs from [classification correctness](classification-accuracy.md) in the output space: per-item answers, not one shared label set.
 - It differs from [functional correctness](functional-correctness.md), where the output is a program and running it decides correctness.
 - A correct answer phrased differently from the key can be scored wrong. That is a weakness of the check, not of the construct.
 

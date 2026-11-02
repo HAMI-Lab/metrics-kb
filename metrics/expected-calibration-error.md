@@ -123,7 +123,7 @@ Maximum calibration error is a variant on this page.
 The Brier score [brier1950] combines calibration and accuracy in one number. [Accuracy](accuracy.md) and [ROC-AUC](roc-auc.md) are complements.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Accuracy](accuracy.md) (Classification performance: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: correctness), [F1 Score](f1-score.md) (Classification performance: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification performance: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification performance: correctness)
+- Sibling construct: [Accuracy](accuracy.md) (Classification performance: accuracy), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification performance: accuracy), [F1 Score](f1-score.md) (Classification performance: accuracy), [Precision (benchmark)](precision-benchmark.md) (Classification performance: accuracy), [Recall (benchmark)](recall-benchmark.md) (Classification performance: accuracy)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
