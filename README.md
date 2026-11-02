@@ -38,7 +38,9 @@ The four roots are sorted by **what you need in order to measure the construct**
 | [Component characteristics](constructs/component-characteristics.md) | One component judged on its own: a retriever, a classifier, a generator, a tool-calling module, an explanation method | Test data, no user |
 | [System characteristics](constructs/system-characteristics.md) | What the whole system delivers: output quality, safety, fairness, robustness, responsiveness, cost | The system, no user pursuing a goal |
 | [Task characteristics](constructs/task-characteristics.md) | A user using the system to reach a goal: effectiveness, efficiency, usability, experience, trust, reliance | People doing tasks |
-| [User characteristics](constructs/user-characteristics.md) | The person alone, independent of any system: literacy, numeracy | Tests of the person |
+| [User characteristics](constructs/user-characteristics.md) | The person alone, independent of any system: literacy, numeracy, background such as education | Tests of the person, or questions about them |
+
+The roots also differ in **who controls the variable** (D24). Builders design and change components and systems. Task characteristics are outcomes of use. User characteristics are attributes no one controls: a study can only select or sample people, and uses these variables to explain differences in outcomes. That is why latent abilities such as numeracy are constructs for people, while machine capabilities such as math or reasoning are not (D23).
 
 **Inside the component root**, constructs are typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval, generation, tool use and explanation. What the test data probes, such as knowledge or reasoning, is not a construct in the DAG; it belongs to the test data and is named in prose (D23).
 
@@ -54,6 +56,8 @@ When the same formula measures constructs under **different roots**, it gets one
 
 Only the formula is shared. Who sets the inputs, who judges, the construct, and the method all differ. The gap between them is a principal-agent problem: builders optimize the cheap test-collection number, users experience the task-level one, and the two are linked only empirically and weakly. Two pages let that link be stated as evidence. Method changes within a root (explicit judgments vs clicks) do not make a new page. The validator enforces the rule.
 
+**Instruments are grouped, not paged** (D25). A standardized questionnaire or test is an instantiation of a metric. Instruments that measure the same construct with the same method share one page, titled by construct and method: [Perceived Usability Score (questionnaire)](metrics/perceived-usability-score.md) holds SUS, UMUX and UMUX-LITE. Each page lists its instruments in front matter and compares them in section 2.6; instrument names stay searchable as aliases.
+
 ### 4. Strategies have two layers
 - **Methods** say how data is gathered: test collections, logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
 - **Routes** say how data becomes a number: direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, difference scoring, coding qualitative data, statistical modeling (D10).
@@ -65,7 +69,7 @@ Keeping the layers apart matters because the same data can be scored in differen
 **Agreement statistics** such as Cohen's kappa, Krippendorff's alpha and the intraclass correlation describe the judges, not the system, task or user. They live in the reliability sections of route pages, not on metric pages (D21).
 
 ### 5. What the wiki deliberately does not model
-- **Instruments.** A metric page points to a way of computing the number that is specific enough to apply. It is not the place for the exact wording and layout of a questionnaire or the code of an evaluation tool; those are named in prose and cited (D19).
+- **Instrument details.** Instruments are listed and compared on metric pages (D25), but they get no pages of their own. The exact wording and layout of a questionnaire, or the code of an evaluation tool, stay with their authors and are cited.
 - **Individual studies.** There are no records per paper and no map of construct-to-construct relationships; evidence is cited on metric pages and objective pages (D22).
 
 ### 6. Validity: light on the page, deep in conversation
@@ -100,7 +104,7 @@ Page types considered for later: task pages (for example "document search and su
 ## How a page is structured
 
 Each page has two parts:
-1. **Front matter** (the YAML block at the top): short, comparable facts. On metric pages: the construct statement and the constructs it measures, direct vs proxy, research method and route, how much validity deserves attention, cost, related metrics, and links to objectives. Scripts use these to build tables and lists.
+1. **Front matter** (the YAML block at the top): short, comparable facts. On metric pages: the construct statement and the constructs it measures, direct vs proxy, research method and route, named instruments, how much validity deserves attention, cost, related metrics, and links to objectives. Scripts use these to build tables and lists.
 2. **Body**: one section per question, with the same headings on every page of that type. The [page guide](schema/page-guide.md) lists every heading and the question it answers.
 
 On metric pages, the construct is described as *property of subject in context*, tagged with five facets: `subject`, `aspect`, `perspective`, `quantity_form` and `context`. The free-text `construct.statement` is the authoritative definition, written at the level of the "spirit" of the measurement; tags are aids.
