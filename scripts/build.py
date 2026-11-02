@@ -196,16 +196,19 @@ def render_map(constructs, metrics, strategies, parents, children, roots, by):
            '  M["Metrics<br/>(the number)"]',
            '  R["Routes<br/>(how data becomes a number)"]',
            '  D["Methods<br/>(how data is gathered)"]',
+           '  I["Instruments<br/>(objects of a metric)"]',
            "  C -- broader / narrower --> C",
            "  M -- measures --> C",
            "  M -- uses --> R",
            "  M -- uses --> D",
+           "  I -- instantiates --> M",
            "  R -- typically fed by --> D",
            "  M -. evidence .-> O",
            "```", "",
            f"Counts: {len(constructs)} constructs, {len(metrics)} metrics, "
            f"{sum(1 for x in strategies if layer(x) == 'route')} routes, "
-           f"{sum(1 for x in strategies if layer(x) == 'method')} methods.", "",
+           f"{sum(1 for x in strategies if layer(x) == 'method')} methods, "
+           f"{sum(len(op(m).get('instruments') or []) for m in metrics)} instrument entries.", "",
            "## 1. Constructs and their metrics, by root", "",
            "The construct DAG with the metrics attached to each construct. A construct with several broader "
            "constructs appears under each of them. The diagram version is in [constructs/index.md](../constructs/index.md).", ""]
@@ -260,9 +263,22 @@ def render_map(constructs, metrics, strategies, parents, children, roots, by):
     out += ["", "Research methods without a page yet are listed in `research_method` in "
             "[`schema/vocabulary.yaml`](../schema/vocabulary.yaml).", ""]
 
+    out += ["## 4. Instruments", "",
+            "A metric page is a class; its instruments are objects (D25, D27): standardized questionnaires, tests and "
+            "benchmarks. Lists are representative, not complete. Details are in section 2.6 of each metric page.", "",
+            "| Instrument | Metric | Probes | Scale |", "|---|---|---|---|"]
+    rows = []
+    for m in metrics:
+        for ins in op(m).get("instruments") or []:
+            if isinstance(ins, dict) and ins.get("name"):
+                rows.append((ins["name"], m, ins.get("probes") or "", ins.get("scale") or ""))
+    for name, m, probes, scale in sorted(rows, key=lambda r: (r[0].lower(), title_of(metrics, r[1]).lower())):
+        out.append(f"| {name} | {Mt(m)} | {probes or '—'} | {scale or '—'} |")
+    out.append("")
+
     objs = sorted((ROOT / "objectives").glob("*.md"))
-    out += ["## 4. Objectives", ""] + [f"- [{p.stem.replace('-', ' ').capitalize()}](../objectives/{p.name})" for p in objs] + [""]
-    out += ["## 5. Schema", "",
+    out += ["## 5. Objectives", ""] + [f"- [{p.stem.replace('-', ' ').capitalize()}](../objectives/{p.name})" for p in objs] + [""]
+    out += ["## 6. Schema", "",
             "- [Page guide](../schema/page-guide.md): every section of every page type and the question it answers.",
             "- Templates: [metric](../schema/metric-template.md), [construct](../schema/construct-template.md), [strategy](../schema/strategy-template.md).",
             "- [Vocabulary](../schema/vocabulary.yaml): allowed tag values.",

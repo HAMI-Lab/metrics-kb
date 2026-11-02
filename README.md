@@ -4,7 +4,7 @@ A wiki of evaluation metrics for human-facing intelligent and interactive system
 
 Every metric page answers the same questions: **what** is measured, **how**, **why**, **who** is involved, and **which metrics are related**. Each page also records how the metric links to two objectives: **sustained use over time** and **improved usability**.
 
-**Start here:** the [wiki map](docs/wiki-map.md) links every page from one place, grouped by root, by strategy layer, and by objective. The [construct DAG](constructs/index.md) shows the same structure as a diagram.
+**Start here:** the [wiki map](docs/wiki-map.md) links every page from one place, grouped by root, by strategy layer, and by objective. Looking for a specific questionnaire, test or benchmark, such as SUS, VLAT or MMLU? Its [instruments table](docs/wiki-map.md#4-instruments) gives the metric page that holds it. The [construct DAG](constructs/index.md) shows the same structure as a diagram.
 
 ## Design philosophy
 
@@ -19,7 +19,8 @@ Think of how an empirical study is put together:
 |---|---|---|
 | The variables a research question asks about | **Constructs**: what we want to know about, such as relevance, perceived usability or trust | Open-ended: there is no end to what one can ask about |
 | The methodology | **Strategies**: how data is gathered and turned into a number | Few, and heavily reused, often renamed or rediscovered across fields, like popular software libraries |
-| The measures defined to answer the question | **Metrics**: one page per operationalization | Many: every study defines or reuses some |
+| The measures defined to answer the question | **Metrics**: one page per operationalization, read as a class | Many: every study defines or reuses some |
+| The concrete questionnaires, tests and data sets used | **Instruments**: objects of a metric, listed and compared on its page | Very many; the wiki lists representative ones |
 
 Metrics are the meeting points. A metric page names the constructs it measures and the method and route it uses, and inherits the caveats on those strategy pages instead of repeating them (D1, D10).
 
@@ -27,6 +28,7 @@ What follows from the cardinalities:
 - **The construct DAG is curated, not complete.** It should have enough depth and breadth to show the structure, but it will never contain every possible construct. Constructs are added when a metric needs one.
 - **Strategy pages are where care pays off most**, because one good page serves many metrics.
 - **Metric pages should be cheap to write**, because they lean on the other two.
+- **Instrument lists stay short.** Complete catalogs, such as benchmark registries, live elsewhere and are cited.
 
 ### 2. Constructs form a DAG with four roots
 Constructs are arranged from broad to narrow. A construct can have several broader constructs (a DAG, not a tree), so a concept like trustworthiness can sit under both retrieval relevance and output quality without being duplicated (D3). Metrics have no hierarchy of their own: what looks like one is usually variants, parts or derivations, which the metric pages record as relations (D4).
@@ -73,6 +75,7 @@ Keeping the layers apart matters because the same data can be scored in differen
 ### 5. What the wiki deliberately does not model
 - **Instrument details.** Instruments are listed and compared on metric pages (D25), but they get no pages of their own. The exact wording and layout of a questionnaire, or the code of an evaluation tool, stay with their authors and are cited.
 - **Individual studies.** There are no records per paper and no map of construct-to-construct relationships; evidence is cited on metric pages and objective pages (D22).
+- **Complete catalogs and individual runs.** Metric pages list representative instruments, not every benchmark (D27). Records of individual evaluation runs, with their scores and settings, belong to result repositories such as [Every Eval Ever](https://github.com/evaleval/every_eval_ever) [batzner2026].
 
 ### 6. Validity: light on the page, deep in conversation
 Pages carry just enough validity content: whether the number is a direct or proxy measure (2.1), how reliable it is (2.2), what happens when people optimize it (4.3), and a `validity_concern` flag (low, moderate, high). The full set of validity questions belongs to an interactive interview, which asks them when they matter (D11).
@@ -92,9 +95,9 @@ Plain language and short sentences, with jargon explained on first use. A metric
 
 | Folder | Contents |
 |---|---|
-| [`docs/`](docs/wiki-map.md) | `wiki-map.md` (generated): every page linked from one place. |
+| [`docs/`](docs/wiki-map.md) | `wiki-map.md` (generated): every page linked from one place, and a table of every instrument. |
 | [`constructs/`](constructs/index.md) | One page per construct; `dag.yaml` (the DAG, hand-editable); `index.md` (generated diagram and tree). |
-| `metrics/` | One page per metric. |
+| `metrics/` | One page per metric, with its instruments listed in front matter and section 2.6. |
 | `strategies/` | One page per route, and one per research method that has a page so far. |
 | `objectives/` | One page per objective ([sustained use](objectives/sustained-use.md), [improved usability](objectives/improved-usability.md)), with the evidence linking metrics to it. |
 | `schema/` | Templates for the three page types, `vocabulary.yaml` (allowed tag values), `page-guide.md` (generated), `DECISIONS.md` (decisions and their reasons). |
@@ -108,6 +111,8 @@ Page types considered for later: task pages (for example "document search and su
 Each page has two parts:
 1. **Front matter** (the YAML block at the top): short, comparable facts. On metric pages: the construct statement and the constructs it measures, direct vs proxy, research method and route, named instruments, how much validity deserves attention, cost, related metrics, and links to objectives. Scripts use these to build tables and lists.
 2. **Body**: one section per question, with the same headings on every page of that type. The [page guide](schema/page-guide.md) lists every heading and the question it answers.
+
+On metric pages, sections 2.1-2.5 describe the whole family of instruments: validity, reliability, data collection, computation, and scale. Section 2.6 describes each instrument: what it contains and probes, its unit and range, and its scoring rules, grouped by what the instruments probe (D27).
 
 On metric pages, the construct is described as *property of subject in context*, tagged with five facets: `subject`, `aspect`, `perspective`, `quantity_form` and `context`. The free-text `construct.statement` is the authoritative definition, written at the level of the "spirit" of the measurement; tags are aids.
 
@@ -130,6 +135,7 @@ Every page carries a `status`: `ai-draft` → `human-edited` → `human-reviewed
 1. Copy the template from `schema/` (`metric-template.md`, `construct-template.md` or `strategy-template.md`) to the matching folder as `<id>.md`. For a new construct, adding an entry to `constructs/dag.yaml` and syncing creates the stub for you.
 2. Fill in the front matter using values from `schema/vocabulary.yaml`.
 3. Cite only keys that exist in `references/bibliography.yaml`; add new sources there first.
+   To add a questionnaire, test or benchmark, do not make a new page: add it to the metric page for its construct and method, in `operationalization.instruments` and section 2.6, and add its name to `aliases`.
 4. Run `python scripts/sync_constructs.py` (if constructs changed), then `python scripts/build.py`, then `python scripts/validate.py`, and fix what it reports.
 
 ## Viewing
