@@ -53,7 +53,7 @@ sources: [samek2017, nauta2023, pawlicki2024]
 ## 1. What is measured
 
 ### 1.1 Definition
-An explanation ranks input features (pixels, words, columns) by importance. Features are removed or replaced in that order, step by step, and the model's output is recorded after each step. The area over the perturbation curve (AOPC) is the average drop in output over the steps [samek2017]. If the explanation is faithful, removing its top features should hurt the output quickly.
+The area over the perturbation curve (AOPC) tests an explanation by removing the features it ranks as most important and watching the model's output fall [samek2017]. An explanation ranks input features (pixels, words, columns) by importance. Features are removed or replaced in that order, step by step, and the output is recorded after each step. AOPC is the average drop over the steps. If the explanation is faithful, removing its top features should hurt the output quickly.
 
 ### 1.2 Construct: property of subject in context
 The property is faithfulness of explanations to the model. The subject is an explanation method applied to a model. The context is a test set and a removal scheme.
