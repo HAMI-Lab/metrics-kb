@@ -63,6 +63,8 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Trust Score (questionnaire)](../metrics/trust-score.md) | unknown | none | More trust is good only when it matches trustworthiness. |
 | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Demographic Profile (questionnaire)](../metrics/demographic-profile.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Educational Attainment (questionnaire)](../metrics/educational-attainment.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

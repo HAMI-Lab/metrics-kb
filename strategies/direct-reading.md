@@ -58,6 +58,8 @@ Low per measurement once instrumented; the cost is engineering time to add and m
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [Cost per Task](../metrics/cost-per-task.md)
+- [Demographic Profile (questionnaire)](../metrics/demographic-profile.md)
+- [Educational Attainment (questionnaire)](../metrics/educational-attainment.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
 <!-- generated:metrics:end -->

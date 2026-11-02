@@ -67,6 +67,8 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Trust Score (questionnaire)](../metrics/trust-score.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
 | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Demographic Profile (questionnaire)](../metrics/demographic-profile.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Educational Attainment (questionnaire)](../metrics/educational-attainment.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

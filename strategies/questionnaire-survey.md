@@ -57,6 +57,8 @@ Cheap per respondent once the items exist. Designing and validating new items is
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [Demographic Profile (questionnaire)](../metrics/demographic-profile.md)
+- [Educational Attainment (questionnaire)](../metrics/educational-attainment.md)
 - [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md)
 - [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md)
 - [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md)

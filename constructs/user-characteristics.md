@@ -28,6 +28,7 @@ Unlike [task characteristics](task-characteristics.md), they are measured withou
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
 - [Literacy](literacy.md)
+- [User background](user-background.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

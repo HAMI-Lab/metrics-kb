@@ -223,3 +223,15 @@ visualization-literacy:
 critical-visualization-literacy:
   title: "Literacy: critical visualization literacy"
   broader: [visualization-literacy]
+
+user-background:
+  title: User background
+  broader: [user-characteristics]
+
+demographics:
+  title: "Background: demographics"
+  broader: [user-background]
+
+educational-background:
+  title: "Background: education"
+  broader: [user-background]

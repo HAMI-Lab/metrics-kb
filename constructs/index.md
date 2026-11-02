@@ -19,6 +19,8 @@ graph TD
   c_content_adequacy(["Generation performance: content adequacy"])
   c_critical_visualization_literacy(["Literacy: critical visualization literacy"])
   c_decision_correctness(["Task effectiveness: decision correctness"])
+  c_demographics(["Background: demographics"])
+  c_educational_background(["Background: education"])
   c_emotional_response(["User experience: emotional response"])
   c_explanation_faithfulness(["Explanation performance: faithfulness"])
   c_explanation_performance(["Explanation performance"])
@@ -58,6 +60,7 @@ graph TD
   c_trust_in_system(["Trust in the system"])
   c_trustworthiness(["Trustworthiness"])
   c_usability(["Usability"])
+  c_user_background(["User background"])
   c_user_characteristics(["User characteristics"])
   c_user_experience(["User experience"])
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
@@ -69,6 +72,8 @@ graph TD
   m_cost_per_task["Cost per Task"]:::metric
   m_decision_accuracy_with_ai["Decision Accuracy with AI Assistance"]:::metric
   m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
+  m_demographic_profile["Demographic Profile (questionnaire)"]:::metric
+  m_educational_attainment["Educational Attainment (questionnaire)"]:::metric
   m_emotional_response_score["Emotional Response Score (questionnaire)"]:::metric
   m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
@@ -150,7 +155,10 @@ graph TD
   c_usability --> c_task_effectiveness
   c_usability --> c_task_efficiency
   c_usability --> c_perceived_usability
+  c_user_background --> c_demographics
+  c_user_background --> c_educational_background
   c_user_characteristics --> c_literacy
+  c_user_characteristics --> c_user_background
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
   c_visualization_literacy --> c_critical_visualization_literacy
@@ -169,6 +177,8 @@ graph TD
   c_content_adequacy -.-> m_rouge
   c_critical_visualization_literacy -.-> m_visualization_literacy_score
   c_decision_correctness -.-> m_decision_accuracy_with_ai
+  c_demographics -.-> m_demographic_profile
+  c_educational_background -.-> m_educational_attainment
   c_emotional_response -.-> m_emotional_response_score
   c_explanation_faithfulness -.-> m_aopc
   c_explanation_understanding -.-> m_forward_prediction_accuracy
@@ -267,6 +277,9 @@ A construct with several broader constructs appears under each of them.
     - [Literacy: numeracy](numeracy.md) · metrics: [Numeracy Score (ability test)](../metrics/numeracy-score.md)
     - [Literacy: visualization literacy](visualization-literacy.md) · metrics: [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
       - [Literacy: critical visualization literacy](critical-visualization-literacy.md) · metrics: [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
+  - [User background](user-background.md)
+    - [Background: demographics](demographics.md) · metrics: [Demographic Profile (questionnaire)](../metrics/demographic-profile.md)
+    - [Background: education](educational-background.md) · metrics: [Educational Attainment (questionnaire)](../metrics/educational-attainment.md)
 
 ## Constructs with no metric yet
 
@@ -292,4 +305,5 @@ A construct with several broader constructs appears under each of them.
 - [Tool-use performance](tool-use-performance.md)
 - [Trustworthiness](trustworthiness.md)
 - [Usability](usability.md)
+- [User background](user-background.md)
 - [User characteristics](user-characteristics.md)
