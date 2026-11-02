@@ -121,7 +121,7 @@ The same computation as [precision](precision-test-collection.md), applied to at
 [Answer Faithfulness](answer-faithfulness.md) is the counterpart for support by given context. [ROUGE](rouge.md) does not check truth.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
+- Sibling construct: [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference), [pass@k](pass-at-k.md) (Generation performance: verifiable correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

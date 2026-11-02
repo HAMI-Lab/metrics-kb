@@ -68,6 +68,7 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 - [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
 - [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
+- [pass@k](../metrics/pass-at-k.md)
 - [pass^k](../metrics/pass-hat-k.md)
 - [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 - [Precision (test collection)](../metrics/precision-test-collection.md)

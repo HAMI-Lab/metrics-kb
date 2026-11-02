@@ -127,7 +127,7 @@ Built from [Precision (test collection)](precision-test-collection.md) and [Reca
 <!-- generated:neighbours:start -->
 - Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
-- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [pass@k](pass-at-k.md) (Generation performance: verifiable correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

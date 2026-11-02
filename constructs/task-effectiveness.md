@@ -35,7 +35,7 @@ Narrower constructs are field-specific forms of outcome quality, such as how rel
 ## 4. Metrics
 Gap: there is no general task-success-rate page yet, although task success is the most common effectiveness metric in usability studies.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

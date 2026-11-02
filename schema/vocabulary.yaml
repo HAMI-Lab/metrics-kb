@@ -29,6 +29,7 @@ aspect:             # what quality is being judged?
   adoption: Uptake and continued use over time.
   safety: Absence of harm, including harmful outputs.
   resource-cost: Monetary, energy, or environmental cost of operating the system.
+  fairness: Whether outcomes or quality differ unjustly across groups of people.
 
 perspective:        # who judges the aspect?
   objective: Observed or computed without asking the person (logs, timers, relevance judgments on outputs).
@@ -42,6 +43,7 @@ quantity_form:      # what form does the number take?
   rating-score: A score from a questionnaire or rating scale.
   composite-index: A weighted or aggregated combination of several sub-measures.
   physical-quantity: A physical unit other than time (joules, kg CO2e, bytes).
+  monetary-amount: An amount of money (dollars), or a count of billed units such as tokens.
 
 context:            # what conditions is the measurement tied to?
   task: A defined task or task set (a query set, a benchmark, a usability-test scenario).

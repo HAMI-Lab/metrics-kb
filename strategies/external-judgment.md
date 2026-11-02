@@ -70,6 +70,7 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 - [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
 - [Precision (test collection)](../metrics/precision-test-collection.md)
 - [Recall (test collection)](../metrics/recall-test-collection.md)
+- [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 - [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->
 

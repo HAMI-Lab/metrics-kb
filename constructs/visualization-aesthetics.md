@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

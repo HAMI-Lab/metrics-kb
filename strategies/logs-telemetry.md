@@ -63,6 +63,7 @@ Low per measurement once instrumented. The costs are engineering time to add and
 - [Precision (user on task)](../metrics/precision-user-task.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
+- [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 - [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->
 

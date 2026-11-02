@@ -37,7 +37,8 @@ cost:
   automatable: true
 
 related:
-  - {metric: task-success-rate-benchmark, kind: operational, note: "pass^1 equals the task success rate; pass@k is its optimistic counterpart."}
+  - {metric: task-success-rate-benchmark, kind: operational, note: "pass^1 equals the task success rate."}
+  - {metric: pass-at-k, kind: conceptual, note: "Same repeated samples, opposite question: any success vs all successes."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Users stop relying on systems whose success they cannot predict."}
@@ -53,7 +54,7 @@ sources: [yao2024, mohammadi2025, chen2021]
 ## 1. What is measured
 
 ### 1.1 Definition
-pass^k (read "pass hat k") is the probability that a system succeeds on a task in all of k independent runs, averaged over tasks [yao2024]. It is meant for systems that do not give the same result every time, such as language-model agents. It is the strict counterpart of pass@k, which counts a task as solved if any one of k runs succeeds [chen2021].
+pass^k (read "pass hat k") is the probability that a system succeeds on a task in all of k independent runs, averaged over tasks [yao2024]. It is meant for systems that do not give the same result every time, such as language-model agents. It is the strict counterpart of [pass@k](pass-at-k.md), which counts a task as solved if any one of k runs succeeds [chen2021].
 
 ### 1.2 Construct: property of subject in context
 The property is consistency across runs: success that repeats. The subject is the system, often an agent. The context is a set of tasks with checkable success.
@@ -114,7 +115,7 @@ Setting the sampling temperature to zero raises consistency without making the a
 pass^1 equals [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md); pass@k is on that page as a variant.
 
 ### 5.2 Conceptually related metrics
-None yet.
+[pass@k](pass-at-k.md) asks whether any of k samples succeeds; pass^k asks whether all do.
 
 <!-- generated:neighbours:start -->
 - Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)

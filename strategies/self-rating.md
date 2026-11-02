@@ -56,9 +56,15 @@ Low per respondent (minutes), but needs people who actually used the system; can
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
 - [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
+- [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md)
+- [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
 - [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
+- [Trust in Automation Scale](../metrics/trust-in-automation-scale.md)
+- [Usability Metric for User Experience (UMUX)](../metrics/umux.md)
+- [User Experience Questionnaire (UEQ)](../metrics/ueq.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

@@ -55,6 +55,18 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [pass^k](../metrics/pass-hat-k.md) | positive | theoretical | Users stop relying on systems whose success they cannot predict. |
 | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | positive | theoretical | Agents that complete tasks save users work. |
 | [Cost per Task](../metrics/cost-per-task.md) | negative | theoretical | Costly systems are harder to offer at a price users accept. |
+| [pass@k](../metrics/pass-at-k.md) | positive | theoretical | Through useful generated code or answers; not measured. |
+| [Task Success Rate (user on task)](../metrics/task-success-rate-user.md) | positive | theoretical | People keep using systems with which they get their tasks done. |
+| [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md) | positive | theoretical | Decision support is kept if it improves decisions. |
+| [Over-reliance Rate](../metrics/over-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
+| [Under-reliance Rate](../metrics/under-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
+| [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md) | unknown | none |  |
+| [Usability Metric for User Experience (UMUX)](../metrics/umux.md) | positive | theoretical | Via satisfaction and continued use. |
+| [User Experience Questionnaire (UEQ)](../metrics/ueq.md) | positive | theoretical | Attractive, stimulating products are expected to be used more. |
+| [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md) | unknown | none |  |
+| [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none |  |
+| [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
+| [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Effortful systems are less pleasant to keep using. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

@@ -59,7 +59,9 @@ At least the cost of the underlying measurement per condition, plus the work of 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
+- [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
 - [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
+- [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md)
 - [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 <!-- generated:metrics:end -->
 

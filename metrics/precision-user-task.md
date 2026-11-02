@@ -124,7 +124,8 @@ Treating clicks as judgments rewards attractive snippets rather than useful item
 [Task Completion Time](task-completion-time.md) measures the efficiency of the same task; task success measures its outcome. [SUS](system-usability-scale.md) measures how usable the system felt.
 
 <!-- generated:neighbours:start -->
-_None found from the construct DAG yet._
+- Broader construct: [Task Success Rate (user on task)](task-success-rate-user.md) (Task effectiveness)
+- Sibling construct: [Decision Accuracy with AI Assistance](decision-accuracy-with-ai.md) (Task effectiveness: decision correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

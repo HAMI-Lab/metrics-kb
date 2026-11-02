@@ -57,19 +57,25 @@ graph TD
   c_usability(["Usability"])
   c_user_characteristics(["User characteristics"])
   c_user_experience(["User experience"])
+  c_verifiable_correctness(["Generation performance: verifiable correctness"])
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_accuracy["Accuracy"]:::metric
   m_answer_faithfulness["Answer Faithfulness"]:::metric
   m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
   m_attack_success_rate["Attack Success Rate (ASR)"]:::metric
+  m_beauvis["BeauVis Aesthetic Pleasure Scale"]:::metric
   m_cost_per_task["Cost per Task"]:::metric
+  m_decision_accuracy_with_ai["Decision Accuracy with AI Assistance"]:::metric
   m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
   m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
   m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
+  m_forward_prediction_accuracy["Forward-Prediction Accuracy"]:::metric
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
   m_ndcg["Normalized Discounted Cumulative Gain (nDCG)"]:::metric
+  m_over_reliance_rate["Over-reliance Rate"]:::metric
+  m_pass_at_k["pass@k"]:::metric
   m_pass_hat_k["pass^k"]:::metric
   m_performance_drop_rate["Performance Drop Rate (PDR)"]:::metric
   m_precision_test_collection["Precision (test collection)"]:::metric
@@ -79,11 +85,18 @@ graph TD
   m_response_latency["Response Latency"]:::metric
   m_roc_auc["Area Under the ROC Curve (ROC-AUC)"]:::metric
   m_rouge["Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"]:::metric
+  m_self_assessment_manikin["Self-Assessment Manikin (SAM)"]:::metric
+  m_smeq["Subjective Mental Effort Questionnaire (SMEQ)"]:::metric
   m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
   m_task_success_rate_benchmark["Task Success Rate (agent benchmark)"]:::metric
+  m_task_success_rate_user["Task Success Rate (user on task)"]:::metric
   m_tool_call_accuracy["Tool Call Accuracy"]:::metric
   m_toxicity_rate["Toxicity Rate"]:::metric
+  m_trust_in_automation_scale["Trust in Automation Scale"]:::metric
+  m_ueq["User Experience Questionnaire (UEQ)"]:::metric
+  m_umux["Usability Metric for User Experience (UMUX)"]:::metric
+  m_under_reliance_rate["Under-reliance Rate"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_component_characteristics --> c_component_performance
@@ -96,6 +109,7 @@ graph TD
   c_generation_performance --> c_factuality
   c_generation_performance --> c_groundedness
   c_generation_performance --> c_reference_similarity
+  c_generation_performance --> c_verifiable_correctness
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
@@ -136,6 +150,8 @@ graph TD
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
   c_visualization_literacy --> c_critical_visualization_literacy
+  c_appropriate_reliance -.-> m_over_reliance_rate
+  c_appropriate_reliance -.-> m_under_reliance_rate
   c_autonomous_task_completion -.-> m_task_success_rate_benchmark
   c_calibration -.-> m_expected_calibration_error
   c_classification_correctness -.-> m_accuracy
@@ -143,12 +159,17 @@ graph TD
   c_classification_correctness -.-> m_precision_test_collection
   c_classification_correctness -.-> m_recall_test_collection
   c_classification_correctness -.-> m_roc_auc
+  c_decision_correctness -.-> m_decision_accuracy_with_ai
+  c_emotional_response -.-> m_self_assessment_manikin
   c_explanation_faithfulness -.-> m_aopc
+  c_explanation_understanding -.-> m_forward_prediction_accuracy
   c_factuality -.-> m_factscore
   c_fairness -.-> m_demographic_parity_difference
   c_groundedness -.-> m_answer_faithfulness
   c_mental_workload -.-> m_nasa_tlx
+  c_mental_workload -.-> m_smeq
   c_perceived_usability -.-> m_system_usability_scale
+  c_perceived_usability -.-> m_umux
   c_reference_similarity -.-> m_f1_score
   c_reference_similarity -.-> m_rouge
   c_relevance -.-> m_ndcg
@@ -159,12 +180,17 @@ graph TD
   c_safety -.-> m_attack_success_rate
   c_safety -.-> m_toxicity_rate
   c_situational_relevance -.-> m_precision_user_task
+  c_task_effectiveness -.-> m_task_success_rate_user
   c_task_efficiency -.-> m_task_completion_time
   c_tool_call_correctness -.-> m_tool_call_accuracy
   c_topical_relevance -.-> m_f1_score
   c_topical_relevance -.-> m_precision_test_collection
   c_topical_relevance -.-> m_recall_test_collection
   c_topical_relevance -.-> m_reciprocal_rank
+  c_trust_in_system -.-> m_trust_in_automation_scale
+  c_user_experience -.-> m_ueq
+  c_verifiable_correctness -.-> m_pass_at_k
+  c_visualization_aesthetics -.-> m_beauvis
   classDef metric stroke-dasharray: 4 2
 ```
 
@@ -183,6 +209,7 @@ A construct with several broader constructs appears under each of them.
       - [Generation performance: factuality](factuality.md) · metrics: [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
       - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
       - [Generation performance: similarity to reference](reference-similarity.md) · metrics: [F1 Score](../metrics/f1-score.md), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
+      - [Generation performance: verifiable correctness](verifiable-correctness.md) · metrics: [pass@k](../metrics/pass-at-k.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
@@ -204,26 +231,26 @@ A construct with several broader constructs appears under each of them.
     - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
     - [System robustness](robustness.md) · metrics: [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 - [Task characteristics](task-characteristics.md)
-  - [Explanation understanding](explanation-understanding.md)
+  - [Explanation understanding](explanation-understanding.md) · metrics: [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md)
   - [Reliance on AI](reliance.md)
-    - [Reliance on AI: appropriateness](appropriate-reliance.md)
+    - [Reliance on AI: appropriateness](appropriate-reliance.md) · metrics: [Over-reliance Rate](../metrics/over-reliance-rate.md), [Under-reliance Rate](../metrics/under-reliance-rate.md)
   - [Task performance](task-performance.md)
-    - [Task effectiveness](task-effectiveness.md)
-      - [Task effectiveness: decision correctness](decision-correctness.md)
+    - [Task effectiveness](task-effectiveness.md) · metrics: [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
+      - [Task effectiveness: decision correctness](decision-correctness.md) · metrics: [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
       - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
-      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
-  - [Trust in the system](trust-in-system.md)
+      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md), [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
+  - [Trust in the system](trust-in-system.md) · metrics: [Trust in Automation Scale](../metrics/trust-in-automation-scale.md)
   - [Usability](usability.md)
-    - [Task effectiveness](task-effectiveness.md)
-      - [Task effectiveness: decision correctness](decision-correctness.md)
+    - [Task effectiveness](task-effectiveness.md) · metrics: [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
+      - [Task effectiveness: decision correctness](decision-correctness.md) · metrics: [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
       - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
-      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
-    - [Usability: perceived usability](perceived-usability.md) · metrics: [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
-  - [User experience](user-experience.md)
-    - [User experience: emotional response](emotional-response.md)
-    - [User experience: visualization aesthetics](visualization-aesthetics.md)
+      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md), [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
+    - [Usability: perceived usability](perceived-usability.md) · metrics: [System Usability Scale (SUS)](../metrics/system-usability-scale.md), [Usability Metric for User Experience (UMUX)](../metrics/umux.md)
+  - [User experience](user-experience.md) · metrics: [User Experience Questionnaire (UEQ)](../metrics/ueq.md)
+    - [User experience: emotional response](emotional-response.md) · metrics: [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md)
+    - [User experience: visualization aesthetics](visualization-aesthetics.md) · metrics: [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
 - [User characteristics](user-characteristics.md)
   - [Literacy](literacy.md)
     - [Literacy: AI literacy](ai-literacy.md)
@@ -238,7 +265,6 @@ A construct with several broader constructs appears under each of them.
 - [Component characteristics](component-characteristics.md)
 - [Component performance](component-performance.md)
 - [Explanation performance](explanation-performance.md)
-- [Explanation understanding](explanation-understanding.md)
 - [Generation performance](generation-performance.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
@@ -248,7 +274,6 @@ A construct with several broader constructs appears under each of them.
 - [Literacy: visualization literacy](visualization-literacy.md)
 - [Output quality](output-quality.md)
 - [Reliance on AI](reliance.md)
-- [Reliance on AI: appropriateness](appropriate-reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)
 - [Retrieval efficiency](retrieval-efficiency.md)
@@ -256,14 +281,8 @@ A construct with several broader constructs appears under each of them.
 - [System characteristics](system-characteristics.md)
 - [System performance](system-performance.md)
 - [Task characteristics](task-characteristics.md)
-- [Task effectiveness](task-effectiveness.md)
-- [Task effectiveness: decision correctness](decision-correctness.md)
 - [Task performance](task-performance.md)
 - [Tool-use performance](tool-use-performance.md)
-- [Trust in the system](trust-in-system.md)
 - [Trustworthiness](trustworthiness.md)
 - [Usability](usability.md)
 - [User characteristics](user-characteristics.md)
-- [User experience](user-experience.md)
-- [User experience: emotional response](emotional-response.md)
-- [User experience: visualization aesthetics](visualization-aesthetics.md)

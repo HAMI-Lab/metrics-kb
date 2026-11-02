@@ -31,6 +31,7 @@ The narrower constructs cover different questions about the same output: does it
 - [Generation performance: factuality](factuality.md)
 - [Generation performance: groundedness](groundedness.md)
 - [Generation performance: similarity to reference](reference-similarity.md)
+- [Generation performance: verifiable correctness](verifiable-correctness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

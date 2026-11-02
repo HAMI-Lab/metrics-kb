@@ -33,7 +33,8 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Over-reliance Rate](../metrics/over-reliance-rate.md)
+- [Under-reliance Rate](../metrics/under-reliance-rate.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

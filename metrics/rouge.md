@@ -123,7 +123,7 @@ ROUGE-1, -2 and -L are variants on this page. BLEU (Bilingual Evaluation Underst
 
 <!-- generated:neighbours:start -->
 - Same construct: [F1 Score](f1-score.md) (Generation performance: similarity to reference)
-- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [pass@k](pass-at-k.md) (Generation performance: verifiable correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

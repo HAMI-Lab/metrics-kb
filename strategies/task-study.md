@@ -58,8 +58,13 @@ High per data point: recruiting, paying and running participants, and designing 
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
+- [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md)
+- [Over-reliance Rate](../metrics/over-reliance-rate.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
+- [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
+- [Under-reliance Rate](../metrics/under-reliance-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

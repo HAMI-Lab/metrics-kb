@@ -16,7 +16,7 @@ construct:
   subject: [system]
   aspect: [resource-cost]
   perspective: [objective]
-  quantity_form: ["other: monetary amount or token count"]
+  quantity_form: [monetary-amount]
   context: [task]
   facet_status: provisional
 
@@ -133,5 +133,4 @@ Trades off with [Task Success Rate (agent benchmark)](task-success-rate-benchmar
 - [patterson2021]: energy and emissions.
 
 ## Open questions and review notes
-- `quantity_form` has no value for money; `other: monetary amount or token count` is used. Add a value?
 - Energy per task and emissions are candidate sibling metrics.

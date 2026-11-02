@@ -51,6 +51,18 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [pass^k](../metrics/pass-hat-k.md) | positive | theoretical | Consistent behaviour is easier to learn. |
 | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | positive | theoretical | Untested with users here. |
 | [Cost per Task](../metrics/cost-per-task.md) | unknown | none | Cost is not something users experience directly. |
+| [pass@k](../metrics/pass-at-k.md) | unknown | none | Users see one output at a time and often cannot check it, so large-k scores say little about their experience. |
+| [Task Success Rate (user on task)](../metrics/task-success-rate-user.md) | positive | correlational | Effectiveness is part of usability by definition; correlations with other usability measures are modest. |
+| [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md) | positive | theoretical | Effectiveness of the person and system together. |
+| [Over-reliance Rate](../metrics/over-reliance-rate.md) | negative | theoretical | Inappropriate reliance lowers decision quality. |
+| [Under-reliance Rate](../metrics/under-reliance-rate.md) | negative | theoretical | Inappropriate reliance lowers decision quality. |
+| [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md) | positive | theoretical | Understanding supports appropriate use of the system. |
+| [Usability Metric for User Experience (UMUX)](../metrics/umux.md) | positive | correlational | Measures perceived usability. |
+| [User Experience Questionnaire (UEQ)](../metrics/ueq.md) | positive | theoretical | The pragmatic scales overlap with perceived usability. |
+| [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md) | unknown | none |  |
+| [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none | Aesthetic pleasure is distinct from readability. |
+| [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | unknown | none | More trust is good only when it matches trustworthiness. |
+| [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Less effort for the same outcome means better usability. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

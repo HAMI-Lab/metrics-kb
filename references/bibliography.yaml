@@ -788,3 +788,21 @@ shrout1979:
   note: Forms of the intraclass correlation
   origin: added by AI from Metric_Taxonomy_Extended.md (2026-11-01; was E14)
   verified: false
+kulal2019:
+  citation: 'Kulal, S., Pasupat, P., Chandra, K., Lee, M., Padon, O., Aiken, A., & Liang, P. (2019). SPoC: Search-based Pseudocode to Code. NeurIPS 2019 (arXiv:1906.04908). (check against the paper)'
+  url: https://arxiv.org/abs/1906.04908
+  note: Program synthesis success under a budget of candidate programs; early form of pass@k
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false
+yue2025:
+  citation: Yue, Y., et al. (2025). Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model? NeurIPS 2025 (arXiv:2504.13837). (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2504.13837
+  note: pass@k at large k as a capability boundary; RL-trained models vs base models
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false
+hariri2025:
+  citation: 'Hariri, M., Samandar, A., Hinczewski, M., & Chaudhary, V. (2025). Don''t Pass@k: A Bayesian Framework for Large Language Model Evaluation. ICLR 2026 (arXiv:2510.04265). (check against the paper)'
+  url: https://arxiv.org/abs/2510.04265
+  note: Instability of pass@k rankings with few samples; Bayesian alternative
+  origin: added by AI after a literature search (2026-11-02)
+  verified: false

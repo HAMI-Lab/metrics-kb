@@ -124,8 +124,8 @@ Component: [Response Latency](response-latency.md) is part of task time.
 Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
 
 <!-- generated:neighbours:start -->
-- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload)
-- Sibling construct: [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability)
+- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Subjective Mental Effort Questionnaire (SMEQ)](smeq.md) (Mental workload)
+- Sibling construct: [Task Success Rate (user on task)](task-success-rate-user.md) (Task effectiveness), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability), [Usability Metric for User Experience (UMUX)](umux.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

@@ -51,6 +51,10 @@ reference-similarity:
   title: "Generation performance: similarity to reference"
   broader: [generation-performance]
 
+verifiable-correctness:
+  title: "Generation performance: verifiable correctness"
+  broader: [generation-performance]
+
 retrieval-performance:
   title: Retrieval performance
   broader: [component-performance]

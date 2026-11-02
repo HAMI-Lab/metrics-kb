@@ -34,6 +34,7 @@ _None yet._
 Standardized questionnaires such as SUS [brooke1996] are the usual operationalization.
 <!-- generated:metrics:start -->
 - [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
+- [Usability Metric for User Experience (UMUX)](../metrics/umux.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

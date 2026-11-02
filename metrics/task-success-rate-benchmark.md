@@ -38,6 +38,7 @@ cost:
 
 related:
   - {metric: pass-hat-k, kind: operational, note: "pass^k extends success rate to repeated runs."}
+  - {metric: task-success-rate-user, kind: operational, note: "Same computation at the task level: a person uses the system for their own goal."}
   - {metric: tool-call-accuracy, kind: conceptual, note: "Correct tool calls are a step toward success, not success itself."}
   - {metric: cost-per-task, kind: empirical, note: "Higher success often costs more per task."}
 
@@ -55,7 +56,7 @@ sources: [mohammadi2025, jimenez2023, mialon2023, chen2021, kapoor2025]
 ## 1. What is measured
 
 ### 1.1 Definition
-Task Success Rate (agent benchmark) is the share of tasks in which an autonomous system reaches the goal, such as buying the right product, fixing a software issue, or giving the right final answer [mohammadi2025]. Success is checked automatically, by tests or a reference answer. No user takes part; when a person uses the system for their own goal, see the task-level page (not yet written; D20).
+Task Success Rate (agent benchmark) is the share of tasks in which an autonomous system reaches the goal, such as buying the right product, fixing a software issue, or giving the right final answer [mohammadi2025]. Success is checked automatically, by tests or a reference answer. No user takes part; when a person uses the system for their own goal, see [Task Success Rate (user on task)](task-success-rate-user.md) (D20).
 
 ### 1.2 Construct: property of subject in context
 The property is autonomous task completion. The subject is the system acting alone. The context is a benchmark of tasks.
@@ -86,7 +87,7 @@ Run the agent on the benchmark tasks and apply the success checks.
 - Success rate = tasks completed ÷ tasks attempted.
 - Resolution rate (SWE-bench): issues whose tests pass after the agent's patch ÷ issues [jimenez2023].
 - Quasi-exact match of final answers (GAIA) [mialon2023].
-- pass@k: share of tasks solved by at least one of k samples [chen2021].
+- pass@k: share of tasks solved by at least one of k samples [chen2021]. For a model generating code or answers without an agent loop, pass@k is component level and has its own page: [pass@k](pass-at-k.md) (D20).
 
 ### 2.5 Unit and scale
 0 to 1.
@@ -141,4 +142,4 @@ Success and cost trade off: agent leaderboards plot accuracy against dollar cost
 - [kapoor2025]: cost-aware leaderboards.
 
 ## Open questions and review notes
-- The task-level counterpart, Task Success Rate (user on task), is planned for the task branch.
+- None yet.

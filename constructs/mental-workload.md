@@ -34,6 +34,7 @@ _None yet._
 Self-report questionnaires such as NASA-TLX are cheapest; physiological measures and secondary-task methods are alternatives.
 <!-- generated:metrics:start -->
 - [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
+- [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

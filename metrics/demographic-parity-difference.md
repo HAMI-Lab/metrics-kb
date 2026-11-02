@@ -14,7 +14,7 @@ construct:
   statement: "How much the rate of favourable decisions differs between groups of people."
   measures: [fairness]
   subject: [system]
-  aspect: ["other: fairness"]
+  aspect: [fairness]
   perspective: [objective]
   quantity_form: [proportion]
   context: [task]
@@ -138,5 +138,4 @@ Hypothesis: reducing DPD through post-processing tends to lower overall accuracy
 - [jacobs2021]: fairness as a contested construct.
 
 ## Open questions and review notes
-- `aspect` has no fairness value; `other: fairness` is used. Add fairness to the vocabulary?
 - Should equalized odds difference get its own page?
