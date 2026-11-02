@@ -38,6 +38,7 @@ cost:
 
 related:
   - {metric: f1-score, kind: operational, note: "Tool Call F1 is F1 over calls."}
+  - {metric: task-success-rate-benchmark, kind: conceptual, note: "Whether the goal was reached, regardless of the calls."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Long causal chain."}
@@ -65,7 +66,7 @@ Measures, in the [construct DAG](../constructs/index.md):
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
-It does not show whether the task was completed; see Task Success Rate (autonomous), on the system branch (page not yet written). It says nothing about efficiency (extra calls).
+It does not show whether the task was completed; see [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md). It says nothing about efficiency (extra calls).
 
 ## 2. How it is measured
 
@@ -115,7 +116,7 @@ Hypothesis: agents tuned to match reference calls may lose the ability to find o
 Tool Call F1 and tool selection accuracy are variants on this page.
 
 ### 5.2 Conceptually related metrics
-Task Success Rate (autonomous), on the system branch (page not yet written) judges the outcome instead of the calls.
+[Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) judges the outcome instead of the calls.
 
 <!-- generated:neighbours:start -->
 _None found from the construct DAG yet._

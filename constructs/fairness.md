@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 Group-difference metrics such as demographic parity difference compare one quantity across groups.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

@@ -59,6 +59,8 @@ At least the cost of the underlying measurement per condition, plus the work of 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
+- [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
+- [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

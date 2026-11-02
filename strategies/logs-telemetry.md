@@ -58,9 +58,12 @@ Low per measurement once instrumented. The costs are engineering time to add and
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [Cost per Task](../metrics/cost-per-task.md)
+- [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)
+- [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

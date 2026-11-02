@@ -33,7 +33,8 @@ _None yet._
 ## 4. Metrics
 Attack success rate measures resistance to adversarial prompts; toxicity rate measures harmful content in ordinary use.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Attack Success Rate (ASR)](../metrics/attack-success-rate.md)
+- [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

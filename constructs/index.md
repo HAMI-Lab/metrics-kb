@@ -62,11 +62,16 @@ graph TD
   m_accuracy["Accuracy"]:::metric
   m_answer_faithfulness["Answer Faithfulness"]:::metric
   m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
+  m_attack_success_rate["Attack Success Rate (ASR)"]:::metric
+  m_cost_per_task["Cost per Task"]:::metric
+  m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
   m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
   m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
   m_ndcg["Normalized Discounted Cumulative Gain (nDCG)"]:::metric
+  m_pass_hat_k["pass^k"]:::metric
+  m_performance_drop_rate["Performance Drop Rate (PDR)"]:::metric
   m_precision_test_collection["Precision (test collection)"]:::metric
   m_precision_user_task["Precision (user on task)"]:::metric
   m_recall_test_collection["Recall (test collection)"]:::metric
@@ -76,7 +81,9 @@ graph TD
   m_rouge["Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"]:::metric
   m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
+  m_task_success_rate_benchmark["Task Success Rate (agent benchmark)"]:::metric
   m_tool_call_accuracy["Tool Call Accuracy"]:::metric
+  m_toxicity_rate["Toxicity Rate"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_component_characteristics --> c_component_performance
@@ -129,6 +136,7 @@ graph TD
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
   c_visualization_literacy --> c_critical_visualization_literacy
+  c_autonomous_task_completion -.-> m_task_success_rate_benchmark
   c_calibration -.-> m_expected_calibration_error
   c_classification_correctness -.-> m_accuracy
   c_classification_correctness -.-> m_f1_score
@@ -137,13 +145,19 @@ graph TD
   c_classification_correctness -.-> m_roc_auc
   c_explanation_faithfulness -.-> m_aopc
   c_factuality -.-> m_factscore
+  c_fairness -.-> m_demographic_parity_difference
   c_groundedness -.-> m_answer_faithfulness
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
   c_reference_similarity -.-> m_f1_score
   c_reference_similarity -.-> m_rouge
   c_relevance -.-> m_ndcg
+  c_resource_cost -.-> m_cost_per_task
   c_responsiveness -.-> m_response_latency
+  c_robustness -.-> m_performance_drop_rate
+  c_run_consistency -.-> m_pass_hat_k
+  c_safety -.-> m_attack_success_rate
+  c_safety -.-> m_toxicity_rate
   c_situational_relevance -.-> m_precision_user_task
   c_task_efficiency -.-> m_task_completion_time
   c_tool_call_correctness -.-> m_tool_call_accuracy
@@ -179,16 +193,16 @@ A construct with several broader constructs appears under each of them.
     - [Tool-use performance](tool-use-performance.md)
       - [Tool-use performance: call correctness](tool-call-correctness.md) · metrics: [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 - [System characteristics](system-characteristics.md)
-  - [Resource cost](resource-cost.md)
+  - [Resource cost](resource-cost.md) · metrics: [Cost per Task](../metrics/cost-per-task.md)
   - [System performance](system-performance.md)
-    - [Autonomous task completion](autonomous-task-completion.md)
-    - [Consistency across runs](run-consistency.md)
+    - [Autonomous task completion](autonomous-task-completion.md) · metrics: [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
+    - [Consistency across runs](run-consistency.md) · metrics: [pass^k](../metrics/pass-hat-k.md)
     - [Output quality](output-quality.md)
-      - [Output quality: fairness](fairness.md)
-      - [Output quality: safety](safety.md)
+      - [Output quality: fairness](fairness.md) · metrics: [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
+      - [Output quality: safety](safety.md) · metrics: [Attack Success Rate (ASR)](../metrics/attack-success-rate.md), [Toxicity Rate](../metrics/toxicity-rate.md)
       - [Trustworthiness](trustworthiness.md)
     - [System responsiveness](responsiveness.md) · metrics: [Response Latency](../metrics/response-latency.md)
-    - [System robustness](robustness.md)
+    - [System robustness](robustness.md) · metrics: [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 - [Task characteristics](task-characteristics.md)
   - [Explanation understanding](explanation-understanding.md)
   - [Reliance on AI](reliance.md)
@@ -220,11 +234,9 @@ A construct with several broader constructs appears under each of them.
 
 ## Constructs with no metric yet
 
-- [Autonomous task completion](autonomous-task-completion.md)
 - [Classification performance](classification-performance.md)
 - [Component characteristics](component-characteristics.md)
 - [Component performance](component-performance.md)
-- [Consistency across runs](run-consistency.md)
 - [Explanation performance](explanation-performance.md)
 - [Explanation understanding](explanation-understanding.md)
 - [Generation performance](generation-performance.md)
@@ -235,18 +247,14 @@ A construct with several broader constructs appears under each of them.
 - [Literacy: numeracy](numeracy.md)
 - [Literacy: visualization literacy](visualization-literacy.md)
 - [Output quality](output-quality.md)
-- [Output quality: fairness](fairness.md)
-- [Output quality: safety](safety.md)
 - [Reliance on AI](reliance.md)
 - [Reliance on AI: appropriateness](appropriate-reliance.md)
-- [Resource cost](resource-cost.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)
 - [Retrieval efficiency](retrieval-efficiency.md)
 - [Retrieval performance](retrieval-performance.md)
 - [System characteristics](system-characteristics.md)
 - [System performance](system-performance.md)
-- [System robustness](robustness.md)
 - [Task characteristics](task-characteristics.md)
 - [Task effectiveness](task-effectiveness.md)
 - [Task effectiveness: decision correctness](decision-correctness.md)

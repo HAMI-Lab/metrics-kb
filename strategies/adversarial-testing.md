@@ -56,7 +56,7 @@ Human red teaming is costly and stressful work. Fixed suites are cheap to re-run
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-_No metric page uses it yet._
+- [Attack Success Rate (ASR)](../metrics/attack-success-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 Cost per task is one metric; energy and emissions are others not yet written.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Cost per Task](../metrics/cost-per-task.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

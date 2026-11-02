@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 Performance drop rate compares scores on original and changed inputs.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

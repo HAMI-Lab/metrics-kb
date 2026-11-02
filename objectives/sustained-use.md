@@ -48,6 +48,13 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Answer Faithfulness](../metrics/answer-faithfulness.md) | positive | theoretical | Grounded answers are expected to keep trust. |
 | [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | positive | theoretical | Long causal chain. |
 | [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md) | unknown | none |  |
+| [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | negative | theoretical | Successful attacks that become public erode trust in the system. |
+| [Toxicity Rate](../metrics/toxicity-rate.md) | negative | theoretical | Toxic outputs drive users away and damage reputation. |
+| [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md) | unknown | none |  |
+| [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md) | negative | theoretical | Systems that break on small input changes frustrate users. |
+| [pass^k](../metrics/pass-hat-k.md) | positive | theoretical | Users stop relying on systems whose success they cannot predict. |
+| [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | positive | theoretical | Agents that complete tasks save users work. |
+| [Cost per Task](../metrics/cost-per-task.md) | negative | theoretical | Costly systems are harder to offer at a price users accept. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

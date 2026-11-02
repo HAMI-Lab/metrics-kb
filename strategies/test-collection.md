@@ -61,15 +61,21 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 - [Answer Faithfulness](../metrics/answer-faithfulness.md)
 - [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
 - [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
+- [Cost per Task](../metrics/cost-per-task.md)
+- [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
 - [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 - [F1 Score](../metrics/f1-score.md)
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 - [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
 - [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
+- [pass^k](../metrics/pass-hat-k.md)
+- [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md)
 - [Precision (test collection)](../metrics/precision-test-collection.md)
 - [Recall (test collection)](../metrics/recall-test-collection.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
+- [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
+- [Toxicity Rate](../metrics/toxicity-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

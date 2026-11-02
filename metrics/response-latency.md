@@ -54,7 +54,7 @@ sources: [miller1968, card1983, nielsen1993, dean2013, arapakis2014, liu2014, ko
 ## 1. What is measured
 
 ### 1.1 Definition
-The elapsed time from a user action (a click, a query, a prompt) to the system's response. For streaming AI systems, two readings are common: **time to first token** (when output starts appearing) and **end-to-end latency** (when the response is complete).
+The elapsed time from a user action (a click, a query, a prompt) to the system's response. For streaming AI systems, two readings are common: **time to first token (TTFT)** (when output starts appearing) and **end-to-end latency** (when the response is complete).
 
 ### 1.2 Construct: property of subject in context
 The property is **responsiveness**. The subject is the **system**, including its network path. The context is the kind of request (a simple lookup vs. a long generation) and the time and place (load, network conditions, the user's device).
@@ -81,6 +81,8 @@ Offline: benchmark runs on fixed inputs [liang2022; chang2024]. Online: telemetr
 
 ### 2.4 Computation
 Collect per-request durations and report percentiles, typically the median (p50) and a tail value (p95 or p99), not only the mean. Tail latency matters because users of large systems regularly hit the slow cases [dean2013]. For AI agents, also report latency per completed task, which includes all intermediate steps and tool calls [mohammadi2025; kapoor2025].
+
+Variants on this page: time to first token (TTFT) and end-to-end latency for streaming responses [mohammadi2025]; server-side inference time, which leaves out the network and the client [liang2022]; and per-step and whole-run latency for agents.
 
 ### 2.5 Unit and scale
 Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive systems: about 0.1 s feels instantaneous, about 1 s keeps the flow of thought, and about 10 s is the limit for holding attention [miller1968; card1983; nielsen1993]. These predate AI assistants and should be treated as guidance, not thresholds.
@@ -119,7 +121,7 @@ Component of [Task Completion Time](task-completion-time.md).
 Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
 
 <!-- generated:neighbours:start -->
-_None found from the construct DAG yet._
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [pass^k](pass-hat-k.md) (Consistency across runs), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
@@ -141,4 +143,4 @@ This is one of the few metrics in the pilot where the path to the business objec
 
 ## Open questions and review notes
 - Verify the specific figures attributed to [liu2014] and add figures from [arapakis2014].
-- Should time to first token be a separate page?
+- Should time to first token be a separate page? No: it differs only in the end point of the interval, so it stays here as a variant (D5).

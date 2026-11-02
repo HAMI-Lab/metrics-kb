@@ -44,6 +44,13 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Answer Faithfulness](../metrics/answer-faithfulness.md) | positive | theoretical | Answers users can trace to sources support checking. |
 | [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | positive | theoretical | Through autonomous task completion; not measured. |
 | [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md) | positive | theoretical | Faithful explanations are a precondition for users to understand the model. |
+| [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | unknown | none | Safety measures can also make the system refuse harmless requests. |
+| [Toxicity Rate](../metrics/toxicity-rate.md) | negative | theoretical | Toxic outputs make the system unpleasant to use. |
+| [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md) | unknown | none |  |
+| [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md) | negative | theoretical | Users rarely phrase inputs the way benchmarks do. |
+| [pass^k](../metrics/pass-hat-k.md) | positive | theoretical | Consistent behaviour is easier to learn. |
+| [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | positive | theoretical | Untested with users here. |
+| [Cost per Task](../metrics/cost-per-task.md) | unknown | none | Cost is not something users experience directly. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].
