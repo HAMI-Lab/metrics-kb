@@ -103,10 +103,10 @@ naveed2024:
   origin: migrated from spreadsheet (was S17)
   verified: false
 gambetti2025:
-  citation: "Gambetti, A., et al. (2025). A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems. arXiv preprint, first submitted Feb 2025. (check against the paper for the full author list; the repo's earlier migration notes speculated a possible mix-up with a separate 'Humer et al., 2024' source at the same link -- that could not be confirmed one way or the other, so treat with care)"
+  citation: "Gambetti, A., Han, Q., Shen, H., & Soares, C. (2025). A Survey on Human-Centered Evaluation of Explainable AI Methods in Clinical Decision Support Systems. arXiv preprint arXiv:2502.09849. (title and authors confirmed against the paper by the project lead on 2026-11-02; venue not checked)"
   url: https://arxiv.org/pdf/2502.09849
   note: Human-centered evaluation frameworks for clinical XAI
-  origin: migrated from spreadsheet (was S18)
+  origin: migrated from spreadsheet (was S18); the spreadsheet's "Humer et al., 2024" row with the same link refers to this paper
   verified: false
 mienye2024:
   citation: "Mienye, I. D., et al. (2024). A survey of explainable artificial intelligence in healthcare: Concepts, applications, and challenges. Informatics in Medicine Unlocked. (check against the paper for the full author list)"
