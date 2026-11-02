@@ -27,7 +27,7 @@ About reading visualizations in general, not the usability of a particular visua
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-_None yet._
+- [Literacy: critical visualization literacy](critical-visualization-literacy.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

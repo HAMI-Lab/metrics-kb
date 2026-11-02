@@ -26,8 +26,10 @@ The quality of what the system as a whole delivers, judged against what it shoul
 It judges outputs, not the user's outcome ([task effectiveness](task-effectiveness.md)) or the experience ([usability](usability.md)).
 
 ## 3. Narrower constructs
-Narrower constructs are qualities of end-to-end output. After the 2026-10-26 split, only trustworthiness is here; correctness, completeness, and faithfulness of end-to-end outputs are candidates.
+Narrower constructs are qualities of end-to-end output. Trustworthiness, safety and fairness so far; correctness, completeness and faithfulness of end-to-end outputs are candidates.
 <!-- generated:narrower:start -->
+- [Output quality: fairness](fairness.md)
+- [Output quality: safety](safety.md)
 - [Trustworthiness](trustworthiness.md)
 <!-- generated:narrower:end -->
 

@@ -30,6 +30,7 @@ Each kind of literacy has its own definition and tests. They overlap (reading a 
 <!-- generated:narrower:start -->
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
+- [Literacy: numeracy](numeracy.md)
 - [Literacy: visualization literacy](visualization-literacy.md)
 <!-- generated:narrower:end -->
 

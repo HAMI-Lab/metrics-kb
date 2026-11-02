@@ -28,8 +28,12 @@ Unlike [system characteristics](system-characteristics.md) and [user characteris
 ## 3. Narrower constructs
 [Task performance](task-performance.md) covers outcomes and the resources spent on them. [Usability](usability.md) adds how the user experiences the task. Task effectiveness and task efficiency sit under both.
 <!-- generated:narrower:start -->
+- [Explanation understanding](explanation-understanding.md)
+- [Reliance on AI](reliance.md)
 - [Task performance](task-performance.md)
+- [Trust in the system](trust-in-system.md)
 - [Usability](usability.md)
+- [User experience](user-experience.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

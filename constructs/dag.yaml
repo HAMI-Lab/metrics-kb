@@ -23,6 +23,34 @@ classification-correctness:
   title: "Classification effectiveness: correctness"
   broader: [classification-performance]
 
+calibration:
+  title: "Classification performance: calibration"
+  broader: [classification-performance]
+
+explanation-performance:
+  title: Explanation performance
+  broader: [component-performance]
+
+explanation-faithfulness:
+  title: "Explanation performance: faithfulness"
+  broader: [explanation-performance]
+
+generation-performance:
+  title: Generation performance
+  broader: [component-performance]
+
+factuality:
+  title: "Generation performance: factuality"
+  broader: [generation-performance]
+
+groundedness:
+  title: "Generation performance: groundedness"
+  broader: [generation-performance]
+
+reference-similarity:
+  title: "Generation performance: similarity to reference"
+  broader: [generation-performance]
+
 retrieval-performance:
   title: Retrieval performance
   broader: [component-performance]
@@ -47,17 +75,45 @@ retrieval-efficiency:
   title: Retrieval efficiency
   broader: [retrieval-performance]
 
+tool-use-performance:
+  title: Tool-use performance
+  broader: [component-performance]
+
+tool-call-correctness:
+  title: "Tool-use performance: call correctness"
+  broader: [tool-use-performance]
+
 system-characteristics:
   title: System characteristics
   broader: []
+
+resource-cost:
+  title: Resource cost
+  broader: [system-characteristics]
 
 system-performance:
   title: System performance
   broader: [system-characteristics]
 
+autonomous-task-completion:
+  title: Autonomous task completion
+  broader: [system-performance]
+
+run-consistency:
+  title: Consistency across runs
+  broader: [system-performance]
+
 output-quality:
   title: Output quality
   broader: [system-performance]
+
+fairness:
+  title: "Output quality: fairness"
+  broader: [output-quality]
+
+safety:
+  title: "Output quality: safety"
+  broader: [output-quality]
 
 trustworthiness:
   title: Trustworthiness
@@ -67,12 +123,32 @@ responsiveness:
   title: System responsiveness
   broader: [system-performance]
 
+robustness:
+  title: System robustness
+  broader: [system-performance]
+
 task-characteristics:
   title: Task characteristics
   broader: []
 
+explanation-understanding:
+  title: Explanation understanding
+  broader: [task-characteristics]
+
+reliance:
+  title: Reliance on AI
+  broader: [task-characteristics]
+
+appropriate-reliance:
+  title: "Reliance on AI: appropriateness"
+  broader: [reliance]
+
 task-performance:
   title: Task performance
+  broader: [task-characteristics]
+
+trust-in-system:
+  title: Trust in the system
   broader: [task-characteristics]
 
 usability:
@@ -82,6 +158,10 @@ usability:
 task-effectiveness:
   title: Task effectiveness
   broader: [task-performance, usability]
+
+decision-correctness:
+  title: "Task effectiveness: decision correctness"
+  broader: [task-effectiveness]
 
 situational-relevance:
   title: "Task effectiveness: situational relevance"
@@ -99,6 +179,18 @@ perceived-usability:
   title: "Usability: perceived usability"
   broader: [usability]
 
+user-experience:
+  title: User experience
+  broader: [task-characteristics]
+
+emotional-response:
+  title: "User experience: emotional response"
+  broader: [user-experience]
+
+visualization-aesthetics:
+  title: "User experience: visualization aesthetics"
+  broader: [user-experience]
+
 user-characteristics:
   title: User characteristics
   broader: []
@@ -115,6 +207,14 @@ information-literacy:
   title: "Literacy: information literacy"
   broader: [literacy]
 
+numeracy:
+  title: "Literacy: numeracy"
+  broader: [literacy]
+
 visualization-literacy:
   title: "Literacy: visualization literacy"
   broader: [literacy]
+
+critical-visualization-literacy:
+  title: "Literacy: critical visualization literacy"
+  broader: [visualization-literacy]

@@ -26,10 +26,13 @@ The quality, speed, and correctness of one component's work, judged against what
 It mirrors [system performance](system-performance.md) and [task performance](task-performance.md) one level down.
 
 ## 3. Narrower constructs
-One narrower construct per kind of component or functionality: retrieval and classification so far.
+One narrower construct per kind of component or functionality: classification, retrieval, generation, tool use and explanation so far.
 <!-- generated:narrower:start -->
 - [Classification performance](classification-performance.md)
+- [Explanation performance](explanation-performance.md)
+- [Generation performance](generation-performance.md)
 - [Retrieval performance](retrieval-performance.md)
+- [Tool-use performance](tool-use-performance.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics
@@ -48,5 +51,5 @@ Added on 2026-10-26 to mirror the system and task sides.
 - None yet.
 
 ## Open questions and review notes
-- Generation and recommendation are components (they can come from a backend without specifying how the front end renders them); pages to be added later.
+- Generation was added on 2026-11-01. Recommendation is also a component (it can come from a backend without specifying how the front end renders it); its page is to be added later.
 - The interface is also a component; interface constructs are to be added later.

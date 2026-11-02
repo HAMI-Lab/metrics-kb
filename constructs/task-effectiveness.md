@@ -28,6 +28,7 @@ It judges the *outcome* of the user and system together, unlike [output quality]
 ## 3. Narrower constructs
 Narrower constructs are field-specific forms of outcome quality, such as how relevant search results are to the user's own task.
 <!-- generated:narrower:start -->
+- [Task effectiveness: decision correctness](decision-correctness.md)
 - [Task effectiveness: situational relevance](situational-relevance.md)
 <!-- generated:narrower:end -->
 

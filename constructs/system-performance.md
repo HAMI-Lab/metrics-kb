@@ -26,10 +26,13 @@ Performance of the system as measured without a user pursuing a goal: the qualit
 It mirrors [task performance](task-performance.md) on the task side. A system can perform well on benchmarks while users still struggle with the task; the two are linked by evidence, not by definition.
 
 ## 3. Narrower constructs
-End-to-end output quality, responsiveness, and reliability. Field-specific performance of single parts (such as [retrieval performance](retrieval-performance.md)) is on the component side.
+End-to-end output quality, responsiveness, robustness, consistency across runs, and completion of tasks the system does on its own. Resource cost sits beside system performance, not under it. Field-specific performance of single parts (such as [retrieval performance](retrieval-performance.md)) is on the component side.
 <!-- generated:narrower:start -->
+- [Autonomous task completion](autonomous-task-completion.md)
+- [Consistency across runs](run-consistency.md)
 - [Output quality](output-quality.md)
 - [System responsiveness](responsiveness.md)
+- [System robustness](robustness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

@@ -28,6 +28,7 @@ Unlike [task characteristics](task-characteristics.md), they do not need a user 
 ## 3. Narrower constructs
 [System performance](system-performance.md) mirrors task performance on the task side. Several system properties are indirect causes of task characteristics, recorded as empirical links on metric pages rather than as DAG edges.
 <!-- generated:narrower:start -->
+- [Resource cost](resource-cost.md)
 - [System performance](system-performance.md)
 <!-- generated:narrower:end -->
 
