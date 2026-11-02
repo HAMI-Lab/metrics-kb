@@ -25,9 +25,9 @@ sources: [ribeiro2020, barocas2021, samek2017, zhu2023, chang2024]
 The data comes from running the same measurement more than once: on the original and on a deliberately changed version of the inputs, the system, or the population. Because only one thing differs between conditions, a change in the score can be attributed to it. This is the logic of experimental design. The conditions are usually built on top of another method, such as a test collection or a task study.
 
 ### 1.2 Typical pairings
-The difference route turns the paired scores into one number.
+The difference-scoring route turns the paired scores into one number.
 <!-- generated:pairings:start -->
-- [Difference: changes between conditions](difference.md)
+- [Difference scoring: changes between conditions](difference-scoring.md)
 <!-- generated:pairings:end -->
 
 ### 1.3 Named practices

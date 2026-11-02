@@ -1,7 +1,7 @@
 ---
-id: difference
-title: "Difference: changes between conditions"
-aliases: [difference score, gap, drop, disparity, relative change, contrast]
+id: difference-scoring
+title: "Difference scoring: changes between conditions"
+aliases: [difference, difference score, gap, drop, disparity, relative change, contrast]
 page_type: strategy
 template_version: "0.2"
 
@@ -15,7 +15,7 @@ reviewers: []
 sources: [cronbach1970, barocas2021, ribeiro2020, samek2017]
 ---
 
-# Difference: changes between conditions
+# Difference scoring: changes between conditions
 
 > The number is how much a score changes from one condition to another.
 
