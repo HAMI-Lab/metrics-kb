@@ -66,6 +66,7 @@ Human judges: medium to high per item. LLM judges and simulators: low per item, 
 <!-- generated:metrics:start -->
 - [Answer Faithfulness](../metrics/answer-faithfulness.md)
 - [Attack Success Rate (ASR)](../metrics/attack-success-rate.md)
+- [CLIPScore](../metrics/clipscore.md)
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 - [Judge Rating (model judge)](../metrics/judge-rating.md)
 - [Learned Reference-Based Score](../metrics/learned-reference-score.md)

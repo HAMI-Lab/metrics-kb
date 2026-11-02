@@ -60,6 +60,7 @@ Low per measurement once instrumented. The costs are engineering time to add and
 <!-- generated:metrics:start -->
 - [Cost per Task](../metrics/cost-per-task.md)
 - [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
+- [Elo Rating (pairwise comparison)](../metrics/elo-rating.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
 - [Response Latency](../metrics/response-latency.md)
 - [Task Completion Time](../metrics/task-completion-time.md)

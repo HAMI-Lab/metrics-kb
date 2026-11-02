@@ -57,6 +57,7 @@ Low per measurement once instrumented; the cost is engineering time to add and m
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md)
 - [Cost per Task](../metrics/cost-per-task.md)
 - [Demographic Profile (questionnaire)](../metrics/demographic-profile.md)
 - [Educational Attainment (questionnaire)](../metrics/educational-attainment.md)

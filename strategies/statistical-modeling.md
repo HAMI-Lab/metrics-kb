@@ -56,6 +56,7 @@ Needs statistical expertise and data to fit; cheap to apply once fitted.
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
+- [Elo Rating (pairwise comparison)](../metrics/elo-rating.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
 - [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
 <!-- generated:metrics:end -->

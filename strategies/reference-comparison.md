@@ -66,6 +66,7 @@ High to build the reference (usually by [external judgment](external-judgment.md
 - [F1 Score](../metrics/f1-score.md)
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 - [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md)
+- [Grounding Accuracy](../metrics/grounding-accuracy.md)
 - [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md)
 - [Learned Reference-Based Score](../metrics/learned-reference-score.md)
 - [Mean Average Precision (MAP)](../metrics/mean-average-precision.md)
@@ -78,11 +79,14 @@ High to build the reference (usually by [external judgment](external-judgment.md
 - [Precision (benchmark)](../metrics/precision-benchmark.md)
 - [Recall (benchmark)](../metrics/recall-benchmark.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
+- [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
+- [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
 - [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
 - [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 - [Under-reliance Rate](../metrics/under-reliance-rate.md)
 - [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
+- [Word Error Rate (WER)](../metrics/word-error-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

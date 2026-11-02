@@ -129,8 +129,9 @@ None on the wiki yet; win rate from pairwise judging is a candidate.
 [Answer Faithfulness](answer-faithfulness.md) uses a judge for one property; [Instruction-Following Accuracy](instruction-following-accuracy.md) covers checkable instructions without a judge.
 
 <!-- generated:neighbours:start -->
+- Same construct: [Elo Rating (pairwise comparison)](elo-rating.md) (Output quality), [Win Rate (pairwise comparison)](win-rate.md) (Output quality)
 - Narrower construct: [Demographic Parity Difference (DPD)](demographic-parity-difference.md) (Output quality: fairness), [Attack Success Rate (ASR)](attack-success-rate.md) (Output quality: safety), [Toxicity Rate](toxicity-rate.md) (Output quality: safety)
-- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [pass^k](pass-hat-k.md) (Consistency across runs), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Action Efficiency Relative to Humans](action-efficiency-vs-humans.md) (Autonomous task efficiency), [pass^k](pass-hat-k.md) (Consistency across runs), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

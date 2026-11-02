@@ -10,6 +10,7 @@ graph TD
   c_answer_correctness(["Closed-answer performance: answer correctness"])
   c_appropriate_reliance(["Reliance on AI: appropriateness"])
   c_autonomous_task_completion(["Autonomous task completion"])
+  c_autonomous_task_efficiency(["Autonomous task efficiency"])
   c_calibration(["Classification performance: calibration"])
   c_classification_correctness(["Classification effectiveness: correctness"])
   c_classification_performance(["Classification performance"])
@@ -30,11 +31,17 @@ graph TD
   c_functional_correctness(["Generation performance: functional correctness"])
   c_generation_performance(["Generation performance"])
   c_groundedness(["Generation performance: groundedness"])
+  c_grounding_accuracy(["Grounding performance: localization accuracy"])
+  c_grounding_performance(["Grounding performance"])
+  c_image_generation_performance(["Image generation performance"])
   c_information_literacy(["Literacy: information literacy"])
   c_instruction_following(["Generation performance: instruction following"])
   c_literacy(["Literacy"])
+  c_map_prediction_performance(["Map prediction performance"])
   c_mental_workload(["Mental workload"])
   c_numeracy(["Literacy: numeracy"])
+  c_numeric_prediction_accuracy(["Numeric prediction performance: accuracy"])
+  c_numeric_prediction_performance(["Numeric prediction performance"])
   c_output_quality(["Output quality"])
   c_perceived_usability(["Usability: perceived usability"])
   c_relevance(["Retrieval effectiveness: relevance"])
@@ -47,6 +54,7 @@ graph TD
   c_robustness(["System robustness"])
   c_run_consistency(["Consistency across runs"])
   c_safety(["Output quality: safety"])
+  c_saliency_prediction_accuracy(["Map prediction performance: saliency prediction accuracy"])
   c_situational_relevance(["Task effectiveness: situational relevance"])
   c_system_characteristics(["System characteristics"])
   c_system_performance(["System performance"])
@@ -54,10 +62,13 @@ graph TD
   c_task_effectiveness(["Task effectiveness"])
   c_task_efficiency(["Task efficiency"])
   c_task_performance(["Task performance"])
+  c_text_image_alignment(["Image generation performance: text-image alignment"])
   c_timeliness(["Retrieval effectiveness: timeliness"])
   c_tool_call_correctness(["Tool-use performance: call correctness"])
   c_tool_use_performance(["Tool-use performance"])
   c_topical_relevance(["Retrieval effectiveness: topical relevance"])
+  c_transcription_accuracy(["Transcription performance: accuracy"])
+  c_transcription_performance(["Transcription performance"])
   c_trust_in_system(["Trust in the system"])
   c_trustworthiness(["Trustworthiness"])
   c_usability(["Usability"])
@@ -67,19 +78,23 @@ graph TD
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_accuracy["Accuracy"]:::metric
+  m_action_efficiency_vs_humans["Action Efficiency Relative to Humans"]:::metric
   m_answer_faithfulness["Answer Faithfulness"]:::metric
   m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
   m_attack_success_rate["Attack Success Rate (ASR)"]:::metric
+  m_clipscore["CLIPScore"]:::metric
   m_cost_per_task["Cost per Task"]:::metric
   m_decision_accuracy_with_ai["Decision Accuracy with AI Assistance"]:::metric
   m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
   m_demographic_profile["Demographic Profile (questionnaire)"]:::metric
   m_educational_attainment["Educational Attainment (questionnaire)"]:::metric
+  m_elo_rating["Elo Rating (pairwise comparison)"]:::metric
   m_emotional_response_score["Emotional Response Score (questionnaire)"]:::metric
   m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
   m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
   m_forward_prediction_accuracy["Forward-Prediction Accuracy"]:::metric
+  m_grounding_accuracy["Grounding Accuracy"]:::metric
   m_instruction_following_accuracy["Instruction-Following Accuracy"]:::metric
   m_judge_rating["Judge Rating (model judge)"]:::metric
   m_learned_reference_score["Learned Reference-Based Score"]:::metric
@@ -98,7 +113,9 @@ graph TD
   m_reciprocal_rank["Mean Reciprocal Rank (MRR)"]:::metric
   m_response_latency["Response Latency"]:::metric
   m_roc_auc["Area Under the ROC Curve (ROC-AUC)"]:::metric
+  m_root_mean_squared_error["Root Mean Squared Error (RMSE)"]:::metric
   m_rouge["Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"]:::metric
+  m_saliency_map_similarity["Saliency Map Similarity (SIM)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
   m_task_success_rate_benchmark["Task Success Rate (agent benchmark)"]:::metric
   m_task_success_rate_user["Task Success Rate (user on task)"]:::metric
@@ -109,6 +126,8 @@ graph TD
   m_user_experience_score["User Experience Score (questionnaire)"]:::metric
   m_visualization_aesthetics_score["Visualization Aesthetics Score (questionnaire)"]:::metric
   m_visualization_literacy_score["Visualization Literacy Score (ability test)"]:::metric
+  m_win_rate["Win Rate (pairwise comparison)"]:::metric
+  m_word_error_rate["Word Error Rate (WER)"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_closed_answer_performance --> c_answer_correctness
@@ -117,18 +136,27 @@ graph TD
   c_component_performance --> c_closed_answer_performance
   c_component_performance --> c_explanation_performance
   c_component_performance --> c_generation_performance
+  c_component_performance --> c_grounding_performance
+  c_component_performance --> c_image_generation_performance
+  c_component_performance --> c_map_prediction_performance
+  c_component_performance --> c_numeric_prediction_performance
   c_component_performance --> c_retrieval_performance
   c_component_performance --> c_tool_use_performance
+  c_component_performance --> c_transcription_performance
   c_explanation_performance --> c_explanation_faithfulness
   c_generation_performance --> c_content_adequacy
   c_generation_performance --> c_factuality
   c_generation_performance --> c_functional_correctness
   c_generation_performance --> c_groundedness
   c_generation_performance --> c_instruction_following
+  c_grounding_performance --> c_grounding_accuracy
+  c_image_generation_performance --> c_text_image_alignment
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
   c_literacy --> c_visualization_literacy
+  c_map_prediction_performance --> c_saliency_prediction_accuracy
+  c_numeric_prediction_performance --> c_numeric_prediction_accuracy
   c_output_quality --> c_fairness
   c_output_quality --> c_safety
   c_output_quality --> c_trustworthiness
@@ -142,6 +170,7 @@ graph TD
   c_system_characteristics --> c_resource_cost
   c_system_characteristics --> c_system_performance
   c_system_performance --> c_autonomous_task_completion
+  c_system_performance --> c_autonomous_task_efficiency
   c_system_performance --> c_run_consistency
   c_system_performance --> c_output_quality
   c_system_performance --> c_responsiveness
@@ -158,6 +187,7 @@ graph TD
   c_task_performance --> c_task_effectiveness
   c_task_performance --> c_task_efficiency
   c_tool_use_performance --> c_tool_call_correctness
+  c_transcription_performance --> c_transcription_accuracy
   c_usability --> c_task_effectiveness
   c_usability --> c_task_efficiency
   c_usability --> c_perceived_usability
@@ -174,6 +204,7 @@ graph TD
   c_appropriate_reliance -.-> m_over_reliance_rate
   c_appropriate_reliance -.-> m_under_reliance_rate
   c_autonomous_task_completion -.-> m_task_success_rate_benchmark
+  c_autonomous_task_efficiency -.-> m_action_efficiency_vs_humans
   c_calibration -.-> m_expected_calibration_error
   c_classification_correctness -.-> m_accuracy
   c_classification_correctness -.-> m_f1_score
@@ -193,10 +224,14 @@ graph TD
   c_fairness -.-> m_demographic_parity_difference
   c_functional_correctness -.-> m_pass_at_k
   c_groundedness -.-> m_answer_faithfulness
+  c_grounding_accuracy -.-> m_grounding_accuracy
   c_instruction_following -.-> m_instruction_following_accuracy
   c_mental_workload -.-> m_mental_workload_score
   c_numeracy -.-> m_numeracy_score
+  c_numeric_prediction_accuracy -.-> m_root_mean_squared_error
+  c_output_quality -.-> m_elo_rating
   c_output_quality -.-> m_judge_rating
+  c_output_quality -.-> m_win_rate
   c_perceived_usability -.-> m_perceived_usability_score
   c_relevance -.-> m_ndcg
   c_resource_cost -.-> m_cost_per_task
@@ -205,15 +240,18 @@ graph TD
   c_run_consistency -.-> m_pass_hat_k
   c_safety -.-> m_attack_success_rate
   c_safety -.-> m_toxicity_rate
+  c_saliency_prediction_accuracy -.-> m_saliency_map_similarity
   c_situational_relevance -.-> m_precision_user_task
   c_task_effectiveness -.-> m_task_success_rate_user
   c_task_efficiency -.-> m_task_completion_time
+  c_text_image_alignment -.-> m_clipscore
   c_tool_call_correctness -.-> m_tool_call_accuracy
   c_topical_relevance -.-> m_f1_score
   c_topical_relevance -.-> m_mean_average_precision
   c_topical_relevance -.-> m_precision_benchmark
   c_topical_relevance -.-> m_recall_benchmark
   c_topical_relevance -.-> m_reciprocal_rank
+  c_transcription_accuracy -.-> m_word_error_rate
   c_trust_in_system -.-> m_trust_score
   c_user_experience -.-> m_user_experience_score
   c_visualization_aesthetics -.-> m_visualization_aesthetics_score
@@ -240,6 +278,14 @@ A construct with several broader constructs appears under each of them.
       - [Generation performance: functional correctness](functional-correctness.md) · metrics: [pass@k](../metrics/pass-at-k.md)
       - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
       - [Generation performance: instruction following](instruction-following.md) · metrics: [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md)
+    - [Grounding performance](grounding-performance.md)
+      - [Grounding performance: localization accuracy](grounding-accuracy.md) · metrics: [Grounding Accuracy](../metrics/grounding-accuracy.md)
+    - [Image generation performance](image-generation-performance.md)
+      - [Image generation performance: text-image alignment](text-image-alignment.md) · metrics: [CLIPScore](../metrics/clipscore.md)
+    - [Map prediction performance](map-prediction-performance.md)
+      - [Map prediction performance: saliency prediction accuracy](saliency-prediction-accuracy.md) · metrics: [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
+    - [Numeric prediction performance](numeric-prediction-performance.md)
+      - [Numeric prediction performance: accuracy](numeric-prediction-accuracy.md) · metrics: [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
@@ -249,12 +295,15 @@ A construct with several broader constructs appears under each of them.
       - [Retrieval efficiency](retrieval-efficiency.md)
     - [Tool-use performance](tool-use-performance.md)
       - [Tool-use performance: call correctness](tool-call-correctness.md) · metrics: [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
+    - [Transcription performance](transcription-performance.md)
+      - [Transcription performance: accuracy](transcription-accuracy.md) · metrics: [Word Error Rate (WER)](../metrics/word-error-rate.md)
 - [System characteristics](system-characteristics.md)
   - [Resource cost](resource-cost.md) · metrics: [Cost per Task](../metrics/cost-per-task.md)
   - [System performance](system-performance.md)
     - [Autonomous task completion](autonomous-task-completion.md) · metrics: [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
+    - [Autonomous task efficiency](autonomous-task-efficiency.md) · metrics: [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md)
     - [Consistency across runs](run-consistency.md) · metrics: [pass^k](../metrics/pass-hat-k.md)
-    - [Output quality](output-quality.md) · metrics: [Judge Rating (model judge)](../metrics/judge-rating.md)
+    - [Output quality](output-quality.md) · metrics: [Elo Rating (pairwise comparison)](../metrics/elo-rating.md), [Judge Rating (model judge)](../metrics/judge-rating.md), [Win Rate (pairwise comparison)](../metrics/win-rate.md)
       - [Output quality: fairness](fairness.md) · metrics: [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
       - [Output quality: safety](safety.md) · metrics: [Attack Success Rate (ASR)](../metrics/attack-success-rate.md), [Toxicity Rate](../metrics/toxicity-rate.md)
       - [Trustworthiness](trustworthiness.md)
@@ -300,9 +349,13 @@ A construct with several broader constructs appears under each of them.
 - [Component performance](component-performance.md)
 - [Explanation performance](explanation-performance.md)
 - [Generation performance](generation-performance.md)
+- [Grounding performance](grounding-performance.md)
+- [Image generation performance](image-generation-performance.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
+- [Map prediction performance](map-prediction-performance.md)
+- [Numeric prediction performance](numeric-prediction-performance.md)
 - [Reliance on AI](reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)
@@ -313,6 +366,7 @@ A construct with several broader constructs appears under each of them.
 - [Task characteristics](task-characteristics.md)
 - [Task performance](task-performance.md)
 - [Tool-use performance](tool-use-performance.md)
+- [Transcription performance](transcription-performance.md)
 - [Trustworthiness](trustworthiness.md)
 - [Usability](usability.md)
 - [User background](user-background.md)

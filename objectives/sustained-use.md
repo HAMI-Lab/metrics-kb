@@ -73,6 +73,14 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | positive | theoretical | Long causal chain through better rankings. |
 | [Judge Rating (model judge)](../metrics/judge-rating.md) | positive | theoretical | Depends on the judge matching users' taste. |
 | [Learned Reference-Based Score](../metrics/learned-reference-score.md) | unknown | none | Too far from what users experience to say. |
+| [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md) | positive | theoretical | Efficient agents finish sooner and cost less. |
+| [Word Error Rate (WER)](../metrics/word-error-rate.md) | negative | theoretical | Recognition errors frustrate voice interaction. |
+| [Win Rate (pairwise comparison)](../metrics/win-rate.md) | positive | theoretical | Preferred responses are assumed to keep users coming back. |
+| [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | positive | theoretical | Preferred systems are assumed to be used more. |
+| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | unknown | none | Too far from what users experience to say. |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | unknown | none | Too far from what users experience to say. |
+| [CLIPScore](../metrics/clipscore.md) | unknown | none | Too far from what users experience to say. |
+| [Grounding Accuracy](../metrics/grounding-accuracy.md) | unknown | none | Too far from what users experience to say. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

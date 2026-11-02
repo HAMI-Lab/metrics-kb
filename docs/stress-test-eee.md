@@ -111,4 +111,17 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 
 Existing pages gained scorer or suite instruments: Toxicity Rate (Perspective API), Answer Faithfulness (RAGAS), FActScore (its estimator) and Accuracy (HELM as a suite).
 
-Still open: the agent-efficiency construct (RHAE), Word Error Rate, win rate and Elo, the new output types for other modalities, and an `external_ids` field that records the registry ids each page covers.
+### Second round of additions
+
+| Page | Covers from the sample | New constructs |
+|---|---|---|
+| [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md) | #25 RHAE (ARC-AGI-3) | [autonomous task efficiency](../constructs/autonomous-task-efficiency.md) (system) |
+| [Word Error Rate (WER)](../metrics/word-error-rate.md) | #19 WER | output type [transcription](../constructs/transcription-performance.md) |
+| [Win Rate (pairwise comparison)](../metrics/win-rate.md) | win rates in the registry (not sampled) | — |
+| [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | Elo ratings in the registry (not sampled) | — |
+| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | #13 MSE | output type [numeric prediction](../constructs/numeric-prediction-performance.md) |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | #26 SIM | output type [map prediction](../constructs/map-prediction-performance.md) |
+| [CLIPScore](../metrics/clipscore.md) | #3 CLIP R-Precision (as an alias) | output type [image generation](../constructs/image-generation-performance.md) |
+| [Grounding Accuracy](../metrics/grounding-accuracy.md) | the in-scope form of #1 (GUI rather than 3D grounding) | output type [grounding](../constructs/grounding-performance.md) |
+
+Not pursued: an `external_ids` field recording the registry ids each page covers (decided 2026-11-02). Still open: Inception Score and other image-quality measures, speech-quality scorers (PESQ, PLCMOS, STOI).

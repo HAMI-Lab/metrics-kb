@@ -137,7 +137,7 @@ Jailbreak success rate and per-type rates are variants on this page.
 
 <!-- generated:neighbours:start -->
 - Same construct: [Toxicity Rate](toxicity-rate.md) (Output quality: safety)
-- Broader construct: [Judge Rating (model judge)](judge-rating.md) (Output quality)
+- Broader construct: [Elo Rating (pairwise comparison)](elo-rating.md) (Output quality), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Win Rate (pairwise comparison)](win-rate.md) (Output quality)
 - Sibling construct: [Demographic Parity Difference (DPD)](demographic-parity-difference.md) (Output quality: fairness)
 <!-- generated:neighbours:end -->
 

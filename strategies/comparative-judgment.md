@@ -56,7 +56,8 @@ Low to medium per judgment; online interleaving is cheap once a ranking system s
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-_No metric page uses it yet._
+- [Elo Rating (pairwise comparison)](../metrics/elo-rating.md)
+- [Win Rate (pairwise comparison)](../metrics/win-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

@@ -69,6 +69,14 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | positive | correlational | Batch effectiveness gains do not always reach users' tasks. |
 | [Judge Rating (model judge)](../metrics/judge-rating.md) | unknown | none | Judge preferences, such as for longer answers, may not match what helps users. |
 | [Learned Reference-Based Score](../metrics/learned-reference-score.md) | unknown | none | Too far from what users experience to say. |
+| [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md) | unknown | none | Users rarely see action counts directly. |
+| [Word Error Rate (WER)](../metrics/word-error-rate.md) | negative | theoretical | Errors must be corrected by users. |
+| [Win Rate (pairwise comparison)](../metrics/win-rate.md) | unknown | none | Judge preferences may not match what helps users. |
+| [Elo Rating (pairwise comparison)](../metrics/elo-rating.md) | unknown | none | Preference in a side-by-side vote is not the same as task success. |
+| [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md) | unknown | none | Too far from what users experience to say. |
+| [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md) | unknown | none | Predicting attention can help designers, but the link to usability is not measured. |
+| [CLIPScore](../metrics/clipscore.md) | unknown | none | Not measured with users. |
+| [Grounding Accuracy](../metrics/grounding-accuracy.md) | unknown | none | Too far from what users experience to say. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

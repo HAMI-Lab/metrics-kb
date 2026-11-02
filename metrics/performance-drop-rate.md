@@ -127,7 +127,7 @@ Computed from [Accuracy](accuracy.md) or another score on two versions of the in
 [Attack Success Rate](attack-success-rate.md) measures resistance to attacks on safety rules.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [pass^k](pass-hat-k.md) (Consistency across runs), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Response Latency](response-latency.md) (System responsiveness)
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Action Efficiency Relative to Humans](action-efficiency-vs-humans.md) (Autonomous task efficiency), [pass^k](pass-hat-k.md) (Consistency across runs), [Elo Rating (pairwise comparison)](elo-rating.md) (Output quality), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Win Rate (pairwise comparison)](win-rate.md) (Output quality), [Response Latency](response-latency.md) (System responsiveness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

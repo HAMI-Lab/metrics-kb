@@ -125,7 +125,7 @@ Component of [Task Completion Time](task-completion-time.md).
 Complementary: perceived speed ratings, [SUS](perceived-usability-score.md).
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [pass^k](pass-hat-k.md) (Consistency across runs), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Action Efficiency Relative to Humans](action-efficiency-vs-humans.md) (Autonomous task efficiency), [pass^k](pass-hat-k.md) (Consistency across runs), [Elo Rating (pairwise comparison)](elo-rating.md) (Output quality), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Win Rate (pairwise comparison)](win-rate.md) (Output quality), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

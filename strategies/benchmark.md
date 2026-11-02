@@ -60,14 +60,17 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [Accuracy](../metrics/accuracy.md)
+- [Action Efficiency Relative to Humans](../metrics/action-efficiency-vs-humans.md)
 - [Answer Faithfulness](../metrics/answer-faithfulness.md)
 - [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
 - [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
+- [CLIPScore](../metrics/clipscore.md)
 - [Cost per Task](../metrics/cost-per-task.md)
 - [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
 - [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 - [F1 Score](../metrics/f1-score.md)
 - [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
+- [Grounding Accuracy](../metrics/grounding-accuracy.md)
 - [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md)
 - [Judge Rating (model judge)](../metrics/judge-rating.md)
 - [Learned Reference-Based Score](../metrics/learned-reference-score.md)
@@ -80,9 +83,13 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 - [Precision (benchmark)](../metrics/precision-benchmark.md)
 - [Recall (benchmark)](../metrics/recall-benchmark.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
+- [Root Mean Squared Error (RMSE)](../metrics/root-mean-squared-error.md)
+- [Saliency Map Similarity (SIM)](../metrics/saliency-map-similarity.md)
 - [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 - [Toxicity Rate](../metrics/toxicity-rate.md)
+- [Win Rate (pairwise comparison)](../metrics/win-rate.md)
+- [Word Error Rate (WER)](../metrics/word-error-rate.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

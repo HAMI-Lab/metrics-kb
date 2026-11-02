@@ -920,3 +920,99 @@ sellam2020:
   note: 'BLEURT: learned metric fine-tuned on human ratings'
   origin: added by AI for stress-test additions (2026-11-02)
   verified: false
+arcprize2026:
+  citation: 'ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence. arXiv:2603.24621. (check against the paper for the author list)'
+  url: https://arxiv.org/abs/2603.24621
+  note: ARC-AGI-3 interactive games; RHAE scoring against a first-play human baseline. See also https://docs.arcprize.org/methodology
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+panayotov2015:
+  citation: 'Panayotov, V., Chen, G., Povey, D., & Khudanpur, S. (2015). Librispeech: An ASR Corpus Based on Public Domain Audio Books. ICASSP 2015. (check against the paper)'
+  url: null
+  note: 'LibriSpeech: read English speech with transcripts; clean and other test sets'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+jurafsky2025:
+  citation: Jurafsky, D., & Martin, J. H. (2025). Speech and Language Processing (3rd ed. draft). (check the draft date)
+  url: https://web.stanford.edu/~jurafsky/slp3/
+  note: Textbook; word error rate for speech recognition
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+dubois2024:
+  citation: 'Dubois, Y., Galambosi, B., Liang, P., & Hashimoto, T. B. (2024). Length-Controlled AlpacaEval: A Simple Way to Debias Automatic Evaluators. arXiv:2404.04475. (check against the paper)'
+  url: https://arxiv.org/abs/2404.04475
+  note: AlpacaEval win rate against a reference model; length-controlled variant
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+li2024b:
+  citation: 'Li, T., et al. (2024). From Crowdsourced Data to High-Quality Benchmarks: Arena-Hard and BenchBuilder Pipeline. arXiv:2406.11939. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2406.11939
+  note: 'Arena-Hard: hard prompts from Chatbot Arena, judged pairwise by an LLM'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+chiang2024:
+  citation: 'Chiang, W.-L., et al. (2024). Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference. ICML 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2403.04132
+  note: Crowdsourced pairwise votes on users' own prompts; Bradley-Terry ratings reported on an Elo scale
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+elo1978:
+  citation: Elo, A. E. (1978). The Rating of Chessplayers, Past and Present. Arco. (check against the book)
+  url: null
+  note: Elo rating system
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+koren2009:
+  citation: Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix Factorization Techniques for Recommender Systems. IEEE Computer, 42(8). (check against the paper)
+  url: null
+  note: Rating prediction; RMSE in the Netflix Prize
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+harper2015:
+  citation: 'Harper, F. M., & Konstan, J. A. (2015). The MovieLens Datasets: History and Context. ACM Transactions on Interactive Intelligent Systems, 5(4). (check against the paper)'
+  url: null
+  note: MovieLens rating data sets
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+cremonesi2010:
+  citation: Cremonesi, P., Koren, Y., & Turrin, R. (2010). Performance of Recommender Algorithms on Top-N Recommendation Tasks. RecSys 2010. (check against the paper)
+  url: null
+  note: Rating-prediction error and top-N ranking quality can disagree
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+bylinskii2019:
+  citation: Bylinskii, Z., Judd, T., Oliva, A., Torralba, A., & Durand, F. (2019). What Do Different Evaluation Metrics Tell Us About Saliency Models? IEEE TPAMI, 41(3). (check against the paper)
+  url: null
+  note: Saliency metrics including SIM, CC, NSS, AUC and KL divergence
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+borkin2016:
+  citation: 'Borkin, M. A., et al. (2016). Beyond Memorability: Visualization Recognition and Recall. IEEE TVCG (InfoVis 2015). (check against the paper for the full author list)'
+  url: null
+  note: MASSVIS visualizations with eye-tracking data
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+hessel2021:
+  citation: 'Hessel, J., Holtzman, A., Forbes, M., Le Bras, R., & Choi, Y. (2021). CLIPScore: A Reference-free Evaluation Metric for Image Captioning. EMNLP 2021. (check against the paper)'
+  url: https://arxiv.org/abs/2104.08718
+  note: 'CLIPScore: rescaled cosine similarity of CLIP image and text embeddings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+radford2021:
+  citation: Radford, A., et al. (2021). Learning Transferable Visual Models From Natural Language Supervision. ICML 2021. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2103.00020
+  note: CLIP
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+lin2014:
+  citation: 'Lin, T.-Y., et al. (2014). Microsoft COCO: Common Objects in Context. ECCV 2014. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/1405.0312
+  note: MS-COCO images with captions
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+cheng2024:
+  citation: 'Cheng, K., et al. (2024). SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents. ACL 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2401.10935
+  note: 'ScreenSpot: GUI grounding benchmark; click accuracy'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false

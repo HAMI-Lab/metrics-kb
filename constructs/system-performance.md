@@ -29,6 +29,7 @@ It mirrors [task performance](task-performance.md) on the task side. A system ca
 End-to-end output quality, responsiveness, robustness, consistency across runs, and completion of tasks the system does on its own. Resource cost sits beside system performance, not under it. Field-specific performance of single parts (such as [retrieval performance](retrieval-performance.md)) is on the component side.
 <!-- generated:narrower:start -->
 - [Autonomous task completion](autonomous-task-completion.md)
+- [Autonomous task efficiency](autonomous-task-efficiency.md)
 - [Consistency across runs](run-consistency.md)
 - [Output quality](output-quality.md)
 - [System responsiveness](responsiveness.md)

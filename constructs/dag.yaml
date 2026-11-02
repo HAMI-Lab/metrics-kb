@@ -67,6 +67,38 @@ instruction-following:
   title: "Generation performance: instruction following"
   broader: [generation-performance]
 
+grounding-performance:
+  title: Grounding performance
+  broader: [component-performance]
+
+grounding-accuracy:
+  title: "Grounding performance: localization accuracy"
+  broader: [grounding-performance]
+
+image-generation-performance:
+  title: Image generation performance
+  broader: [component-performance]
+
+text-image-alignment:
+  title: "Image generation performance: text-image alignment"
+  broader: [image-generation-performance]
+
+map-prediction-performance:
+  title: Map prediction performance
+  broader: [component-performance]
+
+saliency-prediction-accuracy:
+  title: "Map prediction performance: saliency prediction accuracy"
+  broader: [map-prediction-performance]
+
+numeric-prediction-performance:
+  title: Numeric prediction performance
+  broader: [component-performance]
+
+numeric-prediction-accuracy:
+  title: "Numeric prediction performance: accuracy"
+  broader: [numeric-prediction-performance]
+
 retrieval-performance:
   title: Retrieval performance
   broader: [component-performance]
@@ -99,6 +131,14 @@ tool-call-correctness:
   title: "Tool-use performance: call correctness"
   broader: [tool-use-performance]
 
+transcription-performance:
+  title: Transcription performance
+  broader: [component-performance]
+
+transcription-accuracy:
+  title: "Transcription performance: accuracy"
+  broader: [transcription-performance]
+
 system-characteristics:
   title: System characteristics
   broader: []
@@ -113,6 +153,10 @@ system-performance:
 
 autonomous-task-completion:
   title: Autonomous task completion
+  broader: [system-performance]
+
+autonomous-task-efficiency:
+  title: Autonomous task efficiency
   broader: [system-performance]
 
 run-consistency:
