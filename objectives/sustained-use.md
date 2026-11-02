@@ -31,8 +31,8 @@ This table is maintained by hand for now; a script can later generate it from ea
 | Metric | Direction | Evidence | Note |
 |---|---|---|---|
 | [Response Latency](../metrics/response-latency.md) | negative | causal (web search) | Online experiments [kohavi2020] |
-| [SUS](../metrics/system-usability-scale.md) | positive | theoretical | Via TAM / satisfaction |
-| [NASA-TLX](../metrics/nasa-tlx.md) | negative | theoretical | |
+| [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | positive | theoretical | Via TAM / satisfaction |
+| [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | negative | theoretical | |
 | [Precision (test collection)](../metrics/precision-test-collection.md) | positive | theoretical | Long causal chain |
 | [Recall (test collection)](../metrics/recall-test-collection.md) | positive | theoretical | Matters mainly where completeness matters (e.g. systematic reviews); users rarely notice what is missing |
 | [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Results that help with real tasks |
@@ -61,15 +61,12 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Over-reliance Rate](../metrics/over-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
 | [Under-reliance Rate](../metrics/under-reliance-rate.md) | unknown | none | Over-reliance may keep people using a system they should question; under-reliance wastes it. |
 | [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md) | unknown | none |  |
-| [Usability Metric for User Experience (UMUX)](../metrics/umux.md) | positive | theoretical | Via satisfaction and continued use. |
-| [User Experience Questionnaire (UEQ)](../metrics/ueq.md) | positive | theoretical | Attractive, stimulating products are expected to be used more. |
-| [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md) | unknown | none |  |
-| [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none |  |
-| [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
-| [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Effortful systems are less pleasant to keep using. |
-| [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
-| [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
-| [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | positive | theoretical | Attractive, stimulating products are expected to be used more. |
+| [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md) | unknown | none |  |
+| [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md) | unknown | none |  |
+| [Trust Score (questionnaire)](../metrics/trust-score.md) | positive | theoretical | Trust affects whether people keep relying on a system. |
+| [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

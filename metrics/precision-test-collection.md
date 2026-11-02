@@ -3,7 +3,7 @@ id: precision-test-collection
 title: Precision (test collection)
 aliases: [precision, positive predictive value, "precision@k", P@k, offline precision, batch precision]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -40,7 +40,7 @@ related:
   - {metric: precision-user-task, kind: operational, note: "Same computation at the task level: the user's own queries and judgments."}
   - {metric: recall-test-collection, kind: conceptual, note: "Being more selective raises precision and lowers recall."}
   - {metric: task-completion-time, kind: empirical, note: "Better ranking is expected to shorten search tasks; user studies show the link is weaker than assumed."}
-  - {metric: system-usability-scale, kind: empirical, note: "Output quality is one input to perceived usability; not measured directly."}
+  - {metric: perceived-usability-score, kind: empirical, note: "Output quality is one input to perceived usability; not measured directly."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "Relevant results are assumed to make the system worth returning to; long causal chain."}
@@ -91,6 +91,9 @@ Run the system on a test collection with existing judgments. LLM-as-judge labeli
 ### 2.5 Unit and scale
 A proportion from 0 to 1 (ratio scale). Only comparable across systems on the same collection and judgment rules.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -120,7 +123,7 @@ Precision alone is easy to game by returning fewer, safer results (precision ris
 Summaries of both: F1, average precision, nDCG. [Precision (user on task)](precision-user-task.md) is the same computation at the task level. Precision@k and macro or micro averages are variants on this page (2.4).
 
 ### 5.2 Conceptually related metrics
-[Recall (test collection)](recall-test-collection.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](system-usability-scale.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
+[Recall (test collection)](recall-test-collection.md) measures the sibling property, completeness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success, [SUS](perceived-usability-score.md). Precision is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
 - Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness)

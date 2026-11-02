@@ -3,7 +3,7 @@ id: cost-per-task
 title: Cost per Task
 aliases: [dollar cost per task, token cost, inference cost]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, agents, systems]
 
 status: ai-draft
@@ -86,6 +86,9 @@ From API usage records or the provider's billing, per task.
 
 ### 2.5 Unit and scale
 Dollars (or tokens) per task. Lower is better at equal quality.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

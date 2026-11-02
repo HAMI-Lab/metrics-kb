@@ -3,7 +3,7 @@ id: reciprocal-rank
 title: "Mean Reciprocal Rank (MRR)"
 aliases: [MRR, reciprocal rank, "RR@k"]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [information-retrieval, llm-evaluation]
 
 status: ai-draft
@@ -85,6 +85,9 @@ A test collection with at least one known relevant item per query.
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

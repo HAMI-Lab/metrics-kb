@@ -56,9 +56,8 @@ Needs statistical expertise and data to fit; cheap to apply once fitted.
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
 - [Precision (user on task)](../metrics/precision-user-task.md)
-- [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
+- [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

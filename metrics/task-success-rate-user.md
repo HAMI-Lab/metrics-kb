@@ -3,7 +3,7 @@ id: task-success-rate-user
 title: "Task Success Rate (user on task)"
 aliases: [task success rate, task completion rate, completion rate, effectiveness]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [hci, human-ai-interaction]
 
 status: ai-draft
@@ -39,7 +39,7 @@ cost:
 related:
   - {metric: task-success-rate-benchmark, kind: operational, note: "Same computation at the system level: an agent acting alone on benchmark tasks."}
   - {metric: task-completion-time, kind: conceptual, note: "Efficiency of the same tasks; report the two together."}
-  - {metric: system-usability-scale, kind: empirical, note: "Success and perceived usability are correlated, but only modestly."}
+  - {metric: perceived-usability-score, kind: empirical, note: "Success and perceived usability are correlated, but only modestly."}
 
 objectives:
   sustained-use: {direction: positive, evidence: theoretical, note: "People keep using systems with which they get their tasks done."}
@@ -88,6 +88,9 @@ In a task study, observers or the system record whether each task ended in succe
 ### 2.5 Unit and scale
 0 to 1.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -118,11 +121,11 @@ Easy tasks inflate the rate. Counting "completed" without checking correctness o
 The same computation at the system level is [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md).
 
 ### 5.2 Conceptually related metrics
-[Task Completion Time](task-completion-time.md) is the efficiency counterpart; [SUS](system-usability-scale.md) the perceived one.
+[Task Completion Time](task-completion-time.md) is the efficiency counterpart; [SUS](perceived-usability-score.md) the perceived one.
 
 <!-- generated:neighbours:start -->
 - Narrower construct: [Decision Accuracy with AI Assistance](decision-accuracy-with-ai.md) (Task effectiveness: decision correctness), [Precision (user on task)](precision-user-task.md) (Task effectiveness: situational relevance)
-- Sibling construct: [Task Completion Time](task-completion-time.md) (Task efficiency), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability), [Usability Metric for User Experience (UMUX)](umux.md) (Usability: perceived usability)
+- Sibling construct: [Task Completion Time](task-completion-time.md) (Task efficiency), [Perceived Usability Score (questionnaire)](perceived-usability-score.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

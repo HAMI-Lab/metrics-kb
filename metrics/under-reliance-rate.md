@@ -3,7 +3,7 @@ id: under-reliance-rate
 title: Under-reliance Rate
 aliases: [under-reliance, algorithm aversion rate, rejecting right advice]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [human-ai-interaction, xai]
 
 status: ai-draft
@@ -85,6 +85,9 @@ A task study in which participants decide cases with advice whose correctness is
 
 ### 2.5 Unit and scale
 0 to 1. Lower is better.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -1,9 +1,9 @@
 ---
-id: self-assessment-manikin
-title: "Self-Assessment Manikin (SAM)"
-aliases: [SAM, pleasure-arousal-dominance rating]
+id: emotional-response-score
+title: Emotional Response Score (questionnaire)
+aliases: [Self-Assessment Manikin, SAM, pleasure-arousal-dominance rating, emotion rating]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [hci, psychology, visualization]
 
 status: ai-draft
@@ -11,7 +11,7 @@ last_reviewed: null
 reviewers: []
 
 construct:
-  statement: "How a person feels right now, in pleasure, arousal and dominance, rated with pictures."
+  statement: "How a person feels right after seeing or doing something, rated on dimensions such as pleasure, arousal and dominance."
   measures: [emotional-response]
   subject: [user]
   aspect: [satisfaction]
@@ -27,9 +27,11 @@ operationalization:
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "rating per dimension"
-  range: "1-9 (common form)"
+  range: "1-9 per dimension (SAM, common form)"
   better: context-dependent
-  validity_concern: {level: low, note: "Direct for self-reported feeling on three dimensions."}
+  validity_concern: {level: low, note: "Direct for self-reported feeling on the rated dimensions."}
+  instruments:
+    - {name: "Self-Assessment Manikin (SAM)", sources: [bradley1994], note: "Three rows of cartoon figures for pleasure, arousal and dominance; usually 1-9 per dimension."}
 
 cost:
   level: low
@@ -37,7 +39,8 @@ cost:
   automatable: false
 
 related:
-  - {metric: ueq, kind: conceptual, note: "Overall product experience rather than momentary emotion."}
+  - {metric: user-experience-score, kind: conceptual, note: "Overall product experience rather than momentary emotion."}
+  - {metric: visualization-aesthetics-score, kind: conceptual, note: "Aesthetic pleasure from a visualization rather than general emotion."}
 
 objectives:
   sustained-use: {direction: unknown, evidence: none, note: ""}
@@ -46,14 +49,14 @@ objectives:
 sources: [bradley1994]
 ---
 
-# Self-Assessment Manikin (SAM)
+# Emotional Response Score (questionnaire)
 
-> Three picture scales on which a person marks how pleased, aroused and in control they feel.
+> Quick ratings, often with pictures, of how pleased, aroused and in control a person feels right after a stimulus or task.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-The Self-Assessment Manikin (SAM) shows three rows of cartoon figures. The person marks the figure, or a point between figures, that matches how they feel on pleasure (unhappy to happy), arousal (calm to excited) and dominance (controlled to in control) [bradley1994].
+Right after seeing or doing something, a person rates how they feel on one or more emotional dimensions. The Self-Assessment Manikin (SAM), the instrument on this page so far, shows three rows of cartoon figures; the person marks the figure, or a point between figures, that matches how they feel on pleasure (unhappy to happy), arousal (calm to excited) and dominance (controlled to in control) [bradley1994].
 
 ### 1.2 Construct: property of subject in context
 The property is emotional response to something just seen or done. The subject is the person. The context is a moment in an interaction or study.
@@ -70,7 +73,7 @@ It does not measure lasting attitudes such as trust or satisfaction with a produ
 ## 2. How it is measured
 
 ### 2.1 Direct or proxy; construct validity
-**Direct** for self-reported feeling. Being pictorial, it needs little reading and works across languages [bradley1994].
+**Direct** for self-reported feeling. Being pictorial, SAM needs little reading and works across languages [bradley1994].
 
 ### 2.2 Reliability
 Single items per dimension; repeated ratings over a session give more stable estimates.
@@ -79,11 +82,14 @@ Single items per dimension; repeated ratings over a session give more stable est
 Rating right after a stimulus or task. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- One score per dimension, usually 1-9.
+- SAM: one score per dimension, usually 1-9.
 - Compare conditions; do not sum dimensions.
 
 ### 2.5 Unit and scale
 Rating per dimension, commonly 1-9.
+
+### 2.6 Instruments
+- **Self-Assessment Manikin (SAM)** [bradley1994]: pictorial, three dimensions, seconds per rating. Suited to repeated ratings after each stimulus.
 
 ## 3. Why it is measured
 
@@ -114,11 +120,11 @@ Treating higher pleasure as better design without considering the task.
 None.
 
 ### 5.2 Conceptually related metrics
-[UEQ](ueq.md) covers lasting product experience.
+[User Experience Score (questionnaire)](user-experience-score.md) covers lasting product experience. [Visualization Aesthetics Score (questionnaire)](visualization-aesthetics-score.md) covers aesthetic pleasure specifically.
 
 <!-- generated:neighbours:start -->
-- Broader construct: [User Experience Questionnaire (UEQ)](ueq.md) (User experience)
-- Sibling construct: [BeauVis Aesthetic Pleasure Scale](beauvis.md) (User experience: visualization aesthetics)
+- Broader construct: [User Experience Score (questionnaire)](user-experience-score.md) (User experience)
+- Sibling construct: [Visualization Aesthetics Score (questionnaire)](visualization-aesthetics-score.md) (User experience: visualization aesthetics)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
@@ -131,4 +137,4 @@ None recorded.
 - [bradley1994]: SAM.
 
 ## Open questions and review notes
-- None yet.
+- Renamed from the former Self-Assessment Manikin page (D25).

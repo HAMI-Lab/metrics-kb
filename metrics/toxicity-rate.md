@@ -3,7 +3,7 @@ id: toxicity-rate
 title: Toxicity Rate
 aliases: [toxicity score, expected maximum toxicity, toxic generation rate]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, ai-safety, nlp]
 
 status: ai-draft
@@ -88,6 +88,9 @@ Generate outputs for a prompt set such as RealToxicityPrompts [gehman2020], or s
 
 ### 2.5 Unit and scale
 0 to 1. Lower is better.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

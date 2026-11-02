@@ -3,7 +3,7 @@ id: rouge
 title: "Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"
 aliases: [ROUGE, ROUGE-1, ROUGE-2, ROUGE-L]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [nlp, llm-evaluation]
 
 status: ai-draft
@@ -89,6 +89,9 @@ A test set with one or more references per input.
 
 ### 2.5 Unit and scale
 0 to 1 (often ×100).
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

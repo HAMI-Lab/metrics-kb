@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [Trust in Automation Scale](../metrics/trust-in-automation-scale.md)
+- [Trust Score (questionnaire)](../metrics/trust-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

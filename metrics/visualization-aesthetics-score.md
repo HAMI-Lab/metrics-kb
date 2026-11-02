@@ -1,9 +1,9 @@
 ---
-id: beauvis
-title: BeauVis Aesthetic Pleasure Scale
-aliases: [BeauVis, visualization aesthetics scale]
+id: visualization-aesthetics-score
+title: Visualization Aesthetics Score (questionnaire)
+aliases: [BeauVis, BeauVis Aesthetic Pleasure Scale, visualization aesthetics scale, aesthetic pleasure rating]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [visualization, hci]
 
 status: ai-draft
@@ -27,9 +27,11 @@ operationalization:
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "scale mean"
-  range: "1-7"
+  range: "1-7 (BeauVis)"
   better: higher
-  validity_concern: {level: low, note: "Direct for reported aesthetic pleasure; validated as a scale by its authors."}
+  validity_concern: {level: low, note: "Direct for reported aesthetic pleasure; BeauVis was validated as a scale by its authors."}
+  instruments:
+    - {name: "BeauVis Aesthetic Pleasure Scale", sources: [he2023], note: "A few adjectives about aesthetic pleasure, 7-point; score is the mean."}
 
 cost:
   level: low
@@ -37,7 +39,7 @@ cost:
   automatable: false
 
 related:
-  - {metric: self-assessment-manikin, kind: conceptual, note: "General emotional reaction rather than aesthetic pleasure."}
+  - {metric: emotional-response-score, kind: conceptual, note: "General emotional reaction rather than aesthetic pleasure."}
 
 objectives:
   sustained-use: {direction: unknown, evidence: none, note: ""}
@@ -46,14 +48,14 @@ objectives:
 sources: [he2023]
 ---
 
-# BeauVis Aesthetic Pleasure Scale
+# Visualization Aesthetics Score (questionnaire)
 
-> A short validated questionnaire on how pleasing a visualization looks.
+> A short questionnaire rating of how pleasing a visualization looks.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-BeauVis is a short questionnaire in which people rate a visualization on a few adjectives about its aesthetic pleasure, on 7-point scales; the score is the mean [he2023]. It was built and validated for visual representations of data.
+After viewing a visualization, a person rates it on a few adjectives about aesthetic pleasure, and the score is the mean. BeauVis, the instrument on this page so far, was built and validated for visual representations of data [he2023].
 
 ### 1.2 Construct: property of subject in context
 The property is aesthetic pleasure. The subject is the person viewing a visualization. The context is viewing it, usually in a study.
@@ -70,7 +72,7 @@ It does not measure whether the chart is easy to read or correct.
 ## 2. How it is measured
 
 ### 2.1 Direct or proxy; construct validity
-**Direct** for reported aesthetic pleasure; the authors report a validation of the scale (check against [he2023]).
+**Direct** for reported aesthetic pleasure; the BeauVis authors report a validation of the scale (check against [he2023]).
 
 ### 2.2 Reliability
 Multi-item, so internal consistency can be checked; see the validation in [he2023].
@@ -79,10 +81,13 @@ Multi-item, so internal consistency can be checked; see the validation in [he202
 Rating after viewing each visualization. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- Score = mean of the item ratings [he2023] (check the exact items and scale against the paper).
+- BeauVis: score = mean of the item ratings [he2023] (check the exact items and scale against the paper).
 
 ### 2.5 Unit and scale
 1-7 mean.
+
+### 2.6 Instruments
+- **BeauVis Aesthetic Pleasure Scale** [he2023]: a few adjectives, seconds per visualization. Suited to rating many visualizations in one study.
 
 ## 3. Why it is measured
 
@@ -113,11 +118,11 @@ Optimizing beauty at the cost of accuracy.
 None.
 
 ### 5.2 Conceptually related metrics
-[SAM](self-assessment-manikin.md) captures general emotion. Perceived readability (PREVis) is a candidate sibling metric.
+[Emotional Response Score (questionnaire)](emotional-response-score.md) captures general emotion. Perceived readability (PREVis) is a candidate sibling metric.
 
 <!-- generated:neighbours:start -->
-- Broader construct: [User Experience Questionnaire (UEQ)](ueq.md) (User experience)
-- Sibling construct: [Self-Assessment Manikin (SAM)](self-assessment-manikin.md) (User experience: emotional response)
+- Broader construct: [User Experience Score (questionnaire)](user-experience-score.md) (User experience)
+- Sibling construct: [Emotional Response Score (questionnaire)](emotional-response-score.md) (User experience: emotional response)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
@@ -130,4 +135,4 @@ None recorded.
 - [he2023]: BeauVis.
 
 ## Open questions and review notes
-- The title is the instrument's own name, which is not an acronym; is that acceptable under D19?
+- Renamed from the former BeauVis page (D25), which settles that page's question about being titled after an instrument.

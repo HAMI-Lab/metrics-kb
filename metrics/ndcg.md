@@ -3,7 +3,7 @@ id: ndcg
 title: "Normalized Discounted Cumulative Gain (nDCG)"
 aliases: [nDCG, "nDCG@k", DCG]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [information-retrieval, recommender-systems]
 
 status: ai-draft
@@ -87,6 +87,9 @@ Needs graded relevance judgments, usually from assessors on a test collection.
 
 ### 2.5 Unit and scale
 0 to 1. Comparable only with the same k, gain scale and judgments.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -1,9 +1,9 @@
 ---
-id: trust-in-automation-scale
-title: Trust in Automation Scale
-aliases: [Jian trust scale, checklist for trust between people and automation, trust questionnaire]
+id: trust-score
+title: Trust Score (questionnaire)
+aliases: [Trust in Automation Scale, Jian trust scale, checklist for trust between people and automation, trust questionnaire, reported trust]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [human-factors, human-ai-interaction, xai]
 
 status: ai-draft
@@ -27,9 +27,11 @@ operationalization:
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
   unit: "scale mean"
-  range: "1-7"
+  range: "1-7 (Trust in Automation Scale)"
   better: context-dependent
   validity_concern: {level: moderate, note: "Reported trust is an attitude; it does not show whether trust matches how trustworthy the system is."}
+  instruments:
+    - {name: "Trust in Automation Scale", sources: [jian2000], note: "12 statements on trust and distrust, 7-point."}
 
 cost:
   level: low
@@ -47,14 +49,14 @@ objectives:
 sources: [jian2000, lee2004]
 ---
 
-# Trust in Automation Scale
+# Trust Score (questionnaire)
 
-> A 12-item questionnaire on trust and distrust toward an automated system.
+> A questionnaire on which people rate how much they trust, and distrust, an automated system they have used.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-The Trust in Automation Scale has 12 statements, some about trust (for example that the system is reliable) and some about distrust (for example that it is deceptive), rated on 7-point scales [jian2000].
+After using an automated system, a person rates statements about trusting or distrusting it. The Trust in Automation Scale, the instrument on this page so far, has 12 statements, some about trust (for example that the system is reliable) and some about distrust (for example that it is deceptive), rated on 7-point scales [jian2000].
 
 ### 1.2 Construct: property of subject in context
 The property is trust in a particular system, as an attitude [lee2004]. The subject is the person. The context is having used the system.
@@ -80,10 +82,13 @@ Multi-item, so internal consistency can be checked; report it for your sample.
 Questionnaire after use. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- Score each item 1-7; reverse-score distrust items; average. Or report trust and distrust separately (see 2.1).
+- Trust in Automation Scale: score each item 1-7; reverse-score distrust items; average. Or report trust and distrust separately (see 2.1).
 
 ### 2.5 Unit and scale
 1-7 mean.
+
+### 2.6 Instruments
+- **Trust in Automation Scale** [jian2000]: written for automation in general; widely reused for AI systems. Check that the items make sense for the system studied (see 3.3).
 
 ## 3. Why it is measured
 
@@ -117,7 +122,7 @@ Separate trust and distrust subscores are a variant on this page.
 Reliance behaviour is on [Over-reliance Rate](over-reliance-rate.md) and [Under-reliance Rate](under-reliance-rate.md).
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Forward-Prediction Accuracy](forward-prediction-accuracy.md) (Explanation understanding), [User Experience Questionnaire (UEQ)](ueq.md) (User experience)
+- Sibling construct: [Forward-Prediction Accuracy](forward-prediction-accuracy.md) (Explanation understanding), [User Experience Score (questionnaire)](user-experience-score.md) (User experience)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
@@ -127,8 +132,9 @@ Hypothesis: reported trust predicts reliance only partly. Why it could be true: 
 **Sustained use:** positive, theoretical. **Improved usability:** unknown.
 
 ## 7. Sources
-- [jian2000]: the scale.
+- [jian2000]: the Trust in Automation Scale.
 - [lee2004]: trust, trustworthiness and reliance.
 
 ## Open questions and review notes
-- None yet.
+- Renamed from the former Trust in Automation Scale page (D25).
+- Trust questionnaires written for AI systems are candidates for 2.6; add them with verified sources.

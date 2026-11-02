@@ -3,7 +3,7 @@ id: recall-test-collection
 title: Recall (test collection)
 aliases: [recall, sensitivity, true positive rate, hit rate, "recall@k", R@k]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [information-retrieval, recommender-systems, machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -89,6 +89,9 @@ Recall needs to know **all** relevant items, which is rarely possible in a large
 
 ### 2.5 Unit and scale
 A proportion from 0 to 1 (ratio scale). Only comparable across systems on the same collection, judgment rules, and *k*. Recall@k is capped by *k*: if a query has 50 relevant items, recall@10 cannot exceed 0.2.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

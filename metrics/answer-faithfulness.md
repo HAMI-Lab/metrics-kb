@@ -3,7 +3,7 @@ id: answer-faithfulness
 title: Answer Faithfulness
 aliases: [faithfulness, RAGAS faithfulness, groundedness score, context faithfulness]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [nlp, llm-evaluation, information-retrieval]
 
 status: ai-draft
@@ -87,6 +87,9 @@ Log or generate question-context-answer triples; run the judge over them.
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

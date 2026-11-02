@@ -24,7 +24,7 @@ Read `README.md` first. This file adds the rules for AI edits.
 - State evidence strength honestly in section 6. Theoretical links must be called theoretical.
 - Plain language. Short sentences. Explain jargon on first use.
 - A metric known by an acronym gets the title "Full Name (ACRONYM)", e.g. "Normalized Discounted Cumulative Gain (nDCG)", and its full name is spelled out again in the first sentence of 1.1. Keep the acronym in `aliases`.
-- Link to other pages with relative links, e.g. `[SUS](system-usability-scale.md)`.
+- Link to other pages with relative links, e.g. `[SUS](perceived-usability-score.md)`.
 
 ## Status handling
 - New or AI-rewritten pages: `status: ai-draft`.

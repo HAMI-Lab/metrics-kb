@@ -66,21 +66,21 @@ graph TD
   m_answer_faithfulness["Answer Faithfulness"]:::metric
   m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
   m_attack_success_rate["Attack Success Rate (ASR)"]:::metric
-  m_beauvis["BeauVis Aesthetic Pleasure Scale"]:::metric
-  m_berlin_numeracy_test["Berlin Numeracy Test"]:::metric
-  m_calvi["Critical Thinking Assessment for Literacy in Visualizations (CALVI)"]:::metric
   m_cost_per_task["Cost per Task"]:::metric
   m_decision_accuracy_with_ai["Decision Accuracy with AI Assistance"]:::metric
   m_demographic_parity_difference["Demographic Parity Difference (DPD)"]:::metric
+  m_emotional_response_score["Emotional Response Score (questionnaire)"]:::metric
   m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
   m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
   m_forward_prediction_accuracy["Forward-Prediction Accuracy"]:::metric
-  m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
+  m_mental_workload_score["Mental Workload Score (questionnaire)"]:::metric
   m_ndcg["Normalized Discounted Cumulative Gain (nDCG)"]:::metric
+  m_numeracy_score["Numeracy Score (ability test)"]:::metric
   m_over_reliance_rate["Over-reliance Rate"]:::metric
   m_pass_at_k["pass@k"]:::metric
   m_pass_hat_k["pass^k"]:::metric
+  m_perceived_usability_score["Perceived Usability Score (questionnaire)"]:::metric
   m_performance_drop_rate["Performance Drop Rate (PDR)"]:::metric
   m_precision_test_collection["Precision (test collection)"]:::metric
   m_precision_user_task["Precision (user on task)"]:::metric
@@ -89,19 +89,16 @@ graph TD
   m_response_latency["Response Latency"]:::metric
   m_roc_auc["Area Under the ROC Curve (ROC-AUC)"]:::metric
   m_rouge["Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"]:::metric
-  m_self_assessment_manikin["Self-Assessment Manikin (SAM)"]:::metric
-  m_smeq["Subjective Mental Effort Questionnaire (SMEQ)"]:::metric
-  m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
   m_task_success_rate_benchmark["Task Success Rate (agent benchmark)"]:::metric
   m_task_success_rate_user["Task Success Rate (user on task)"]:::metric
   m_tool_call_accuracy["Tool Call Accuracy"]:::metric
   m_toxicity_rate["Toxicity Rate"]:::metric
-  m_trust_in_automation_scale["Trust in Automation Scale"]:::metric
-  m_ueq["User Experience Questionnaire (UEQ)"]:::metric
-  m_umux["Usability Metric for User Experience (UMUX)"]:::metric
+  m_trust_score["Trust Score (questionnaire)"]:::metric
   m_under_reliance_rate["Under-reliance Rate"]:::metric
-  m_vlat["Visualization Literacy Assessment Test (VLAT)"]:::metric
+  m_user_experience_score["User Experience Score (questionnaire)"]:::metric
+  m_visualization_aesthetics_score["Visualization Aesthetics Score (questionnaire)"]:::metric
+  m_visualization_literacy_score["Visualization Literacy Score (ability test)"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_closed_answer_performance --> c_answer_correctness
@@ -170,20 +167,18 @@ graph TD
   c_classification_correctness -.-> m_recall_test_collection
   c_classification_correctness -.-> m_roc_auc
   c_content_adequacy -.-> m_rouge
-  c_critical_visualization_literacy -.-> m_calvi
+  c_critical_visualization_literacy -.-> m_visualization_literacy_score
   c_decision_correctness -.-> m_decision_accuracy_with_ai
-  c_emotional_response -.-> m_self_assessment_manikin
+  c_emotional_response -.-> m_emotional_response_score
   c_explanation_faithfulness -.-> m_aopc
   c_explanation_understanding -.-> m_forward_prediction_accuracy
   c_factuality -.-> m_factscore
   c_fairness -.-> m_demographic_parity_difference
   c_functional_correctness -.-> m_pass_at_k
   c_groundedness -.-> m_answer_faithfulness
-  c_mental_workload -.-> m_nasa_tlx
-  c_mental_workload -.-> m_smeq
-  c_numeracy -.-> m_berlin_numeracy_test
-  c_perceived_usability -.-> m_system_usability_scale
-  c_perceived_usability -.-> m_umux
+  c_mental_workload -.-> m_mental_workload_score
+  c_numeracy -.-> m_numeracy_score
+  c_perceived_usability -.-> m_perceived_usability_score
   c_relevance -.-> m_ndcg
   c_resource_cost -.-> m_cost_per_task
   c_responsiveness -.-> m_response_latency
@@ -199,10 +194,10 @@ graph TD
   c_topical_relevance -.-> m_precision_test_collection
   c_topical_relevance -.-> m_recall_test_collection
   c_topical_relevance -.-> m_reciprocal_rank
-  c_trust_in_system -.-> m_trust_in_automation_scale
-  c_user_experience -.-> m_ueq
-  c_visualization_aesthetics -.-> m_beauvis
-  c_visualization_literacy -.-> m_vlat
+  c_trust_in_system -.-> m_trust_score
+  c_user_experience -.-> m_user_experience_score
+  c_visualization_aesthetics -.-> m_visualization_aesthetics_score
+  c_visualization_literacy -.-> m_visualization_literacy_score
   classDef metric stroke-dasharray: 4 2
 ```
 
@@ -253,25 +248,25 @@ A construct with several broader constructs appears under each of them.
       - [Task effectiveness: decision correctness](decision-correctness.md) · metrics: [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
       - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
-      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md), [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
-  - [Trust in the system](trust-in-system.md) · metrics: [Trust in Automation Scale](../metrics/trust-in-automation-scale.md)
+      - [Mental workload](mental-workload.md) · metrics: [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md)
+  - [Trust in the system](trust-in-system.md) · metrics: [Trust Score (questionnaire)](../metrics/trust-score.md)
   - [Usability](usability.md)
     - [Task effectiveness](task-effectiveness.md) · metrics: [Task Success Rate (user on task)](../metrics/task-success-rate-user.md)
       - [Task effectiveness: decision correctness](decision-correctness.md) · metrics: [Decision Accuracy with AI Assistance](../metrics/decision-accuracy-with-ai.md)
       - [Task effectiveness: situational relevance](situational-relevance.md) · metrics: [Precision (user on task)](../metrics/precision-user-task.md)
     - [Task efficiency](task-efficiency.md) · metrics: [Task Completion Time](../metrics/task-completion-time.md)
-      - [Mental workload](mental-workload.md) · metrics: [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md), [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
-    - [Usability: perceived usability](perceived-usability.md) · metrics: [System Usability Scale (SUS)](../metrics/system-usability-scale.md), [Usability Metric for User Experience (UMUX)](../metrics/umux.md)
-  - [User experience](user-experience.md) · metrics: [User Experience Questionnaire (UEQ)](../metrics/ueq.md)
-    - [User experience: emotional response](emotional-response.md) · metrics: [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md)
-    - [User experience: visualization aesthetics](visualization-aesthetics.md) · metrics: [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
+      - [Mental workload](mental-workload.md) · metrics: [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md)
+    - [Usability: perceived usability](perceived-usability.md) · metrics: [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md)
+  - [User experience](user-experience.md) · metrics: [User Experience Score (questionnaire)](../metrics/user-experience-score.md)
+    - [User experience: emotional response](emotional-response.md) · metrics: [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md)
+    - [User experience: visualization aesthetics](visualization-aesthetics.md) · metrics: [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md)
 - [User characteristics](user-characteristics.md)
   - [Literacy](literacy.md)
     - [Literacy: AI literacy](ai-literacy.md)
     - [Literacy: information literacy](information-literacy.md)
-    - [Literacy: numeracy](numeracy.md) · metrics: [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md)
-    - [Literacy: visualization literacy](visualization-literacy.md) · metrics: [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
-      - [Literacy: critical visualization literacy](critical-visualization-literacy.md) · metrics: [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
+    - [Literacy: numeracy](numeracy.md) · metrics: [Numeracy Score (ability test)](../metrics/numeracy-score.md)
+    - [Literacy: visualization literacy](visualization-literacy.md) · metrics: [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
+      - [Literacy: critical visualization literacy](critical-visualization-literacy.md) · metrics: [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
 
 ## Constructs with no metric yet
 

@@ -3,7 +3,7 @@ id: task-success-rate-benchmark
 title: "Task Success Rate (agent benchmark)"
 aliases: [task success rate, success rate, resolution rate, "pass@k", goal completion rate]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, agents]
 
 status: ai-draft
@@ -91,6 +91,9 @@ Run the agent on the benchmark tasks and apply the success checks.
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

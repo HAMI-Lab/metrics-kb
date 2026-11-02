@@ -34,7 +34,7 @@ Emotional response and aesthetic pleasure are narrower aspects; others (stimulat
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [User Experience Questionnaire (UEQ)](../metrics/ueq.md)
+- [User Experience Score (questionnaire)](../metrics/user-experience-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

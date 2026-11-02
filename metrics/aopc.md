@@ -3,7 +3,7 @@ id: aopc
 title: "Area Over the Perturbation Curve (AOPC)"
 aliases: [AOPC, deletion metric, feature removal test]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [xai, machine-learning]
 
 status: ai-draft
@@ -86,6 +86,9 @@ For each test input: compute the explanation, then perturb the input in order of
 
 ### 2.5 Unit and scale
 In units of the model output, usually probability of the predicted class.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md)
+- [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

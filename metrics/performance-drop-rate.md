@@ -3,7 +3,7 @@ id: performance-drop-rate
 title: "Performance Drop Rate (PDR)"
 aliases: [PDR, robustness gap, relative performance drop]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, machine-learning, nlp]
 
 status: ai-draft
@@ -88,6 +88,9 @@ Score the system on a test set and on perturbed copies of it. See [controlled co
 
 ### 2.5 Unit and scale
 A proportion of the original score. 0 means no drop.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

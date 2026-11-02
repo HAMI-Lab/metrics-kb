@@ -3,7 +3,7 @@ id: tool-call-accuracy
 title: Tool Call Accuracy
 aliases: [tool selection accuracy, tool call F1, argument accuracy]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, agents]
 
 status: ai-draft
@@ -86,6 +86,9 @@ Run the agent on tasks with reference calls; log calls and arguments.
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -32,6 +32,7 @@ Source: [`schema/metric-template.md`](metric-template.md)
   - `validity_concern`: how much thought the gap between number and construct deserves
     - `level`: vocabulary: validity_concern
     - `note`: one line: why
+  - `instruments`: named instantiations (D25), described in 2.6; each item:
 - `cost`
   - `level`: vocabulary: cost_level
   - `requires`: free text, e.g. "participants", "relevance judgments", "eye tracker"
@@ -52,6 +53,7 @@ Source: [`schema/metric-template.md`](metric-template.md)
   - **2.3 Data collection and measurement error**: Online / offline / in-lab / field. Instruments. Sources of measurement error and statistical uncertainty.
   - **2.4 Computation**: Data selection, transformation, aggregation. The formula. Common variants (e.g. @k, macro vs micro).
   - **2.5 Unit and scale**: Unit, range, scale type (ratio / interval / ordinal), what "good" looks like, benchmarks.
+  - **2.6 Instruments**: Named instruments that instantiate this metric: standardized questionnaires, tests, test collections, evaluation code. For each: what it asks or contains, how it is scored, how it differs from the others, and when to choose it. List them in operationalization.instruments too. Write "None listed." when the computation in 2.4 is the whole operationalization.
 - **3. Why it is measured**: In which situations, and for which purposes, do people pull up this number?
   - **3.1 Use cases**: 2-4 concrete scenarios where this metric would actually be pulled up, real or realistic. Name a specific system, team, or decision, not a generic task category (e.g. not just "information retrieval") -- these are seeds for a reviewer to swap in their own. Different fields' uses of the same computation (e.g. precision in search vs in classification) go here.
   - **3.2 Purposes**: Evaluation, documentation, comparison, improvement, monitoring... and for which kinds of systems.

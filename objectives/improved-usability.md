@@ -17,8 +17,8 @@ ISO 9241-11 defines usability as the extent to which specified users can use a s
 ## How it can be observed
 No single measure captures it. The usual practice is to measure all three parts:
 - Effectiveness: task success, error rate, output quality ([Precision (test collection)](../metrics/precision-test-collection.md) for the system side).
-- Efficiency: [Task Completion Time](../metrics/task-completion-time.md), effort ([NASA-TLX](../metrics/nasa-tlx.md)), waiting time ([Response Latency](../metrics/response-latency.md)).
-- Satisfaction: [SUS](../metrics/system-usability-scale.md) and similar questionnaires.
+- Efficiency: [Task Completion Time](../metrics/task-completion-time.md), effort ([NASA-TLX](../metrics/mental-workload-score.md)), waiting time ([Response Latency](../metrics/response-latency.md)).
+- Satisfaction: [SUS](../metrics/perceived-usability-score.md) and similar questionnaires.
 
 These parts correlate only modestly with one another [hornbaek2007; sauro2009], so improving one does not guarantee improvement in the others.
 
@@ -27,9 +27,9 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | Metric | Direction | Evidence | Note |
 |---|---|---|---|
 | [Response Latency](../metrics/response-latency.md) | negative | causal (visual analytics) | |
-| [SUS](../metrics/system-usability-scale.md) | positive | correlational | Measures perceived usability |
+| [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | positive | correlational | Measures perceived usability |
 | [Task Completion Time](../metrics/task-completion-time.md) | negative | correlational | For the same outcome |
-| [NASA-TLX](../metrics/nasa-tlx.md) | negative | correlational | Not at very low workload |
+| [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | negative | correlational | Not at very low workload |
 | [Precision (test collection)](../metrics/precision-test-collection.md) | positive | correlational | Weaker than assumed |
 | [Recall (test collection)](../metrics/recall-test-collection.md) | positive | correlational | Batch gains do not always translate to users |
 | [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Part of effectiveness for the user's own task |
@@ -57,15 +57,12 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Over-reliance Rate](../metrics/over-reliance-rate.md) | negative | theoretical | Inappropriate reliance lowers decision quality. |
 | [Under-reliance Rate](../metrics/under-reliance-rate.md) | negative | theoretical | Inappropriate reliance lowers decision quality. |
 | [Forward-Prediction Accuracy](../metrics/forward-prediction-accuracy.md) | positive | theoretical | Understanding supports appropriate use of the system. |
-| [Usability Metric for User Experience (UMUX)](../metrics/umux.md) | positive | correlational | Measures perceived usability. |
-| [User Experience Questionnaire (UEQ)](../metrics/ueq.md) | positive | theoretical | The pragmatic scales overlap with perceived usability. |
-| [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md) | unknown | none |  |
-| [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md) | unknown | none | Aesthetic pleasure is distinct from readability. |
-| [Trust in Automation Scale](../metrics/trust-in-automation-scale.md) | unknown | none | More trust is good only when it matches trustworthiness. |
-| [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md) | negative | theoretical | Less effort for the same outcome means better usability. |
-| [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
-| [Critical Thinking Assessment for Literacy in Visualizations (CALVI)](../metrics/calvi.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
-| [Berlin Numeracy Test](../metrics/berlin-numeracy-test.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | positive | theoretical | The pragmatic scales overlap with perceived usability. |
+| [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md) | unknown | none |  |
+| [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md) | unknown | none | Aesthetic pleasure is distinct from readability. |
+| [Trust Score (questionnaire)](../metrics/trust-score.md) | unknown | none | More trust is good only when it matches trustworthiness. |
+| [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

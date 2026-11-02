@@ -57,14 +57,12 @@ Cheap per respondent once the items exist. Designing and validating new items is
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
-- [NASA Task Load Index (NASA-TLX)](../metrics/nasa-tlx.md)
-- [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md)
-- [Subjective Mental Effort Questionnaire (SMEQ)](../metrics/smeq.md)
-- [System Usability Scale (SUS)](../metrics/system-usability-scale.md)
-- [Trust in Automation Scale](../metrics/trust-in-automation-scale.md)
-- [Usability Metric for User Experience (UMUX)](../metrics/umux.md)
-- [User Experience Questionnaire (UEQ)](../metrics/ueq.md)
+- [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md)
+- [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md)
+- [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md)
+- [Trust Score (questionnaire)](../metrics/trust-score.md)
+- [User Experience Score (questionnaire)](../metrics/user-experience-score.md)
+- [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

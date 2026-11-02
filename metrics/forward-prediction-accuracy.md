@@ -3,7 +3,7 @@ id: forward-prediction-accuracy
 title: Forward-Prediction Accuracy
 aliases: [simulatability, forward simulation accuracy, explanation comprehension accuracy]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [xai, human-ai-interaction]
 
 status: ai-draft
@@ -88,6 +88,9 @@ A task study with a training phase and a test phase; often a controlled comparis
 ### 2.5 Unit and scale
 0 to 1.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -120,7 +123,7 @@ The gain from explanations is a variant on this page.
 [AOPC](aopc.md) judges faithfulness without people.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Trust in Automation Scale](trust-in-automation-scale.md) (Trust in the system), [User Experience Questionnaire (UEQ)](ueq.md) (User experience)
+- Sibling construct: [Trust Score (questionnaire)](trust-score.md) (Trust in the system), [User Experience Score (questionnaire)](user-experience-score.md) (User experience)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

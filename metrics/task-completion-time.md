@@ -3,7 +3,7 @@ id: task-completion-time
 title: Task Completion Time
 aliases: [time on task, task time, time-to-completion]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [hci, information-retrieval, visualization, human-ai-interaction]
 
 status: ai-draft
@@ -38,8 +38,8 @@ cost:
 
 related:
   - {metric: response-latency, kind: operational, note: "System waiting time is part of task time."}
-  - {metric: nasa-tlx, kind: empirical, note: "Faster is not better if it costs much more effort."}
-  - {metric: system-usability-scale, kind: conceptual, note: "Objective efficiency vs. perceived usability; modest correlation."}
+  - {metric: mental-workload-score, kind: empirical, note: "Faster is not better if it costs much more effort."}
+  - {metric: perceived-usability-score, kind: conceptual, note: "Objective efficiency vs. perceived usability; modest correlation."}
   - {metric: precision-test-collection, kind: empirical, note: "Better results are expected to shorten search tasks; evidence is mixed."}
 
 objectives:
@@ -90,6 +90,9 @@ Lab studies: timer or software log with defined start and end events. Field and 
 ### 2.5 Unit and scale
 Seconds (ratio scale). Only comparable within the same task definition.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -121,11 +124,11 @@ Optimizing for speed can reduce accuracy or careful checking, including checking
 Component: [Response Latency](response-latency.md) is part of task time.
 
 ### 5.2 Conceptually related metrics
-Same aspect, other resource: [NASA-TLX](nasa-tlx.md) (effort). Complementary: task success rate, [SUS](system-usability-scale.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
+Same aspect, other resource: [NASA-TLX](mental-workload-score.md) (effort). Complementary: task success rate, [SUS](perceived-usability-score.md). Predicted time from models [card1983] is a cheap substitute early in design; measured time with users is costlier but real.
 
 <!-- generated:neighbours:start -->
-- Narrower construct: [NASA Task Load Index (NASA-TLX)](nasa-tlx.md) (Mental workload), [Subjective Mental Effort Questionnaire (SMEQ)](smeq.md) (Mental workload)
-- Sibling construct: [Task Success Rate (user on task)](task-success-rate-user.md) (Task effectiveness), [System Usability Scale (SUS)](system-usability-scale.md) (Usability: perceived usability), [Usability Metric for User Experience (UMUX)](umux.md) (Usability: perceived usability)
+- Narrower construct: [Mental Workload Score (questionnaire)](mental-workload-score.md) (Mental workload)
+- Sibling construct: [Task Success Rate (user on task)](task-success-rate-user.md) (Task effectiveness), [Perceived Usability Score (questionnaire)](perceived-usability-score.md) (Usability: perceived usability)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

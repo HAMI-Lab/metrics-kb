@@ -3,7 +3,7 @@ id: demographic-parity-difference
 title: "Demographic Parity Difference (DPD)"
 aliases: [DPD, statistical parity difference, disparate impact ratio, demographic parity ratio]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [machine-learning, fairness]
 
 status: ai-draft
@@ -87,6 +87,9 @@ Needs the decision and the group for each case, from a test set or from logged d
 
 ### 2.5 Unit and scale
 Difference in proportions, 0 to 1 (0 = equal rates). The ratio variant runs from 0 to 1, with 1 = equal.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -111,6 +111,19 @@ def check_metric(mid, page, metrics, constructs, strategies):
             err(f"operationalization.route: '{r}' has no page in strategies/")
         elif (strategies[r]["fm"] or {}).get("layer") == "method":
             err(f"operationalization.route: '{r}' is a method page; list it under research_method instead")
+    # D25: instruments are named instantiations, described in section 2.6.
+    instruments = o.get("instruments") or []
+    for i, ins in enumerate(instruments):
+        if not isinstance(ins, dict) or not ins.get("name"):
+            err(f"operationalization.instruments[{i}]: each instrument needs a name")
+            continue
+        for k in ins.get("sources") or []:
+            if k not in BIB:
+                err(f"instrument '{ins['name']}': source '{k}' not in bibliography")
+            elif k not in (fm.get("sources") or []):
+                warnings.append(f"{n}: instrument source '{k}' is not in front matter sources")
+    if instruments and re.search(r"^### 2\.6 Instruments\s*\n+None listed\.", body, re.M):
+        err("instruments are listed in front matter but section 2.6 says 'None listed.'")
     vc = o.get("validity_concern") or {}
     if vc.get("level") not in VOCAB["validity_concern"]:
         err(f"bad validity_concern.level '{vc.get('level')}'")

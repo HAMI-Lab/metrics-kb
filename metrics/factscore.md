@@ -3,7 +3,7 @@ id: factscore
 title: "Factual Precision in Atomicity Score (FActScore)"
 aliases: [FActScore, atomic factual precision, factual precision]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [nlp, llm-evaluation]
 
 status: ai-draft
@@ -88,6 +88,9 @@ Generate texts for a prompt set, split them into facts (by people or a model), a
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

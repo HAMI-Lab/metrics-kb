@@ -3,7 +3,7 @@ id: precision-user-task
 title: Precision (user on task)
 aliases: [precision, user-judged precision, interactive precision, click precision]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [information-retrieval, recommender-systems, hci]
 
 status: ai-draft
@@ -40,7 +40,7 @@ related:
   - {metric: precision-test-collection, kind: operational, note: "Same computation at the component level, on fixed queries and assessor judgments."}
   - {metric: precision-test-collection, kind: empirical, note: "Higher test-collection precision does not reliably give higher precision for users on their own tasks."}
   - {metric: task-completion-time, kind: conceptual, note: "Effectiveness and efficiency of the same task."}
-  - {metric: system-usability-scale, kind: empirical, note: "Result quality is expected to feed perceived usability; not measured here."}
+  - {metric: perceived-usability-score, kind: empirical, note: "Result quality is expected to feed perceived usability; not measured here."}
 
 objectives:
   improved-usability: {direction: positive, evidence: theoretical, note: "Part of effectiveness for the user's own task."}
@@ -91,6 +91,9 @@ Judgments of one user on one task are not repeatable in the way assessor judgmen
 ### 2.5 Unit and scale
 A proportion from 0 to 1. Comparable only across conditions with similar users, tasks and judgment instructions; it is not comparable with test-collection precision on the same system.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -121,7 +124,7 @@ Treating clicks as judgments rewards attractive snippets rather than useful item
 [Precision (test collection)](precision-test-collection.md) is the same computation at the component level, on fixed queries and assessor judgments.
 
 ### 5.2 Conceptually related metrics
-[Task Completion Time](task-completion-time.md) measures the efficiency of the same task; task success measures its outcome. [SUS](system-usability-scale.md) measures how usable the system felt.
+[Task Completion Time](task-completion-time.md) measures the efficiency of the same task; task success measures its outcome. [SUS](perceived-usability-score.md) measures how usable the system felt.
 
 <!-- generated:neighbours:start -->
 - Broader construct: [Task Success Rate (user on task)](task-success-rate-user.md) (Task effectiveness)

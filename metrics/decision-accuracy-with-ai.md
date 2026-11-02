@@ -3,7 +3,7 @@ id: decision-accuracy-with-ai
 title: Decision Accuracy with AI Assistance
 aliases: [human-AI team accuracy, assisted decision accuracy, diagnostic accuracy with AI]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [human-ai-interaction, xai, healthcare]
 
 status: ai-draft
@@ -87,6 +87,9 @@ In a task study, participants decide each case with advice (and often without, a
 
 ### 2.5 Unit and scale
 0 to 1.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

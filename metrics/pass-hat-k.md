@@ -3,7 +3,7 @@ id: pass-hat-k
 title: pass^k
 aliases: [pass hat k, consistency over k trials, reliability over repeated trials]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, agents]
 
 status: ai-draft
@@ -85,6 +85,9 @@ Run each task n ≥ k times and record success.
 
 ### 2.5 Unit and scale
 0 to 1. Report k.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

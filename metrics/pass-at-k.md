@@ -3,7 +3,7 @@ id: pass-at-k
 title: pass@k
 aliases: [pass at k, "pass@1", functional correctness rate]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [llm-evaluation, software-engineering]
 
 status: ai-draft
@@ -93,6 +93,9 @@ Sample n outputs per problem from the model and run the checks on each.
 
 ### 2.5 Unit and scale
 0 to 1. Always report k (and n).
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [Self-Assessment Manikin (SAM)](../metrics/self-assessment-manikin.md)
+- [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

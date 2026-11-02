@@ -3,7 +3,7 @@ id: expected-calibration-error
 title: "Expected Calibration Error (ECE)"
 aliases: [ECE, calibration error]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [machine-learning, llm-evaluation]
 
 status: ai-draft
@@ -86,6 +86,9 @@ Needs a confidence score per prediction. For language models, confidence may com
 
 ### 2.5 Unit and scale
 0 to 1 (often reported as a percentage). Lower is better.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

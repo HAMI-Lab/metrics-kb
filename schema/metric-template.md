@@ -4,7 +4,7 @@ id: metric-id                    # lowercase-hyphenated; must equal the file nam
 title: Metric Name
 aliases: []
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: []                       # e.g. hci, information-retrieval, recommender-systems, visualization, human-ai-interaction, llm-evaluation
 
 # ---- Provenance ----
@@ -17,6 +17,8 @@ reviewers: []
 # One page per computation per root (D20): if the same formula measures constructs under different roots,
 # make one page per root and qualify the title, e.g. "Precision (test collection)", "Precision (user on task)".
 # Method variants within a root (judgments vs clicks) stay on one page.
+# Instruments (D25): a standardized questionnaire or test is an instantiation, not a page. Group instruments
+# that measure the same construct with the same method on one page, e.g. "Perceived Usability Score (questionnaire)".
 construct:
   statement: ""                  # one sentence in plain language: the "spirit" of what this number measures, across all its uses. Authoritative.
   measures: []                   # construct ids from constructs/ (one or more); the place(s) this metric sits in the construct DAG
@@ -40,6 +42,8 @@ operationalization:
   validity_concern:              # how much thought the gap between number and construct deserves
     level: low                   # vocabulary: validity_concern
     note: ""                     # one line: why
+  instruments: []                # named instantiations (D25), described in 2.6; each item:
+                                 # {name: "Full Name (ACRONYM)", sources: [bibliography keys], note: "items, scale, scoring in one line"}
 
 # ---- 4. Who (cost) ----
 cost:
@@ -101,6 +105,12 @@ sources: []                      # keys in references/bibliography.yaml
 
 ### 2.5 Unit and scale
 <!-- Unit, range, scale type (ratio / interval / ordinal), what "good" looks like, benchmarks. -->
+
+### 2.6 Instruments
+<!-- Named instruments that instantiate this metric: standardized questionnaires, tests, test collections,
+     evaluation code. For each: what it asks or contains, how it is scored, how it differs from the
+     others, and when to choose it. List them in operationalization.instruments too. Write
+     "None listed." when the computation in 2.4 is the whole operationalization. -->
 
 ## 3. Why it is measured
 <!-- In which situations, and for which purposes, do people pull up this number? -->

@@ -33,7 +33,7 @@ About reading visualizations in general, not the usability of a particular visua
 ## 4. Metrics
 Standardized tests with right answers, such as VLAT [lee2017], some built and scored with item response theory [boy2014].
 <!-- generated:metrics:start -->
-- [Visualization Literacy Assessment Test (VLAT)](../metrics/vlat.md)
+- [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

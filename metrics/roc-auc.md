@@ -3,7 +3,7 @@ id: roc-auc
 title: "Area Under the ROC Curve (ROC-AUC)"
 aliases: [ROC-AUC, AUC, AUROC, area under the ROC curve, c-statistic]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [machine-learning, healthcare]
 
 status: ai-draft
@@ -87,6 +87,9 @@ Needs scores for each case, not only labels, on a labeled test set.
 
 ### 2.5 Unit and scale
 0 to 1, where 0.5 is chance and 1 is perfect separation.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

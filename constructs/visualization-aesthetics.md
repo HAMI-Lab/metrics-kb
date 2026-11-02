@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [BeauVis Aesthetic Pleasure Scale](../metrics/beauvis.md)
+- [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

@@ -3,7 +3,7 @@ id: f1-score
 title: F1 Score
 aliases: [F1, F-measure, F-score, token-overlap F1, F-beta]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [machine-learning, information-retrieval, nlp, llm-evaluation]
 
 status: ai-draft
@@ -91,6 +91,9 @@ As for [precision](precision-test-collection.md): run on a test collection and c
 
 ### 2.5 Unit and scale
 A proportion from 0 to 1. Report the averaging (macro or micro) and the unit counted.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

@@ -3,7 +3,7 @@ id: response-latency
 title: Response Latency
 aliases: [response time, latency, time to first token, TTFT, end-to-end latency]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [hci, information-retrieval, visualization, llm-evaluation, systems]
 
 status: ai-draft
@@ -38,7 +38,7 @@ cost:
 
 related:
   - {metric: task-completion-time, kind: operational, note: "Latency is part of the time users spend on a task."}
-  - {metric: system-usability-scale, kind: empirical, note: "Delays plausibly lower perceived usability."}
+  - {metric: perceived-usability-score, kind: empirical, note: "Delays plausibly lower perceived usability."}
 
 objectives:
   sustained-use: {direction: negative, evidence: causal, note: "Controlled online experiments in web search show added latency reduces engagement; transfer to AI assistants, where users expect slower answers, is untested here."}
@@ -87,6 +87,9 @@ Variants on this page: time to first token (TTFT) and end-to-end latency for str
 ### 2.5 Unit and scale
 Milliseconds or seconds (ratio scale). Classic rules of thumb for interactive systems: about 0.1 s feels instantaneous, about 1 s keeps the flow of thought, and about 10 s is the limit for holding attention [miller1968; card1983; nielsen1993]. These predate AI assistants and should be treated as guidance, not thresholds.
 
+### 2.6 Instruments
+None listed.
+
 ## 3. Why it is measured
 
 ### 3.1 Use cases
@@ -118,7 +121,7 @@ Reporting the mean hides tail problems. Measuring server time only hides client 
 Component of [Task Completion Time](task-completion-time.md).
 
 ### 5.2 Conceptually related metrics
-Complementary: perceived speed ratings, [SUS](system-usability-scale.md).
+Complementary: perceived speed ratings, [SUS](perceived-usability-score.md).
 
 <!-- generated:neighbours:start -->
 - Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [pass^k](pass-hat-k.md) (Consistency across runs), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)

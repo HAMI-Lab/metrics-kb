@@ -3,7 +3,7 @@ id: accuracy
 title: Accuracy
 aliases: [classification accuracy, exact match, EM, quasi-exact match]
 page_type: metric
-template_version: "0.2"
+template_version: "0.3"
 fields: [machine-learning, llm-evaluation, nlp]
 
 status: ai-draft
@@ -89,6 +89,9 @@ Run the component on a test collection with reference labels or answers. Errors 
 
 ### 2.5 Unit and scale
 A proportion from 0 to 1. Compare with the accuracy of always predicting the most common class.
+
+### 2.6 Instruments
+None listed.
 
 ## 3. Why it is measured
 

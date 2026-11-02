@@ -4,6 +4,29 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-02 (who controls a variable; instruments revisited)
+
+### D24. Roots differ in who controls the variable; latent abilities belong to the user root only
+- **Decision.**
+  - Component and system constructs are properties of what builders design and can change: swap the model, retune the retriever, change the prompt. Task constructs are outcomes of people using the system. User constructs are attributes of people that no one controls; a study can only select or sample people. In a study they serve as explanatory variables: covariates and moderators (does a design help low-numeracy users more than high-numeracy ones?).
+  - Latent abilities (literacy, numeracy) are constructs at the user root. Machine capabilities such as math, reasoning or commonsense knowledge are not constructs in the DAG (D23). A builder who cares about them chooses test data and reads the scores, so a claim about them is a claim about the test data's validity.
+  - User background (demographics, education) also sits at the user root. These attributes are recorded rather than tested, usually with a few questions on a questionnaire. They get constructs and short metric pages.
+- **Why.** It extends the research-project reading of the wiki (README §1): the roots differ not only in what is needed to measure them (D12–D15) but in the role their variables play. Experimental design distinguishes variables that can be manipulated from attributes that can only be measured. The asymmetry between people and machines follows from that difference, so it is a principle, not an inconsistency.
+- **Considered.** A page type for capabilities, covering both human abilities and machine capabilities, for symmetry. Rejected as heavy: it would curate a contested, open-ended taxonomy for what is, on the machine side, performance on chosen test data.
+- **Boundary to watch.** Psychometric models fitted across many benchmarks estimate latent abilities of models, the way human abilities are estimated. If such a metric is added, it is a component metric with the [statistical modeling](../strategies/statistical-modeling.md) route and a generic construct; the abilities found are described in prose.
+- **Vocabulary.** New `aspect` value `background` and new `quantity_form` value `category`, for recorded attributes such as age group or highest degree.
+
+### D25. Instruments are named instantiations; instrument pages are grouped by construct and method (revises D19)
+- **Decision.**
+  - A standardized instrument (a questionnaire such as SUS, a test such as VLAT) is an instantiation of a metric, not a metric. Instruments that measure the same construct with the same method share one metric page, titled by the construct and the method: "Perceived Usability Score (questionnaire)" holds SUS, UMUX and UMUX-LITE.
+  - Metric pages may list instruments in `operationalization.instruments` (name, sources, a one-line note) and describe them in a new section, 2.6 Instruments: what each asks, how it is scored, how they differ, when to choose which. Pages without named instruments say "None listed." Template version 0.3.
+  - The 11 instrument pages were merged into 8: perceived usability (SUS, UMUX), mental workload (NASA-TLX, SMEQ), visualization literacy (VLAT, CALVI), numeracy (Berlin Numeracy Test), emotional response (SAM), user experience (UEQ), trust (Trust in Automation Scale), and visualization aesthetics (BeauVis). Instrument names stay searchable as aliases.
+- **Refines D20.** For questionnaires and ability tests, "one computation" means scoring a standardized instrument for one construct. The scoring rules of individual instruments differ and are given per instrument in 2.4.
+- **Why.** Pages named after instruments contradicted D19, which said instruments are named in prose. Merging them without a structured list lost the ability to compare instruments. The higher-level page states what the instruments share (construct, method, caveats) once, and the list keeps each instrument findable. For user-root constructs, the validated test is the operationalization, so the instruments matter more there than anywhere else.
+- **Considered.** Keeping D19 unchanged and leaving instrument pages as they were (inconsistent). Instrument pages as their own page type (heavier, and D19's reasons against it still hold).
+
+---
+
 ## 2026-11-02 (component types by input and output)
 
 ### D23. Component constructs are typed by input and output; latent demand is not a construct; route names removed from construct names
@@ -65,6 +88,7 @@ A record of decisions about the wiki's structure, why they were made, and what w
 ## 2026-11-01 (instruments not modeled)
 
 ### D19. Instruments are not modeled: no page type and no front matter list
+*Revised by D25: instruments may be listed in front matter and described in section 2.6; they still get no pages of their own.*
 - **Decision.** Specific instruments (a questionnaire's exact wording and layout, a test collection release, evaluation code such as trec_eval) get neither pages nor a structured `instruments` field. A metric page names an instrument in prose when it matters, and cites it. This closes the open item "measurement instruments as a page type" from D1 and the 2026-10-26 round.
 - **Why.** A metric page should point to a way of operationalizing or computing the number that is specific enough to apply. It is not the place for the line-by-line implementation or the instrument itself; those live with their authors and are reached through citations.
 - **Considered.** An optional `operationalization.instruments` list (name, version, role, source, note), with instrument pages once two or more metrics share one. Rejected as too detailed for the wiki's purpose.
