@@ -20,7 +20,6 @@ The wiki has three first-class page types:
 | `objectives/` | One page per business objective, with the evidence linking metrics to it. |
 | `schema/` | Templates for the three page types, `vocabulary.yaml` (allowed tag values), `page-guide.md` (generated: what every section answers), `DECISIONS.md` (schema decisions and their reasons). |
 | `references/` | `bibliography.yaml`: every source that pages may cite. |
-| `migration/` | Notes on moving content from the original spreadsheet. |
 | `scripts/` | `validate.py` (checks everything), `build.py` (regenerates derived content), `sync_constructs.py` (keeps `dag.yaml` and construct pages in sync). |
 
 Page types planned but not started: tasks (e.g. "document search and summarization") and decision guides.
