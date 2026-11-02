@@ -6,7 +6,7 @@ page_type: construct
 template_version: "0.1"
 fields: [nlp, llm-evaluation]
 
-broader: [generation-performance]
+broader: [generation-performance, trustworthiness]
 
 status: ai-draft
 last_reviewed: null

@@ -1,6 +1,6 @@
 ---
-id: rating-prediction-accuracy
-title: "Recommendation performance: rating prediction accuracy"
+id: rating-prediction-correctness
+title: "Recommendation performance: rating prediction correctness"
 aliases: [rating prediction error, numeric prediction accuracy]
 page_type: construct
 template_version: "0.1"
@@ -15,9 +15,9 @@ reviewers: []
 sources: [koren2009, cremonesi2010]
 ---
 
-# Recommendation performance: rating prediction accuracy
+# Recommendation performance: rating prediction correctness
 
-> How close a recommender's predicted ratings are to the ratings people actually gave.
+> How close a recommender's predicted ratings are to the ratings people actually gave. For continuous predictions like these, correctness means closeness, not right or wrong.
 
 ## 1. Definition
 The distance between the ratings a recommender predicts and the ratings people gave, averaged over held-out ratings [koren2009].

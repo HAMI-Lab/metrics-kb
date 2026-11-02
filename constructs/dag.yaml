@@ -19,12 +19,12 @@ classification-performance:
   title: Classification performance
   broader: [component-performance]
 
-classification-correctness:
-  title: "Classification effectiveness: correctness"
-  broader: [classification-performance]
-
 calibration:
   title: "Classification performance: calibration"
+  broader: [classification-performance]
+
+classification-correctness:
+  title: "Classification performance: correctness"
   broader: [classification-performance]
 
 closed-answer-performance:
@@ -51,16 +51,8 @@ content-adequacy:
   title: "Generation performance: content adequacy"
   broader: [generation-performance]
 
-factuality:
-  title: "Generation performance: factuality"
-  broader: [generation-performance]
-
 functional-correctness:
   title: "Generation performance: functional correctness"
-  broader: [generation-performance]
-
-groundedness:
-  title: "Generation performance: groundedness"
   broader: [generation-performance]
 
 instruction-following:
@@ -71,8 +63,8 @@ grounding-performance:
   title: Grounding performance
   broader: [component-performance]
 
-grounding-accuracy:
-  title: "Grounding performance: localization accuracy"
+grounding-correctness:
+  title: "Grounding performance: localization correctness"
   broader: [grounding-performance]
 
 image-generation-performance:
@@ -87,8 +79,8 @@ recommendation-performance:
   title: Recommendation performance
   broader: [component-performance]
 
-rating-prediction-accuracy:
-  title: "Recommendation performance: rating prediction accuracy"
+rating-prediction-correctness:
+  title: "Recommendation performance: rating prediction correctness"
   broader: [recommendation-performance]
 
 retrieval-performance:
@@ -127,16 +119,16 @@ transcription-performance:
   title: Transcription performance
   broader: [component-performance]
 
-transcription-accuracy:
-  title: "Transcription performance: accuracy"
+transcription-correctness:
+  title: "Transcription performance: correctness"
   broader: [transcription-performance]
 
 visual-attention-prediction-performance:
   title: Visual attention prediction performance
   broader: [component-performance]
 
-saliency-prediction-accuracy:
-  title: "Visual attention prediction performance: accuracy"
+attention-prediction-correctness:
+  title: "Visual attention prediction performance: correctness"
   broader: [visual-attention-prediction-performance]
 
 system-characteristics:
@@ -178,6 +170,14 @@ safety:
 trustworthiness:
   title: Trustworthiness
   broader: [relevance, output-quality]
+
+factuality:
+  title: "Generation performance: factuality"
+  broader: [generation-performance, trustworthiness]
+
+groundedness:
+  title: "Generation performance: groundedness"
+  broader: [generation-performance, trustworthiness]
 
 responsiveness:
   title: System responsiveness

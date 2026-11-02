@@ -27,7 +27,7 @@ Not [grounding](grounding-performance.md), which outputs one location for one in
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
-- [Visual attention prediction performance: accuracy](saliency-prediction-accuracy.md)
+- [Visual attention prediction performance: correctness](attention-prediction-correctness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

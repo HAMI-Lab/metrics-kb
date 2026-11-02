@@ -64,7 +64,7 @@ The property is how well the component's scores rank positives above negatives. 
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Classification effectiveness: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
+- [Classification performance: correctness](../constructs/classification-correctness.md) (under Component characteristics → Component performance → Classification performance)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure
@@ -124,7 +124,7 @@ Computed from the same scores as precision and recall at each threshold.
 [Accuracy](accuracy.md) and [F1](f1-score.md) judge one threshold. [Expected Calibration Error](expected-calibration-error.md) judges the scores as probabilities, which AUC ignores.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness)
+- Same construct: [Accuracy](accuracy.md) (Classification performance: correctness), [F1 Score](f1-score.md) (Classification performance: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification performance: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification performance: correctness)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 

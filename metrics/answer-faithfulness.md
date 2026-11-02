@@ -64,7 +64,7 @@ The property is groundedness: whether the answer stays within what its sources s
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Generation performance: groundedness](../constructs/groundedness.md) (under Component characteristics → Component performance → Generation performance)
+- [Generation performance: groundedness](../constructs/groundedness.md) (under Component characteristics → Component performance → Generation performance; Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance → Trustworthiness; System characteristics → System performance → Output quality → Trustworthiness)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -21,12 +21,14 @@ A construct is the thing you actually want to know about, as opposed to the numb
 
 Keeping the two apart matters because a number can drift away from what you meant to measure: a team can push precision up and still leave users unhappy with their searches.
 
-Three quick checks tell you whether something is a construct (D32):
+Three quick checks tell you whether something is a construct (D32, D33):
 1. **About the what, not the how.** You can name it without saying how it is measured. "Relevance" passes; "word overlap with a reference text" does not, because it describes a way of measuring.
-2. **A matter of degree.** Something can have more or less of it: a part of a system, the whole system, a person using the system, or the person alone.
+2. **Something that varies.** Things can have more or less of it, or a different kind of it: a part of a system, the whole system, a person using the system, or the person alone. Perceived usability varies by degree; a person's first language varies by kind.
 3. **Measurable in more than one way.** More than one method could measure it, at least in principle. Relevance can be measured with judged test queries or with people's own searches.
 
-The wiki does not treat these as constructs: what one particular test happens to cover (GSM8K tests math, which is described with the test itself), the goals of one specific product, and how much judges agree with each other (that is about the measurement, not the thing measured).
+Some entries in the construct tree are headings that group constructs rather than constructs themselves, such as the four top-level groups (component, system, task and user characteristics) and *User background*. The wiki does not treat these as constructs either: what one particular test happens to cover (GSM8K tests math, which is described with the test itself), the goals of one specific product, and how much judges agree with each other (that is about the measurement, not the thing measured).
+
+A construct can have several facets measured in different ways. Trustworthiness, for example, covers factuality and groundedness, which are measured on outputs; how trustworthy people *perceive* a system to be is a separate construct, trust in the system, measured with questionnaires.
 
 ### 1. Constructs, strategies and metrics, read like a research project
 Think of how an empirical study is put together:

@@ -8,6 +8,12 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 The decisions below follow a stress test: 50 metrics sampled from the Every Eval Ever metric registry [batzner2026] were mapped onto the wiki. The mapping and counts are in [`docs/stress-test-eee.md`](../docs/stress-test-eee.md).
 
+### D33. Audit of the constructs against D32
+- **Check 2 widened.** "A matter of degree" became "**Something that varies**: more or less of it, or a different kind of it". As first worded, it excluded demographics, which vary by kind; research treats them as variables.
+- **Grouping nodes are not constructs.** The four roots and *User background* organize the tree; they fail the checks and the README says so.
+- **Trustworthiness has facets.** Factuality and groundedness take trustworthiness as a second broader construct. Perceived trust stays a separate construct, trust in the system, linked in prose rather than in the DAG, because the gap between trust and trustworthiness is what appropriate reliance is about [lee2004].
+- **Renames.** Constructs ending in "accuracy" become "correctness", so they are not confused with the Accuracy metric: transcription, rating prediction, visual attention prediction (id `attention-prediction-correctness`) and localization (`grounding-correctness`). For continuous predictions, correctness means closeness. "Classification effectiveness: correctness" becomes "Classification performance: correctness" to match its parent.
+
 ### D32. A plain definition of a construct, with three checks
 - **Decision.** The README opens its account of the design with a definition written for first-time readers: a construct is the thing you want to know about, as opposed to the number you compute to find out. Three checks decide whether something is a construct:
   1. **About the what, not the how**: it can be named without saying how it is measured.

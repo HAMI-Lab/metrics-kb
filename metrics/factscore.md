@@ -66,7 +66,7 @@ The property is factuality: whether stated facts are true. The subject is a text
 <!-- generated:constructs:start -->
 Measures, in the [construct DAG](../constructs/index.md):
 
-- [Generation performance: factuality](../constructs/factuality.md) (under Component characteristics → Component performance → Generation performance)
+- [Generation performance: factuality](../constructs/factuality.md) (under Component characteristics → Component performance → Generation performance; Component characteristics → Component performance → Retrieval performance → Retrieval effectiveness → Retrieval effectiveness: relevance → Trustworthiness; System characteristics → System performance → Output quality → Trustworthiness)
 <!-- generated:constructs:end -->
 
 ### 1.3 What it does not measure

@@ -1,6 +1,6 @@
 ---
-id: saliency-prediction-accuracy
-title: "Visual attention prediction performance: accuracy"
+id: attention-prediction-correctness
+title: "Visual attention prediction performance: correctness"
 aliases: [attention prediction accuracy]
 page_type: construct
 template_version: "0.1"
@@ -15,9 +15,9 @@ reviewers: []
 sources: [bylinskii2019, borkin2016]
 ---
 
-# Visual attention prediction performance: accuracy
+# Visual attention prediction performance: correctness
 
-> How well a predicted map matches where people actually look.
+> How well a predicted map matches where people actually look. For continuous predictions like these, correctness means closeness, not right or wrong.
 
 ## 1. Definition
 The agreement between a predicted saliency map and fixations recorded from people viewing the same image or visualization [bylinskii2019].

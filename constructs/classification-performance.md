@@ -28,8 +28,8 @@ A component or system functionality, judged on reference labels; whether users a
 ## 3. Narrower constructs
 Correctness so far; efficiency (latency, cost per item) and calibration of its confidence scores are candidates.
 <!-- generated:narrower:start -->
-- [Classification effectiveness: correctness](classification-correctness.md)
 - [Classification performance: calibration](calibration.md)
+- [Classification performance: correctness](classification-correctness.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

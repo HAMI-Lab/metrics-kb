@@ -23,7 +23,7 @@ sources: [lee2004, jian2000]
 An attitude: the person's willingness to rely on a system in a situation of uncertainty [lee2004].
 
 ## 2. Boundaries
-Differs from [trustworthiness](trustworthiness.md), a property of the system and its outputs. Differs from [reliance](reliance.md), which is what the person does. Trust shapes reliance but does not determine it [lee2004]. A general propensity to trust automation, independent of any system, would be a user characteristic.
+Differs from [trustworthiness](trustworthiness.md), a property of the system and its outputs: a trust questionnaire measures how trustworthy people perceive the system to be. Differs from [reliance](reliance.md), which is what the person does. Trust shapes reliance but does not determine it [lee2004]. A general propensity to trust automation, independent of any system, would be a user characteristic.
 
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->

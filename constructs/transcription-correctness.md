@@ -1,6 +1,6 @@
 ---
-id: transcription-accuracy
-title: "Transcription performance: accuracy"
+id: transcription-correctness
+title: "Transcription performance: correctness"
 aliases: [recognition accuracy]
 page_type: construct
 template_version: "0.1"
@@ -15,7 +15,7 @@ reviewers: []
 sources: [jurafsky2025]
 ---
 
-# Transcription performance: accuracy
+# Transcription performance: correctness
 
 > How closely a transcript matches the correct one.
 
