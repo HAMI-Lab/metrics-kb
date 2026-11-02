@@ -117,6 +117,8 @@ def check_metric(mid, page, metrics, constructs, strategies):
         if not isinstance(ins, dict) or not ins.get("name"):
             err(f"operationalization.instruments[{i}]: each instrument needs a name")
             continue
+        if ins.get("kind", "content") not in ("content", "scorer", "suite"):
+            err(f"instrument '{ins['name']}': kind must be content, scorer or suite (D30)")
         for k in ins.get("sources") or []:
             if k not in BIB:
                 err(f"instrument '{ins['name']}': source '{k}' not in bibliography")

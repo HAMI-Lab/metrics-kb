@@ -30,7 +30,8 @@ operationalization:
   range: "0-1"
   better: higher
   validity_concern: {level: high, note: "Usually judged by an LLM; checks support by the context, not truth, and the judge goes unchecked unless sampled."}
-  instruments: []
+  instruments:
+    - {name: "RAGAS faithfulness", sources: [es2023, ragas2026], scale: "share of supported claims, 0-1", note: "An LLM splits the answer into claims and checks each against the retrieved context."}
 
 cost:
   level: low
@@ -90,7 +91,10 @@ Log or generate question-context-answer triples; run the judge over them.
 0 to 1.
 
 ### 2.6 Instruments
-None listed.
+**Scorers**
+- **RAGAS faithfulness** [es2023; ragas2026]: an LLM judge splits the answer into claims and checks each against the retrieved context; the score is the share supported. The judge model and prompt are part of the instrument, so report both.
+
+Content: any set of question-context-answer triples; none is singled out here.
 
 ## 3. Why it is measured
 

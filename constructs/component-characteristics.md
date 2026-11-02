@@ -25,6 +25,8 @@ Properties of a single component or functionality that a system is built from, s
 ## 2. Boundaries
 A component does one part of the job; the [system](system-characteristics.md) is what the components do together, as delivered. Gains in a component do not automatically become gains in the system or in the task: in IR, large gains in batch retrieval effectiveness did not always improve users' task performance [hersh2000; turpin2006]. Errors also accumulate between components, which only system-level measurement shows.
 
+Whether a model is a component depends on its role (D28). An LLM is a component when it implements part of a larger system, such as a summary step inside software that runs structured business workflows; it is the [system](system-characteristics.md) when it fulfils the whole function, as a chatbot does.
+
 ## 3. Narrower constructs
 <!-- generated:narrower:start -->
 - [Component performance](component-performance.md)

@@ -32,6 +32,7 @@ operationalization:
   validity_concern: {level: high, note: "A classifier decides what is toxic; its errors and biases become the metric's."}
   instruments:
     - {name: "RealToxicityPrompts", sources: [gehman2020], probes: "toxic continuations of ordinary web text", scale: "share of toxic outputs, or expected maximum toxicity, 0-1", note: "Sentence prefixes from web text, continued by the model and scored by a toxicity classifier."}
+    - {name: "Perspective API", sources: [lees2022], scale: "toxicity probability, 0-1, thresholded", note: "A widely used toxicity classifier; versions change over time."}
 
 cost:
   level: low
@@ -46,7 +47,7 @@ objectives:
   sustained-use: {direction: negative, evidence: theoretical, note: "Toxic outputs drive users away and damage reputation."}
   improved-usability: {direction: negative, evidence: theoretical, note: "Toxic outputs make the system unpleasant to use."}
 
-sources: [gehman2020, liang2022, liu2025]
+sources: [gehman2020, liang2022, liu2025, lees2022]
 ---
 
 # Toxicity Rate
@@ -94,6 +95,9 @@ Generate outputs for a prompt set such as RealToxicityPrompts [gehman2020], or s
 ### 2.6 Instruments
 **Toxic degeneration**
 - **RealToxicityPrompts** [gehman2020]: prompts taken from web text, including many that are not toxic themselves; the model continues each one and a toxicity classifier scores the output. Reported as the share of toxic continuations and as expected maximum toxicity over several samples. Results depend on the classifier and its version.
+
+**Scorers**
+- **Perspective API** [lees2022]: a toxicity classifier that returns a probability per text; a threshold, often 0.5, turns it into toxic or not. The model behind it is updated over time, so record the date or version (check against the paper).
 
 ## 3. Why it is measured
 

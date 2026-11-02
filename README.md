@@ -1,6 +1,6 @@
 # Interactive Systems Evaluation Metrics Wiki
 
-A wiki of evaluation metrics for human-facing intelligent and interactive systems: human-AI interaction, information retrieval, recommender systems, visualization, LLM and agent evaluation, and related fields. It helps researchers and practitioners decide which metrics to use, what each one actually measures, and what can go wrong when they rely on it.
+A wiki of evaluation metrics for human-facing intelligent and interactive systems: human-AI interaction, information retrieval, recommender systems, visualization, LLM and agent evaluation, and related fields. A metric is in scope when the system or component it evaluates produces output that people consume or interact with, in any modality (D29). It helps researchers and practitioners decide which metrics to use, what each one actually measures, and what can go wrong when they rely on it.
 
 Every metric page answers the same questions: **what** is measured, **how**, **why**, **who** is involved, and **which metrics are related**. Each page also records how the metric links to two objectives: **sustained use over time** and **improved usability**.
 
@@ -46,6 +46,8 @@ The roots also differ in **who controls the variable** (D24). Builders design an
 
 **Inside the component root**, constructs are typed by what the component takes in and puts out: classification (a label from a fixed set), closed answers (one correct answer per item), retrieval, generation, tool use and explanation. What the test data probes, such as knowledge or reasoning, is not a construct in the DAG; it belongs to the test data and is named in prose (D23).
 
+**A model's root depends on its role** (D28). An LLM that implements part of a larger system, such as a summary step in a business-workflow application, is a component; an LLM that fulfils the whole function, such as a chatbot, is the system. A construct that applies in both roles can sit under both roots, and its metric pages stay as they are.
+
 The split exists because **gains at one level do not automatically carry over to the next**. Errors pile up between components, and a better system does not guarantee better outcomes for users. Effects that cross levels, such as faster responses shortening tasks, are recorded as empirical links on metric pages, not as edges in the DAG.
 
 ### 3. One metric page per computation per root
@@ -61,6 +63,8 @@ Only the formula is shared. Who sets the inputs, who judges, the construct, and 
 **Instruments are grouped, not paged** (D25). A standardized questionnaire or test is an instantiation of a metric. Instruments that measure the same construct with the same method share one page, titled by construct and method: [Perceived Usability Score (questionnaire)](metrics/perceived-usability-score.md) holds SUS, UMUX and UMUX-LITE. Each page lists its instruments in front matter and compares them in section 2.6; instrument names stay searchable as aliases.
 
 **A metric page is a class; instruments are its objects** (D27). The page fixes what every instrument shares: construct, method, route, the computation with its parameters, and the caveats. An instrument fixes the content: the items, or the benchmark's inputs and references. What an instrument probes, such as math reasoning for GSM8K, belongs to the instrument, so the 2.6 lists are grouped by it. The lists are representative, not complete.
+
+Instruments come in three kinds (D30): **content** fixes what is measured on (items, a benchmark), **scorer** fixes how outputs are judged (a learned metric such as COMET, a toxicity classifier, an LLM judge), and **suite** is an aggregate over benchmarks. **An average over benchmarks measures no single construct**: it mixes demands, scales and chance levels, and a change can come from any member. Read the member scores first.
 
 ### 4. Strategies have two layers
 - **Methods** say how data is gathered: benchmarks (also called test collections or labeled datasets), logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
@@ -95,7 +99,7 @@ Plain language and short sentences, with jargon explained on first use. A metric
 
 | Folder | Contents |
 |---|---|
-| [`docs/`](docs/wiki-map.md) | `wiki-map.md` (generated): every page linked from one place, and a table of every instrument. |
+| [`docs/`](docs/wiki-map.md) | `wiki-map.md` (generated): every page linked from one place, and a table of every instrument. `stress-test-eee.md`: 50 metrics from the Every Eval Ever registry mapped onto the wiki, the evidence for D28-D30. |
 | [`constructs/`](constructs/index.md) | One page per construct; `dag.yaml` (the DAG, hand-editable); `index.md` (generated diagram and tree). |
 | `metrics/` | One page per metric, with its instruments listed in front matter and section 2.6. |
 | `strategies/` | One page per route, and one per research method that has a page so far. |

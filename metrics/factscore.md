@@ -32,6 +32,7 @@ operationalization:
   validity_concern: {level: high, note: "Depends on how text is split into facts, on the knowledge source's coverage, and on an automatic judge."}
   instruments:
     - {name: "FActScore biographies", sources: [min2023], probes: "factual precision of long-form text about people", scale: "share of supported facts, 0-1", note: "Generated biographies checked against Wikipedia."}
+    - {name: "FActScore automatic estimator", sources: [min2023], scale: "share of supported facts, 0-1", note: "Retrieval from the knowledge source plus a language model that decides whether each fact is supported."}
 
 cost:
   level: medium
@@ -94,6 +95,9 @@ Generate texts for a prompt set, split them into facts (by people or a model), a
 ### 2.6 Instruments
 **Long-form factuality about people**
 - **FActScore biographies** [min2023]: the model writes biographies of people with Wikipedia pages; each atomic fact is checked against Wikipedia. Rare entities give lower scores than well-known ones (check against the paper).
+
+**Scorers**
+- **FActScore automatic estimator** [min2023]: retrieves passages from the knowledge source and asks a language model whether each atomic fact is supported; used in place of human annotators. Changing the judge model changes the scores.
 
 ## 3. Why it is measured
 

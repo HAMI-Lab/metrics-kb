@@ -266,14 +266,16 @@ def render_map(constructs, metrics, strategies, parents, children, roots, by):
     out += ["## 4. Instruments", "",
             "A metric page is a class; its instruments are objects (D25, D27): standardized questionnaires, tests and "
             "benchmarks. Lists are representative, not complete. Details are in section 2.6 of each metric page.", "",
-            "| Instrument | Metric | Probes | Scale |", "|---|---|---|---|"]
+            "Kinds (D30): **content** fixes what is measured on, **scorer** fixes how outputs are judged, "
+            "**suite** is an aggregate over benchmarks and measures no single construct.", "",
+            "| Instrument | Kind | Metric | Probes | Scale |", "|---|---|---|---|---|"]
     rows = []
     for m in metrics:
         for ins in op(m).get("instruments") or []:
             if isinstance(ins, dict) and ins.get("name"):
-                rows.append((ins["name"], m, ins.get("probes") or "", ins.get("scale") or ""))
-    for name, m, probes, scale in sorted(rows, key=lambda r: (r[0].lower(), title_of(metrics, r[1]).lower())):
-        out.append(f"| {name} | {Mt(m)} | {probes or '—'} | {scale or '—'} |")
+                rows.append((ins["name"], ins.get("kind") or "content", m, ins.get("probes") or "", ins.get("scale") or ""))
+    for name, kind, m, probes, scale in sorted(rows, key=lambda r: (r[0].lower(), title_of(metrics, r[2]).lower())):
+        out.append(f"| {name} | {kind} | {Mt(m)} | {probes or '—'} | {scale or '—'} |")
     out.append("")
 
     objs = sorted((ROOT / "objectives").glob("*.md"))

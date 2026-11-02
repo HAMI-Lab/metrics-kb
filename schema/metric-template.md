@@ -43,8 +43,8 @@ operationalization:
     level: low                   # vocabulary: validity_concern
     note: ""                     # one line: why
   instruments: []                # named instantiations (objects) of this metric (D25, D27), described in 2.6; each item:
-                                 # {name: "Full Name (ACRONYM)", sources: [keys], probes: "what it tests, e.g. math reasoning",
-                                 #  scale: "unit and range", note: "items and scoring in one line"}; probes and scale are optional
+                                 # {name: "Full Name (ACRONYM)", kind: content | scorer | suite (D30, default content), sources: [keys],
+                                 #  probes: "what it tests, e.g. math reasoning", scale: "unit and range", note: "one line"}
 
 # ---- 4. Who (cost) ----
 cost:
@@ -119,7 +119,10 @@ sources: []                      # keys in references/bibliography.yaml
      instruments probe different things, group them under bold labels by what they probe.
      List representative instruments, not all of them: the best-known, ones that show a distinct
      demand or answer format, and ones with known problems worth knowing (saturation, contamination).
-     Point to an external catalog for the rest. List them in operationalization.instruments too.
+     Point to an external catalog for the rest. Instruments are of three kinds (D30): content (items,
+     benchmarks), scorer (a learned metric, classifier or LLM judge) and suite (an aggregate over
+     benchmarks). For a suite, state in bold that the aggregate measures no single construct.
+     List them in operationalization.instruments too.
      Write "None listed." when the computation in 2.4 is the whole operationalization. -->
 
 ## 3. Why it is measured

@@ -4,7 +4,28 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
-## 2026-11-02 (who controls a variable; instruments revisited)
+## 2026-11-02 (after the Every Eval Ever stress test)
+
+The decisions below follow a stress test: 50 metrics sampled from the Every Eval Ever metric registry [batzner2026] were mapped onto the wiki. The mapping and counts are in [`docs/stress-test-eee.md`](../docs/stress-test-eee.md).
+
+### D28. Component or system is decided by the role the model plays
+- **Decision.** A model, such as an LLM, is a **component** when it implements part of a larger system's function, for example an AI summary step inside software that runs structured business workflows. It is the **system** when it fulfils the whole function end to end, for example a chatbot or a question-answering system. The same model can be either; what decides is the role in the system being evaluated, not the model.
+- **Consequence for pages.** D20 splits a computation into pages only when who sets the inputs or who judges changes. A change of role alone does not. When a construct applies in both roles (factuality, for instance, is a property of a summary component's output and of a chatbot's answers), it may take a broader construct under each root, and the metric page stays one. Which constructs need both parents is decided case by case.
+- **Why.** The stress test kept meeting judged LLM outputs where the root was unclear. Tying the root to the model's role answers the question with the same information an evaluator already has.
+
+### D29. Scope: systems whose outputs people consume or interact with
+- **Decision.** A metric is in scope when the system or component it evaluates produces output that people consume or interact with, in any modality. In: text, speech recognition and speech quality, image generation, document understanding, saliency prediction for visualizations. Out: pose estimation, 3D detection, codecs and compression, driving, game-playing agents.
+- **Why.** In the stress test, 14 of 50 metrics were plainly outside human-facing use and 15 sat in other modalities; modality was the wrong boundary.
+
+### D30. Instruments come in three kinds: content, scorer and suite (refines D27)
+- **Decision.** `operationalization.instruments` entries take an optional `kind`:
+  - **content** (default): fixes what is measured on: the items of a questionnaire or test, the inputs and references of a benchmark.
+  - **scorer**: fixes how outputs are judged: a learned metric (COMET, BERTScore), a classifier (a toxicity classifier) or an LLM judge with its prompt. One measurement is then class × content × scorer, and changing either object changes the number.
+  - **suite**: a fixed collection of benchmarks reported as one aggregate, such as a leaderboard average.
+- **Suites need a caveat, stated prominently.** An average over benchmarks mixes different latent demands, different scales and different chance levels, so the aggregate does not measure any one construct. A change in the average can come from any member, and the weighting is a choice by the suite's authors. Pages that list a suite say so in bold in section 2.6, and readers should look at the member scores before drawing conclusions.
+- **Why.** About a dozen of the 50 sampled metrics were defined by a scoring model rather than by test data, and the registry includes averages across benchmarks that are neither a class nor a single object.
+
+
 
 ### D24. Roots differ in who controls the variable; latent abilities belong to the user root only
 - **Decision.**

@@ -890,3 +890,9 @@ zhang2024:
   note: 'GSM1k: a fresh GSM8K-like set; score drops suggest contamination for some models'
   origin: added by AI for instrument lists (2026-11-02)
   verified: false
+lees2022:
+  citation: 'Lees, A., Tran, V. Q., Tay, Y., Sorensen, J., Gupta, J., Metzler, D., & Vasserman, L. (2022). A New Generation of Perspective API: Efficient Multilingual Character-level Transformers. KDD 2022. (check against the paper)'
+  url: https://arxiv.org/abs/2202.11176
+  note: Perspective API toxicity classifier
+  origin: added by AI for scorer instruments (2026-11-02)
+  verified: false

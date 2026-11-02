@@ -36,6 +36,7 @@ operationalization:
     - {name: "HellaSwag", sources: [zellers2019], probes: "commonsense reasoning about everyday situations", scale: "proportion, 0-1", note: "Choose the most plausible continuation of a scene among four."}
     - {name: "TruthfulQA (multiple-choice)", sources: [lin2022], probes: "avoiding common misconceptions", scale: "proportion, 0-1", note: "Questions written so that a popular false answer is tempting."}
     - {name: "Stanford Question Answering Dataset (SQuAD)", sources: [rajpurkar2016], probes: "reading comprehension", scale: "proportion, 0-1 (exact match)", note: "Answer spans extracted from Wikipedia paragraphs."}
+    - {name: "Holistic Evaluation of Language Models (HELM)", sources: [liang2022], probes: "many scenarios at once", scale: "aggregates of per-scenario scores", note: "A suite of scenarios and metrics; reports per-scenario results and aggregates."}
 
 cost:
   level: low
@@ -113,6 +114,11 @@ Representative benchmarks, grouped by what they probe (D27). All report accuracy
 
 **Reading comprehension**
 - **SQuAD** [rajpurkar2016]: answer a question with a span from a given Wikipedia paragraph; scored by exact match after normalization (and by token-overlap [F1](f1-score.md)).
+
+**Suites (aggregates over benchmarks)**
+- **HELM** [liang2022]: runs many scenarios, each with its own benchmark, and reports per-scenario results alongside aggregates.
+
+**Caution: an average over benchmarks measures no single construct (D30).** It mixes different demands, scales and chance levels, a change can come from any one member, and the weights are the suite authors' choice. Read the member scores before drawing a conclusion from the average.
 
 The full catalog of benchmarks is far larger; registries such as the one behind Every Eval Ever list them [batzner2026].
 

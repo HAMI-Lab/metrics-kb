@@ -23,7 +23,7 @@ graph LR
   M -. evidence .-> O
 ```
 
-Counts: 59 constructs, 39 metrics, 8 routes, 7 methods, 42 instrument entries.
+Counts: 59 constructs, 39 metrics, 8 routes, 7 methods, 46 instrument entries.
 
 ## 1. Constructs and their metrics, by root
 
@@ -204,50 +204,56 @@ Research methods without a page yet are listed in `research_method` in [`schema/
 
 A metric page is a class; its instruments are objects (D25, D27): standardized questionnaires, tests and benchmarks. Lists are representative, not complete. Details are in section 2.6 of each metric page.
 
-| Instrument | Metric | Probes | Scale |
-|---|---|---|---|
-| Adaptive CALVI (A-CALVI) | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | not being misled by deceptive charts | latent ability (item response theory) |
-| Adaptive VLAT (A-VLAT) | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | latent ability (item response theory) |
-| AdvBench | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | refusal of harmful requests under jailbreak attacks | share of successful attacks, 0-1 |
-| BeauVis Aesthetic Pleasure Scale | [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md) | — | 1-7 mean |
-| BEIR | [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | retrieval across domains without in-domain training | nDCG@10, 0-1 |
-| Berlin Numeracy Test | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | statistical numeracy and risk literacy | number correct 0-4, or quartile 1-4 |
-| CNN/DailyMail | [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | summarizing news articles in several sentences | ROUGE-1/2/L, 0-1 |
-| Critical Thinking Assessment for Literacy in Visualizations (CALVI) | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | not being misled by deceptive charts | share correct, 0-1, or latent ability |
-| DecodingTrust | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | trustworthiness under adversarial conditions, across several perspectives | per-perspective scores |
-| FActScore biographies | [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | factual precision of long-form text about people | share of supported facts, 0-1 |
-| GAIA | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | general assistant tasks needing browsing, tools and reasoning | share correct, 0-1 |
-| Grade School Math 8K (GSM8K) | [Accuracy](../metrics/accuracy.md) | multi-step math reasoning | proportion, 0-1 |
-| HarmBench | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | refusal of harmful requests under automated red teaming | share of successful attacks, 0-1 |
-| HellaSwag | [Accuracy](../metrics/accuracy.md) | commonsense reasoning about everyday situations | proportion, 0-1 |
-| HumanEval | [pass@k](../metrics/pass-at-k.md) | writing short Python functions from a docstring | pass@k, 0-1 |
-| Massive Multitask Language Understanding (MMLU) | [Accuracy](../metrics/accuracy.md) | knowledge across academic and professional subjects | proportion, 0-1 |
-| Mini-VLAT | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | share correct, 0-1 |
-| Mostly Basic Python Problems (MBPP) | [pass@k](../metrics/pass-at-k.md) | writing entry-level Python programs from a description | pass@k, 0-1 |
-| MS MARCO passage ranking | [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | ranking a relevant passage for real search queries | MRR@10, 0-1 |
-| NASA Task Load Index (NASA-TLX) | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | — | 0-100 |
-| PromptBench | [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md) | robustness to adversarial changes in prompts | relative drop, usually 0-1 |
-| RealToxicityPrompts | [Toxicity Rate](../metrics/toxicity-rate.md) | toxic continuations of ordinary web text | share of toxic outputs, or expected maximum toxicity, 0-1 |
-| Self-Assessment Manikin (SAM) | [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md) | pleasure, arousal and dominance | 1-9 per dimension (common form) |
-| Stanford Question Answering Dataset (SQuAD) | [Accuracy](../metrics/accuracy.md) | reading comprehension | proportion, 0-1 (exact match) |
-| Stanford Question Answering Dataset (SQuAD) | [F1 Score](../metrics/f1-score.md) | reading comprehension | token-overlap F1, 0-1 |
-| Subjective Mental Effort Questionnaire (SMEQ) | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | — | 0 to about 150 |
-| SWE-bench | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | resolving real software issues in a code repository | share resolved, 0-1 |
-| System Usability Scale (SUS) | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
-| tau-bench | [pass^k](../metrics/pass-hat-k.md) | tool use while talking with a simulated user under policies | pass^k, 0-1 |
-| tau-bench | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | tool use while talking with a simulated user under policies | share of successful episodes, 0-1 |
-| TREC ad hoc collections | [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | topical relevance for ad hoc search | nDCG at a cutoff, 0-1 |
-| TREC ad hoc collections | [Precision (benchmark)](../metrics/precision-benchmark.md) | topical relevance for ad hoc search | precision@k, 0-1 |
-| TREC ad hoc collections | [Recall (benchmark)](../metrics/recall-benchmark.md) | topical relevance for ad hoc search | recall@k, 0-1 |
-| TREC-8 Question Answering track | [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | finding a correct answer to a factoid question | MRR, 0-1 |
-| Trust in Automation Scale | [Trust Score (questionnaire)](../metrics/trust-score.md) | — | 1-7 mean |
-| TruthfulQA (multiple-choice) | [Accuracy](../metrics/accuracy.md) | avoiding common misconceptions | proportion, 0-1 |
-| UEQ-S | [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | — | -3 to +3 per scale |
-| UMUX-LITE | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
-| Usability Metric for User Experience (UMUX) | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
-| User Experience Questionnaire (UEQ) | [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | — | -3 to +3 per scale |
-| Visualization Literacy Assessment Test (VLAT) | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | share correct, 0-1 |
-| XSum | [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | summarizing news articles in one sentence | ROUGE-1/2/L, 0-1 |
+Kinds (D30): **content** fixes what is measured on, **scorer** fixes how outputs are judged, **suite** is an aggregate over benchmarks and measures no single construct.
+
+| Instrument | Kind | Metric | Probes | Scale |
+|---|---|---|---|---|
+| Adaptive CALVI (A-CALVI) | content | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | not being misled by deceptive charts | latent ability (item response theory) |
+| Adaptive VLAT (A-VLAT) | content | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | latent ability (item response theory) |
+| AdvBench | content | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | refusal of harmful requests under jailbreak attacks | share of successful attacks, 0-1 |
+| BeauVis Aesthetic Pleasure Scale | content | [Visualization Aesthetics Score (questionnaire)](../metrics/visualization-aesthetics-score.md) | — | 1-7 mean |
+| BEIR | content | [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | retrieval across domains without in-domain training | nDCG@10, 0-1 |
+| Berlin Numeracy Test | content | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | statistical numeracy and risk literacy | number correct 0-4, or quartile 1-4 |
+| CNN/DailyMail | content | [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | summarizing news articles in several sentences | ROUGE-1/2/L, 0-1 |
+| Critical Thinking Assessment for Literacy in Visualizations (CALVI) | content | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | not being misled by deceptive charts | share correct, 0-1, or latent ability |
+| DecodingTrust | content | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | trustworthiness under adversarial conditions, across several perspectives | per-perspective scores |
+| FActScore automatic estimator | content | [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | — | share of supported facts, 0-1 |
+| FActScore biographies | content | [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | factual precision of long-form text about people | share of supported facts, 0-1 |
+| GAIA | content | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | general assistant tasks needing browsing, tools and reasoning | share correct, 0-1 |
+| Grade School Math 8K (GSM8K) | content | [Accuracy](../metrics/accuracy.md) | multi-step math reasoning | proportion, 0-1 |
+| HarmBench | content | [Attack Success Rate (ASR)](../metrics/attack-success-rate.md) | refusal of harmful requests under automated red teaming | share of successful attacks, 0-1 |
+| HellaSwag | content | [Accuracy](../metrics/accuracy.md) | commonsense reasoning about everyday situations | proportion, 0-1 |
+| Holistic Evaluation of Language Models (HELM) | content | [Accuracy](../metrics/accuracy.md) | many scenarios at once | aggregates of per-scenario scores |
+| HumanEval | content | [pass@k](../metrics/pass-at-k.md) | writing short Python functions from a docstring | pass@k, 0-1 |
+| Massive Multitask Language Understanding (MMLU) | content | [Accuracy](../metrics/accuracy.md) | knowledge across academic and professional subjects | proportion, 0-1 |
+| Mini-VLAT | content | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | share correct, 0-1 |
+| Mostly Basic Python Problems (MBPP) | content | [pass@k](../metrics/pass-at-k.md) | writing entry-level Python programs from a description | pass@k, 0-1 |
+| MS MARCO passage ranking | content | [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | ranking a relevant passage for real search queries | MRR@10, 0-1 |
+| NASA Task Load Index (NASA-TLX) | content | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | — | 0-100 |
+| Perspective API | content | [Toxicity Rate](../metrics/toxicity-rate.md) | — | toxicity probability, 0-1, thresholded |
+| PromptBench | content | [Performance Drop Rate (PDR)](../metrics/performance-drop-rate.md) | robustness to adversarial changes in prompts | relative drop, usually 0-1 |
+| RAGAS faithfulness | content | [Answer Faithfulness](../metrics/answer-faithfulness.md) | — | share of supported claims, 0-1 |
+| RealToxicityPrompts | content | [Toxicity Rate](../metrics/toxicity-rate.md) | toxic continuations of ordinary web text | share of toxic outputs, or expected maximum toxicity, 0-1 |
+| Self-Assessment Manikin (SAM) | content | [Emotional Response Score (questionnaire)](../metrics/emotional-response-score.md) | pleasure, arousal and dominance | 1-9 per dimension (common form) |
+| Stanford Question Answering Dataset (SQuAD) | content | [Accuracy](../metrics/accuracy.md) | reading comprehension | proportion, 0-1 (exact match) |
+| Stanford Question Answering Dataset (SQuAD) | content | [F1 Score](../metrics/f1-score.md) | reading comprehension | token-overlap F1, 0-1 |
+| Subjective Mental Effort Questionnaire (SMEQ) | content | [Mental Workload Score (questionnaire)](../metrics/mental-workload-score.md) | — | 0 to about 150 |
+| SWE-bench | content | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | resolving real software issues in a code repository | share resolved, 0-1 |
+| System Usability Scale (SUS) | content | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
+| tau-bench | content | [pass^k](../metrics/pass-hat-k.md) | tool use while talking with a simulated user under policies | pass^k, 0-1 |
+| tau-bench | content | [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md) | tool use while talking with a simulated user under policies | share of successful episodes, 0-1 |
+| TREC ad hoc collections | content | [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | topical relevance for ad hoc search | nDCG at a cutoff, 0-1 |
+| TREC ad hoc collections | content | [Precision (benchmark)](../metrics/precision-benchmark.md) | topical relevance for ad hoc search | precision@k, 0-1 |
+| TREC ad hoc collections | content | [Recall (benchmark)](../metrics/recall-benchmark.md) | topical relevance for ad hoc search | recall@k, 0-1 |
+| TREC-8 Question Answering track | content | [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | finding a correct answer to a factoid question | MRR, 0-1 |
+| Trust in Automation Scale | content | [Trust Score (questionnaire)](../metrics/trust-score.md) | — | 1-7 mean |
+| TruthfulQA (multiple-choice) | content | [Accuracy](../metrics/accuracy.md) | avoiding common misconceptions | proportion, 0-1 |
+| UEQ-S | content | [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | — | -3 to +3 per scale |
+| UMUX-LITE | content | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
+| Usability Metric for User Experience (UMUX) | content | [Perceived Usability Score (questionnaire)](../metrics/perceived-usability-score.md) | — | 0-100 |
+| User Experience Questionnaire (UEQ) | content | [User Experience Score (questionnaire)](../metrics/user-experience-score.md) | — | -3 to +3 per scale |
+| Visualization Literacy Assessment Test (VLAT) | content | [Visualization Literacy Score (ability test)](../metrics/visualization-literacy-score.md) | reading well-made charts | share correct, 0-1 |
+| XSum | content | [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | summarizing news articles in one sentence | ROUGE-1/2/L, 0-1 |
 
 ## 5. Objectives
 
