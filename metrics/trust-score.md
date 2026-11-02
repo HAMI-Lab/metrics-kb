@@ -31,7 +31,7 @@ operationalization:
   better: context-dependent
   validity_concern: {level: moderate, note: "Reported trust is an attitude; it does not show whether trust matches how trustworthy the system is."}
   instruments:
-    - {name: "Trust in Automation Scale", sources: [jian2000], note: "12 statements on trust and distrust, 7-point."}
+    - {name: "Trust in Automation Scale", sources: [jian2000], scale: "1-7 mean", note: "12 statements on trust and distrust, 7-point."}
 
 cost:
   level: low
@@ -82,13 +82,13 @@ Multi-item, so internal consistency can be checked; report it for your sample.
 Questionnaire after use. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- Trust in Automation Scale: score each item 1-7; reverse-score distrust items; average. Or report trust and distrust separately (see 2.1).
+Score each item on the instrument's scale, reverse-score distrust items, and average; or report trust and distrust separately (see 2.1). Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-1-7 mean.
+A mean rating, treated as interval data, on the instrument's range (2.6). More trust is not better in itself (1.3).
 
 ### 2.6 Instruments
-- **Trust in Automation Scale** [jian2000]: written for automation in general; widely reused for AI systems. Check that the items make sense for the system studied (see 3.3).
+- **Trust in Automation Scale** [jian2000]: 12 statements, some about trust (for example that the system is reliable) and some about distrust (for example that it is deceptive), rated on 7-point scales; the score is the mean, 1-7, with distrust items reversed. Written for automation in general and widely reused for AI systems; check that the items make sense for the system studied (3.3).
 
 ## 3. Why it is measured
 

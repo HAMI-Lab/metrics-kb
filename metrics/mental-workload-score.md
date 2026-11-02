@@ -26,13 +26,13 @@ operationalization:
   route: [self-rating]
   collection_mode: [in-lab, field]
   data_source: [questionnaire]
-  unit: "workload or effort score (dimensionless)"
-  range: "0-100 (NASA-TLX); 0-150 (SMEQ)"
+  unit: "workload or effort score (dimensionless); differs by instrument (see 2.6)"
+  range: "differs by instrument (see 2.6)"
   better: context-dependent
   validity_concern: {level: moderate, note: "Self-reported workload; may differ from physiological or performance-based workload measures."}
   instruments:
-    - {name: "NASA Task Load Index (NASA-TLX)", sources: [hart1988, hart2006], note: "Six subscales rated 0-100, combined by pairwise weights (weighted TLX) or a plain mean (Raw TLX)."}
-    - {name: "Subjective Mental Effort Questionnaire (SMEQ)", sources: [zijlstra1985], note: "One vertical scale, 0 to about 150, with verbal labels; mental effort only."}
+    - {name: "NASA Task Load Index (NASA-TLX)", sources: [hart1988, hart2006], scale: "0-100", note: "Six subscales, combined by pairwise weights (weighted TLX) or a plain mean (Raw TLX)."}
+    - {name: "Subjective Mental Effort Questionnaire (SMEQ)", sources: [zijlstra1985], scale: "0 to about 150", note: "One vertical scale with verbal labels; mental effort only."}
 
 cost:
   level: medium
@@ -79,24 +79,27 @@ The questionnaires are a **direct** measure of *perceived* workload and a **prox
 **Using a proxy with a known gap.** The score can compare designs or assistance conditions within one study on how demanding people found them. It cannot show how much cognitive capacity was used, or whether people had spare capacity to catch errors. Before relying on it for safety-critical decisions, pair it with a performance measure under load.
 
 ### 2.2 Reliability
-NASA-TLX has been used and validated in many domains since the 1980s [hart2006]. (TODO: add specific test-retest or internal-consistency figures from a verified source.) SMEQ is a single item, but sensitive to differences between tasks in comparisons with other one-question measures [sauro2009onequestion] (check against the paper).
+Post-task workload ratings are sensitive to differences between tasks, which is what most studies need. Single-item scales are coarser than multi-dimensional ones. Figures for each instrument are in 2.6. (TODO: add test-retest or internal-consistency figures from a verified source.)
 
 ### 2.3 Data collection and measurement error
-Given right after each task, on paper or on screen. Errors come from memory decay (long tasks), anchoring on the first task rated, confusion about the TLX *performance* subscale (whose scale runs from "perfect" to "failure", opposite to the others), and differences in how individuals use the scale.
+Given right after each task, on paper or on screen. Errors come from memory decay (long tasks), anchoring on the first task rated, confusion about scales that run in the opposite direction from the others, and differences in how individuals use the scale.
 
 ### 2.4 Computation
-- **NASA-TLX:** each subscale is rated from 0 to 100 (the original paper form has 21 marks in steps of 5).
-  - **Weighted TLX** (original): the person also makes 15 pairwise comparisons of the subscales; each subscale's weight is how many times it was chosen, and the overall score is the weighted mean [hart1988].
-  - **Raw TLX (RTLX):** the unweighted mean of the six ratings. Widely used because it is quicker; Hart's 20-year review discusses its use [hart2006].
-  - Many studies also report the six subscales separately, which is often more informative than the overall score.
-- **SMEQ:** the position marked, 0-150. Average per task across participants.
+For each person and task, record the rating or ratings and combine them into one score where the instrument defines how; average per task or condition across participants. Report subscales where the instrument has them, since they are often more informative than the overall score. Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-Dimensionless: 0-100 for NASA-TLX, 0-150 for SMEQ. There is no universal "acceptable" threshold; scores are best compared across conditions within one study, with the same instrument.
+Dimensionless ratings, treated as interval data. The range differs by instrument (2.6), so scores from different instruments are not comparable. There is no universal "acceptable" threshold; compare conditions within one study, with the same instrument. Lower is less demand, but lower is not always better (4.3).
 
 ### 2.6 Instruments
-- **NASA Task Load Index (NASA-TLX)** [hart1988; hart2006]: multi-dimensional. Choose it when you need to know *which kind* of demand changed (time pressure vs. frustration, for example), or when comparing with the large body of TLX studies.
-- **Subjective Mental Effort Questionnaire (SMEQ)** [zijlstra1985]: one scale with verbal labels from "not at all hard to do" to "tremendously hard to do". Choose it for a quick rating after every task in a usability test [sauro2009onequestion]. It corresponds to the mental-demand side of TLX.
+- **NASA Task Load Index (NASA-TLX)** [hart1988; hart2006]. Six subscales: mental demand, physical demand, temporal demand, performance, effort, and frustration.
+  - *Scale:* each subscale is rated from 0 to 100 (the original paper form has 21 marks in steps of 5). The *performance* subscale runs from "perfect" to "failure", opposite to the others, which some people misread.
+  - *Scoring:* **weighted TLX** (original): the person also makes 15 pairwise comparisons of the subscales; each subscale's weight is how many times it was chosen, and the overall score is the weighted mean [hart1988]. **Raw TLX (RTLX)**: the unweighted mean of the six ratings, widely used because it is quicker [hart2006].
+  - *Reliability:* used and validated in many domains since the 1980s [hart2006].
+  - *Choose it* when you need to know *which kind* of demand changed (time pressure vs. frustration, for example), or to compare with the large body of TLX studies.
+- **Subjective Mental Effort Questionnaire (SMEQ)** [zijlstra1985]. One vertical line with verbal labels, from "not at all hard to do" to "tremendously hard to do".
+  - *Scale:* 0 to about 150; the score is the position marked.
+  - *Reliability:* a single item, but sensitive to differences between tasks in comparisons with other one-question measures [sauro2009onequestion] (check against the paper).
+  - *Choose it* for a quick rating after every task in a usability test. It covers mental effort only, the mental-demand side of TLX.
 
 ## 3. Why it is measured
 

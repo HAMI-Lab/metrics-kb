@@ -31,7 +31,7 @@ operationalization:
   better: context-dependent
   validity_concern: {level: low, note: "Direct for self-reported feeling on the rated dimensions."}
   instruments:
-    - {name: "Self-Assessment Manikin (SAM)", sources: [bradley1994], note: "Three rows of cartoon figures for pleasure, arousal and dominance; usually 1-9 per dimension."}
+    - {name: "Self-Assessment Manikin (SAM)", sources: [bradley1994], probes: "pleasure, arousal and dominance", scale: "1-9 per dimension (common form)", note: "Three rows of cartoon figures; pictorial, seconds per rating."}
 
 cost:
   level: low
@@ -76,20 +76,21 @@ It does not measure lasting attitudes such as trust or satisfaction with a produ
 **Direct** for self-reported feeling. Being pictorial, SAM needs little reading and works across languages [bradley1994].
 
 ### 2.2 Reliability
-Single items per dimension; repeated ratings over a session give more stable estimates.
+Single items per dimension are noisy; repeated ratings over a session give more stable estimates.
 
 ### 2.3 Data collection and measurement error
 Rating right after a stimulus or task. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- SAM: one score per dimension, usually 1-9.
-- Compare conditions; do not sum dimensions.
+One score per rated dimension. Compare conditions dimension by dimension; do not sum dimensions. Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-Rating per dimension, commonly 1-9.
+A rating per dimension, treated as interval data; the range depends on the instrument (2.6). Higher is not always better: high arousal can be excitement or stress.
 
 ### 2.6 Instruments
-- **Self-Assessment Manikin (SAM)** [bradley1994]: pictorial, three dimensions, seconds per rating. Suited to repeated ratings after each stimulus.
+- **Self-Assessment Manikin (SAM)** [bradley1994]: three rows of cartoon figures for pleasure (unhappy to happy), arousal (calm to excited) and dominance (controlled to in control). The person marks a figure or a point between figures.
+  - *Scale:* usually 1-9 per dimension.
+  - *Choose it* for repeated ratings after each stimulus; being pictorial, it needs little reading and works across languages [bradley1994].
 
 ## 3. Why it is measured
 

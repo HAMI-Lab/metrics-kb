@@ -31,11 +31,11 @@ operationalization:
   better: higher
   validity_concern: {level: moderate, note: "Covers the chart types, tasks and misleading designs in the test; scores may not carry over to unusual charts, new tricks or real dashboards."}
   instruments:
-    - {name: "Visualization Literacy Assessment Test (VLAT)", sources: [lee2017], note: "Common chart types; retrieve values, find extremes, spot trends, compare. Full form."}
-    - {name: "Mini-VLAT", sources: [pandey2023], note: "Short form, one item per chart type; about 5 minutes."}
-    - {name: "Adaptive VLAT (A-VLAT)", sources: [cui2024], note: "Picks each next item from earlier answers; scored with item response theory."}
-    - {name: "Critical Thinking Assessment for Literacy in Visualizations (CALVI)", sources: [ge2023], note: "Charts with misleading features (truncated axes, bad aggregation, missing data) mixed with normal ones."}
-    - {name: "Adaptive CALVI (A-CALVI)", sources: [cui2024], note: "Adaptive form of CALVI."}
+    - {name: "Visualization Literacy Assessment Test (VLAT)", sources: [lee2017], probes: "reading well-made charts", scale: "share correct, 0-1", note: "Common chart types; retrieve values, find extremes, spot trends, compare. Full form."}
+    - {name: "Mini-VLAT", sources: [pandey2023], probes: "reading well-made charts", scale: "share correct, 0-1", note: "Short form, one item per chart type; about 5 minutes."}
+    - {name: "Adaptive VLAT (A-VLAT)", sources: [cui2024], probes: "reading well-made charts", scale: "latent ability (item response theory)", note: "Picks each next item from earlier answers."}
+    - {name: "Critical Thinking Assessment for Literacy in Visualizations (CALVI)", sources: [ge2023], probes: "not being misled by deceptive charts", scale: "share correct, 0-1, or latent ability", note: "Charts with misleading features (truncated axes, bad aggregation, missing data) mixed with normal ones."}
+    - {name: "Adaptive CALVI (A-CALVI)", sources: [cui2024], probes: "not being misled by deceptive charts", scale: "latent ability (item response theory)", note: "Adaptive form of CALVI."}
 
 cost:
   level: low
@@ -82,24 +82,27 @@ It says nothing about the usability of a particular visualization tool. VLAT doe
 **Using a proxy with a known gap.** Scores can group participants, control for literacy when comparing designs, or show whether training improves reading of the covered charts. They cannot certify that someone will read a particular product's charts correctly, or resist new or subtler misleading charts; test that with a task study on those charts.
 
 ### 2.2 Reliability
-The full VLAT has many items, so scores are fairly stable; the short and adaptive forms trade items for time, and the authors report how much information they keep (check against [pandey2023; cui2024]). The CALVI authors report item analysis with item response theory (check against [ge2023]).
+Longer forms give more stable scores; short and adaptive forms trade items for time. Adaptive forms report the precision of each ability estimate. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
 Given online or in a lab, often as a block in a study platform such as reVISit [ding2023]. Time limits per item are part of the protocol in some forms.
 
 ### 2.4 Computation
-- Share correct, or a total with a correction for guessing in multiple-choice items (check the scoring rule for each form).
-- Adaptive forms (A-VLAT, A-CALVI): an ability estimate from an item response theory model [cui2024; embretson2000].
+- Share of items answered correctly, or a total with a correction for guessing in multiple-choice items (check each instrument's rule).
+- Adaptive forms: an ability estimate from an item response theory model [embretson2000].
 
 ### 2.5 Unit and scale
-Share correct (0-1), or a latent ability score for the adaptive forms. Scores from different instruments are not on the same scale.
+Share correct (0-1, ratio scale) or a latent ability score (interval scale), depending on the instrument (2.6). Higher is better. Scores from different instruments are not on the same scale.
 
 ### 2.6 Instruments
-- **VLAT** [lee2017]: the full test on well-made charts. Choose it when literacy is a main variable of the study.
-- **Mini-VLAT** [pandey2023]: one item per chart type, about five minutes. Choose it to describe or group participants at the start of a study.
-- **A-VLAT** [cui2024]: adaptive; fewer items for a similar precision.
-- **CALVI** [ge2023]: critical reading of misleading charts. Choose it when being misled is the concern, for example with AI-generated or persuasive charts.
-- **A-CALVI** [cui2024]: adaptive form of CALVI.
+**Reading well-made charts** (construct: visualization literacy)
+- **VLAT** [lee2017]: the full test on common chart types such as bar charts, line charts, scatterplots and maps; tasks are retrieving a value, finding an extreme, spotting a trend and comparing. Share correct. Many items, so scores are fairly stable. Choose it when literacy is a main variable of the study.
+- **Mini-VLAT** [pandey2023]: one item per chart type, about five minutes. Share correct. The authors report how much information it keeps relative to the full test (check against the paper). Choose it to describe or group participants at the start of a study.
+- **A-VLAT** [cui2024]: adaptive; each next item depends on earlier answers, scored as a latent ability. Fewer items for similar precision (check against the paper).
+
+**Not being misled by deceptive charts** (construct: critical visualization literacy)
+- **CALVI** [ge2023]: charts with misleading features, such as truncated or inverted axes, inappropriate aggregation or missing data, mixed with normal items so that answering "it's misleading" every time does not score well (check against the paper). Share correct, or an ability estimate; the authors report item analysis with item response theory. Choose it when being misled is the concern, for example with AI-generated or persuasive charts.
+- **A-CALVI** [cui2024]: adaptive form of CALVI, scored as a latent ability.
 
 ## 3. Why it is measured
 

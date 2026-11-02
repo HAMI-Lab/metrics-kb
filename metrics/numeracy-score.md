@@ -31,7 +31,7 @@ operationalization:
   better: higher
   validity_concern: {level: low, note: "Direct for statistical numeracy as the test defines it; the Berlin test was designed for educated populations."}
   instruments:
-    - {name: "Berlin Numeracy Test", sources: [cokely2012], note: "Probability and risk word problems; four-item paper form, one-item form, and an adaptive form of two or three items."}
+    - {name: "Berlin Numeracy Test", sources: [cokely2012], probes: "statistical numeracy and risk literacy", scale: "number correct 0-4, or quartile 1-4", note: "Probability and risk word problems; four-item, one-item and adaptive forms."}
 
 cost:
   level: low
@@ -75,20 +75,22 @@ It does not measure everyday arithmetic in general, or how people feel about num
 **Direct** for statistical numeracy as the test defines it. The Berlin Numeracy Test was designed to tell apart people in educated populations, so it may not separate people well at the low end (check against [cokely2012]).
 
 ### 2.2 Reliability
-The Berlin test's authors report reliability and validity across countries (check against [cokely2012]). The one-item form is coarse.
+Short tests give coarse scores; more items give finer distinctions. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
 Paper or online, often in study platforms such as reVISit [ding2023]. See [ability tests](../strategies/ability-test.md).
 
 ### 2.4 Computation
-- Berlin Numeracy Test, four-item form: number correct (0-4), often reported as quartiles.
-- Berlin Numeracy Test, adaptive form: assigns a quartile from two or three answers [cokely2012].
+Number of problems answered correctly, often turned into a level (quartile) of numeracy. Adaptive forms assign a level from fewer items. Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-Number correct or quartile (1-4).
+Number correct (ratio) or level (ordinal), depending on the instrument and form (2.6). Higher is better.
 
 ### 2.6 Instruments
-- **Berlin Numeracy Test** [cokely2012]: four-item paper form, one-item form, and a computer-adaptive form that uses two or three items depending on earlier answers. Scores place people into four levels. Choose the adaptive or one-item form when time is short and coarse groups are enough.
+- **Berlin Numeracy Test** [cokely2012]: short word problems about probabilities and risks.
+  - *Forms and scoring:* a four-item paper form scored as number correct (0-4), often reported as quartiles; a one-item form; and a computer-adaptive form that assigns a quartile from two or three answers.
+  - *Reliability:* the authors report reliability and validity across countries (check against the paper). The one-item form is coarse. Designed to tell apart people in educated populations, so it may not separate people well at the low end (check against the paper).
+  - *Choose* the adaptive or one-item form when time is short and coarse groups are enough.
 
 ## 3. Why it is measured
 

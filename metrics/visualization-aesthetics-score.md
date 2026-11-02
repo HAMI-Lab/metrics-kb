@@ -31,7 +31,7 @@ operationalization:
   better: higher
   validity_concern: {level: low, note: "Direct for reported aesthetic pleasure; BeauVis was validated as a scale by its authors."}
   instruments:
-    - {name: "BeauVis Aesthetic Pleasure Scale", sources: [he2023], note: "A few adjectives about aesthetic pleasure, 7-point; score is the mean."}
+    - {name: "BeauVis Aesthetic Pleasure Scale", sources: [he2023], scale: "1-7 mean", note: "A few adjectives about aesthetic pleasure, 7-point; validated for visualizations."}
 
 cost:
   level: low
@@ -75,19 +75,19 @@ It does not measure whether the chart is easy to read or correct.
 **Direct** for reported aesthetic pleasure; the BeauVis authors report a validation of the scale (check against [he2023]).
 
 ### 2.2 Reliability
-Multi-item, so internal consistency can be checked; see the validation in [he2023].
+Multi-item scales allow internal consistency to be checked. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
 Rating after viewing each visualization. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- BeauVis: score = mean of the item ratings [he2023] (check the exact items and scale against the paper).
+The mean of the item ratings for each visualization, averaged across viewers. Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-1-7 mean.
+A mean rating, treated as interval data, on the instrument's range (2.6). Higher is more pleasing, which is not the same as easier to read.
 
 ### 2.6 Instruments
-- **BeauVis Aesthetic Pleasure Scale** [he2023]: a few adjectives, seconds per visualization. Suited to rating many visualizations in one study.
+- **BeauVis Aesthetic Pleasure Scale** [he2023]: a few adjectives about aesthetic pleasure on 7-point scales; the score is the mean, 1-7 (check the exact items and scale against the paper). The authors report a validation of the scale. Seconds per visualization, so it suits rating many visualizations in one study.
 
 ## 3. Why it is measured
 

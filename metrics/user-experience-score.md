@@ -31,8 +31,8 @@ operationalization:
   better: higher
   validity_concern: {level: low, note: "Direct for the experience as reported on the instrument's scales."}
   instruments:
-    - {name: "User Experience Questionnaire (UEQ)", sources: [laugwitz2008], note: "26 pairs of opposite adjectives, 7-point; six scales: attractiveness, perspicuity, efficiency, dependability, stimulation, novelty."}
-    - {name: "UEQ-S", sources: [schrepp2017], note: "8 items summarized as pragmatic and hedonic quality; under a minute."}
+    - {name: "User Experience Questionnaire (UEQ)", sources: [laugwitz2008], scale: "-3 to +3 per scale", note: "26 pairs of opposite adjectives, 7-point; six scales: attractiveness, perspicuity, efficiency, dependability, stimulation, novelty."}
+    - {name: "UEQ-S", sources: [schrepp2017], scale: "-3 to +3 per scale", note: "8 items summarized as pragmatic and hedonic quality; under a minute."}
 
 cost:
   level: low
@@ -77,22 +77,23 @@ It does not measure task performance. The pragmatic scales overlap with perceive
 **Direct** for perceived experience on the instrument's scales.
 
 ### 2.2 Reliability
-UEQ scale reliabilities and benchmark data are published by the authors (check against [laugwitz2008]). UEQ-S gives only the two summary qualities [schrepp2017].
+Multi-item scales allow internal consistency to be checked; short forms report fewer, broader scales. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
 Questionnaire after use, often online. See [self-rating](../strategies/self-rating.md).
 
 ### 2.4 Computation
-- UEQ: each item scored from −3 to +3; scale score = mean of its items.
-- UEQ-S: pragmatic and hedonic quality = means of their four items [schrepp2017].
-- Compare with the published benchmark data set.
+Each item is scored on the instrument's scale; a scale score is the mean of its items. Compare with the instrument's published benchmark data where it has one. Each instrument's rule is in 2.6.
 
 ### 2.5 Unit and scale
-−3 to +3 per scale.
+Scale means, treated as interval data, on the instrument's range (2.6). Higher is better. Report scales separately rather than one overall mean.
 
 ### 2.6 Instruments
-- **User Experience Questionnaire (UEQ)** [laugwitz2008]: six scales: attractiveness, perspicuity, efficiency, dependability, stimulation and novelty. Choose it to see trade-offs between scales.
-- **UEQ-S** [schrepp2017]: pragmatic and hedonic quality only. Choose it for exit surveys and other short slots.
+- **User Experience Questionnaire (UEQ)** [laugwitz2008]: 26 pairs of opposite adjectives, such as annoying–enjoyable, on 7-point scales.
+  - *Scales and scoring:* six scales: attractiveness, perspicuity, efficiency, dependability, stimulation and novelty. Each item is scored from −3 to +3; a scale score is the mean of its items. Compare with the published benchmark data set.
+  - *Reliability:* scale reliabilities and benchmark data are published by the authors (check against the paper).
+  - *Choose it* to see trade-offs between scales.
+- **UEQ-S** [schrepp2017]: 8 items. Pragmatic and hedonic quality are the means of their four items each, from −3 to +3. Choose it for exit surveys and other short slots.
 
 ## 3. Why it is measured
 

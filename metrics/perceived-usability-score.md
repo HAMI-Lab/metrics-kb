@@ -31,9 +31,9 @@ operationalization:
   better: higher
   validity_concern: {level: low, note: "Direct for perceived usability as reported; a proxy for usability in the ISO sense (see 2.1)."}
   instruments:
-    - {name: "System Usability Scale (SUS)", sources: [brooke1996], note: "10 statements, 5-point agreement, alternately positive and negative; scored 0-100. The most widely used."}
-    - {name: "Usability Metric for User Experience (UMUX)", sources: [finstad2010], note: "4 items, 7-point; scored 0-100; designed to correspond to SUS."}
-    - {name: "UMUX-LITE", sources: [lewis2013], note: "The 2 positively worded UMUX items; scored 0-100, with a proposed adjustment toward SUS."}
+    - {name: "System Usability Scale (SUS)", sources: [brooke1996], scale: "0-100", note: "10 statements, 5-point agreement, alternately positive and negative. The most widely used, with published norms."}
+    - {name: "Usability Metric for User Experience (UMUX)", sources: [finstad2010], scale: "0-100", note: "4 items, 7-point; designed to correspond to SUS."}
+    - {name: "UMUX-LITE", sources: [lewis2013], scale: "0-100", note: "The 2 positively worded UMUX items; a proposed adjustment aligns it with SUS."}
 
 cost:
   level: medium
@@ -82,24 +82,28 @@ It does not measure objective performance. People can rate a system highly and s
 These questionnaires are a **direct** measure of *perceived* usability, in the sense that the construct is defined by what people report. They are a **proxy** for usability in the ISO 9241-11 sense (effectiveness, efficiency, and satisfaction), because only the satisfaction part is observed directly [iso9241-11]. Hence `measure_type: mixed`.
 
 ### 2.2 Reliability
-SUS has high internal consistency; Bangor et al. reported a coefficient alpha of about 0.91 over a large set of studies [bangor2008]. UMUX reports acceptable internal consistency for a short scale (check against [finstad2010]); UMUX-LITE trades reliability for brevity. Reliability of a *mean* score depends on sample size; small samples give wide confidence intervals [sauro2016].
+Multi-item perceived-usability questionnaires are internally consistent; shorter instruments trade some reliability for brevity. Reliability of a *mean* score depends on sample size; small samples give wide confidence intervals [sauro2016]. Figures for each instrument are in 2.6.
 
 ### 2.3 Data collection and measurement error
-Given on paper or online right after a session or a set of tasks. Error sources include recency (the last task dominates), social desirability toward the moderator, respondents misreading negatively worded items, and ceiling effects for simple systems. A SUS variant with all items worded positively gives similar scores and avoids some misreading [sauro2011positive].
+Given on paper or online right after a session or a set of tasks. Error sources include recency (the last task dominates), social desirability toward the moderator, respondents misreading negatively worded items, and ceiling effects for simple systems.
 
 ### 2.4 Computation
-- **SUS:** for each respondent, odd-numbered (positive) items contribute (response − 1); even-numbered (negative) items contribute (5 − response). Sum the ten contributions (0-40) and multiply by 2.5 to get 0-100 [brooke1996].
-- **UMUX:** 7-point items, odd items scored as response − 1 and even items as 7 − response, summed and rescaled to 0-100 [finstad2010] (check against the paper).
-- **UMUX-LITE:** two items, rescaled to 0-100; a regression adjustment to align with SUS has been proposed [lewis2013] (check against the paper).
-- Report the mean with a confidence interval across respondents.
+For each respondent, each item response is turned into an item score, with negatively worded items reversed; the item scores are summed and rescaled to 0-100. Report the mean with a confidence interval across respondents. Each instrument's exact rule is in 2.6.
 
 ### 2.5 Unit and scale
-A dimensionless score, 0-100. Usually treated as interval data. A commonly cited SUS average across many studies is about 68 [sauro2016]. Adjective labels ("OK", "good", "excellent") have been mapped to SUS score ranges [bangor2009]. Scores are most meaningful when compared with the same system over time or with competitors measured with the same instrument.
+A dimensionless score from 0 to 100 for all the instruments listed, usually treated as interval data. It is not a percentage. Scores are most meaningful when compared with the same system over time or with competitors measured with the same instrument; norms are instrument-specific (2.6).
 
 ### 2.6 Instruments
-- **System Usability Scale (SUS)** [brooke1996]: ten statements, alternately positive and negative. The default choice: it has the most published norms and benchmarks [bangor2008; sauro2016].
-- **Usability Metric for User Experience (UMUX)** [finstad2010]: four items about how well the system meets the person's needs, how frustrating and how easy it is, and how much time it takes to correct things. Designed so its scores correspond to SUS scores (check against the paper).
-- **UMUX-LITE** [lewis2013]: the two positively worded UMUX items. For in-app or exit surveys where SUS is too long [lewis2018].
+- **System Usability Scale (SUS)** [brooke1996]. Ten statements, alternately positive and negative, on a five-point agreement scale.
+  - *Scoring:* odd-numbered (positive) items contribute (response − 1); even-numbered (negative) items contribute (5 − response). Sum the ten contributions (0-40) and multiply by 2.5 to get 0-100 [brooke1996].
+  - *Reliability and norms:* Bangor et al. reported a coefficient alpha of about 0.91 over a large set of studies [bangor2008]. A commonly cited average across many studies is about 68 [sauro2016], and adjective labels ("OK", "good", "excellent") have been mapped to score ranges [bangor2009]. A variant with all items worded positively gives similar scores and avoids some misreading [sauro2011positive].
+  - *Choose it* by default: it has the most published norms and benchmarks.
+- **Usability Metric for User Experience (UMUX)** [finstad2010]. Four items about how well the system meets the person's needs, how frustrating and how easy it is, and how much time it takes to correct things.
+  - *Scoring:* 7-point items, odd items scored as response − 1 and even items as 7 − response, summed and rescaled to 0-100 (check against [finstad2010]).
+  - *Reliability:* acceptable internal consistency for a short scale (check against [finstad2010]). Designed so its scores correspond to SUS scores (check against the paper).
+- **UMUX-LITE** [lewis2013]. The two positively worded UMUX items.
+  - *Scoring:* rescaled to 0-100; a regression adjustment to align with SUS has been proposed (check against [lewis2013]).
+  - *Choose it* for in-app or exit surveys where SUS is too long [lewis2018].
 - Other perceived-usability questionnaires, such as PSSUQ, are close substitutes; they have no entry here yet.
 
 Do not compare scores across instruments without the published conversions, and keep the instrument fixed within a study.

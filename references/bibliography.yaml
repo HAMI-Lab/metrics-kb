@@ -812,3 +812,81 @@ batzner2026:
   note: Shared schema and crowdsourced datastore for AI evaluation results (EvalEval Coalition). Its companion eval-card-registry (github.com/evaleval/eval-card-registry) tags benchmarks with a flat list of about 110 labels.
   origin: added by AI while comparing the wiki with Every Eval Ever (2026-11-02)
   verified: false
+hendrycks2021:
+  citation: Hendrycks, D., Burns, C., Basart, S., Zou, A., Mazeika, M., Song, D., & Steinhardt, J. (2021). Measuring Massive Multitask Language Understanding. ICLR 2021. (check against the paper)
+  url: https://arxiv.org/abs/2009.03300
+  note: 'MMLU: multiple-choice questions across 57 subjects'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+cobbe2021:
+  citation: Cobbe, K., et al. (2021). Training Verifiers to Solve Math Word Problems. arXiv:2110.14168. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2110.14168
+  note: 'GSM8K: grade-school math word problems with numeric answers'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zellers2019:
+  citation: 'Zellers, R., Holtzman, A., Bisk, Y., Farhadi, A., & Choi, Y. (2019). HellaSwag: Can a Machine Really Finish Your Sentence? ACL 2019. (check against the paper)'
+  url: https://arxiv.org/abs/1905.07830
+  note: 'HellaSwag: commonsense sentence completion, multiple choice'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+lin2022:
+  citation: 'Lin, S., Hilton, J., & Evans, O. (2022). TruthfulQA: Measuring How Models Mimic Human Falsehoods. ACL 2022. (check against the paper)'
+  url: https://arxiv.org/abs/2109.07958
+  note: 'TruthfulQA: questions that invite common misconceptions'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+austin2021:
+  citation: Austin, J., et al. (2021). Program Synthesis with Large Language Models. arXiv:2108.07732. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2108.07732
+  note: 'MBPP: short Python programming problems with tests'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+bajaj2016:
+  citation: 'Bajaj, P., et al. (2016). MS MARCO: A Human Generated MAchine Reading COmprehension Dataset. arXiv:1611.09268. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/1611.09268
+  note: 'MS MARCO: passage and document ranking from real search queries; MRR@10 for passage ranking'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+thakur2021:
+  citation: 'Thakur, N., Reimers, N., Rücklé, A., Srivastava, A., & Gurevych, I. (2021). BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models. NeurIPS 2021 Datasets and Benchmarks. (check against the paper)'
+  url: https://arxiv.org/abs/2104.08663
+  note: 'BEIR: retrieval across many domains without in-domain training; nDCG@10'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+hermann2015:
+  citation: Hermann, K. M., et al. (2015). Teaching Machines to Read and Comprehend. NeurIPS 2015. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/1506.03340
+  note: CNN/DailyMail news articles with highlights, later widely used for summarization
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+narayan2018:
+  citation: Narayan, S., Cohen, S. B., & Lapata, M. (2018). Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. EMNLP 2018. (check against the paper)
+  url: https://arxiv.org/abs/1808.08745
+  note: 'XSum: one-sentence summaries of BBC articles'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zou2023:
+  citation: Zou, A., Wang, Z., Carlini, N., Nasr, M., Kolter, J. Z., & Fredrikson, M. (2023). Universal and Transferable Adversarial Attacks on Aligned Language Models. arXiv:2307.15043. (check against the paper)
+  url: https://arxiv.org/abs/2307.15043
+  note: 'AdvBench: harmful behaviours used to test jailbreak attacks'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+mazeika2024:
+  citation: 'Mazeika, M., et al. (2024). HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal. ICML 2024. (check against the paper for the full author list)'
+  url: https://arxiv.org/abs/2402.04249
+  note: 'HarmBench: standardized red-teaming evaluation with a fixed judge'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+gema2024:
+  citation: Gema, A. P., et al. (2024). Are We Done with MMLU? arXiv:2406.04127. (check against the paper for the full author list and venue)
+  url: https://arxiv.org/abs/2406.04127
+  note: Errors in MMLU questions and answer keys
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
+zhang2024:
+  citation: Zhang, H., et al. (2024). A Careful Examination of Large Language Model Performance on Grade School Arithmetic. arXiv:2405.00332. (check against the paper for the full author list)
+  url: https://arxiv.org/abs/2405.00332
+  note: 'GSM1k: a fresh GSM8K-like set; score drops suggest contamination for some models'
+  origin: added by AI for instrument lists (2026-11-02)
+  verified: false
