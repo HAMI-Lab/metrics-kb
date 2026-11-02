@@ -68,5 +68,4 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 - [zheng2023]: LLM-as-a-judge on benchmarks.
 
 ## Open questions and review notes
-- Where does the method end and the instrument begin? A specific collection (TREC Robust04, MT-Bench) may deserve its own instrument page; see the instruments discussion.
 - Should contamination of test items into training data get a citation and its own subsection as LLM evaluation grows?

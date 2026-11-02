@@ -71,4 +71,3 @@ Cheap per respondent once the items exist. Designing and validating new items is
 
 ## Open questions and review notes
 - Knowledge tests with right answers (for example literacy tests) are given like questionnaires but scored against a key. Do they belong here, or need their own vocabulary value?
-- Standardized questionnaires are also instruments. If instruments get pages, the named practices above should link to them.

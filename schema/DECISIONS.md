@@ -4,6 +4,15 @@ A record of decisions about the wiki's structure, why they were made, and what w
 
 ---
 
+## 2026-11-01 (instruments not modeled)
+
+### D19. Instruments are not modeled: no page type and no front matter list
+- **Decision.** Specific instruments (a questionnaire's exact wording and layout, a test collection release, evaluation code such as trec_eval) get neither pages nor a structured `instruments` field. A metric page names an instrument in prose when it matters, and cites it. This closes the open item "measurement instruments as a page type" from D1 and the 2026-10-26 round.
+- **Why.** A metric page should point to a way of operationalizing or computing the number that is specific enough to apply. It is not the place for the line-by-line implementation or the instrument itself; those live with their authors and are reached through citations.
+- **Considered.** An optional `operationalization.instruments` list (name, version, role, source, note), with instrument pages once two or more metrics share one. Rejected as too detailed for the wiki's purpose.
+
+---
+
 ## 2026-11-01 (research methods as a strategy layer)
 
 ### D18. Research methods get pages, as a second layer of strategy pages
@@ -142,7 +151,7 @@ Decided in a design discussion between the project lead (after a team discussion
 - Topical relevance: split into exactness and completeness as narrower constructs? Proposed, not decided.
 - Placement questions noted on construct pages (mental workload under efficiency; system reliability as a root; output quality as a shared parent).
 - Should LLM-as-a-judge, simulated users, and synthetic references get their own strategy pages as the practice matures?
-- Measurement instruments (e.g. a specific questionnaire version) as a page type: deferred.
+- Measurement instruments (e.g. a specific questionnaire version) as a page type: deferred. (Closed by D19: not modeled.)
 
 ## Sources
 Keys refer to `references/bibliography.yaml`: [jacobs2021], [webb1966], [campbell1959], [bollen1991].
