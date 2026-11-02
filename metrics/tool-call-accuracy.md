@@ -107,7 +107,7 @@ Agent developers.
 Agent teams deciding whether a change broke tool use.
 
 ### 4.3 Risks: misuse, misinterpretation, gaming, Goodhart's law
-Agents tuned to match references can lose the ability to find alternative routes.
+Hypothesis: agents tuned to match reference calls may lose the ability to find other valid routes. Why it could be true: tuning rewards the reference sequence and penalizes every alternative, even correct ones (further reference needed). Matching references is also a proxy for completing the task; check it against task success.
 
 ## 5. Related metrics
 

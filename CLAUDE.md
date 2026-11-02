@@ -19,6 +19,8 @@ Read `README.md` first. This file adds the rules for AI edits.
 - Use only values from `schema/vocabulary.yaml`. If none fits, use `other: <description>` and flag it.
 - `construct.statement` is the authoritative definition; tags are aids.
 - Every factual claim that is not common knowledge cites a key from `references/bibliography.yaml` in the form `[key]`. Never invent a citation. If you add a reference, mark it `verified: false`, and never add details (page numbers, figures) you are not sure of; write "(check against the paper)" instead.
+- Tell findings from hypotheses. Use "(check against the paper)" only for a finding you attribute to a cited source but whose details you have not verified. If a claim is a hypothesis (plausible, but no source you know states it), say so: write "Hypothesis:", give the reasoning for why it could be true, and end with "(further reference needed)". Never dress a hypothesis as a reported finding.
+- When a metric is a proxy with a known gap (`measure_type` proxy or mixed, `validity_concern` moderate or high), say in 2.1 under "**Using a proxy with a known gap.**" which decisions the number can support, which it cannot, and what check to run before relying on it.
 - State evidence strength honestly in section 6. Theoretical links must be called theoretical.
 - Plain language. Short sentences. Explain jargon on first use.
 - Link to other pages with relative links, e.g. `[SUS](system-usability-scale.md)`.

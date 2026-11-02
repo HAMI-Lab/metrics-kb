@@ -74,6 +74,8 @@ It does not reward completeness (a short text with few facts can score high). It
 ### 2.1 Direct or proxy; construct validity
 **Direct** for support by the chosen source; **proxy** for truth, because the source can be incomplete or wrong. Results depend on how facts are split and on the judge that checks them [min2023].
 
+**Using a proxy with a known gap.** Three gaps stack: the source may not cover the facts, the splitting may merge or drop facts, and the judge may misread support. Each one is a reason to sample facts and check them by hand before reporting the number as "how often the model is right". The score also ignores completeness, so report it with the number of facts per answer.
+
 ### 2.2 Reliability
 Automatic judges are reported to agree reasonably with human annotation in the original study (check against [min2023]); re-check when changing the judge model or the source.
 

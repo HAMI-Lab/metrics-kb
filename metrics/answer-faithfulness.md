@@ -73,6 +73,8 @@ It does not check whether the passages are true or relevant, or whether the answ
 ### 2.1 Direct or proxy; construct validity
 **Direct** for support by the given context, as the judge reads it; **proxy** for trustworthy answers. An LLM judge does the splitting and checking, so the number inherits the judge's errors; sample and compare with people before relying on it [li2024].
 
+**Using a proxy with a known gap.** A high score means the answer did not go beyond its sources, not that it is true or useful: a faithful answer can repeat a wrong passage or miss the point of the question. Use it to catch answers that invent content, alongside metrics for retrieval quality and correctness, not as a quality score on its own.
+
 ### 2.2 Reliability
 Depends on the judge model and prompt; changing either changes scores. The original RAGAS paper compared automatic scores with human judgments on a small set (check against [es2023]).
 

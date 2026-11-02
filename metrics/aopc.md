@@ -70,7 +70,9 @@ It does not show whether people understand or trust the explanation. A faithful 
 ## 2. How it is measured
 
 ### 2.1 Direct or proxy; construct validity
-**Direct** for the effect of removal under the chosen scheme; **proxy** for what the model relies on. Removing features produces inputs unlike training data, so the output may drop because the input is strange, not because the feature mattered [nauta2023]. Different removal schemes rank explanation methods differently [pawlicki2024].
+**Direct** for the effect of removal under the chosen scheme; **proxy** for what the model relies on. Removing features produces inputs unlike training data, so the output may drop because the input is strange, not because the feature mattered [nauta2023].
+
+**Using a proxy with a known gap.** AOPC can rank explanation methods under one removal scheme. It cannot show that an explanation is faithful in general, and still less that users will understand it. Report the removal scheme, compare with removal in random order, and, if the choice matters, check that the ranking holds under a second scheme.
 
 ### 2.2 Reliability
 Sensitive to the replacement value, step size and number of steps; report them.
@@ -121,7 +123,7 @@ _None found from the construct DAG yet._
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-Different faithfulness metrics often disagree on which explanation method is best [pawlicki2024] (check against the paper).
+Hypothesis: AOPC and other faithfulness metrics can rank explanation methods differently. Why it could be true: each metric changes the input in its own way (removal, replacement, insertion), and each change creates its own unnatural inputs, so the drops measure partly different things. Whether several metrics are needed at all is the question [pawlicki2024] examines (further reference needed for the direction of the finding).
 
 ## 6. Links to business objectives
 **Improved usability:** positive, theoretical. **Sustained use:** unknown.

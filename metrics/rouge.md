@@ -74,6 +74,8 @@ It does not measure whether the text is correct, faithful to its source, or flue
 ### 2.1 Direct or proxy; construct validity
 **Proxy**. Different correct summaries share few words, so ROUGE punishes valid paraphrase. A summary can copy the reference's words and still state something false.
 
+**Using a proxy with a known gap.** ROUGE can support a narrow decision, such as catching a regression between two versions of the same generator on the same references. It cannot support claims that outputs are good, correct or useful. Before using it for those, check a sample of outputs with people, and report ROUGE next to a metric closer to the construct, such as [FActScore](factscore.md) for truth.
+
 ### 2.2 Reliability
 Deterministic given the references and tokenization; results depend strongly on the number of references and the preprocessing.
 
@@ -125,7 +127,7 @@ ROUGE-1, -2 and -L are variants on this page. BLEU [papineni2002] is a related o
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-Agreement with human quality judgments is reported to be weak for open-ended generation (check against [chang2024]).
+Hypothesis: ROUGE agrees only weakly with human judgments of quality for open-ended generation. Why it could be true: when many different outputs are acceptable, a single reference covers few of them, so overlap with it says little about quality. Surveys raise this limit [chang2024] (further reference needed for measured agreement).
 
 ## 6. Links to business objectives
 **Improved usability** and **sustained use:** unknown, no evidence: the number is too far from what users experience.

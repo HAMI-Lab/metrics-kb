@@ -125,7 +125,7 @@ nDCG@k at different k, and the gain variants, are on this page.
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
-As with precision, offline ranking gains often show small effects on what users achieve [turpin2006].
+Hypothesis: as with precision [turpin2006], gains in nDCG on a test collection may show small effects on what users achieve. Why it could be true: nDCG shares precision's fixed queries and assessor judgments, and users adapt by reformulating queries and reading further down. Evidence for nDCG specifically (further reference needed).
 
 ## 6. Links to business objectives
 **Improved usability** and **sustained use:** positive, theoretical.

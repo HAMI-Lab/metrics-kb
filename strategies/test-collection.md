@@ -50,7 +50,7 @@ The data shows what the system outputs for the chosen inputs, not how people wou
 Small input sets give high variance, and results can depend on which inputs happened to be chosen. Report the spread across inputs, not just the mean. Judges disagree about references, although system rankings can be more stable than individual judgments [voorhees2000] (check against the paper).
 
 ### 3.3 Bias and gaming
-Reuse invites overfitting: a test set used for many rounds of tuning stops being a test. Test items can leak into training data, especially for models trained on web-scale text. With pooling, items no one judged usually count as wrong, which can penalize a new system that finds items outside the original pool [manning2008] (check against the paper).
+Reuse invites overfitting: a test set used for many rounds of tuning stops being a test. Test items can leak into training data, especially for models trained on web-scale text. With pooling, judges assess only the items the original systems returned [manning2008], and items no one judged usually count as not relevant. Hypothesis: this penalizes a new system that finds relevant items outside the original pool. Why it could be true: those items were never judged, so they count as misses for the new system although they would count as hits if judged (further reference needed).
 
 ## 4. Cost
 High to build: inputs, references, licensing and documentation. Once built, a re-run costs little, which is why collections are shared and reused across many studies.
