@@ -139,7 +139,7 @@ pass@1 is [Accuracy](accuracy.md) of a single sample against the check. The agen
 
 <!-- generated:neighbours:start -->
 - Same construct: [Accuracy](accuracy.md) (Closed-answer performance: answer correctness), [F1 Score](f1-score.md) (Closed-answer performance: answer correctness)
-- Sibling construct: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Sibling construct: [Learned Reference-Based Score](learned-reference-score.md) (Generation performance: content adequacy), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [Instruction-Following Accuracy](instruction-following-accuracy.md) (Generation performance: instruction following)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

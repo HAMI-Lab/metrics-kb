@@ -35,6 +35,7 @@ _None yet._
 ## 4. Metrics
 ROUGE and BLEU count n-gram overlap; embedding-based scores such as BERTScore compare meaning. All estimate adequacy through references.
 <!-- generated:metrics:start -->
+- [Learned Reference-Based Score](../metrics/learned-reference-score.md)
 - [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 <!-- generated:metrics:end -->
 

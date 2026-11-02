@@ -128,7 +128,7 @@ RR@k is a variant on this page.
 [nDCG](ndcg.md) credits all relevant items with grades; [Precision (benchmark)](precision-benchmark.md) ignores order.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 <!-- generated:neighbours:end -->
 

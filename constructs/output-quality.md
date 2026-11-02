@@ -35,7 +35,7 @@ Narrower constructs are qualities of end-to-end output. Trustworthiness, safety 
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Judge Rating (model judge)](../metrics/judge-rating.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

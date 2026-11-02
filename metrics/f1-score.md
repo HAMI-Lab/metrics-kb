@@ -133,7 +133,7 @@ Built from [Precision (benchmark)](precision-benchmark.md) and [Recall (benchmar
 [Accuracy](accuracy.md) is a simpler alternative when classes are balanced. [ROUGE](rouge.md) also counts overlap with a reference, for longer texts.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
+- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (benchmark)](precision-benchmark.md) (Classification effectiveness: correctness), [Recall (benchmark)](recall-benchmark.md) (Classification effectiveness: correctness), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [pass@k](pass-at-k.md) (Closed-answer performance: answer correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->

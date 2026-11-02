@@ -34,6 +34,7 @@ _None yet._
 Precision and recall are its classic metrics. They capture two different properties, exactness (no false hits) and completeness (no misses), which could become narrower constructs.
 <!-- generated:metrics:start -->
 - [F1 Score](../metrics/f1-score.md)
+- [Mean Average Precision (MAP)](../metrics/mean-average-precision.md)
 - [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
 - [Precision (benchmark)](../metrics/precision-benchmark.md)
 - [Recall (benchmark)](../metrics/recall-benchmark.md)

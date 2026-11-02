@@ -132,7 +132,7 @@ Summaries of both: F1, average precision, precision-recall curves.
 [Precision (benchmark)](precision-benchmark.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness)
 - Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 - Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->

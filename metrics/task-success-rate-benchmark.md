@@ -139,7 +139,7 @@ pass@k and resolution rate are variants on this page. [pass^k](pass-hat-k.md) ex
 [Tool Call Accuracy](tool-call-accuracy.md) checks the steps rather than the outcome.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [pass^k](pass-hat-k.md) (Consistency across runs), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
+- Sibling construct: [pass^k](pass-hat-k.md) (Consistency across runs), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

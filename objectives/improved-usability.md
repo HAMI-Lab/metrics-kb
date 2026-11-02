@@ -65,6 +65,10 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Demographic Profile (questionnaire)](../metrics/demographic-profile.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Educational Attainment (questionnaire)](../metrics/educational-attainment.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md) | positive | theoretical | Fewer retries and corrections; not measured with users. |
+| [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | positive | correlational | Batch effectiveness gains do not always reach users' tasks. |
+| [Judge Rating (model judge)](../metrics/judge-rating.md) | unknown | none | Judge preferences, such as for longer answers, may not match what helps users. |
+| [Learned Reference-Based Score](../metrics/learned-reference-score.md) | unknown | none | Too far from what users experience to say. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

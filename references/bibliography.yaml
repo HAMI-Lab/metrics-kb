@@ -896,3 +896,27 @@ lees2022:
   note: Perspective API toxicity classifier
   origin: added by AI for scorer instruments (2026-11-02)
   verified: false
+zhou2023:
+  citation: Zhou, J., Lu, T., Mishra, S., Brahma, S., Basu, S., Luan, Y., Zhou, D., & Hou, L. (2023). Instruction-Following Evaluation for Large Language Models. arXiv:2311.07911. (check against the paper)
+  url: https://arxiv.org/abs/2311.07911
+  note: 'IFEval: verifiable instructions; prompt- and instruction-level, strict and loose accuracy'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+zhang2020:
+  citation: 'Zhang, T., Kishore, V., Wu, F., Weinberger, K. Q., & Artzi, Y. (2020). BERTScore: Evaluating Text Generation with BERT. ICLR 2020. (check against the paper)'
+  url: https://arxiv.org/abs/1904.09675
+  note: 'BERTScore: token matching by contextual embeddings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+rei2020:
+  citation: 'Rei, R., Stewart, C., Farinha, A. C., & Lavie, A. (2020). COMET: A Neural Framework for MT Evaluation. EMNLP 2020. (check against the paper)'
+  url: https://arxiv.org/abs/2009.09025
+  note: 'COMET: learned MT metric trained on human judgments'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false
+sellam2020:
+  citation: 'Sellam, T., Das, D., & Parikh, A. P. (2020). BLEURT: Learning Robust Metrics for Text Generation. ACL 2020. (check against the paper)'
+  url: https://arxiv.org/abs/2004.04696
+  note: 'BLEURT: learned metric fine-tuned on human ratings'
+  origin: added by AI for stress-test additions (2026-11-02)
+  verified: false

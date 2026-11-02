@@ -131,7 +131,7 @@ The same computation as [precision](precision-benchmark.md), applied to atomic f
 [Answer Faithfulness](answer-faithfulness.md) is the counterpart for support by given context. [ROUGE](rouge.md) does not check truth.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Sibling construct: [Learned Reference-Based Score](learned-reference-score.md) (Generation performance: content adequacy), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [Instruction-Following Accuracy](instruction-following-accuracy.md) (Generation performance: instruction following)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

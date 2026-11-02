@@ -128,7 +128,7 @@ The same computation as [precision](precision-benchmark.md), applied to an answe
 [FActScore](factscore.md) checks truth instead of support by context.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [pass@k](pass-at-k.md) (Generation performance: functional correctness)
+- Sibling construct: [Learned Reference-Based Score](learned-reference-score.md) (Generation performance: content adequacy), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: content adequacy), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Instruction-Following Accuracy](instruction-following-accuracy.md) (Generation performance: instruction following)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

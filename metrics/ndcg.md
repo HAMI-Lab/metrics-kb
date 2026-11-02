@@ -133,7 +133,7 @@ nDCG@k at different k, and the gain variants, are on this page.
 [Precision (benchmark)](precision-benchmark.md) ignores order and grades within the top k; [Reciprocal Rank](reciprocal-rank.md) looks only at the first relevant item.
 
 <!-- generated:neighbours:start -->
-- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
+- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Average Precision (MAP)](mean-average-precision.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (benchmark)](precision-benchmark.md) (Retrieval effectiveness: topical relevance), [Recall (benchmark)](recall-benchmark.md) (Retrieval effectiveness: topical relevance)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

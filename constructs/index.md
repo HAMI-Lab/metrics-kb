@@ -31,6 +31,7 @@ graph TD
   c_generation_performance(["Generation performance"])
   c_groundedness(["Generation performance: groundedness"])
   c_information_literacy(["Literacy: information literacy"])
+  c_instruction_following(["Generation performance: instruction following"])
   c_literacy(["Literacy"])
   c_mental_workload(["Mental workload"])
   c_numeracy(["Literacy: numeracy"])
@@ -79,6 +80,10 @@ graph TD
   m_f1_score["F1 Score"]:::metric
   m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
   m_forward_prediction_accuracy["Forward-Prediction Accuracy"]:::metric
+  m_instruction_following_accuracy["Instruction-Following Accuracy"]:::metric
+  m_judge_rating["Judge Rating (model judge)"]:::metric
+  m_learned_reference_score["Learned Reference-Based Score"]:::metric
+  m_mean_average_precision["Mean Average Precision (MAP)"]:::metric
   m_mental_workload_score["Mental Workload Score (questionnaire)"]:::metric
   m_ndcg["Normalized Discounted Cumulative Gain (nDCG)"]:::metric
   m_numeracy_score["Numeracy Score (ability test)"]:::metric
@@ -119,6 +124,7 @@ graph TD
   c_generation_performance --> c_factuality
   c_generation_performance --> c_functional_correctness
   c_generation_performance --> c_groundedness
+  c_generation_performance --> c_instruction_following
   c_literacy --> c_ai_literacy
   c_literacy --> c_information_literacy
   c_literacy --> c_numeracy
@@ -174,6 +180,7 @@ graph TD
   c_classification_correctness -.-> m_precision_benchmark
   c_classification_correctness -.-> m_recall_benchmark
   c_classification_correctness -.-> m_roc_auc
+  c_content_adequacy -.-> m_learned_reference_score
   c_content_adequacy -.-> m_rouge
   c_critical_visualization_literacy -.-> m_visualization_literacy_score
   c_decision_correctness -.-> m_decision_accuracy_with_ai
@@ -186,8 +193,10 @@ graph TD
   c_fairness -.-> m_demographic_parity_difference
   c_functional_correctness -.-> m_pass_at_k
   c_groundedness -.-> m_answer_faithfulness
+  c_instruction_following -.-> m_instruction_following_accuracy
   c_mental_workload -.-> m_mental_workload_score
   c_numeracy -.-> m_numeracy_score
+  c_output_quality -.-> m_judge_rating
   c_perceived_usability -.-> m_perceived_usability_score
   c_relevance -.-> m_ndcg
   c_resource_cost -.-> m_cost_per_task
@@ -201,6 +210,7 @@ graph TD
   c_task_efficiency -.-> m_task_completion_time
   c_tool_call_correctness -.-> m_tool_call_accuracy
   c_topical_relevance -.-> m_f1_score
+  c_topical_relevance -.-> m_mean_average_precision
   c_topical_relevance -.-> m_precision_benchmark
   c_topical_relevance -.-> m_recall_benchmark
   c_topical_relevance -.-> m_reciprocal_rank
@@ -225,15 +235,16 @@ A construct with several broader constructs appears under each of them.
     - [Explanation performance](explanation-performance.md)
       - [Explanation performance: faithfulness](explanation-faithfulness.md) · metrics: [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
     - [Generation performance](generation-performance.md)
-      - [Generation performance: content adequacy](content-adequacy.md) · metrics: [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
+      - [Generation performance: content adequacy](content-adequacy.md) · metrics: [Learned Reference-Based Score](../metrics/learned-reference-score.md), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
       - [Generation performance: factuality](factuality.md) · metrics: [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
       - [Generation performance: functional correctness](functional-correctness.md) · metrics: [pass@k](../metrics/pass-at-k.md)
       - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
+      - [Generation performance: instruction following](instruction-following.md) · metrics: [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
         - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
           - [Retrieval effectiveness: timeliness](timeliness.md)
-          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md), [Precision (benchmark)](../metrics/precision-benchmark.md), [Recall (benchmark)](../metrics/recall-benchmark.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Mean Average Precision (MAP)](../metrics/mean-average-precision.md), [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md), [Precision (benchmark)](../metrics/precision-benchmark.md), [Recall (benchmark)](../metrics/recall-benchmark.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
     - [Tool-use performance](tool-use-performance.md)
@@ -243,7 +254,7 @@ A construct with several broader constructs appears under each of them.
   - [System performance](system-performance.md)
     - [Autonomous task completion](autonomous-task-completion.md) · metrics: [Task Success Rate (agent benchmark)](../metrics/task-success-rate-benchmark.md)
     - [Consistency across runs](run-consistency.md) · metrics: [pass^k](../metrics/pass-hat-k.md)
-    - [Output quality](output-quality.md)
+    - [Output quality](output-quality.md) · metrics: [Judge Rating (model judge)](../metrics/judge-rating.md)
       - [Output quality: fairness](fairness.md) · metrics: [Demographic Parity Difference (DPD)](../metrics/demographic-parity-difference.md)
       - [Output quality: safety](safety.md) · metrics: [Attack Success Rate (ASR)](../metrics/attack-success-rate.md), [Toxicity Rate](../metrics/toxicity-rate.md)
       - [Trustworthiness](trustworthiness.md)
@@ -292,7 +303,6 @@ A construct with several broader constructs appears under each of them.
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: information literacy](information-literacy.md)
-- [Output quality](output-quality.md)
 - [Reliance on AI](reliance.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)

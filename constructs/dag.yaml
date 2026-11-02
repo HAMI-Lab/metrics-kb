@@ -63,6 +63,10 @@ groundedness:
   title: "Generation performance: groundedness"
   broader: [generation-performance]
 
+instruction-following:
+  title: "Generation performance: instruction following"
+  broader: [generation-performance]
+
 retrieval-performance:
   title: Retrieval performance
   broader: [component-performance]

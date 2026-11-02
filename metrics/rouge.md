@@ -132,7 +132,8 @@ ROUGE-1, -2 and -L are variants on this page. BLEU (Bilingual Evaluation Underst
 [FActScore](factscore.md) checks truth and [Answer Faithfulness](answer-faithfulness.md) checks support by sources, both closer to what users care about.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Same construct: [Learned Reference-Based Score](learned-reference-score.md) (Generation performance: content adequacy)
+- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [pass@k](pass-at-k.md) (Generation performance: functional correctness), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [Instruction-Following Accuracy](instruction-following-accuracy.md) (Generation performance: instruction following)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

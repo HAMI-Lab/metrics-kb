@@ -124,7 +124,7 @@ pass^1 equals [Task Success Rate (agent benchmark)](task-success-rate-benchmark.
 [pass@k](pass-at-k.md) asks whether any of k samples succeeds; pass^k asks whether all do.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
+- Sibling construct: [Task Success Rate (agent benchmark)](task-success-rate-benchmark.md) (Autonomous task completion), [Judge Rating (model judge)](judge-rating.md) (Output quality), [Response Latency](response-latency.md) (System responsiveness), [Performance Drop Rate (PDR)](performance-drop-rate.md) (System robustness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

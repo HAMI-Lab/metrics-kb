@@ -32,6 +32,7 @@ The narrower constructs cover different questions about generated output: does i
 - [Generation performance: factuality](factuality.md)
 - [Generation performance: functional correctness](functional-correctness.md)
 - [Generation performance: groundedness](groundedness.md)
+- [Generation performance: instruction following](instruction-following.md)
 <!-- generated:narrower:end -->
 
 ## 4. Metrics

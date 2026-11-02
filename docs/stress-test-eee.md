@@ -99,6 +99,16 @@ The two projects sit at different levels. EEE records **runs**: one score, from 
 - **D28**: component or system is decided by the role a model plays.
 - **D29**: in scope when people consume the output or interact with the system, in any modality.
 - **D30**: instruments are content, scorer or suite; suites carry a prominent caveat.
-- Pages added for the coverage gaps the user prioritized: see the next section.
+
+### Pages added
+
+| Page | Covers from the sample | Notes |
+|---|---|---|
+| [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md) | #38 IFEval prompt-level loose accuracy | With the new construct [instruction following](../constructs/instruction-following.md). |
+| [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | #11 mAP@10 | Notes that mAP in object detection is a different computation. |
+| [Judge Rating (model judge)](../metrics/judge-rating.md) | #9 LLM-Score, #23 MMAU-Pro judge score | System root (D28); MT-Bench as content, the LLM judge as scorer. |
+| [Learned Reference-Based Score](../metrics/learned-reference-score.md) | #4 COMET, #36 BERTScore | BERTScore, COMET and BLEURT as scorer instruments (D30). |
+
+Existing pages gained scorer or suite instruments: Toxicity Rate (Perspective API), Answer Faithfulness (RAGAS), FActScore (its estimator) and Accuracy (HELM as a suite).
 
 Still open: the agent-efficiency construct (RHAE), Word Error Rate, win rate and Elo, the new output types for other modalities, and an `external_ids` field that records the registry ids each page covers.

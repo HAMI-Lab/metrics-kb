@@ -69,6 +69,10 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Numeracy Score (ability test)](../metrics/numeracy-score.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Demographic Profile (questionnaire)](../metrics/demographic-profile.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
 | [Educational Attainment (questionnaire)](../metrics/educational-attainment.md) | unknown | none | Describes users; used to explain or control for differences in outcomes, not as a target. |
+| [Instruction-Following Accuracy](../metrics/instruction-following-accuracy.md) | positive | theoretical | Outputs that follow instructions need less rework. |
+| [Mean Average Precision (MAP)](../metrics/mean-average-precision.md) | positive | theoretical | Long causal chain through better rankings. |
+| [Judge Rating (model judge)](../metrics/judge-rating.md) | positive | theoretical | Depends on the judge matching users' taste. |
+| [Learned Reference-Based Score](../metrics/learned-reference-score.md) | unknown | none | Too far from what users experience to say. |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

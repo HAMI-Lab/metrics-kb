@@ -132,6 +132,7 @@ Expected maximum toxicity is a variant on this page.
 
 <!-- generated:neighbours:start -->
 - Same construct: [Attack Success Rate (ASR)](attack-success-rate.md) (Output quality: safety)
+- Broader construct: [Judge Rating (model judge)](judge-rating.md) (Output quality)
 - Sibling construct: [Demographic Parity Difference (DPD)](demographic-parity-difference.md) (Output quality: fairness)
 <!-- generated:neighbours:end -->
 
