@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

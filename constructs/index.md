@@ -59,13 +59,24 @@ graph TD
   c_user_experience(["User experience"])
   c_visualization_aesthetics(["User experience: visualization aesthetics"])
   c_visualization_literacy(["Literacy: visualization literacy"])
+  m_accuracy["Accuracy"]:::metric
+  m_answer_faithfulness["Answer Faithfulness"]:::metric
+  m_aopc["AOPC (deletion curve)"]:::metric
+  m_expected_calibration_error["Expected Calibration Error"]:::metric
+  m_f1_score["F1 Score"]:::metric
+  m_factscore["FActScore"]:::metric
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
+  m_ndcg["nDCG"]:::metric
   m_precision_test_collection["Precision (test collection)"]:::metric
   m_precision_user_task["Precision (user on task)"]:::metric
   m_recall_test_collection["Recall (test collection)"]:::metric
+  m_reciprocal_rank["Reciprocal Rank (MRR)"]:::metric
   m_response_latency["Response Latency"]:::metric
+  m_roc_auc["ROC-AUC"]:::metric
+  m_rouge["ROUGE"]:::metric
   m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
+  m_tool_call_accuracy["Tool Call Accuracy"]:::metric
   c_classification_performance --> c_classification_correctness
   c_classification_performance --> c_calibration
   c_component_characteristics --> c_component_performance
@@ -118,15 +129,28 @@ graph TD
   c_user_experience --> c_emotional_response
   c_user_experience --> c_visualization_aesthetics
   c_visualization_literacy --> c_critical_visualization_literacy
+  c_calibration -.-> m_expected_calibration_error
+  c_classification_correctness -.-> m_accuracy
+  c_classification_correctness -.-> m_f1_score
   c_classification_correctness -.-> m_precision_test_collection
   c_classification_correctness -.-> m_recall_test_collection
+  c_classification_correctness -.-> m_roc_auc
+  c_explanation_faithfulness -.-> m_aopc
+  c_factuality -.-> m_factscore
+  c_groundedness -.-> m_answer_faithfulness
   c_mental_workload -.-> m_nasa_tlx
   c_perceived_usability -.-> m_system_usability_scale
+  c_reference_similarity -.-> m_f1_score
+  c_reference_similarity -.-> m_rouge
+  c_relevance -.-> m_ndcg
   c_responsiveness -.-> m_response_latency
   c_situational_relevance -.-> m_precision_user_task
   c_task_efficiency -.-> m_task_completion_time
+  c_tool_call_correctness -.-> m_tool_call_accuracy
+  c_topical_relevance -.-> m_f1_score
   c_topical_relevance -.-> m_precision_test_collection
   c_topical_relevance -.-> m_recall_test_collection
+  c_topical_relevance -.-> m_reciprocal_rank
   classDef metric stroke-dasharray: 4 2
 ```
 
@@ -137,23 +161,23 @@ A construct with several broader constructs appears under each of them.
 - [Component characteristics](component-characteristics.md)
   - [Component performance](component-performance.md)
     - [Classification performance](classification-performance.md)
-      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
-      - [Classification performance: calibration](calibration.md)
+      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md), [ROC-AUC](../metrics/roc-auc.md)
+      - [Classification performance: calibration](calibration.md) · metrics: [Expected Calibration Error](../metrics/expected-calibration-error.md)
     - [Explanation performance](explanation-performance.md)
-      - [Explanation performance: faithfulness](explanation-faithfulness.md)
+      - [Explanation performance: faithfulness](explanation-faithfulness.md) · metrics: [AOPC (deletion curve)](../metrics/aopc.md)
     - [Generation performance](generation-performance.md)
-      - [Generation performance: factuality](factuality.md)
-      - [Generation performance: groundedness](groundedness.md)
-      - [Generation performance: similarity to reference](reference-similarity.md)
+      - [Generation performance: factuality](factuality.md) · metrics: [FActScore](../metrics/factscore.md)
+      - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
+      - [Generation performance: similarity to reference](reference-similarity.md) · metrics: [F1 Score](../metrics/f1-score.md), [ROUGE](../metrics/rouge.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
-        - [Retrieval effectiveness: relevance](relevance.md)
+        - [Retrieval effectiveness: relevance](relevance.md) · metrics: [nDCG](../metrics/ndcg.md)
           - [Retrieval effectiveness: timeliness](timeliness.md)
-          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md), [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
     - [Tool-use performance](tool-use-performance.md)
-      - [Tool-use performance: call correctness](tool-call-correctness.md)
+      - [Tool-use performance: call correctness](tool-call-correctness.md) · metrics: [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 - [System characteristics](system-characteristics.md)
   - [Resource cost](resource-cost.md)
   - [System performance](system-performance.md)
@@ -198,17 +222,12 @@ A construct with several broader constructs appears under each of them.
 
 - [Autonomous task completion](autonomous-task-completion.md)
 - [Classification performance](classification-performance.md)
-- [Classification performance: calibration](calibration.md)
 - [Component characteristics](component-characteristics.md)
 - [Component performance](component-performance.md)
 - [Consistency across runs](run-consistency.md)
 - [Explanation performance](explanation-performance.md)
-- [Explanation performance: faithfulness](explanation-faithfulness.md)
 - [Explanation understanding](explanation-understanding.md)
 - [Generation performance](generation-performance.md)
-- [Generation performance: factuality](factuality.md)
-- [Generation performance: groundedness](groundedness.md)
-- [Generation performance: similarity to reference](reference-similarity.md)
 - [Literacy](literacy.md)
 - [Literacy: AI literacy](ai-literacy.md)
 - [Literacy: critical visualization literacy](critical-visualization-literacy.md)
@@ -222,7 +241,6 @@ A construct with several broader constructs appears under each of them.
 - [Reliance on AI: appropriateness](appropriate-reliance.md)
 - [Resource cost](resource-cost.md)
 - [Retrieval effectiveness](retrieval-effectiveness.md)
-- [Retrieval effectiveness: relevance](relevance.md)
 - [Retrieval effectiveness: timeliness](timeliness.md)
 - [Retrieval efficiency](retrieval-efficiency.md)
 - [Retrieval performance](retrieval-performance.md)
@@ -234,7 +252,6 @@ A construct with several broader constructs appears under each of them.
 - [Task effectiveness: decision correctness](decision-correctness.md)
 - [Task performance](task-performance.md)
 - [Tool-use performance](tool-use-performance.md)
-- [Tool-use performance: call correctness](tool-call-correctness.md)
 - [Trust in the system](trust-in-system.md)
 - [Trustworthiness](trustworthiness.md)
 - [Usability](usability.md)

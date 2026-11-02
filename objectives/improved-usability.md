@@ -33,6 +33,17 @@ These parts correlate only modestly with one another [hornbaek2007; sauro2009], 
 | [Precision (test collection)](../metrics/precision-test-collection.md) | positive | correlational | Weaker than assumed |
 | [Recall (test collection)](../metrics/recall-test-collection.md) | positive | correlational | Batch gains do not always translate to users |
 | [Precision (user on task)](../metrics/precision-user-task.md) | positive | theoretical | Part of effectiveness for the user's own task |
+| [Accuracy](../metrics/accuracy.md) | positive | theoretical | Correct components are a precondition for effective tasks; the link to user outcomes is not measured. |
+| [F1 Score](../metrics/f1-score.md) | positive | theoretical | Through output quality; not measured. |
+| [ROC-AUC](../metrics/roc-auc.md) | positive | theoretical | Through output quality; not measured. |
+| [Expected Calibration Error](../metrics/expected-calibration-error.md) | positive | theoretical | Calibrated confidence lets users decide when to rely on outputs. |
+| [nDCG](../metrics/ndcg.md) | positive | theoretical | Better rankings are assumed to help users; offline-online links are weak. |
+| [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | positive | theoretical | When one answer suffices, finding it sooner saves effort. |
+| [ROUGE](../metrics/rouge.md) | unknown | none | Too far from what users experience to say. |
+| [FActScore](../metrics/factscore.md) | positive | theoretical | False content harms users' tasks. |
+| [Answer Faithfulness](../metrics/answer-faithfulness.md) | positive | theoretical | Answers users can trace to sources support checking. |
+| [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | positive | theoretical | Through autonomous task completion; not measured. |
+| [AOPC (deletion curve)](../metrics/aopc.md) | positive | theoretical | Faithful explanations are a precondition for users to understand the model. |
 
 ## Open questions
 - For AI systems, should trust and appropriate reliance count as part of usability, or be treated as a third objective? Several spreadsheet sources treat them as central [kim2024; rong2022].

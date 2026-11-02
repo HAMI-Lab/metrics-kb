@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 RAGAS Faithfulness is the common metric; other tools use similar claim-by-claim checks [ragas2026].
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [Answer Faithfulness](../metrics/answer-faithfulness.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

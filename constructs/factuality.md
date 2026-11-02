@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 FActScore splits text into atomic claims and checks each against a knowledge source.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [FActScore](../metrics/factscore.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

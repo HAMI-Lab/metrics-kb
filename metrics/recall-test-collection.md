@@ -124,7 +124,9 @@ Summaries of both: F1, average precision, precision-recall curves.
 [Precision (test collection)](precision-test-collection.md) measures the sibling property, exactness, on the same judgments. Complementary user-side measures: [Task Completion Time](task-completion-time.md), task success. Recall is cheap once judgments exist; user measures are costlier but closer to the construct that matters.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance)
+- Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Accuracy](accuracy.md) (Classification effectiveness: correctness), [ROC-AUC](roc-auc.md) (Classification effectiveness: correctness)
+- Broader construct: [nDCG](ndcg.md) (Retrieval effectiveness: relevance)
+- Sibling construct: [Expected Calibration Error](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

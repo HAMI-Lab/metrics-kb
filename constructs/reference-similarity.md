@@ -33,7 +33,8 @@ _None yet._
 ## 4. Metrics
 ROUGE and BLEU count n-gram overlap; embedding-based scores such as BERTScore compare meaning.
 <!-- generated:metrics:start -->
-_No metric page yet._
+- [F1 Score](../metrics/f1-score.md)
+- [ROUGE](../metrics/rouge.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives
