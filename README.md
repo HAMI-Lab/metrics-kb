@@ -58,6 +58,8 @@ Only the formula is shared. Who sets the inputs, who judges, the construct, and 
 
 **Instruments are grouped, not paged** (D25). A standardized questionnaire or test is an instantiation of a metric. Instruments that measure the same construct with the same method share one page, titled by construct and method: [Perceived Usability Score (questionnaire)](metrics/perceived-usability-score.md) holds SUS, UMUX and UMUX-LITE. Each page lists its instruments in front matter and compares them in section 2.6; instrument names stay searchable as aliases.
 
+**A metric page is a class; instruments are its objects** (D27). The page fixes what every instrument shares: construct, method, route, the computation with its parameters, and the caveats. An instrument fixes the content: the items, or the benchmark's inputs and references. What an instrument probes, such as math reasoning for GSM8K, belongs to the instrument, so the 2.6 lists are grouped by it. The lists are representative, not complete.
+
 ### 4. Strategies have two layers
 - **Methods** say how data is gathered: benchmarks (also called test collections or labeled datasets), logs and telemetry, questionnaires, task studies, ability tests, adversarial testing, controlled comparison. The full list is `research_method` in the vocabulary; not every method has a page yet (D18).
 - **Routes** say how data becomes a number: direct reading, self-rating, external judgment, comparison against reference data, comparative judgment, difference scoring, coding qualitative data, statistical modeling (D10).

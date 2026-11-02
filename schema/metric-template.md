@@ -42,8 +42,9 @@ operationalization:
   validity_concern:              # how much thought the gap between number and construct deserves
     level: low                   # vocabulary: validity_concern
     note: ""                     # one line: why
-  instruments: []                # named instantiations (D25), described in 2.6; each item:
-                                 # {name: "Full Name (ACRONYM)", sources: [bibliography keys], note: "items, scale, scoring in one line"}
+  instruments: []                # named instantiations (objects) of this metric (D25, D27), described in 2.6; each item:
+                                 # {name: "Full Name (ACRONYM)", sources: [keys], probes: "what it tests, e.g. math reasoning",
+                                 #  scale: "unit and range", note: "items and scoring in one line"}; probes and scale are optional
 
 # ---- 4. Who (cost) ----
 cost:
@@ -85,7 +86,10 @@ sources: []                      # keys in references/bibliography.yaml
 <!-- Common misreadings; neighbouring constructs this metric is often confused with. -->
 
 ## 2. How it is measured
-<!-- How are observations gathered and turned into this number, and how far can the number be trusted? -->
+<!-- How are observations gathered and turned into this number, and how far can the number be trusted?
+     A metric page is a class; its instruments are objects (D27). Write 2.1-2.5 for the whole family:
+     what holds for every instrument. Put what differs between instruments (items, unit, range,
+     scoring constants, reliability figures) in 2.6. -->
 
 ### 2.1 Direct or proxy; construct validity
 <!-- Is it a direct or proxy measure of the construct in 1.2? If it is a proxy, what gap between the
@@ -98,19 +102,25 @@ sources: []                      # keys in references/bibliography.yaml
 <!-- Would the metric give the same answer twice: across judges, occasions, samples? Known figures. -->
 
 ### 2.3 Data collection and measurement error
-<!-- Online / offline / in-lab / field. Instruments. Sources of measurement error and statistical uncertainty. -->
+<!-- Online / offline / in-lab / field. Sources of measurement error and statistical uncertainty common to the family. -->
 
 ### 2.4 Computation
-<!-- Data selection, transformation, aggregation. The formula. Common variants (e.g. @k, macro vs micro). -->
+<!-- Data selection, transformation, aggregation. The formula for the family, with its parameters (e.g. @k,
+     macro vs micro). Scoring rules specific to one instrument go in 2.6. -->
 
 ### 2.5 Unit and scale
-<!-- Unit, range, scale type (ratio / interval / ordinal), what "good" looks like, benchmarks. -->
+<!-- Scale type (ratio / interval / ordinal) and direction for the family; the unit and range when every
+     instrument shares them. When instruments differ, say so and give each one's unit and range in 2.6. -->
 
 ### 2.6 Instruments
-<!-- Named instruments that instantiate this metric: standardized questionnaires, tests, test collections,
-     evaluation code. For each: what it asks or contains, how it is scored, how it differs from the
-     others, and when to choose it. List them in operationalization.instruments too. Write
-     "None listed." when the computation in 2.4 is the whole operationalization. -->
+<!-- Named instruments (objects) that instantiate this metric (the class): standardized questionnaires,
+     tests, benchmarks, evaluation code. For each: what it contains, what it probes (its latent demand,
+     e.g. math reasoning), its unit and range, scoring specifics, and when to choose it. When
+     instruments probe different things, group them under bold labels by what they probe.
+     List representative instruments, not all of them: the best-known, ones that show a distinct
+     demand or answer format, and ones with known problems worth knowing (saturation, contamination).
+     Point to an external catalog for the rest. List them in operationalization.instruments too.
+     Write "None listed." when the computation in 2.4 is the whole operationalization. -->
 
 ## 3. Why it is measured
 <!-- In which situations, and for which purposes, do people pull up this number? -->

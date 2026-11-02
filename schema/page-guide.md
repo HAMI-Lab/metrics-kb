@@ -32,7 +32,7 @@ Source: [`schema/metric-template.md`](metric-template.md)
   - `validity_concern`: how much thought the gap between number and construct deserves
     - `level`: vocabulary: validity_concern
     - `note`: one line: why
-  - `instruments`: named instantiations (D25), described in 2.6; each item:
+  - `instruments`: named instantiations (objects) of this metric (D25, D27), described in 2.6; each item:
 - `cost`
   - `level`: vocabulary: cost_level
   - `requires`: free text, e.g. "participants", "relevance judgments", "eye tracker"
@@ -47,13 +47,13 @@ Source: [`schema/metric-template.md`](metric-template.md)
   - **1.1 Definition**: Plain-language definition. Formula goes in 2.4.
   - **1.2 Construct: property of subject in context**: Expand construct.statement: what property, of what subject, in what context. Write it at the level of the "spirit" of the measurement, so it holds for every use in 3.1. The links to the construct DAG (front matter construct.measures) are listed automatically below; do not edit between the markers.
   - **1.3 What it does not measure**: Common misreadings; neighbouring constructs this metric is often confused with.
-- **2. How it is measured**: How are observations gathered and turned into this number, and how far can the number be trusted?
+- **2. How it is measured**: How are observations gathered and turned into this number, and how far can the number be trusted? A metric page is a class; its instruments are objects (D27). Write 2.1-2.5 for the whole family: what holds for every instrument. Put what differs between instruments (items, unit, range, scoring constants, reliability figures) in 2.6.
   - **2.1 Direct or proxy; construct validity**: Is it a direct or proxy measure of the construct in 1.2? If it is a proxy, what gap between the number and the construct could mislead a user of this metric, and what evidence says the gap is small? Keep this short when the metric obviously is the thing (validity_concern: low); say more when it is contested (moderate or high). The research method and route in the front matter link to strategy pages that hold the caveats shared by all metrics using that route.
   - **2.2 Reliability**: Would the metric give the same answer twice: across judges, occasions, samples? Known figures.
-  - **2.3 Data collection and measurement error**: Online / offline / in-lab / field. Instruments. Sources of measurement error and statistical uncertainty.
-  - **2.4 Computation**: Data selection, transformation, aggregation. The formula. Common variants (e.g. @k, macro vs micro).
-  - **2.5 Unit and scale**: Unit, range, scale type (ratio / interval / ordinal), what "good" looks like, benchmarks.
-  - **2.6 Instruments**: Named instruments that instantiate this metric: standardized questionnaires, tests, test collections, evaluation code. For each: what it asks or contains, how it is scored, how it differs from the others, and when to choose it. List them in operationalization.instruments too. Write "None listed." when the computation in 2.4 is the whole operationalization.
+  - **2.3 Data collection and measurement error**: Online / offline / in-lab / field. Sources of measurement error and statistical uncertainty common to the family.
+  - **2.4 Computation**: Data selection, transformation, aggregation. The formula for the family, with its parameters (e.g. @k, macro vs micro). Scoring rules specific to one instrument go in 2.6.
+  - **2.5 Unit and scale**: Scale type (ratio / interval / ordinal) and direction for the family; the unit and range when every instrument shares them. When instruments differ, say so and give each one's unit and range in 2.6.
+  - **2.6 Instruments**: Named instruments (objects) that instantiate this metric (the class): standardized questionnaires, tests, benchmarks, evaluation code. For each: what it contains, what it probes (its latent demand, e.g. math reasoning), its unit and range, scoring specifics, and when to choose it. When instruments probe different things, group them under bold labels by what they probe. List representative instruments, not all of them: the best-known, ones that show a distinct demand or answer format, and ones with known problems worth knowing (saturation, contamination). Point to an external catalog for the rest. List them in operationalization.instruments too. Write "None listed." when the computation in 2.4 is the whole operationalization.
 - **3. Why it is measured**: In which situations, and for which purposes, do people pull up this number?
   - **3.1 Use cases**: 2-4 concrete scenarios where this metric would actually be pulled up, real or realistic. Name a specific system, team, or decision, not a generic task category (e.g. not just "information retrieval") -- these are seeds for a reviewer to swap in their own. Different fields' uses of the same computation (e.g. precision in search vs in classification) go here.
   - **3.2 Purposes**: Evaluation, documentation, comparison, improvement, monitoring... and for which kinds of systems.
