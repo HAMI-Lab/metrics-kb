@@ -1,7 +1,7 @@
 ---
 id: roc-auc
-title: ROC-AUC
-aliases: [AUC, AUROC, area under the ROC curve, c-statistic]
+title: "Area Under the ROC Curve (ROC-AUC)"
+aliases: [ROC-AUC, AUC, AUROC, area under the ROC curve, c-statistic]
 page_type: metric
 template_version: "0.2"
 fields: [machine-learning, healthcare]
@@ -48,14 +48,14 @@ objectives:
 sources: [fawcett2006, guo2023, nastoska2025]
 ---
 
-# ROC-AUC
+# Area Under the ROC Curve (ROC-AUC)
 
 > The probability that the component scores a random positive case above a random negative one.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-The ROC curve plots the true-positive rate against the false-positive rate as the decision threshold moves. ROC-AUC is the area under it, which equals the chance that a randomly chosen positive case gets a higher score than a randomly chosen negative case [fawcett2006].
+The receiver operating characteristic (ROC) curve plots the true-positive rate against the false-positive rate as the decision threshold moves. ROC-AUC is the area under it, which equals the chance that a randomly chosen positive case gets a higher score than a randomly chosen negative case [fawcett2006].
 
 ### 1.2 Construct: property of subject in context
 The property is how well the component's scores rank positives above negatives. The subject is a scoring classifier. The context is a labeled test set.
@@ -121,7 +121,7 @@ Computed from the same scores as precision and recall at each threshold.
 
 <!-- generated:neighbours:start -->
 - Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
-- Sibling construct: [Expected Calibration Error](expected-calibration-error.md) (Classification performance: calibration)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

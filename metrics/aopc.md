@@ -1,7 +1,7 @@
 ---
 id: aopc
-title: "AOPC (deletion curve)"
-aliases: [area over the perturbation curve, deletion metric, feature removal test]
+title: "Area Over the Perturbation Curve (AOPC)"
+aliases: [AOPC, deletion metric, feature removal test]
 page_type: metric
 template_version: "0.2"
 fields: [xai, machine-learning]
@@ -46,14 +46,14 @@ objectives:
 sources: [samek2017, nauta2023, pawlicki2024]
 ---
 
-# AOPC (deletion curve)
+# Area Over the Perturbation Curve (AOPC)
 
 > Remove the most important features first, step by step, and average how much the model's output falls.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-An explanation ranks input features (pixels, words, columns) by importance. Features are removed or replaced in that order, step by step, and the model's output is recorded after each step. AOPC is the average drop in output over the steps [samek2017]. If the explanation is faithful, removing its top features should hurt the output quickly.
+An explanation ranks input features (pixels, words, columns) by importance. Features are removed or replaced in that order, step by step, and the model's output is recorded after each step. The area over the perturbation curve (AOPC) is the average drop in output over the steps [samek2017]. If the explanation is faithful, removing its top features should hurt the output quickly.
 
 ### 1.2 Construct: property of subject in context
 The property is faithfulness of explanations to the model. The subject is an explanation method applied to a model. The context is a test set and a removal scheme.

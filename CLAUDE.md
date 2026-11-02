@@ -23,6 +23,7 @@ Read `README.md` first. This file adds the rules for AI edits.
 - When a metric is a proxy with a known gap (`measure_type` proxy or mixed, `validity_concern` moderate or high), say in 2.1 under "**Using a proxy with a known gap.**" which decisions the number can support, which it cannot, and what check to run before relying on it.
 - State evidence strength honestly in section 6. Theoretical links must be called theoretical.
 - Plain language. Short sentences. Explain jargon on first use.
+- A metric known by an acronym gets the title "Full Name (ACRONYM)", e.g. "Normalized Discounted Cumulative Gain (nDCG)", and its full name is spelled out again in the first sentence of 1.1. Keep the acronym in `aliases`.
 - Link to other pages with relative links, e.g. `[SUS](system-usability-scale.md)`.
 
 ## Status handling

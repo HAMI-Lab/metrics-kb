@@ -32,7 +32,7 @@ _None yet._
 
 ## 4. Metrics
 <!-- generated:metrics:start -->
-- [AOPC (deletion curve)](../metrics/aopc.md)
+- [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

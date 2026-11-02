@@ -120,7 +120,7 @@ The same computation as [precision](precision-test-collection.md), applied to an
 [FActScore](factscore.md) checks truth instead of support by context.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [FActScore](factscore.md) (Generation performance: factuality), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [ROUGE](rouge.md) (Generation performance: similarity to reference)
+- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

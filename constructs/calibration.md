@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 Expected calibration error summarizes the gap over confidence bins; the Brier score [brier1950] mixes calibration with accuracy.
 <!-- generated:metrics:start -->
-- [Expected Calibration Error](../metrics/expected-calibration-error.md)
+- [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

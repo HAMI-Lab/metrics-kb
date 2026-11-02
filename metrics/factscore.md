@@ -1,7 +1,7 @@
 ---
 id: factscore
-title: FActScore
-aliases: [atomic factual precision, factual precision]
+title: "Factual Precision in Atomicity Score (FActScore)"
+aliases: [FActScore, atomic factual precision, factual precision]
 page_type: metric
 template_version: "0.2"
 fields: [nlp, llm-evaluation]
@@ -48,14 +48,14 @@ objectives:
 sources: [min2023, chang2024]
 ---
 
-# FActScore
+# Factual Precision in Atomicity Score (FActScore)
 
 > Split a generated text into atomic facts and count the share supported by a knowledge source.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-A long generated text, such as a biography, is broken into short atomic facts. Each fact is checked against a knowledge source, such as Wikipedia. The score is the share of facts that are supported [min2023].
+Factual Precision in Atomicity Score (FActScore) measures how much of a long text is factually supported [min2023]. A long generated text, such as a biography, is broken into short atomic facts. Each fact is checked against a knowledge source, such as Wikipedia. The score is the share of facts that are supported [min2023].
 
 ### 1.2 Construct: property of subject in context
 The property is factuality: whether stated facts are true. The subject is a text generator. The context is a set of prompts and a knowledge source.
@@ -121,7 +121,7 @@ The same computation as [precision](precision-test-collection.md), applied to at
 [Answer Faithfulness](answer-faithfulness.md) is the counterpart for support by given context. [ROUGE](rouge.md) does not check truth.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [ROUGE](rouge.md) (Generation performance: similarity to reference)
+- Sibling construct: [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness), [F1 Score](f1-score.md) (Generation performance: similarity to reference), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

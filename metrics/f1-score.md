@@ -125,9 +125,9 @@ Built from [Precision (test collection)](precision-test-collection.md) and [Reca
 [Accuracy](accuracy.md) is a simpler alternative when classes are balanced. [ROUGE](rouge.md) also counts overlap with a reference, for longer texts.
 
 <!-- generated:neighbours:start -->
-- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [ROC-AUC](roc-auc.md) (Classification effectiveness: correctness), [Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [ROUGE](rouge.md) (Generation performance: similarity to reference)
-- Broader construct: [nDCG](ndcg.md) (Retrieval effectiveness: relevance)
-- Sibling construct: [Expected Calibration Error](expected-calibration-error.md) (Classification performance: calibration), [FActScore](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Same construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](rouge.md) (Generation performance: similarity to reference)
+- Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration), [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

@@ -33,7 +33,7 @@ _None yet._
 ## 4. Metrics
 FActScore splits text into atomic claims and checks each against a knowledge source.
 <!-- generated:metrics:start -->
-- [FActScore](../metrics/factscore.md)
+- [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

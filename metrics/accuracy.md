@@ -122,8 +122,8 @@ Exact match and balanced accuracy are variants on this page. [F1](f1-score.md) i
 [F1](f1-score.md) and [Precision (test collection)](precision-test-collection.md) are substitutes when classes are imbalanced. [ROC-AUC](roc-auc.md) complements it by ignoring the threshold.
 
 <!-- generated:neighbours:start -->
-- Same construct: [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [ROC-AUC](roc-auc.md) (Classification effectiveness: correctness)
-- Sibling construct: [Expected Calibration Error](expected-calibration-error.md) (Classification performance: calibration)
+- Same construct: [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
+- Sibling construct: [Expected Calibration Error (ECE)](expected-calibration-error.md) (Classification performance: calibration)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

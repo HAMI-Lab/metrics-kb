@@ -39,15 +39,15 @@ This table is maintained by hand for now; a script can later generate it from ea
 | [Task Completion Time](../metrics/task-completion-time.md) | unknown | none | Could go either way |
 | [Accuracy](../metrics/accuracy.md) | positive | theoretical | Long causal chain through output quality. |
 | [F1 Score](../metrics/f1-score.md) | positive | theoretical | Long causal chain. |
-| [ROC-AUC](../metrics/roc-auc.md) | positive | theoretical | Long causal chain. |
-| [Expected Calibration Error](../metrics/expected-calibration-error.md) | positive | theoretical | Users who are misled by confident errors may stop relying on the system. |
-| [nDCG](../metrics/ndcg.md) | positive | theoretical | Long causal chain. |
-| [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | positive | theoretical | Long causal chain. |
-| [ROUGE](../metrics/rouge.md) | unknown | none | Too far from what users experience to say. |
-| [FActScore](../metrics/factscore.md) | positive | theoretical | False content erodes trust. |
+| [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md) | positive | theoretical | Long causal chain. |
+| [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md) | positive | theoretical | Users who are misled by confident errors may stop relying on the system. |
+| [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md) | positive | theoretical | Long causal chain. |
+| [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md) | positive | theoretical | Long causal chain. |
+| [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md) | unknown | none | Too far from what users experience to say. |
+| [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md) | positive | theoretical | False content erodes trust. |
 | [Answer Faithfulness](../metrics/answer-faithfulness.md) | positive | theoretical | Grounded answers are expected to keep trust. |
 | [Tool Call Accuracy](../metrics/tool-call-accuracy.md) | positive | theoretical | Long causal chain. |
-| [AOPC (deletion curve)](../metrics/aopc.md) | unknown | none |  |
+| [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md) | unknown | none |  |
 
 ## Open questions
 - Which direct measure of sustained use should the wiki treat as the reference (for example 30-day retention)? It likely differs by system type.

@@ -1,7 +1,7 @@
 ---
 id: ndcg
-title: nDCG
-aliases: [normalized discounted cumulative gain, "nDCG@k", DCG]
+title: "Normalized Discounted Cumulative Gain (nDCG)"
+aliases: [nDCG, "nDCG@k", DCG]
 page_type: metric
 template_version: "0.2"
 fields: [information-retrieval, recommender-systems]
@@ -48,14 +48,14 @@ objectives:
 sources: [jarvelin2002, manning2008, liang2022, turpin2006]
 ---
 
-# nDCG
+# Normalized Discounted Cumulative Gain (nDCG)
 
 > Graded relevance summed down a ranking, discounted by position, and scaled by the best possible ranking.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-Each result gets a gain for how relevant it is (for example 0, 1, 2, 3). Gains are summed down the ranking, with lower positions counting less. The sum is divided by the sum for an ideal ranking of the same items, so a perfect ranking scores 1 [jarvelin2002].
+Normalized discounted cumulative gain (nDCG) scores a ranking by its graded relevance. Each result gets a gain for how relevant it is (for example 0, 1, 2, 3). Gains are summed down the ranking, with lower positions counting less. The sum is divided by the sum for an ideal ranking of the same items, so a perfect ranking scores 1 [jarvelin2002].
 
 ### 1.2 Construct: property of subject in context
 The property is graded relevance of a ranking, weighted toward the top. The subject is a ranking component such as a search engine's ranker or a recommender. The context is a test collection with graded judgments [liang2022].
@@ -121,7 +121,7 @@ nDCG@k at different k, and the gain variants, are on this page.
 [Precision (test collection)](precision-test-collection.md) ignores order and grades within the top k; [Reciprocal Rank](reciprocal-rank.md) looks only at the first relevant item.
 
 <!-- generated:neighbours:start -->
-- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance), [Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance)
+- Narrower construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Mean Reciprocal Rank (MRR)](reciprocal-rank.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

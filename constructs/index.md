@@ -61,19 +61,19 @@ graph TD
   c_visualization_literacy(["Literacy: visualization literacy"])
   m_accuracy["Accuracy"]:::metric
   m_answer_faithfulness["Answer Faithfulness"]:::metric
-  m_aopc["AOPC (deletion curve)"]:::metric
-  m_expected_calibration_error["Expected Calibration Error"]:::metric
+  m_aopc["Area Over the Perturbation Curve (AOPC)"]:::metric
+  m_expected_calibration_error["Expected Calibration Error (ECE)"]:::metric
   m_f1_score["F1 Score"]:::metric
-  m_factscore["FActScore"]:::metric
+  m_factscore["Factual Precision in Atomicity Score (FActScore)"]:::metric
   m_nasa_tlx["NASA Task Load Index (NASA-TLX)"]:::metric
-  m_ndcg["nDCG"]:::metric
+  m_ndcg["Normalized Discounted Cumulative Gain (nDCG)"]:::metric
   m_precision_test_collection["Precision (test collection)"]:::metric
   m_precision_user_task["Precision (user on task)"]:::metric
   m_recall_test_collection["Recall (test collection)"]:::metric
-  m_reciprocal_rank["Reciprocal Rank (MRR)"]:::metric
+  m_reciprocal_rank["Mean Reciprocal Rank (MRR)"]:::metric
   m_response_latency["Response Latency"]:::metric
-  m_roc_auc["ROC-AUC"]:::metric
-  m_rouge["ROUGE"]:::metric
+  m_roc_auc["Area Under the ROC Curve (ROC-AUC)"]:::metric
+  m_rouge["Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"]:::metric
   m_system_usability_scale["System Usability Scale (SUS)"]:::metric
   m_task_completion_time["Task Completion Time"]:::metric
   m_tool_call_accuracy["Tool Call Accuracy"]:::metric
@@ -161,19 +161,19 @@ A construct with several broader constructs appears under each of them.
 - [Component characteristics](component-characteristics.md)
   - [Component performance](component-performance.md)
     - [Classification performance](classification-performance.md)
-      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md), [ROC-AUC](../metrics/roc-auc.md)
-      - [Classification performance: calibration](calibration.md) · metrics: [Expected Calibration Error](../metrics/expected-calibration-error.md)
+      - [Classification effectiveness: correctness](classification-correctness.md) · metrics: [Accuracy](../metrics/accuracy.md), [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md), [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
+      - [Classification performance: calibration](calibration.md) · metrics: [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
     - [Explanation performance](explanation-performance.md)
-      - [Explanation performance: faithfulness](explanation-faithfulness.md) · metrics: [AOPC (deletion curve)](../metrics/aopc.md)
+      - [Explanation performance: faithfulness](explanation-faithfulness.md) · metrics: [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
     - [Generation performance](generation-performance.md)
-      - [Generation performance: factuality](factuality.md) · metrics: [FActScore](../metrics/factscore.md)
+      - [Generation performance: factuality](factuality.md) · metrics: [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
       - [Generation performance: groundedness](groundedness.md) · metrics: [Answer Faithfulness](../metrics/answer-faithfulness.md)
-      - [Generation performance: similarity to reference](reference-similarity.md) · metrics: [F1 Score](../metrics/f1-score.md), [ROUGE](../metrics/rouge.md)
+      - [Generation performance: similarity to reference](reference-similarity.md) · metrics: [F1 Score](../metrics/f1-score.md), [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
     - [Retrieval performance](retrieval-performance.md)
       - [Retrieval effectiveness](retrieval-effectiveness.md)
-        - [Retrieval effectiveness: relevance](relevance.md) · metrics: [nDCG](../metrics/ndcg.md)
+        - [Retrieval effectiveness: relevance](relevance.md) · metrics: [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
           - [Retrieval effectiveness: timeliness](timeliness.md)
-          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md), [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
+          - [Retrieval effectiveness: topical relevance](topical-relevance.md) · metrics: [F1 Score](../metrics/f1-score.md), [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md), [Precision (test collection)](../metrics/precision-test-collection.md), [Recall (test collection)](../metrics/recall-test-collection.md)
           - [Trustworthiness](trustworthiness.md)
       - [Retrieval efficiency](retrieval-efficiency.md)
     - [Tool-use performance](tool-use-performance.md)

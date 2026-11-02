@@ -34,7 +34,7 @@ _None yet._
 ROUGE and BLEU count n-gram overlap; embedding-based scores such as BERTScore compare meaning.
 <!-- generated:metrics:start -->
 - [F1 Score](../metrics/f1-score.md)
-- [ROUGE](../metrics/rouge.md)
+- [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

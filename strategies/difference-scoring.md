@@ -55,7 +55,7 @@ Twice (or more) the cost of the underlying score, because every condition must b
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [AOPC (deletion curve)](../metrics/aopc.md)
+- [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

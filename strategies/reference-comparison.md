@@ -59,15 +59,15 @@ High to build the reference (usually by [external judgment](external-judgment.md
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
 - [Accuracy](../metrics/accuracy.md)
-- [Expected Calibration Error](../metrics/expected-calibration-error.md)
+- [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
+- [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 - [F1 Score](../metrics/f1-score.md)
-- [FActScore](../metrics/factscore.md)
-- [nDCG](../metrics/ndcg.md)
+- [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
+- [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
+- [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
 - [Precision (test collection)](../metrics/precision-test-collection.md)
 - [Recall (test collection)](../metrics/recall-test-collection.md)
-- [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
-- [ROC-AUC](../metrics/roc-auc.md)
-- [ROUGE](../metrics/rouge.md)
+- [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 <!-- generated:metrics:end -->
 

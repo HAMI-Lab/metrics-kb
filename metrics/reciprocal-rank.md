@@ -1,7 +1,7 @@
 ---
 id: reciprocal-rank
-title: "Reciprocal Rank (MRR)"
-aliases: [MRR, mean reciprocal rank, "RR@k"]
+title: "Mean Reciprocal Rank (MRR)"
+aliases: [MRR, reciprocal rank, "RR@k"]
 page_type: metric
 template_version: "0.2"
 fields: [information-retrieval, llm-evaluation]
@@ -47,14 +47,14 @@ objectives:
 sources: [voorhees1999, liang2022, mohammadi2025]
 ---
 
-# Reciprocal Rank (MRR)
+# Mean Reciprocal Rank (MRR)
 
 > One divided by the rank of the first relevant result, averaged over queries.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-For each query, find the position of the first relevant result and take one divided by it: 1 if it is first, 0.5 if second, and so on. The mean over queries is the mean reciprocal rank [voorhees1999].
+For each query, find the position of the first relevant result and take one divided by it: 1 if it is first, 0.5 if second, and so on. The mean over queries is the mean reciprocal rank (MRR) [voorhees1999].
 
 ### 1.2 Construct: property of subject in context
 The property is how quickly a ranking reaches a relevant item. The subject is a ranker. The context is queries with a known correct item or judgments, often in question answering.
@@ -119,7 +119,7 @@ RR@k is a variant on this page.
 
 <!-- generated:neighbours:start -->
 - Same construct: [F1 Score](f1-score.md) (Retrieval effectiveness: topical relevance), [Precision (test collection)](precision-test-collection.md) (Retrieval effectiveness: topical relevance), [Recall (test collection)](recall-test-collection.md) (Retrieval effectiveness: topical relevance)
-- Broader construct: [nDCG](ndcg.md) (Retrieval effectiveness: relevance)
+- Broader construct: [Normalized Discounted Cumulative Gain (nDCG)](ndcg.md) (Retrieval effectiveness: relevance)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

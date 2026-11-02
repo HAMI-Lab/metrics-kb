@@ -59,16 +59,16 @@ High to build: inputs, references, licensing and documentation. Once built, a re
 <!-- generated:metrics:start -->
 - [Accuracy](../metrics/accuracy.md)
 - [Answer Faithfulness](../metrics/answer-faithfulness.md)
-- [AOPC (deletion curve)](../metrics/aopc.md)
-- [Expected Calibration Error](../metrics/expected-calibration-error.md)
+- [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
+- [Area Under the ROC Curve (ROC-AUC)](../metrics/roc-auc.md)
+- [Expected Calibration Error (ECE)](../metrics/expected-calibration-error.md)
 - [F1 Score](../metrics/f1-score.md)
-- [FActScore](../metrics/factscore.md)
-- [nDCG](../metrics/ndcg.md)
+- [Factual Precision in Atomicity Score (FActScore)](../metrics/factscore.md)
+- [Mean Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
+- [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
 - [Precision (test collection)](../metrics/precision-test-collection.md)
 - [Recall (test collection)](../metrics/recall-test-collection.md)
-- [Reciprocal Rank (MRR)](../metrics/reciprocal-rank.md)
-- [ROC-AUC](../metrics/roc-auc.md)
-- [ROUGE](../metrics/rouge.md)
+- [Recall-Oriented Understudy for Gisting Evaluation (ROUGE)](../metrics/rouge.md)
 - [Tool Call Accuracy](../metrics/tool-call-accuracy.md)
 <!-- generated:metrics:end -->
 

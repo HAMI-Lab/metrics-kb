@@ -36,7 +36,7 @@ The narrower constructs here are aspects users judge separately. They can disagr
 ## 4. Metrics
 Most relevance metrics in practice operationalize topical relevance only.
 <!-- generated:metrics:start -->
-- [nDCG](../metrics/ndcg.md)
+- [Normalized Discounted Cumulative Gain (nDCG)](../metrics/ndcg.md)
 <!-- generated:metrics:end -->
 
 ## 5. Links to business objectives

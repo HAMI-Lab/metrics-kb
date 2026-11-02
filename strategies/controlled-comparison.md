@@ -58,7 +58,7 @@ At least the cost of the underlying measurement per condition, plus the work of 
 
 ## 5. Metrics using this strategy
 <!-- generated:metrics:start -->
-- [AOPC (deletion curve)](../metrics/aopc.md)
+- [Area Over the Perturbation Curve (AOPC)](../metrics/aopc.md)
 <!-- generated:metrics:end -->
 
 ## 6. Sources

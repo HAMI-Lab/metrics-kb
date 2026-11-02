@@ -1,6 +1,6 @@
 ---
 id: expected-calibration-error
-title: Expected Calibration Error
+title: "Expected Calibration Error (ECE)"
 aliases: [ECE, calibration error]
 page_type: metric
 template_version: "0.2"
@@ -47,7 +47,7 @@ objectives:
 sources: [guo2017, liang2022, brier1950]
 ---
 
-# Expected Calibration Error
+# Expected Calibration Error (ECE)
 
 > The average gap between confidence and accuracy, over bins of predictions with similar confidence.
 
@@ -119,7 +119,7 @@ Maximum calibration error is a variant on this page.
 The Brier score [brier1950] combines calibration and accuracy in one number. [Accuracy](accuracy.md) and [ROC-AUC](roc-auc.md) are complements.
 
 <!-- generated:neighbours:start -->
-- Sibling construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness), [ROC-AUC](roc-auc.md) (Classification effectiveness: correctness)
+- Sibling construct: [Accuracy](accuracy.md) (Classification effectiveness: correctness), [Area Under the ROC Curve (ROC-AUC)](roc-auc.md) (Classification effectiveness: correctness), [F1 Score](f1-score.md) (Classification effectiveness: correctness), [Precision (test collection)](precision-test-collection.md) (Classification effectiveness: correctness), [Recall (test collection)](recall-test-collection.md) (Classification effectiveness: correctness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements

@@ -1,7 +1,7 @@
 ---
 id: rouge
-title: ROUGE
-aliases: [ROUGE-1, ROUGE-2, ROUGE-L]
+title: "Recall-Oriented Understudy for Gisting Evaluation (ROUGE)"
+aliases: [ROUGE, ROUGE-1, ROUGE-2, ROUGE-L]
 page_type: metric
 template_version: "0.2"
 fields: [nlp, llm-evaluation]
@@ -48,14 +48,14 @@ objectives:
 sources: [lin2004, papineni2002, liang2022, chang2024]
 ---
 
-# ROUGE
+# Recall-Oriented Understudy for Gisting Evaluation (ROUGE)
 
 > Overlap of words and word sequences between a generated text and reference texts.
 
 ## 1. What is measured
 
 ### 1.1 Definition
-ROUGE counts how many words (ROUGE-1), word pairs (ROUGE-2), or longest shared word sequences (ROUGE-L) of a reference text also appear in the generated text [lin2004]. It was made for summaries and is reported as recall, precision or F1 of the overlap.
+Recall-Oriented Understudy for Gisting Evaluation (ROUGE) counts how many words (ROUGE-1), word pairs (ROUGE-2), or longest shared word sequences (ROUGE-L) of a reference text also appear in the generated text [lin2004]. It was made for summaries and is reported as recall, precision or F1 of the overlap.
 
 ### 1.2 Construct: property of subject in context
 The property is similarity to a human-written reference. The subject is a text generator, such as a summarizer. The context is a test set with references [liang2022].
@@ -116,14 +116,14 @@ Optimizing ROUGE rewards copying and length tuning, not quality.
 ## 5. Related metrics
 
 ### 5.1 Operationally related metrics
-ROUGE-1, -2 and -L are variants on this page. BLEU [papineni2002] is a related overlap metric built on precision instead of recall, for translation.
+ROUGE-1, -2 and -L are variants on this page. BLEU (Bilingual Evaluation Understudy) [papineni2002] is a related overlap metric built on precision instead of recall, for translation.
 
 ### 5.2 Conceptually related metrics
 [FActScore](factscore.md) checks truth and [Answer Faithfulness](answer-faithfulness.md) checks support by sources, both closer to what users care about.
 
 <!-- generated:neighbours:start -->
 - Same construct: [F1 Score](f1-score.md) (Generation performance: similarity to reference)
-- Sibling construct: [FActScore](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
+- Sibling construct: [Factual Precision in Atomicity Score (FActScore)](factscore.md) (Generation performance: factuality), [Answer Faithfulness](answer-faithfulness.md) (Generation performance: groundedness)
 <!-- generated:neighbours:end -->
 
 ### 5.3 Empirical co-movements
